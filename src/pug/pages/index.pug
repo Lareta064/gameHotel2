@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header.pug
+	main.investor-page
+		include ../sections/_investor-banner.pug
+		include ../sections/_our-offer.pug
+		include ../sections/_investor-cta.pug
+	
+	
+	
+block variables
+	-var title = "For Investor";

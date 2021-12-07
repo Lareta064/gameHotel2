@@ -1,0 +1,40 @@
+
+/* our-offer*/
+.our-offer{
+	position: relative;
+	background-color: #EEF5FF;
+	padding-top: 133px;
+	padding-bottom: 133px;
+	overflow: hidden;
+	&__text{
+		width: 80%;
+		max-width:585px;
+		
+	}
+	.button{
+		margin-top: 56px;
+	}
+	@media(max-width:1023px){
+		padding-top: 67px;
+		padding-bottom: 67px;
+		&__text{width: 55%;
+			
+		}
+	}
+}
+.our-offer .our-offer__bg{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.our-offer-content{
+	
+	.our-offer__img{
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		z-index: 3;
+	}
+}

@@ -1,0 +1,78 @@
+/*=================
+кастомная выпадашка СЕЛЕКТ
+===================*/
+.custom-select {
+	position: relative;
+
+	.select-icon {
+		position: absolute;
+		right: 8px;
+		top: 4px;
+		width: 16px;
+		height: 16px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.94 5.71997L8 8.77997L11.06 5.71997L12 6.66664L8 10.6666L4 6.66664L4.94 5.71997Z' fill='%23788CAB'/%3e%3c/svg%3e");
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center;
+		z-index: 2;
+		pointer-events: none;
+		cursor: pointer;
+	}
+
+	.select-field {
+		
+		background-color: #EEF5FF;
+		border-radius: 24px;
+		input {
+			padding: 0;
+			border: 0;
+			padding-left: 8px;
+			padding-right: 32px;
+			width: 60px;
+			height: 24px;
+			color: $text;
+			font-size: 13px;
+			background-color: transparent;
+			font-family: $os;
+			cursor: pointer;
+			display: block;
+		}
+	}
+
+	.select-list {
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+		max-height: 0;
+		transition: max-height 0.3s ease-out;
+		overflow: hidden;
+		transform: translateY(100%);
+		width: 100%;
+		background-color: #fff;
+		z-index: 3;
+		// border: 1px solid #888888;
+		border-top: 0;
+		border-radius: 0 0 4px 4px;
+
+		li {
+			
+			color: $text;
+			font-size: 13px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			cursor: pointer;
+			padding-left: 8px;
+			transition: .2s;
+			&:hover {
+				opacity: .8;
+			}
+		}
+
+		li.current {
+			
+			color: $text;
+
+
+		}
+	}
+}

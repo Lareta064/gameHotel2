@@ -1,0 +1,24 @@
+/*==========animation line==========*/
+.animate-line_1,
+.animate-line_2 {
+	background-image: url(../img/line1.png);
+	background-position: 0 50%;
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+	height: 250px;
+	margin-top: 80px;
+	display: inline-block;
+	width: 100%;
+	will-change: background-position-x;
+	
+}
+.animate-line_1{
+	// -webkit-animation: moveRight 14s linear infinite;
+	// animation: moveRight 14s linear infinite;
+}
+.animate-line_2 {
+	background-image: url(../img/line2.png);
+	// -webkit-animation: moveLeft 14s linear infinite;
+	// animation: moveLeft 14s linear infinite;
+	
+}

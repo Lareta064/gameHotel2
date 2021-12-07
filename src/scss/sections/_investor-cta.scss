@@ -1,0 +1,173 @@
+/*========стань игроком======*/
+.investor-cta{
+	padding-top: 80px;
+	padding-bottom: 96px;
+	background: #FFFFFF;
+	
+}
+.investor-cta-header{
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.investor-cta-header__title{
+	width: 70%;
+	max-width:728px;
+}
+
+.light-cards-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 40px;
+	row-gap: 40px;
+	}
+.investor-cta .card-light.arr-card:after {
+	top: 24px;
+	right: -28px;
+}
+.investor-cta .card-light.arr-card:nth-child(8n+4):after {
+	top: auto;
+	bottom: -28px;
+	right: 28px;
+	transform: rotate(90deg);
+}
+.investor-cta .card-light:nth-child(8){
+	order: 5;
+}
+.investor-cta .card-light:nth-child(7) {
+	order: 6;
+}
+.investor-cta .card-light:nth-child(6) {
+	order: 7;
+}
+.investor-cta .card-light:nth-child(5) {
+	order: 8;
+}
+.investor-cta .card-light:nth-child(n+5):after {
+	
+	right: auto;
+	left:-28px;
+	transform: rotate(180deg);
+}
+.light-cards-grid .card-light:last-child:after {
+	display: none;
+}
+@media(min-width:1024px) and (max-width:1279px) {
+	.light-cards-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.investor-cta .card-light.arr-card:nth-child(3) {
+		order: 3;
+
+		&:after {			
+			left:auto;
+			top: auto;
+			bottom: -28px;
+			right: 28px;
+			transform: rotate(90deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(4) {
+		order: 6;
+
+		&:after {
+			bottom: unset;
+			top: 24px;
+			right: auto;
+			left: -28px;
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(5) {
+		order: 5;
+	}
+	.investor-cta .card-light.arr-card:nth-child(6) {
+		order: 4;
+		&:after{
+			right: auto;
+			left: auto;
+			bottom: -28px;
+			left: 28px;
+			top: unset;
+			transform: rotate(90deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(7) {
+		order: 7;
+		&:after{
+			right: -28px;
+			left: auto;		
+			transform: rotate(0deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(8) {
+		order: 8;
+	}
+	
+
+}
+@media(max-width:1023px){
+	.light-cards-grid{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.investor-cta .card-light.arr-card:nth-child(8n+4):after {
+		top: unset;
+		bottom: unset;
+		right: unset;
+		transform: unset;}
+	.investor-cta .card-light.arr-card:nth-child(2):after,
+	.investor-cta .card-light.arr-card:nth-child(3):after,
+	.investor-cta .card-light.arr-card:nth-child(5):after {
+		top: auto;
+		bottom: -28px;
+		right: 28px;
+		transform: rotate(90deg);
+	}
+	.investor-cta .card-light.arr-card:nth-child(3){
+		order:4;
+		&:after{
+			bottom: unset;
+			right: unset;
+			left: -28px;
+			top: 24px;
+			transform: rotate(180deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(4) {
+		order: 3;
+		&:after {
+			top: unset;
+			right: unset;
+			left: 28px;
+			bottom: -24px;
+			transform: rotate(90deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(5) {
+		order: 5;
+		&:after {
+			top: 24px;
+			right: -28px;
+			left: unset;
+			bottom: unset;
+			transform: unset;
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(6) {
+		order: 6;
+		&:after {
+			top: auto;
+			left: auto;
+			bottom: -28px;
+			right: 28px;
+			transform: rotate(90deg);
+		}
+	}
+	.investor-cta .card-light.arr-card:nth-child(7) {
+		order: 8;
+	}
+	.investor-cta .card-light.arr-card:nth-child(8) {
+		order: 7;
+	}
+}

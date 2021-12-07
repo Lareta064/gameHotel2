@@ -1,0 +1,71 @@
+.card-light{
+	padding: 20px 24px;
+	background: #FFFFFF;
+	box-shadow: 0px 5px 16px rgba(221, 213, 245, 0.8);
+	border-radius: 16px;
+	position: relative;
+	transition: .3s;
+	.card-light__head{
+		display: flex;
+		justify-content: space-between;
+		&>*{flex-shrink: 0;}
+		span{
+			margin-left: 16px;
+			padding-left: 8px;
+			padding-right: 8px;
+			display: inline-block;
+			text-align: center;
+			background: #7256FF;
+			border:1px solid #7256FF;
+			border-radius: 24px;
+			height: 20px;
+			line-height: 18px;
+			font-size: 13px;
+			color: #fff;
+		}
+	}
+	h4{
+		font-family: $ms;
+		font-size: 15px;
+		line-height: 24px;
+		height: 48px;
+		 display: -webkit-box;
+		 -webkit-box-orient: vertical;
+		 -webkit-line-clamp: 2;
+		 overflow: hidden;
+		 max-width:160px;
+	}
+	.card-light__text {
+		padding-top: 28px;
+		color: $text;
+		p{
+			 display: -webkit-box;
+			 -webkit-box-orient: vertical;
+			 -webkit-line-clamp: 3;
+			 overflow: hidden;
+		}
+	}
+}
+.card-light:hover{
+	background: #7256FF;
+	box-shadow: 0px 5px 16px rgba(221, 213, 245, 0.8);
+	color: #fff;
+	.card-light__text {
+		color: rgba(255, 255, 255, 0.7);
+	}
+}
+.arr-card{
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		right:-16px;
+		width: 16px;
+		height: 16px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.66666 7.3333V8.66664H10.6667L6.99999 12.3333L7.94666 13.28L13.2267 7.99997L7.94666 2.71997L6.99999 3.66664L10.6667 7.3333H2.66666Z' fill='%237256FF'/%3e%3c/svg%3e");
+		background-position: 0 0;
+		background-size: auto;
+		background-repeat: no-repeat;
+	}
+}

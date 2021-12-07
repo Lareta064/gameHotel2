@@ -1,0 +1,18 @@
+@keyframes moveRight {
+	0% {
+		background-position-x: 0;
+	}
+
+	to {
+		background-position-x: 1884px;
+	}
+}
+@keyframes moveLeft {
+	0% {
+		background-position-x: 1570px;
+	}
+
+	to {
+		background-position-x: 0;
+	}
+}
