@@ -91,20 +91,24 @@
   }
   
   section {
-	padding-left: 16px;
-	padding-right: 16px;
+	// padding-left: 16px;
+	// padding-right: 16px;
 	position: relative;
+	padding-top: 80px;
+	padding-bottom: 96px;
   }
   input[type="radio"], input[type='checkbox'], input[type="submit"]{
 	  appearance: none;
 	  -moz-appearance: none;
   -webkit-appearance: none;
   }
-.title-3{
+.title-3,
+.section-title {
 	  font-size: 32px;
   	 line-height: 1.375;
 	   font-family: $ms;
 }
+.section-title{margin-bottom: 56px;}
 .text-20, .text-20 p{
 	font-size: 20px;
 	line-height: 1.4;

@@ -1,0 +1,30 @@
+.game-news{
+	 
+	.card-light__text{
+		display: flex;
+		flex-direction: column;
+	}
+	.card-light__text h4{
+		height: auto;
+		-webkit-line-clamp: 1;
+	}
+	.card-light{
+		background: #EEF5FF;
+		height: 144px;
+		&:hover{
+			background: #7256FF;
+		}
+
+	}
+	.card-light__text p{
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		font-family: $os;
+	}
+	.card-light__details{
+		margin-top: auto;
+		font-family: $os;
+	}
+}

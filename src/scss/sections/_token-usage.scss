@@ -1,0 +1,84 @@
+.token-usage{
+	position: relative;
+	overflow: hidden;
+	&:after{
+		content:'';
+		position: absolute;
+		width: 125%;
+		height: 125%;
+		top:50%;		
+		left: -50%;
+		transform: translate(50%, -50%);
+		background: radial-gradient(50% 50% at 50% 50%, #FEBEFF 0%, rgba(247, 191, 162, 0.463542) 54.17%, rgba(241, 201, 82, 0) 100%);
+		opacity: 0.32;
+		z-index: 2;
+	}
+	.container{
+	position: relative;
+	z-index: 3;
+	}
+}
+.token-card{
+background: #FFFFFF;
+border-radius: 16px;
+padding: 16px;
+max-width:584px;
+box-shadow: 0px 5px 16px rgba(221, 213, 245, 0.8);
+} 
+.token-card-content{
+	
+	padding: 20px 24px;
+	background: linear-gradient(90deg, #EEF5FF 0%, #FFFFFF 100%);
+	border-radius: 16px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	
+
+} 
+.token-card-label{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #F169DC;
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 16px;
+	position: absolute;
+	top: 20px;
+	right: 24px;
+	
+}
+.token-card-text{
+	h4 {
+		font-family: $ms;
+		font-size: 17px;
+		line-height: 24px;
+		color: #0A0522;
+		height: 48px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+	p{
+		 display: -webkit-box;
+		 -webkit-box-orient: vertical;
+		 -webkit-line-clamp: 3;
+		 overflow: hidden;
+		 font-size: 14px;
+		 line-height: 20px;
+	}
+
+} 
+.token-card-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 58%;
+}
+.token-card-img{
+	flex-shrink: 0;
+	width: 31%;
+}
