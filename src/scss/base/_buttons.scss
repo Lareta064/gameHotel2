@@ -40,6 +40,13 @@
 		background-color: transparent;
 	}
 }
+.button--color.button--color-dark{
+	
+	&:hover {
+		color:#fff;
+		border: 1px solid #ffffff;
+	}
+}
 .button--color svg{
 	fill: #ffffff;
 	margin-right: 14px;

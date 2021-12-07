@@ -105,6 +105,11 @@
   	 line-height: 1.375;
 	   font-family: $ms;
 }
+.text-20, .text-20 p{
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: $mr;
+}
 .text-32,
 .text-32  p{
 	font-size: 32px;
@@ -140,7 +145,20 @@
 }
 .mt-56	{
 	margin-top: 56px;
-}	
+}
+.flex-header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.flex-header__text{
+		width: 85%;
+		max-width: 687px;
+	}
+	.flex-header__btn{
+		flex-shrink: 0;
+		margin-left: 16px;
+	}
+}
 .text-column{
 	flex-shrink: 0;
 	.text-column__title {

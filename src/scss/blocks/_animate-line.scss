@@ -1,24 +1,69 @@
 /*==========animation line==========*/
+.animate-lines{
+	padding-top: 80px;
+	padding-bottom: 96px;
+	background: #0A0522;	
+	position: relative;
+	.container{
+		position: relative;
+		z-index: 3;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 48%;
+		left: 0;
+		width: 64%;
+		z-index: 2;
+		background: radial-gradient(50% 50% at 50% 50%, #F8A4FF 0%, rgba(10, 5, 34, 0) 100%);
+		opacity: .3;
+	}
+	// opacity: 0.3;
+}
 .animate-line_1,
 .animate-line_2 {
 	background-image: url(../img/line1.png);
 	background-position: 0 50%;
 	background-size: auto 100%;
 	background-repeat: repeat-x;
-	height: 250px;
+	height: 168px;
 	margin-top: 80px;
 	display: inline-block;
 	width: 100%;
 	will-change: background-position-x;
-	
+	position: relative;
+	z-index:  3;
+	@media(max-width:1279px){
+		height: 130px;
+	}
 }
 .animate-line_1{
-	// -webkit-animation: moveRight 14s linear infinite;
-	// animation: moveRight 14s linear infinite;
+	
+	-webkit-animation: moveLeft 14s linear infinite;
+	animation: moveLeft 14s linear infinite;
 }
 .animate-line_2 {
 	background-image: url(../img/line2.png);
-	// -webkit-animation: moveLeft 14s linear infinite;
-	// animation: moveLeft 14s linear infinite;
+	-webkit-animation: moveRight 14s linear infinite;
+	animation: moveRight 14s linear infinite;
 	
+}
+.animate-lines .flex-header__text{
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	span{
+		font-size: 77px;
+		color: #fff;
+		margin-right: 50px;
+	}
+	@media(max-width:1023px){
+		.text-20 p{
+			font-size: 18px;
+		}
+		span {
+			margin-right: 30px;
+		}
+	}
 }
