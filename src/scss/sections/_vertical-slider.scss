@@ -13,6 +13,9 @@
 			
 		}
 	}
+	@media(max-width:767px){
+		display: none;
+	}
 }
 .vertical-slider__header{
 	display: flex;
