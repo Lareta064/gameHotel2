@@ -77,7 +77,11 @@
 } .information-board__img{
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: 12vw;
+	@media(max-width:1920px) {right: 0;}
+	@media(max-width:1439px){
+		width: 70%;
+	}
 	
 }
 .information-board-content{
