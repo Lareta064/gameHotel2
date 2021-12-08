@@ -1,0 +1,82 @@
+.information-board{
+	background: linear-gradient(81.66deg, #271B64 0%, #0A0522 100%);
+	.information-board-head{
+		margin-bottom: 60px;
+		ul, li{
+			display: flex;
+			align-items: center;
+		}
+	ul{
+		width: 71%;
+		justify-content: space-between;
+	}
+		p {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;			
+			color: #FFFFFF;
+			font-family: $ms;
+		}
+		span{
+			padding: 5px 12px;
+			background-color: #fff;
+			font-size: 16px;
+			color: #0A0522;
+			margin-left: 20px;
+			font-family: $ms;
+			border-radius: 30px;
+			white-space: nowrap;
+			min-width:37px;
+			text-align: center;
+		}
+		.binance-item{
+			position: relative;
+			
+			span{
+				padding-right: 40px;
+			}
+			svg{
+				top:5px;
+				right: 12px;
+				position: absolute;
+			}
+		}
+	}
+	
+}
+.information-board__list-bottom,
+.information-board__list-top{
+	padding-top: 28px;
+	width: 100%;
+	max-width:557px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap:24px;
+	
+}
+.information-board__list-bottom{
+	max-width:740px;
+	padding-top: 30px;
+}
+.information-board{
+	overflow: hidden;
+	position: relative;
+	&:before{
+		content:'';
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 45%;
+		
+		bottom:0;
+		background-image: url('../img/infoBgLeft.png');
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+	
+} .information-board__img{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+}

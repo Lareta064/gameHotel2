@@ -4,6 +4,7 @@
 	padding-top: 40px;
 	padding-bottom: 72px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
 }
 .investor-banner-content{
 	position: relative;
@@ -78,6 +79,10 @@
 	
 }
 /*banner__benefits*/
+.investor-banner__benefits{
+	position: relative;
+	z-index: 5;
+}
 .investor-banner__benefits .text-column-row{
 	
 	.text-column+.text-column{

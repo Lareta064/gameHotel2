@@ -45,7 +45,11 @@
   .noscroll {
 	overflow: hidden;
   }
-  
+  header, main{
+	@media(min-width:1200px){
+		margin-left: 72px;
+	}
+  }
  
   a,
   a:hover {
@@ -181,4 +185,110 @@
 		line-height: 1.6;
 		padding-top: 12px;
 	}
+}
+.label-text{
+	.label-text__top{
+		display: flex;
+		span{
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 24px;
+			padding-left: 8px;
+			padding-right: 8px;
+			border-radius: 16px;
+			font-family: $ms;
+			color: #FFFFFF;
+		}
+		p{
+			font-family: $ms;
+			color: #FFFFFF;
+			font-size: 15px;
+			line-height: 24px;
+			margin-left: 16px;
+		}
+	}
+	.label-text__bottom{
+		padding-top: 8px;
+		p{
+			font-family: $os;
+			font-size: 14px;
+			line-height: 20px;
+			color: #FFFFFF;
+		}
+	}
+}
+.label-text.label-text--dashed{
+	span{
+		background: rgba(255, 255, 255, 0.2);		
+		border: 1px dashed rgba(255, 255, 255, 0.7);
+	}
+}
+.label-text.label-text--pink {
+	span {
+		background: #F169DC;
+	}
+}
+.label-text.label-text--purple {
+	span {
+		background: #E83EC2;
+	}
+}
+.label-text.label-text--blue {
+	span {
+		background: #2400FF;
+	}
+}
+.label-text.label-text--aqua {
+	span {
+		background: #40E0EE;
+	}
+}
+.label-text.label-text--red {
+	span {
+		background: #F73232;
+	}
+}
+.label-text.label-text--green {
+	span {
+		background: #339FAD;
+		
+	}
+}
+.label-text.label-text--lime{
+	span {
+		background: #6BBF18;
+	}
+}
+.label-text.label-text--violet {
+	span {
+		background: #7256FF;
+	}
+}
+
+.label-text.label-text--star,
+.label-text.label-text--bull{
+	.label-text__top{
+		position: relative;
+		padding-left: 20px;
+		p{margin-left: 0;}
+		&:before{
+			content:'';
+			position: absolute;
+			top:5px;
+			left: 0;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: #F2CF68;
+			;
+		}
+	}
+}
+.label-text.label-text--star .label-text__top:before {
+	content: '\2605';
+	color: #fff;
+	background-color: transparent;
+	font-size: 18px;
+	top: 0;
+
 }

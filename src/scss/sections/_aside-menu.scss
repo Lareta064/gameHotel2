@@ -1,0 +1,62 @@
+.aside-panel{
+	position: fixed;
+	top:0;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	width: 72px;
+	background: #7256FF;
+	padding-top: 16px;
+	.logo{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: 37px;
+	}
+}
+.aside-panel__menu{
+	button{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 24px;
+		position: relative;
+		span{
+			font-family: $ms;
+			font-size: 12px;
+			line-height: 16px;
+			color: #FFFFFF;
+			padding-top: 8px;
+		}
+		svg{
+			width: 24px;
+			height: 24px;
+		}
+		align-items: center;
+	}
+	
+	button .label{
+		display: inline-block;
+		
+		min-width: 12px;
+		
+		padding-left: 3px;
+		padding-right: 3px;		
+		height: 12px;
+		line-height: 12px;
+		background-color: #F2CF68;
+		position: absolute;
+		top: -1px;
+		left: 18px;
+		z-index: 4;
+		border-radius: 50%;
+		padding-bottom: 1px;
+		span{
+			font-size: 10px;
+			color: #0A0522;
+			line-height: 12px;
+		}
+	}
+}

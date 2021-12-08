@@ -28,3 +28,48 @@
 			thisList.classList.remove('visible');
 		}
 	});
+const headerProfileArrow = document.getElementById('profile-arrow');
+const headerProfileDrop = document.getElementById('profile-menu');
+headerProfileArrow.addEventListener('click', function(){
+	if(this.classList.contains('active')){
+		this.classList.remove('active');
+		headerProfileDrop.classList.remove('active');
+
+	}else{
+		this.classList.add('active');
+		headerProfileDrop.classList.add('active');
+	}
+});
+// vertical-scroll
+function vertSlider(textBlockClassName, imageBlockClassName) {
+
+  // define elements
+  const txtDiv = document.querySelectorAll(`.${textBlockClassName}`);
+  const imgDiv = document.querySelectorAll(`.${imageBlockClassName}`);
+
+  // setup scroll event
+  window.onscroll = () => {
+    // init index
+    let ind = imgDiv.length;
+
+    // Check what txt element is visible
+    txtDiv.forEach(elem => {
+      if (elem.getBoundingClientRect().y > 0) ind--;
+    });
+
+    // Setup upper bound for index
+    ind = Math.min(ind, imgDiv.length - 1);
+
+    // Hide images
+    imgDiv.forEach(elem => {
+      elem.style.opacity = 0;
+    });
+
+    // Show img, based on txt element visible
+    imgDiv[ind].style.opacity = 1;
+
+  };
+}
+if (document.querySelector('.how-bay')) {
+  vertSlider('vertical-slider__text-item','vertical-slider__img-item' );
+}
