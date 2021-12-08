@@ -26,6 +26,7 @@ header.header{
 			line-height: 20px;			
 			color: #0A0522;
 			font-family: arial;
+			white-space: nowrap;
 
 		}
 		li.active a{
@@ -143,5 +144,32 @@ header.header{
 	svg{transition: .3s;}
 	&.active svg{
 		transform: rotate(180deg)
+	}
+}
+.header .mobile-logo{
+	display: none;
+	@media(max-width:1199px){
+		display: block;
+	}
+}
+.header .mobile-logo svg{
+	fill: #7256FF;
+	width: 35px;
+	height: 20px;
+}
+/* mob version*/
+@media(max-width:1199px) {
+	.header .mobile-logo {
+	display: block;
+	margin-right: 4px;
+}
+	.custom-select--lang {
+	 	display: none;
+
+	}
+	header.header .header-menu ul li{margin-left: 16px;}
+	.header-center .header-menu{
+		overflow: hidden;
+		overflow-x:auto;
 	}
 }

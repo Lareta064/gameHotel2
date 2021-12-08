@@ -1,16 +1,26 @@
 /*========стань игроком======*/
-.investor-cta{
-	
+.investor-cta{	
 	background: #FFFFFF;
 	
 }
 .investor-cta-header{
 	justify-content: space-between;
 	align-items: flex-start;
+	@media(max-width:767px){
+		flex-direction: column;
+		.button{
+			width: 246px;
+			text-align: center;
+		}
+	}
 }
 .investor-cta-header__title{
 	width: 70%;
 	max-width:728px;
+		@media(max-width:767px) {
+			width: 100%;
+			margin-bottom: 30px;
+		}
 }
 
 .light-cards-grid {

@@ -1,7 +1,11 @@
 header.header
 	.header-content.d-flex
 		.header-left
-			.custom-select
+			.mobile-logo
+				a(href="#!")
+					svg(width="42" height="24")
+						use(xlink:href="./img/svg-sprite.svg#footer-logo")
+			.custom-select.custom-select--lang
 				.select-icon
 				.select-field
 					input(type="text" value="Ru" readonly)

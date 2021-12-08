@@ -9,6 +9,8 @@
 	&__text{
 		width: 80%;
 		max-width:585px;
+		position: relative;
+		z-index:  3;
 		
 	}
 	.button{
@@ -21,6 +23,30 @@
 			
 		}
 	}
+	@media(max-width:767px) {
+		padding-bottom: 0;
+		&__text {
+			width: 100%;
+			text-align: center;
+
+		}
+		.button{
+			margin-top: 24px;
+		}
+		
+	}
+	.our-offer__text-desk{
+		display: block;
+		@media(max-width:767px) {
+			display: none;
+		}
+	}
+	 .our-offer__text-mob{
+		display: none;
+		@media(max-width:767px) {
+			display: block;
+		}
+	 }
 }
 .our-offer .our-offer__bg{
 	position: absolute;
@@ -28,6 +54,10 @@
 	bottom: 0;
 	right: 0;
 	z-index: 2;
+	@media(max-width:767px) {
+		top:auto;
+		right: -50%;
+	}
 }
 .our-offer-content{
 	
@@ -36,5 +66,12 @@
 		bottom: 0;
 		left: 50%;
 		z-index: 3;
+		@media(max-width:767px){
+			position: relative;
+			left:auto;
+			bottom: auto;
+			margin-top: 44px;
+			height: 150px;
+		}
 	}
 }
