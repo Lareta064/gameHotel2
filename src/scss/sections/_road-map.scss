@@ -92,6 +92,9 @@
 		z-index: 2;
 		right: 20px;
 		bottom: -96px;
+		@media(max-width:991px){
+			display: none;
+		}
 	}
 } 
 .road-map__content .card-grid-trio{
@@ -105,5 +108,20 @@
 	}
 	@media(max-width:767px) {
 		grid-template-columns: repeat(1, 1fr);
+	}
+}
+/*swiper-style*/
+.road-map {
+.list-card{
+	@media(max-width:991px) {
+		width: 299px !important;
+		height: 530px;
+	}
+	@media(max-width:767px){
+		width: 240px!important;
+		padding: 16px;
+		.list-card__ul li span{display: none;}
+		.list-card li+li{margin-top: 16px;}
+	}
 	}
 }

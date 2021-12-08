@@ -1,10 +1,12 @@
 section.game-news
 	.container
-		h2.section-title Интересное из мира Game Fi
+		.flex-header
+			h2.section-title Интересное из мира Game Fi
+			a(href="#!").button.button--color Все новости
 		.game-news-cards
-			.card-grid-trio
+			.card-grid-trio.swiper-wrapper
 				//=======one card ======
-				a(href="#!").card-light.card-light--pic
+				a(href="#!").card-light.card-light--pic.swiper-slide
 					.card-light__img
 						img(src="./img/game-news1.jpg", width="104" height="104" alt="alt")
 					.card-light__text
@@ -14,7 +16,7 @@ section.game-news
 							p 14.10.2021
 							span
 				//=======one card ======
-				a(href="#!").card-light.card-light--pic
+				a(href="#!").card-light.card-light--pic.swiper-slide
 					.card-light__img
 						img(src="./img/game-news2.jpg", width="104" height="104" alt="alt")
 					.card-light__text
@@ -24,7 +26,7 @@ section.game-news
 							p 14.10.2021
 							span
 				//=======one card ======
-				a(href="#!").card-light.card-light--pic
+				a(href="#!").card-light.card-light--pic.swiper-slide
 					.card-light__img
 						img(src="./img/game-news3.jpg", width="104" height="104" alt="alt")
 					.card-light__text
@@ -33,6 +35,5 @@ section.game-news
 						.card-light__details
 							p 14.10.2021
 							span
-
-
+		.swiper-pagination-news.swiper-pagination
 

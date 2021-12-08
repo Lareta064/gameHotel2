@@ -1,5 +1,6 @@
 .information-board{
 	background: linear-gradient(81.66deg, #271B64 0%, #0A0522 100%);
+	 
 	.information-board-head{
 		margin-bottom: 60px;
 		ul, li{
@@ -18,7 +19,7 @@
 			font-family: $ms;
 		}
 		span{
-			padding: 5px 12px;
+			padding: 4px 12px 2px;
 			background-color: #fff;
 			font-size: 16px;
 			color: #0A0522;
@@ -34,9 +35,11 @@
 			
 			span{
 				padding-right: 40px;
+				position: relative;
+				
 			}
 			svg{
-				top:5px;
+				top:3px;
 				right: 12px;
 				position: absolute;
 			}
@@ -82,9 +85,103 @@
 	@media(max-width:1439px){
 		width: 70%;
 	}
+	@media(max-width:1199px) {
+		width: 56%;
+	}
+	@media(max-width:1023px) {
+		display: none;
+	}
 	
 }
 .information-board-content{
 	position: relative;
 	z-index: 6;
+}
+.info-board-swiper,
+.information-board__img-mobile {display: none;}
+@media(min-width:1024px) and (max-width:1199px){
+	.information-board-head li+li{margin-left: 32px;}
+}
+@media(max-width:1023px) {
+	.info-board-swiper,
+	.information-board__img-mobile {
+		display: block;
+	}
+	.information-board {
+		.information-board-head{margin-bottom: 16px;}
+		.information-board-head li {
+				flex-direction: column;
+				align-items: flex-start;
+				span{
+					margin-top: 12px;
+					margin-left: 0;
+				}
+			}
+			.information-board__img-mobile {
+				width: 288px;
+				height: 288px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+
+				p {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: #fff;
+				}
+
+				p span {
+					display: block;
+					text-align: center;
+					font-family: $ms;
+					font-size: 18px;
+					line-height: 24px;
+
+					&+span {
+						font-family: $os;
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+
+			}
+	}
+
+}
+@media(max-width:1023px){
+	.information-board {
+		 background-color: #0A0522;
+		background-image: url('../img/grid.png');
+		background-position: center;
+		background-repeat: repeat;
+		background-size: auto;
+		.information-board__list{display: none;}
+		
+		.information-board-head .binance-item {
+			margin-left: 24px;
+			
+		}
+	}
+
+	.information-board  .swiper-slide {
+		width: 240px !important;
+
+	}
+
+	.information-board  .swiper-slide .label-text {
+		margin-top: 24px;
+	}
+}
+@media(max-width:767px) {
+	.information-board {
+		
+		.information-board-head {
+
+			li:nth-child(2) {
+				display: none;
+			}
+		}
+	}
 }

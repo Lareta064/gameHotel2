@@ -2,6 +2,7 @@ section.information-board
 	.container
 		.information-board__img
 			img(src="./img/infoBg.png", width="970" alt="alt")
+		
 		.information-board-content
 			.information-board-head
 				ul
@@ -14,10 +15,16 @@ section.information-board
 					li.binance-item
 						p Сеть
 						span Binance Smart Chain
-						svg(width="20" height="20")
-							use(xlink:href="./img/svg-sprite.svg#binanceIcon")
+							svg(width="20" height="20")
+								use(xlink:href="./img/svg-sprite.svg#binanceIcon")
 			
-			//========= info list ========				
+			.information-board__img-mobile
+				img(src="./img/infoBgMob.png", width="750" alt="alt")
+				p 
+					span 100 000 000
+					span GHot
+			
+			//========= DESKTOP  info list ========
 			.information-board__list
 				.information-board__list-block
 					.label-text.label-text--dashed
@@ -111,3 +118,106 @@ section.information-board
 							p Фонд для соучастников
 						.label-text__bottom
 							p 37 500 000 GHot
+
+			//====== MOBILE SWIPER=======
+			.info-board-swiper
+				.swiper-wrapper
+					//===one slide =====
+					.swiper-slide
+						//===card =====
+						.label-text.label-text--dashed
+							.label-text__top
+								span 20%
+								p Продажа токена
+							.label-text__bottom
+								p $2.5 млн. (20 000 000 GHot)
+
+						.label-text.label-text--bull
+							.label-text__top
+								p Продажа токена
+							.label-text__bottom
+								p 37 500 000 GHot
+						.label-text.label-text--bull
+							.label-text__top
+								p Продажа токена
+							.label-text__bottom
+								p 37 500 000 GHot
+					.swiper-slide
+						.label-text.label-text--bull
+							.label-text__top
+								p Продажа токена
+							.label-text__bottom
+								p 37 500 000 GHot
+						
+						
+						.label-text.label-text--star
+							.label-text__top
+								p Продажа токена
+							.label-text__bottom
+								p 37 500 000 GHot
+
+						.label-text.label-text--blue
+							.label-text__top
+								span 2,5%
+								p Экосистема и партнерства
+							.label-text__bottom
+								p 37 500 000 GHot
+					//===one slide =====
+					.swiper-slide
+						.label-text.label-text--pink
+							.label-text__top
+								span 50%
+								p Поддержка и развитие проекта
+							.label-text__bottom
+								p 75 000 000 GHot
+						
+						.label-text.label-text--violet
+							.label-text__top
+								span 10%
+								p Участники команды и советники
+							.label-text__bottom
+								p 75 000 000 GHot
+						
+						.label-text.label-text--aqua
+							.label-text__top
+								span 5%
+								p Продажа токена
+							.label-text__bottom
+								p 37 500 000 GHot
+					.swiper-slide
+						.label-text.label-text--red
+							.label-text__top
+								span 5%
+								p Маркетинг при токенсейле
+							.label-text__bottom
+								p 37 500 000 GHot
+
+						.label-text.label-text--green
+							.label-text__top
+								span 4%
+								p Резервный фонд
+							.label-text__bottom
+								p 37 500 000 GHot
+						
+						.label-text.label-text--purple
+							.label-text__top
+								span 2,5%
+								p Маркетинг на поздних стадиях
+							.label-text__bottom
+								p 37 500 000 GHot
+						
+					.swiper-slide
+						.label-text.label-text--blue
+							.label-text__top
+								span 2,5%
+								p Экосистема и партнерства
+							.label-text__bottom
+								p 37 500 000 GHot
+						
+						.label-text.label-text--lime
+							.label-text__top
+								span 1%
+								p Фонд для соучастников
+							.label-text__bottom
+								p 37 500 000 GHot
+				.swiper-pagination-info.swiper-pagination

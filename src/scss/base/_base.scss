@@ -126,7 +126,12 @@
 		font-family: $ms;
 	}
 }
-.section-title{margin-bottom: 56px;}
+.section-title{
+	margin-bottom: 56px;
+	@media(max-width:767px){
+		margin-bottom: 24px;
+	}
+}
 .text-20, .text-20 p{
 	font-size: 20px;
 	line-height: 1.4;
@@ -211,6 +216,7 @@
 .label-text{
 	.label-text__top{
 		display: flex;
+		align-items: flex-start;
 		span{
 			font-weight: 600;
 			font-size: 14px;
@@ -341,5 +347,48 @@
 .swiper-pagination{
 	display: flex;
 	justify-content: center;
-	bottom:25px;
+	
+	display: none;
+	@media(max-width:767px){
+		display: flex;
+	}
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal{bottom:25px;}
+.card-grid-trio.swiper-wrapper {
+	@media(max-width:767px) {
+		display: flex;
+	}
+}
+.swiper-pagination-roadMap.swiper-pagination{
+	@media(max-width:991px) {
+		display: flex;
+		bottom: -45px;
+	}
+	@media(max-width:767px) {
+		
+		bottom: -35px;
+	}
+}
+.road-map .card-grid-trio.swiper-wrapper,
+.game-news .card-grid-trio.swiper-wrapper {	
+	@media(max-width:991px) {
+		display: flex;
+	}
+	
+}
+.swiper-pagination-info{
+	.swiper-pagination-bullet {
+		background: #fff;
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: #7256FF;
+	}
+	
+}
+.info-board-swiper{
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		bottom: -25px;
+	}
 }
