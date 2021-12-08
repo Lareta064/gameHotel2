@@ -1,0 +1,39 @@
+.partners{
+	border-bottom: 1px solid #D4DFF1;
+	.partners-logo{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.partners-logo__item{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 104px;
+			border-radius: 24px;
+			overflow:hidden;
+		}
+		
+	}
+	.partners-logo__item.partners-dao {
+		width: 208px;		
+		background-color: #3F55F6;
+		
+	}
+	.partners-logo__item.partners-haw {
+		width: 216px;
+		background-color: #7342FE;
+		img {
+			max-width: unset;
+			height: 47px;
+			width: auto;
+		}
+		
+	}
+	.partners-logo__item.partners-crypto {
+		width: 300px;
+	}
+	.partners-logo__item.partners-kaz {
+		width: 160px;
+		
+	}
+}

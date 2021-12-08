@@ -38,13 +38,27 @@
 
 	.vertical-slider--left{
 		position: sticky;
-		top: -50px;
+		top:100px;
 	}
 }
 .vertical-slider--right{
-	padding-bottom: 15vh;
+	// padding-bottom: 15vh;
 }
-.vertical-slider--left{height: 400px;}
+.vertical-slider--left{
+	height: 1015px;
+	@media(max-width:1279px) {
+		height: 940px;
+	}
+	@media(max-width:1023px){
+		height: 735px;
+	}
+}
+.vertical-slider__text{
+	margin-bottom: 400px;
+	p+p{
+		margin-top: 24px;
+	}
+}
 
 .vertical-slider__img .vertical-slider__img-item {
  	position: absolute;
