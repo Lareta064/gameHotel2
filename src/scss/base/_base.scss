@@ -183,10 +183,16 @@
 	.flex-header__text{
 		width: 85%;
 		max-width: 687px;
+		@media(max-width:767px){
+			width: 100%;
+		}
 	}
 	.flex-header__btn{
 		flex-shrink: 0;
 		margin-left: 16px;
+		@media(max-width:767px) {
+			display: none;
+		}
 	}
 }
 .text-column{
@@ -330,4 +336,10 @@
 
 	}
 	
+}
+/***swiper pagination***/
+.swiper-pagination{
+	display: flex;
+	justify-content: center;
+	bottom:25px;
 }

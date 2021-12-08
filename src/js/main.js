@@ -73,3 +73,18 @@ function vertSlider(textBlockClassName, imageBlockClassName) {
 if (document.querySelector('.how-bay')) {
   vertSlider('vertical-slider__text-item','vertical-slider__img-item' );
 }
+(function () {
+  // Activate swipers
+  const swips = new Swips();
+  /*Глав желтый блок*/
+  swips.addSwiper(".swiper-investor-cta", "", {
+	slidesPerView: 1,        
+	spaceBetween: 24,
+	pagination: {
+		el: ".swiper-pagination-cta",
+		clickable: true,
+	},
+  });
+
+  swips.init();
+})();

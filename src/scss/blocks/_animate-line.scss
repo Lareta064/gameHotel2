@@ -37,6 +37,9 @@
 	@media(max-width:1279px){
 		height: 130px;
 	}
+	@media(max-width:767px) {
+		margin-top: 36px;
+	}
 }
 .animate-line_1{
 	
@@ -47,16 +50,25 @@
 	background-image: url(../img/line2.png);
 	-webkit-animation: moveRight 14s linear infinite;
 	animation: moveRight 14s linear infinite;
+	@media(max-width:767px) {
+		margin-top: 24px;
+	}
 	
 }
 .animate-lines .flex-header__text{
 	display: flex;
 	align-items: center;
 	color: #ffffff;
-	span{
-		font-size: 77px;
-		color: #fff;
+	span{		
 		margin-right: 50px;
+		@media(max-width:767px){
+			
+			margin-right: 30px;
+			svg{
+				width: 57px;
+			height: 40px;
+			}
+		}
 	}
 	@media(max-width:1023px){
 		.text-20 p{
@@ -65,5 +77,14 @@
 		span {
 			margin-right: 30px;
 		}
+	}
+}
+
+.flex-header__btn.animate-lines__btnMob{
+	display: none;
+	@media(max-width:767px) {
+		display: flex;
+		justify-content: center;
+		margin-top: 36px;
 	}
 }
