@@ -1,0 +1,27 @@
+.page-modal.login-modal(data-modal="reg_1")
+	.page-modal__header
+		h3.text-16 Авторизация
+		button.close-btn &#10006;
+	.page-modal__img
+		.image-group
+			img(src="./img/registr.png", width="177" alt="alt")
+			img(src="./img/lock.png", width="108" alt="alt")
+	.page-modal__body
+		form.register-form
+			.register-step
+				.register-step-title
+					span.text-13 1/2
+					p.text-15 Мы отправим код на телефон
+				.form-field
+					span.form-field-icon
+						svg.phone-svg
+							use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					input(type="text" class="phone" name="phone" placeholder="+7(___)___-__-__")
+				.register-step-btn
+					button.button.button--color.button-icon
+						span Войти
+						svg(width="16" height="16")
+							use(xlink:href="./img/svg-sprite.svg#arrRight")
+		
+		.text-agree
+			p.text-13 Нажимая на кнопку вы соглашаетесь с правилам и обработкой и политикой конфиденциальности.

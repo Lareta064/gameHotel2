@@ -1,5 +1,7 @@
 //================ui==========
 .container
+	
+	
 	.button Купить $Hotel
 	.button--color.button Купить $Hotel
 	.button--color.button.button--flex
@@ -11,12 +13,20 @@
 			img(src="./img/gamepad.png", width="80" alt="img")
 		.button--color.button Стать игроком
 
+.button.button--color.button-icon
+	span Войти
+	svg(width="16" height="16")
+		use(xlink:href="./img/svg-sprite.svg#arrRight")
 .card-light
 	.card-light__head
 		h4 Легальный найм
 		span 01
 	.card-light__text
-
+.form-field
+	span.form-field-icon
+		svg.phone-svg
+			use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+	input(type="text")
 .information-board__list
 	.label-text.label-text--dashed
 		.label-text__top

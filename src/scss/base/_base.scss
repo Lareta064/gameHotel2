@@ -93,7 +93,16 @@
 	box-shadow: none;
 	cursor: pointer;
   }
-  
+  #overlay{
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background-color:  rgba(10, 5, 34, .72);
+	  z-index: 25;
+	  display: none;
+  }
   section {
 	
 	position: relative;
@@ -138,6 +147,18 @@
 		margin-bottom: 24px;
 	}
 }
+.text-13{
+	font-size: 13px;
+	line-height: 20px;
+}
+.text-15,
+.text-16{
+	font-family: $ms;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #0A0522;
+}
+.text-15{font-size: 15px;}
 .text-20, .text-20 p{
 	font-size: 20px;
 	line-height: 1.4;
@@ -209,6 +230,11 @@
 			display: none;
 		}
 	}
+}
+svg.phone-svg{
+	fill:#788CAB;
+	width:20px;
+	height:20px;
 }
 .text-column{
 	flex-shrink: 0;

@@ -24,21 +24,17 @@
 	}
 	
 }
-// .button--white{
-// 	background: #FFFFFF;
-// 	color: $text;
-// 	&:hover{
-// 		background-color: transparent;
-// 		color: #fff;
-// 	}
-// }
+
 .button--color {
 	background: #7256FF;
 	border: 1px solid #7256FF;
 	color: #ffffff;
 	&:hover{
-		color: $text;
-		background-color: transparent;
+	
+		background-color: #E857D1;
+		border-color: #E857D1;
+		color: #fff;
+		
 	}
 }
 .button--color.button--color-dark{
@@ -53,7 +49,7 @@
 	margin-right: 14px;
 }
 .button--color:hover svg {
-	fill:#7256FF;
+	fill:#fff;
 
 }
 .button--flex{
@@ -93,5 +89,18 @@
 		background-color: #E857D1;
 		border-color: #E857D1;
 		color: #fff;
+	}
+}
+svg#arrRight{
+	fill:#7256FF;
+}
+.button.button-icon{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	svg{
+		fill:#fff;
+		margin-left: 12px;
+		margin-right: 0;
 	}
 }
