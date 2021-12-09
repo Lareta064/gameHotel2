@@ -1,42 +1,56 @@
 //========== BANNER BENEFITS ==========
 section.investor-banner
+	.contact-icons.contact-icons--vertical
+		a(href="").contact-icons__item
+			svg
+				use(xlink:href="./img/svg-sprite.svg#twitIcon")
+		a(href="").contact-icons__item
+			svg
+				use(xlink:href="./img/svg-sprite.svg#fbIcon")
+		a(href="").contact-icons__item
+			svg
+				use(xlink:href="./img/svg-sprite.svg#tgIcon")
 	.container
-		.investor-banner-content
-			.investor-banner__img
-				img(src="./img/investor/banner-group2.png", width="656" alt="img")
-			.investor-banner__header
-				.investor-banner__title
-					h3.title-3 Платформа для майнинга
-					p  в блокчейн играх
-					.investor-banner__text
-						p Мы создали токены $GHot для участия в доле от&nbsp;дохода нашей организации в игровом майнинге
-					.investor-banner__btn
-						a(href="#!").button.button--white Купить $Hotel
-						a(href="#!").button Получить доход
+		//===== desktop version=====
+		.investor-banner-desktop
+			.investor-banner-content
+				.investor-banner__img
+					img(src="./img/investor/banner-group2.png", width="656" alt="img")
+				
+				.investor-banner__header
+					.investor-banner__title
+						h3.title-3 Платформа для майнинга
+						p  в блокчейн играх
+						.investor-banner__text
+							p Мы создали токены $GHot для участия в&nbsp;доле от&nbsp;дохода нашей организации в игровом майнинге
+						.investor-banner__btn
+							a(href="#!").button.button--white Купить $Hotel
+							a(href="#!").button Получить доход
 
-			.investor-banner__benefits.mt-64
-				.text-column-row.d-flex
-					//======one text column
-					.text-column
-						.text-column__title
-							p 105%
-						.text-column__descr
-							p Текущая доходность#[br] майнинг пула 
-					//======one text column
-					.text-column
-						.text-column__title
-							p 131+
-						.text-column__descr
-							p Профессиональных#[br] игроков
-					//======one text column
-					.text-column
-						.text-column__title
-							p $231 000+
-						.text-column__descr
-							p Стоимость игровых#[br] активов в системе
-					//======one text column
-					.text-column
-						.text-column__title
-							p 3
-						.text-column__descr
-							p Игровых проекта#[br] в инвестиционном пуле
+				.investor-banner__benefits.mt-64.swiper
+					.text-column-row.d-flex.swiper-wrapper
+						//======one text column
+						.text-column.swiper-slide
+							.text-column__title
+								p 105%
+							.text-column__descr
+								p Текущая доходность#[br] майнинг пула 
+						//======one text column
+						.text-column.swiper-slide
+							.text-column__title
+								p 131+
+							.text-column__descr
+								p Профессиональных#[br] игроков
+						//======one text column
+						.text-column.swiper-slide
+							.text-column__title
+								p $231 000+
+							.text-column__descr
+								p Стоимость игровых#[br] активов в системе
+						//======one text column
+						.text-column.swiper-slide
+							.text-column__title
+								p 3
+							.text-column__descr
+								p Игровых проекта#[br] в инвестиционном пуле
+					.swiper-pagination-investBenef.swiper-pagination

@@ -7,8 +7,39 @@
 		height: 80px;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
+		
+		p{
+			font-size: 13px;
+			line-height: 20px;
+			font-family: $os;
+		}
 	}
 	.footer-logo svg{
 		fill:#788CAB;
+	}
+	.footer-logo{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@media(max-width:1199px){
+		margin-bottom: 70px;
+	}
+}
+.footer .footer-content--desk {
+	display: flex;
+	@media(max-width: 767px){
+		display: none;
+	}
+}
+
+.footer .footer-content--mob {
+	display: none;
+	
+	@media(max-width: 767px){
+			display: flex;
+
 	}
 }

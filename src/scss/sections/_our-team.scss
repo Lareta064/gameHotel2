@@ -1,13 +1,32 @@
 .our-team{
 	background: #EEF5FF;
-	.double-card{
-		@media(max-width:767px){
-			width:240px!important;
-		}
+	
+	
+}
+.our-experts,
+.our-team{
+	@media(max-width:767px) {
+		padding-bottom: 27px;
 	}
 }
 .our-experts__cards.card-grid-duo {
-	@media(max-width:767px) {
-		grid-template-columns: 1fr;
+	@media(max-width:1023px) {
+		display: flex;
+		// .double-card{width: 370px!important;}
+	}
+}
+.our-team .double-card__top {
+	@media(max-width:1023px) {
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
+
+		h4 {
+			font-size: 14px;
+		}
+
+		p {
+			font-size: 13px;
+		}
 	}
 }

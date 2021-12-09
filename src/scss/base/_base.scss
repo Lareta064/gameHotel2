@@ -180,6 +180,7 @@
 }
 .mt-64{
 	margin-top: 64px;
+	@media(max-width:767px){margin-top: 44px;}
 }
 .mt-56	{
 	margin-top: 56px;
@@ -343,10 +344,86 @@
 		font-size: 18px;
 		line-height: 24px;
 
+	}	
+}
+.contact-icons{
+	display: flex;
+	a{
+		display: flex;
+		width: 32px;
+		height: 32px;
+		flex-shrink: 0;
+		justify-content: center;
+		align-items: center;
+		background: #EEF5FF;
+		border-radius: 9px;
+		border: 1px solid #EEF5FF;
+		transition: .3s;
+		&:hover{
+			border-color: #788CAB;
+			background-color: #fff;
+		}
 	}
-	
+	svg{
+		width: 24px;
+		height: 24px;
+		@media(max-width:767px) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	@media(max-width:767px){
+		a+a{
+			margin-left: 12px;
+		}
+	}
+}
+.contact-icons--vertical{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	flex-direction: column;
+	border: 1px solid #D4DFF1;
+	border-right:0;
+	border-radius: 12px 0px 0px 12px;
+	background: #FFFFFF;
+	overflow: hidden;
+	a{
+		background-color: #fff;
+		width: 40px;
+		height: 40px;
+		border: none;
+		border-radius: 0;
+		&:nth-child(even){
+			border-top: 1px solid #D4DFF1;
+			border-bottom: 1px solid #D4DFF1;
+		}
+		&:hover{
+			background-color: #eef5ff;
+		}
+	}
 }
 /***swiper pagination***/
+.swiper {
+	
+	overflow: unset;
+	
+	padding: 0;
+	
+padding-bottom: 0;
+	@media(max-width: 1023px){
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		overflow: hidden;
+		list-style: none;
+		padding: 0;
+		z-index: 1;
+		padding-bottom: 0;
+	}
+}
 .swiper-pagination{
 	display: flex;
 	justify-content: center;
@@ -356,25 +433,28 @@
 		display: flex;
 	}
 }
-.swiper-pagination-bullets.swiper-pagination-horizontal{bottom:25px;}
+.swiper-pagination-bullets.swiper-pagination-horizontal{bottom:10px;}
+.card-grid-duo.swiper-wrapper,
 .card-grid-trio.swiper-wrapper {
 	@media(max-width:767px) {
 		display: flex;
 	}
 }
-.swiper-pagination-roadMap.swiper-pagination{
-	@media(max-width:991px) {
+.swiper-our-experts .card-grid-trio.swiper-wrapper,
+.our-team .card-grid-trio.swiper-wrapper,
+.road-map .card-grid-trio.swiper-wrapper,
+.game-news-cards .card-grid-trio.swiper-wrapper,
+.our-team__cards.swiper-wrapper {
+	@media(max-width:1023px) {
 		display: flex;
-		bottom: -45px;
-	}
-	@media(max-width:767px) {
-		
-		bottom: -35px;
 	}
 }
+
+.swiper-pagination-info,
 .road-map .card-grid-trio.swiper-wrapper,
-.game-news .card-grid-trio.swiper-wrapper {	
-	@media(max-width:991px) {
+.game-news .card-grid-trio.swiper-wrapper,
+.swiper-pagination-roadMap.swiper-pagination {
+	@media(max-width:1023px) {
 		display: flex;
 	}
 	
@@ -390,8 +470,6 @@
 	}
 	
 }
-.info-board-swiper{
-	.swiper-pagination-bullets.swiper-pagination-horizontal {
-		bottom: -25px;
-	}
+.swiper-wrapper{
+	padding-bottom: 40px;
 }

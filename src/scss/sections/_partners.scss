@@ -1,9 +1,27 @@
 .partners{
 	border-bottom: 1px solid #D4DFF1;
+	overflow: hidden;
 	.partners-logo{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		overflow:hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+		
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+		@media(min-width:575px) and(max-width:1023px){
+			width: calc(100% + 50vw - 50%);
+		}
+		@media(max-width:574px) {
+			flex-wrap: wrap;
+			max-width:330px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.partners-logo__item{
 			display: flex;
 			justify-content: center;
@@ -11,12 +29,27 @@
 			height: 104px;
 			border-radius: 24px;
 			overflow:hidden;
+			flex-shrink:0;
+			margin-left: auto;
+			margin-right: auto;
+			&+.partners-logo__item{margin-left: 24px;}
+			@media(max-width:575px) {
+				height: 54px;
+				border-radius: 12px;
+				&:nth-last-child(-n+2){margin-top: 24px;}
+				&+.partners-logo__item {
+					margin-left: 0;
+				}
+			}
 		}
 		
 	}
 	.partners-logo__item.partners-dao {
 		width: 208px;		
 		background-color: #3F55F6;
+		@media(max-width:574px) {
+			width: 152px;
+		}
 		
 	}
 	.partners-logo__item.partners-haw {
@@ -27,13 +60,27 @@
 			height: 47px;
 			width: auto;
 		}
+		@media(max-width:574px) {
+			width: 152px;
+			img {height: 24px;}
+		}
 		
 	}
 	.partners-logo__item.partners-crypto {
 		width: 300px;
+		@media(max-width:574px) {
+			width: 152px;
+		}
 	}
 	.partners-logo__item.partners-kaz {
 		width: 160px;
+		@media(max-width:574px) {
+			width: 150px;
+			background-color: #060C0E;
+			img{
+				width: 87px;
+			}
+		}
 		
 	}
 }

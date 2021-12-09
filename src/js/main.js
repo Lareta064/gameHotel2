@@ -1,5 +1,6 @@
 // ========= КАСТОМНЫЙ СЕЛЕКТ =============
-	const customSelect = document.querySelector('.custom-select');
+const customSelect = document.querySelector('.custom-select');
+if(customSelect){	
 	customSelect.addEventListener('click', function(e){
 		const thisList = customSelect.querySelector('.select-list');
 		const thisInput = customSelect.querySelector('input');
@@ -28,18 +29,22 @@
 			thisList.classList.remove('visible');
 		}
 	});
+}
+
 const headerProfileArrow = document.getElementById('profile-arrow');
 const headerProfileDrop = document.getElementById('profile-menu');
-headerProfileArrow.addEventListener('click', function(){
-	if(this.classList.contains('active')){
-		this.classList.remove('active');
-		headerProfileDrop.classList.remove('active');
+if(headerProfileArrow){
+	headerProfileArrow.addEventListener('click', function(){
+		if(this.classList.contains('active')){
+			this.classList.remove('active');
+			headerProfileDrop.classList.remove('active');
 
-	}else{
-		this.classList.add('active');
-		headerProfileDrop.classList.add('active');
-	}
-});
+		}else{
+			this.classList.add('active');
+			headerProfileDrop.classList.add('active');
+		}
+	});
+}
 // vertical-scroll
 function vertSlider(textBlockClassName, imageBlockClassName) {
 
@@ -78,13 +83,119 @@ if (document.querySelector('.how-bay')) {
   const swips = new Swips();
   /*Глав желтый блок*/
   swips.addSwiper(".swiper-investor-cta", "", {
-	slidesPerView: 1,        
+	loop: true,
+	slidesPerView: 1.2,        
 	spaceBetween: 24,
 	pagination: {
 		el: ".swiper-pagination-cta",
 		clickable: true,
 	},
   });
-
+	swips.addSwiper(".game-news-cards", "min-width:1024px", {
+		loop: true,
+		slidesPerView: 1.2, 
+		spaceBetween: 24,
+		pagination: {
+			el: ".swiper-pagination-news",
+			clickable: true,
+		},
+		breakpoints: {
+			574: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 2.5,
+				spaceBetween: 24,
+			},
+		},
+	});
+	swips.addSwiper(".road-map-swiper", "min-width:1024px", {
+		loop: true,
+		slidesPerView: 1.2, 
+		spaceBetween: 24,
+		pagination: {
+			el: ".swiper-pagination-roadMap",
+			clickable: true,
+		},
+		breakpoints: {
+			574: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+			},
+		},
+	});
+	swips.addSwiper(".info-board-swiper", "min-width:1024px", {
+		slidesPerView: 1, 
+		spaceBetween: 24,
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination-info",
+			clickable: true,
+		},
+		breakpoints: {
+			574: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+			},
+		},
+	});
+	swips.addSwiper(".swiper-team", "min-width:1024px", {
+		slidesPerView: 'auto', 
+		spaceBetween: 24,
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination-team",
+			clickable: true,
+		},
+		breakpoints: {
+			574: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 2.5,
+				spaceBetween: 24,
+			}
+			
+		},
+	});
+	swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
+		slidesPerView: .8, 
+		spaceBetween: 24,
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination-experts",
+			clickable: true,
+		},
+		breakpoints: {
+			
+			768: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			}
+			
+		},
+	});
+	swips.addSwiper(".investor-banner__benefits", "", {
+		slidesPerView: 2, 
+		spaceBetween: 24,
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination-investBenef",
+			clickable: true,
+		}
+	});
+	
   swips.init();
+ 
+
 })();

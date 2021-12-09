@@ -1,13 +1,26 @@
 /*====   banner benefits==========*/
-.investor-banner{
-	background-color: #FEBEFF;
+.investor-banner{	
 	padding-top: 40px;
 	padding-bottom: 72px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	overflow: hidden;
+	position: relative;
+	&:after{
+		content:'';
+		position: absolute;
+		z-index: 1;
+		width: 200%;
+		height: 200%;
+		top: 50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		background: radial-gradient(50% 50% at 50% 50%, #FEBEFF 0%, rgba(247, 191, 162, 0.463542) 54.17%, rgba(241, 201, 82, 0) 100%);
+		opacity: 0.32;
+	}
 }
 .investor-banner-content{
 	position: relative;
+	z-index: 2;
 	
 	.investor-banner__header {
 		height: 496px;
@@ -58,9 +71,16 @@
 	}
 	.investor-banner__btn{
 		margin-top: auto;
+		display: flex;
+		align-items: center;
 		.button +.button{margin-left: 32px;}
 		@media(max-width:1023px) {
 			margin-top: 40px;
+		}
+		@media(max-width:1023px) {
+			.button+.button {
+				margin-left: 25px;
+			}
 		}
 	}
 }
@@ -82,6 +102,10 @@
 .investor-banner__benefits{
 	position: relative;
 	z-index: 5;
+	@media(max-width:1023px){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 .investor-banner__benefits .text-column-row{
 	
@@ -110,5 +134,62 @@
 			
 
 		}
+	}
+}
+.investor-banner .contact-icons--vertical {
+	display: flex;
+	@media(max-width:767px){
+		display: none;
+	}
+}
+/****mob***/
+@media(max-width:1023px) {
+	.investor-banner-content .investor-banner__header {
+		background-image: url('../img/investor/bannerMob.png');
+		background-size: cover;
+		background-position: left;
+		background-repeat: no-repeat;
+		height: 380px;
+		border-radius: 0;
+		padding: 44px 24px;
+
+	}
+
+	.investor-banner:after {
+		background: none;
+	}
+
+	.investor-banner-content .investor-banner__header:before {
+		display: none;
+	}
+	.investor-banner .container {
+		padding: 0;
+	}
+	.investor-banner .investor-banner__title .title-3 ,
+	.investor-banner .investor-banner__title p {
+		font-size: 26px;
+		line-height: 1.4;
+	}
+
+	.investor-banner .investor-banner__text p {
+		font-size: 18px;
+		line-height: 20px;
+		max-width: 330px;
+	}
+}
+@media(max-width:767px) {
+	.investor-banner{
+		padding-bottom: 27px;
+		padding-top: 0;
+	}
+	.investor-banner .investor-banner__title .title-3,
+	.investor-banner .investor-banner__title p {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+	.investor-banner .investor-banner__text p {
+		font-size: 14px;
+		line-height: 20px;
+		max-width:176px;
 	}
 }

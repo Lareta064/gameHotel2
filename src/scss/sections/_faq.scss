@@ -6,10 +6,25 @@
 		max-width: 568px;
 	}
 	.faq-content-col+.faq-content-col{margin-left: 72px;}
-	@media(max-width:1279px){
-		justify-content: space-between;
+	@media(max-width:1279px) {
+		.faq-content-col {width: 49%;}
 		.faq-content-col+.faq-content-col {
 			margin-left:auto;
+		}
+	}
+	@media(max-width:1023px){
+		justify-content: space-between;
+		flex-direction: column;
+		
+		
+	
+		.faq-content-col+.faq-content-col {
+			margin-left: 0;
+		}
+		.question-card ,
+		.faq-content-col {
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 }
@@ -33,4 +48,7 @@
 .faq-content-col+.faq-content-col .question-card,
 .faq-content .question-card+.question-card {
 	margin-top: 72px;
+	@media(max-width:1023px){
+		margin-top: 20px;
+	}
 }

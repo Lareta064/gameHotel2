@@ -168,8 +168,16 @@ header.header{
 
 	}
 	header.header .header-menu ul li{margin-left: 16px;}
-	.header-center .header-menu{
+	.header-content {
 		overflow: hidden;
 		overflow-x:auto;
-	}
+		width: 100%;
+		scrollbar-width: none;
+		}
+
+		.header-content::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	.header-center{padding-right: 44px;}
 }
