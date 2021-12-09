@@ -1,7 +1,10 @@
 /*========стань игроком======*/
 .investor-cta{	
 	background: #FFFFFF;
-	
+	@media(max-width:767px){
+		padding-bottom: 27px;
+		overflow:hidden;
+	}
 }
 .investor-cta-header{
 	justify-content: space-between;
@@ -188,11 +191,17 @@
 }
 .swiper-investor-cta{
 	margin-top: 34px;
-	display: none;
-	@media(max-width:767px) {
+	
+	@media(max-width:767px) {			
+	
+		width: calc(50% + 50vw);
+		
 		.swiper-slide{
 			
 			.card-light +.card-light{margin-top: 24px;}
 		}
 	}
+}
+@media(min-width:768px){
+	.swiper-investor-cta{display: none;}
 }

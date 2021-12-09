@@ -10,6 +10,9 @@
 	ul{
 		width: 71%;
 		justify-content: space-between;
+		@media(max-width:767px){
+			width: 100%;
+		}
 	}
 		p {
 			font-weight: 600;
@@ -123,7 +126,13 @@
 				margin-left: auto;
 				margin-right: auto;
 				position: relative;
-
+				img{
+				animation-name: spin;
+				animation-duration: 10s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;	
+				}
+				
 				p {
 					position: absolute;
 					top: 50%;
@@ -159,22 +168,19 @@
 		background-size: auto;
 		.information-board__list{display: none;}
 		
-		.information-board-head .binance-item {
-			margin-left: 24px;
-			
-		}
+		
 	}
 
-	.information-board  .swiper-slide {
-		width: 240px !important;
-
-	}
 
 	.information-board  .swiper-slide .label-text {
 		margin-top: 24px;
 	}
 }
 @media(max-width:767px) {
+	.information-board-head .binance-item {
+		margin-left: 16px;
+
+	}
 	.information-board {
 		padding-bottom: 27px;
 		.information-board-head {

@@ -1,7 +1,8 @@
 /*==========animation line==========*/
 .animate-lines{
-	padding-top: 80px;
-	padding-bottom: 96px;
+	@media(max-width:767px){
+		padding-bottom: 44px;
+	}
 	background: #0A0522;	
 	position: relative;
 	.container{
@@ -35,10 +36,11 @@
 	position: relative;
 	z-index:  3;
 	@media(max-width:1279px){
-		height: 130px;
+		height: 132px;
 	}
 	@media(max-width:767px) {
 		margin-top: 36px;
+		height: 104px;
 	}
 }
 .animate-line_1{

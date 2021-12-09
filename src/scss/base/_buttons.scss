@@ -14,6 +14,7 @@
 	color: #ffffff;
 	transition: .2s;
 	white-space: nowrap;
+	font-family: $ms;
 	&:focus{
 		outline: none ;
 	}
@@ -23,14 +24,14 @@
 	}
 	
 }
-.button--white{
-	background: #FFFFFF;
-	color: $text;
-	&:hover{
-		background-color: transparent;
-		color: #fff;
-	}
-}
+// .button--white{
+// 	background: #FFFFFF;
+// 	color: $text;
+// 	&:hover{
+// 		background-color: transparent;
+// 		color: #fff;
+// 	}
+// }
 .button--color {
 	background: #7256FF;
 	border: 1px solid #7256FF;
@@ -69,5 +70,28 @@
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 2;
+	}
+}
+.button--pink {
+	background-color: #E857D1;
+	border-color: #E857D1;
+	color: #fff;
+
+	&:hover {
+		background-color: #fff;
+		color: #0A0522;
+		border-color: #fff;
+	}
+}
+
+.button--white {
+	background-color: #fff;
+	color: #0A0522;
+	border-color: #fff;
+
+	&:hover {
+		background-color: #E857D1;
+		border-color: #E857D1;
+		color: #fff;
 	}
 }

@@ -5,6 +5,20 @@
 }
 .our-experts,
 .our-team{
+	@media(max-width:1023px) {
+		overflow: hidden;
+		.container{
+			width:calc(50% + 50vw);
+			padding-right: 0;
+		}
+		.double-card__bottom p {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+			height: 72px;
+		}
+	}
 	@media(max-width:767px) {
 		padding-bottom: 27px;
 	}

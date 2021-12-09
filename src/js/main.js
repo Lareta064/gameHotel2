@@ -81,20 +81,46 @@ if (document.querySelector('.how-bay')) {
 (function () {
   // Activate swipers
   const swips = new Swips();
-  /*Глав желтый блок*/
+  	swips.addSwiper(".investor-banner__benefits", "", {
+		slidesPerView: 1.2, 
+		spaceBetween: 24,
+		loop: true,
+		speed:800,
+		pagination: {
+			el: ".swiper-pagination-investBenef",
+			clickable: true,
+		},
+		breakpoints: {
+			
+			425: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			}
+			
+		}
+	});
   swips.addSwiper(".swiper-investor-cta", "", {
 	loop: true,
-	slidesPerView: 1.2,        
+	slidesPerView: 1.4,        
 	spaceBetween: 24,
+	speed:800,
 	pagination: {
 		el: ".swiper-pagination-cta",
 		clickable: true,
 	},
+	breakpoints: {
+		
+		575: {
+			slidesPerView: 2,
+			spaceBetween: 24,
+		}
+	}
   });
 	swips.addSwiper(".game-news-cards", "min-width:1024px", {
 		loop: true,
 		slidesPerView: 1.2, 
 		spaceBetween: 24,
+		speed:800,
 		pagination: {
 			el: ".swiper-pagination-news",
 			clickable: true,
@@ -108,12 +134,13 @@ if (document.querySelector('.how-bay')) {
 				slidesPerView: 2.5,
 				spaceBetween: 24,
 			},
-		},
+		}
 	});
 	swips.addSwiper(".road-map-swiper", "min-width:1024px", {
 		loop: true,
 		slidesPerView: 1.2, 
 		spaceBetween: 24,
+		speed:800,
 		pagination: {
 			el: ".swiper-pagination-roadMap",
 			clickable: true,
@@ -127,12 +154,13 @@ if (document.querySelector('.how-bay')) {
 				slidesPerView: 2,
 				spaceBetween: 24,
 			},
-		},
+		}
 	});
 	swips.addSwiper(".info-board-swiper", "min-width:1024px", {
 		slidesPerView: 1, 
 		spaceBetween: 24,
 		loop: true,
+		speed:800,
 		pagination: {
 			el: ".swiper-pagination-info",
 			clickable: true,
@@ -146,12 +174,13 @@ if (document.querySelector('.how-bay')) {
 				slidesPerView: 2,
 				spaceBetween: 24,
 			},
-		},
+		}
 	});
 	swips.addSwiper(".swiper-team", "min-width:1024px", {
 		slidesPerView: 'auto', 
 		spaceBetween: 24,
 		loop: true,
+		speed:800,
 		pagination: {
 			el: ".swiper-pagination-team",
 			clickable: true,
@@ -166,12 +195,13 @@ if (document.querySelector('.how-bay')) {
 				spaceBetween: 24,
 			}
 			
-		},
+		}
 	});
 	swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
 		slidesPerView: .8, 
 		spaceBetween: 24,
 		loop: true,
+		speed:800,
 		pagination: {
 			el: ".swiper-pagination-experts",
 			clickable: true,
@@ -183,17 +213,9 @@ if (document.querySelector('.how-bay')) {
 				spaceBetween: 24,
 			}
 			
-		},
-	});
-	swips.addSwiper(".investor-banner__benefits", "", {
-		slidesPerView: 2, 
-		spaceBetween: 24,
-		loop: true,
-		pagination: {
-			el: ".swiper-pagination-investBenef",
-			clickable: true,
 		}
 	});
+
 	
   swips.init();
  

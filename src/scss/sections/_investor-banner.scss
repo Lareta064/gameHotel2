@@ -21,7 +21,17 @@
 .investor-banner-content{
 	position: relative;
 	z-index: 2;
-	
+	.text-column {
+		position: relative;
+
+		span {
+			font-size: 12px;
+			font-family: $mr;
+			position: absolute;
+			top: -16px;
+			left: 0;
+		}
+	}
 	.investor-banner__header {
 		height: 496px;
 		color: #ffffff;
@@ -82,6 +92,28 @@
 				margin-left: 25px;
 			}
 		}
+		// @media(max-width:767px){
+		// 	.button.button--white {
+		// 		background-color: #E857D1;
+		// 		border-color: #E857D1;
+		// 		color: #fff;
+		// 		&:hover{
+		// 			background-color: #fff;
+		// 			color:#0A0522;
+		// 			border-color: #fff;
+		// 		}
+		// 	}
+		// 	.button{
+		// 		background-color: #fff;
+		// 		color:#0A0522;
+		// 		border-color: #fff;
+		// 		&:hover {
+		// 		background-color: #E857D1;
+		// 		border-color: #E857D1;
+		// 		color: #fff;
+		// 		}
+		// 	}
+		// }
 	}
 }
 .investor-banner__img{
@@ -191,5 +223,16 @@
 		font-size: 14px;
 		line-height: 20px;
 		max-width:176px;
+	}
+}
+.investor-banner__benefits.swiper{
+	@media(min-width:768px){
+		display: none;
+	}
+}
+.investor-banner__benefits.visible-768{
+	display: none;
+	@media(min-width:768px) {
+		display: block;
 	}
 }

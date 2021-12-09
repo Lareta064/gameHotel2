@@ -104,14 +104,14 @@
 	 font-family: $os;
  }
  .vertical-slider__text-item+.vertical-slider__text-item{
-	 margin-top: 64px;
+	 margin-top: 164px;
  }
  /* phone-img*/
 .vertical-slider--left{
 	position: relative;
 	.vertical-slider__bg{
 		position: absolute;
-		top: 100px;
+		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 100%;

@@ -1,5 +1,15 @@
 .road-map{
 	background-color: #EEF5FF;
+		@media(max-width:1023px) {
+			overflow: hidden;
+
+			.container {
+				width: calc(50% + 50vw);
+			}
+		}
+	@media(max-width:767px){
+		padding-bottom: 27px;
+	}
 }
 
 .list-card{
@@ -119,8 +129,7 @@
 		height: 440px;
 	}
 	
-	@media(max-width:767px){
-		height: 530px;
+	@media(max-width:767px){		
 		padding: 16px;
 		.list-card__ul li span{display: none;}
 		.list-card li+li{margin-top: 16px;}

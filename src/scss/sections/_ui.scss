@@ -1,0 +1,33 @@
+.profile-persone__row {
+		height: 43px;
+		width: 145px;
+		border-radius: 25px;
+		background: #EEF5FF;
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 13px;
+		text-align: right;
+		color: #3E516F;
+		padding-left: 45px;
+	}
+	.profile-persone__arrow{
+		position: absolute;
+		right: 7px;
+		z-index: 3;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor:pointer;
+		svg{transition: .3s;}
+		&.active svg{
+			transform: rotate(180deg)
+		}
+	}
+/*********************************************/

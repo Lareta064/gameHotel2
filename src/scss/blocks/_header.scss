@@ -1,6 +1,26 @@
 header.header{
 	height: 56px;
 	background: #FFFFFF;
+	position: sticky;
+	top:0;
+	z-index: 15;
+	@media(max-width:1199px){
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top:auto;
+		border-top:1px solid #D4DFF1;
+		&:before{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 40px;
+			background: linear-gradient(270deg, #FFFFFF 34.78%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
 .header-content{
 	height: 100%;
 	max-width: 1238px;
@@ -10,6 +30,7 @@ header.header{
 	margin-right: auto;
 	
 }
+
 .header-left .custom-select{
 	width: 60px;
 	
@@ -51,10 +72,9 @@ header.header{
 	bottom: 0;
 	transform: translateY(100%);
 	z-index: 5;
-	height: 50px;
+	height: 80px;
 	background-color: #fff;
-	border-radius: 0 0 24px 24px;
-	border: 1px solid red;
+	border-radius: 0 0 12px 12px;
 	display: none;
 	&.active{display: block;}
 }
@@ -114,36 +134,34 @@ header.header{
 		}
 	}
 }
-.profile-persone__row {
-	height: 43px;
-	width: 145px;
-	border-radius: 25px;
-	background: #EEF5FF;
-	display: flex;
-	align-items: center;
-	font-weight: 600;
-	font-size: 13px;
-	text-align: right;
-	color: #3E516F;
-	padding-left: 45px;
-}
-.profile-persone__arrow{
-	position: absolute;
-	right: 7px;
-	z-index: 3;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	background-color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor:pointer;
-	svg{transition: .3s;}
-	&.active svg{
-		transform: rotate(180deg)
+.login-block{
+	position: relative;
+	height: 31px;
+	.login-block__img{
+		width: 31px;
+		height: 31px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: absolute;
+		left: -13px;
+		top: 0;
+		z-index: 2;
+	}
+	.login-btn{
+		font-size: 13px;
+		font-family: $ms;
+		padding-right: 12px;
+		border-radius: 20px;
+		padding-left: 27px;
+		height: 31px;
+		line-height: 31px;
+		background-color: #EEF5FF;
+		color: $pr;
+		transition: .3s;
+		&:hover{
+			background-color: $pr;
+			color: #fff;
+		}
 	}
 }
 .header .mobile-logo{
