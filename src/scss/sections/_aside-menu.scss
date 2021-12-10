@@ -45,6 +45,7 @@
 			color: #fff;
 			font-size: 20px;
 			line-height: 12px;
+			transition: .3s;
 		}
 		span+span{
 			font-family: $ms;
@@ -112,4 +113,17 @@
 	@media (max-width: 1199px) {
 	display: flex;
 	}
+}
+.aside-panel__menu svg{
+	fill:#fff;
+	transition: .2s;
+}
+.aside-panel__menu button:hover{
+	svg{fill: $pink}
+	span, p{color: $pink;}
+}
+.logo:hover svg.logo-svg{fill: $pink;}
+svg.logo-svg{
+	fill:#fff;
+	transition: .2s;
 }

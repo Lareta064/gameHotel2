@@ -24,7 +24,23 @@
 	}
 	
 }
+.button-light{
+background: #EEF5FF;
+svg{fill: $pr;}
+span{color: $pr;}
+border-color: #EEF5FF;
+&:hover{
+border-color: $pr;
+background: $pr;
+	svg {
+		fill: #fff;
+	}
 
+	span {
+		color: #fff;
+	}
+	}
+}
 .button--color {
 	background: #7256FF;
 	border: 1px solid #7256FF;
@@ -37,13 +53,7 @@
 		
 	}
 }
-.button--color.button--color-dark{
-	
-	&:hover {
-		color:#fff;
-		border: 1px solid #ffffff;
-	}
-}
+
 .button--color svg{
 	fill: #ffffff;
 	margin-right: 14px;
@@ -55,6 +65,10 @@
 .button--flex{
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
+	svg{
+		margin-right: 12px;
+	}
 }
 .btn-group{
 	position: relative;

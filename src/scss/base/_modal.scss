@@ -5,10 +5,10 @@
 	display: block;
 }
 .page-modal{
-	min-height: 468px;
+	
 	width: 100%;
 	max-width:376px;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
@@ -17,10 +17,14 @@
 	overflow: hidden;
 	background-color: #fff;
 	box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.2);
+	@media(max-width:424px){
+		width: 98%;
+	}
 	.page-modal__header{
 		padding: 16px 24px;
 		display: flex;
 		justify-content: space-between;
+		border-bottom: 1px solid #D4DFF1;
 		h3{
 			font-family: $ms;
 			font-size: 16px;
@@ -80,6 +84,7 @@
 		background-color: $light;
 		width: 24px;
 		height: 24px;
+		line-height: 24px;
 		border-radius: 7px;
 		color: #788CAB;transition: .3s;
 		cursor:pointer;
@@ -98,11 +103,19 @@
 			border-radius: 24px;
 			background-color: $light;
 			margin-right: 12px;
+			height: 24px;
 		}
 	}
 }
-.login-modal--step2 .page-modal__img{
+.login-modal--blue .register-step-title span{
+	background-color: #33A661;
+	color: #fff;
+}
+.login-modal--yellow .page-modal__img{
 	background-color: #FEF8E8;
+}
+.login-modal--blue .page-modal__img {
+	background-color: #E7FBFF;
 }
 .step2-text{
 	span{

@@ -41,6 +41,9 @@ header.header{
 		align-items: center;
 		li{
 			margin-left: 32px;
+			&:hover{
+				a{color: $pr;}
+			}
 		}
 		a{
 			font-size: 13px;
