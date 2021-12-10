@@ -1,0 +1,78 @@
+.form-field{
+	position: relative;
+	margin-bottom: 20px;
+
+	input{
+		width: 100%;
+		height: 48px;
+		background: #EEF5FF;		
+		border: 1px solid #D4DFF1;
+		border-radius: 12px;
+		padding-left: 44px;
+	}
+	.form-field-icon{
+		position: absolute;
+		top: 50%;
+		transform:translateY(-50%);
+		z-index: 2;
+		left: 12px;
+		height: 20px;
+	}
+	@media(max-width:767px){
+		margin-bottom: 15px;
+		input {height: 40px;}
+	}
+	input.phone{
+		color: #788CAB;
+	}
+}
+/*******code value group******/
+.codeValue-group{
+	display: flex;
+	justify-content: center;
+	input{
+		width: 67px;
+		background-color: #EEF5FF;
+		border: 1px solid #D4DFF1;
+		border-radius: 12px;
+		flex-shrink: 0;
+		text-align: center;
+		color: #0A0522;
+		font-size: 18px;
+		text-align: center;
+		font-family: $ms;
+		padding: 0;
+		
+	
+	}
+	input:focus,
+	input:valid{
+		background: #fff;
+	}
+	.codeValue__item{position: relative;
+	}
+	span {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform:translateX(-50%);
+		width: 9px;
+		height: 1px;
+		background-color: #0A0522;
+		display: block;
+		position: relative;
+		bottom: 15px;
+		z-index: 2;
+		display: block;
+
+	}
+	.codeValue__item+.codeValue__item {
+		margin-left: 21px;
+	}
+	input+input {
+		margin-left: 21px;
+	}
+	.codeValue__item input:valid +span,
+	.codeValue__item input:focus +span{display: none;}
+	
+}

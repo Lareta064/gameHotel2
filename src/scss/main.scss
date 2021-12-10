@@ -4,11 +4,13 @@
 @import "base/_buttons";
 @import "base/_animation";
 @import "base/_cards";
-
+ @import "base/modal";
 //blocks
  @import "blocks/custom-select";
  @import "blocks/header";
  @import "blocks/animate-line";
+ @import "blocks/registr-form";
+ @import "blocks/form";
 
  //sections
  @import "sections/investor-banner";
@@ -27,6 +29,3 @@
  @import "sections/footer";
  
  @import "pages/investor-page";
-
-
-
