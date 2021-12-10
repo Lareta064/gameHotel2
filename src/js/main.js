@@ -216,8 +216,47 @@ if (document.querySelector('.how-bay')) {
 		}
 	});
 
-	
   swips.init();
- 
-
 })();
+
+	const overlayBg = document.querySelector('#overlay');
+
+	const formOpenButton = document.querySelectorAll('[data-btn]');
+	const formsArray = document.querySelectorAll('[data-modal]');
+	const formCloseBtn = document.querySelectorAll('[data-close]');
+
+	// ===== Показать блок с формой  ======
+	for(let item of formOpenButton){
+		item.addEventListener('click', function(e){
+			
+			e.preventDefault.default;
+			let thisDataValue = item.dataset.btn;
+			
+			for(let i=0; i<formsArray.length; i++){
+				
+				let formDataValue = formsArray[i].dataset.modal;
+				console.log(formDataValue);
+				if(thisDataValue == formDataValue){
+					formsArray[i].classList.add('visible');
+					overlayBg.classList.add('active');
+				}
+			}
+
+		});
+	}
+
+	// =====Закрыть форму по клику на крестик ======
+	for(let item of formCloseBtn){
+		item.addEventListener('click', function(){
+			item.closest('[data-modal]').classList.remove('visible');
+			overlayBg.classList.remove('active');
+		});
+	}
+
+	// ===== Закрыть форму по клику на фон-затемнение ======
+	overlayBg.addEventListener('click', function(){
+		for(let item of formsArray){
+			item.classList.remove('visible');
+			this.classList.remove('active');
+		}
+	});

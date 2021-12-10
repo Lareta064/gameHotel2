@@ -102,6 +102,7 @@
 	  background-color:  rgba(10, 5, 34, .72);
 	  z-index: 25;
 	  display: none;
+	  &.active{display: block;}
   }
   section {
 	

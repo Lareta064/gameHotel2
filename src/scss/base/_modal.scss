@@ -1,3 +1,9 @@
+[data-modal]{
+	display: none;
+}
+.visible[data-modal]{
+	display: block;
+}
 .page-modal{
 	width: 100%;
 	max-width:376px;
