@@ -1,4 +1,5 @@
-.page-modal.login-modal(data-modal="logIn")
+//================= АВТОРИЗАЦИЯ ШАГ 1/2=====================
+.page-modal.login-modal(data-modal)
 	.page-modal__header
 		h3.text-16 Авторизация
 		button.close-btn(data-close) &#10006;
@@ -18,10 +19,81 @@
 							use(xlink:href="./img/svg-sprite.svg#phoneSvg")
 					input(type="text" class="phone" name="phone" placeholder="+7(___)___-__-__")
 				.register-step-btn
+					button.button.button--color.button-icon( type="button" )
+						span Продолжить
+						svg(width="16" height="16")
+							use(xlink:href="./img/svg-sprite.svg#arrRight")
+		
+	.page-modal__footer
+		.text-agree
+			p.text-13 Нажимая на кнопку вы соглашаетесь с правилам и обработкой и политикой конфиденциальности.
+
+//================= АВТОРИЗАЦИЯ ШАГ 2/2 =====================
+.page-modal.login-modal.visible.login-modal--step2(data-modal)
+	.page-modal__header
+		h3.text-16 Авторизация
+		button.close-btn(data-close) &#10006;
+	.page-modal__img
+		.image-group
+			img(src="./img/registr.png", width="177" alt="alt")
+			img(src="./img/lock.png", width="108" alt="alt")
+	.page-modal__body
+		form.register-form
+			.register-step
+				.register-step-title
+					span.text-13 2/2
+					p.text-15 Введите код из сообщения
+				
+				.form-field.codeValue-group
+					.codeValue__item
+						input(type="text"  name="" value="1" required)
+						span
+					.codeValue__item
+						input(type="text"  name="" required)
+						span
+					.codeValue__item
+						input(type="text"  name="" required)
+						span
+					.codeValue__item
+						input(type="text"  name="" required)
+						span
+				.register-step-btn
 					button.button.button--color.button-icon
 						span Войти
 						svg(width="16" height="16")
 							use(xlink:href="./img/svg-sprite.svg#arrRight")
 		
+	.page-modal__footer
+		.step2-text
+			p.text-14 Мы отправили SMS код для проверки на ваш телефон #[span + 7 *** *** 34 44.]
+			p  #[button(type="button") Отправить повторно] через #[span 60] секунд
+
+//================= АВТОРИЗАЦИЯ ШАГ 1/3=====================
+.page-modal.login-modal(data-modal)
+	.page-modal__header
+		h3.text-16 Авторизация
+		button.close-btn(data-close) &#10006;
+	.page-modal__img
+		.image-group
+			img(src="./img/registr.png", width="177" alt="alt")
+			img(src="./img/lock.png", width="108" alt="alt")
+	.page-modal__body
+		form.register-form
+			.register-step
+				.register-step-title
+					span.text-13 1/3
+					p.text-15 Мы отправим код на телефон
+				.form-field
+					span.form-field-icon
+						svg.phone-svg
+							use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					input(type="text" class="phone" name="phone" placeholder="+7(___)___-__-__")
+				.register-step-btn
+					button.button.button--color.button-icon( type="button" )
+						span Продолжить
+						svg(width="16" height="16")
+							use(xlink:href="./img/svg-sprite.svg#arrRight")
+		
+	.page-modal__footer
 		.text-agree
 			p.text-13 Нажимая на кнопку вы соглашаетесь с правилам и обработкой и политикой конфиденциальности.
