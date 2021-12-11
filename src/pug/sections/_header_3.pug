@@ -1,0 +1,54 @@
+header.header
+	.header-content.d-flex
+		.header-left
+			.mobile-logo
+				a(href="#!")
+					svg(width="42" height="24")
+						use(xlink:href="./img/svg-sprite.svg#footer-logo")
+			.custom-select.custom-select--lang
+				.select-icon
+				.select-field
+					input(type="text" value="Ru" readonly)
+				.select-list
+					ul
+						li.current(data-role="Ru") Ru
+						li(data-role="En") En
+						
+		.header-center
+			.header-menu
+				ul
+					li.active
+						a(href="#!") О проекте
+					li
+						a(href="#games-catalogy") Игры
+					li
+						a(href="#road-map") Road map
+					li
+						a(href="#tokenomic") Токеномика
+					li
+						a(href="#team") Команда
+					li
+						a(href="#hoy-bay") Как купить GHOT?
+			//=======SEARCH FORM =======
+			.header-search
+				form.header-search-form(action="" method="method")
+					.form-field
+						input(type="text")
+					button.form-btn.search-form-btn
+		
+		//=======HEADER RIGHT =======			
+		.header-right
+			.profile-panel
+				.profile-icon
+					.icon-notify
+						p.label
+							span 2
+				.profile-persone
+					.profile-persone__img
+						img(src="./img/ava.png", width="38" alt="ava")
+					.profile-persone__arrow#profile-arrow
+						svg(width="10" height="6")
+							use(xlink:href="./img/svg-sprite.svg#iconArr")
+					.profile-persone__row
+						p 0x...263a
+					//- .profile-persone__drop#profile-menu

@@ -25,6 +25,9 @@
 	input.phone{
 		color: #788CAB;
 	}
+	input:focus {
+		background: #fff;
+	}
 }
 /*******code value group******/
 .codeValue-group{
@@ -76,3 +79,4 @@
 	.codeValue__item input:focus +span{display: none;}
 	
 }
+
