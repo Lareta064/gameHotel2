@@ -119,10 +119,11 @@
 	transition: .2s;
 }
 .aside-panel__menu button:hover{
-	svg{fill: $pink}
-	span, p{color: $pink;}
+	opacity: .7;
 }
-.logo:hover svg.logo-svg{fill: $pink;}
+.logo:hover {
+	opacity: .7;
+}
 svg.logo-svg{
 	fill:#fff;
 	transition: .2s;

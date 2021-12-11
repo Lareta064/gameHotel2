@@ -92,40 +92,38 @@
 				margin-left: 25px;
 			}
 		}
-		// @media(max-width:767px){
-		// 	.button.button--white {
-		// 		background-color: #E857D1;
-		// 		border-color: #E857D1;
-		// 		color: #fff;
-		// 		&:hover{
-		// 			background-color: #fff;
-		// 			color:#0A0522;
-		// 			border-color: #fff;
-		// 		}
-		// 	}
-		// 	.button{
-		// 		background-color: #fff;
-		// 		color:#0A0522;
-		// 		border-color: #fff;
-		// 		&:hover {
-		// 		background-color: #E857D1;
-		// 		border-color: #E857D1;
-		// 		color: #fff;
-		// 		}
-		// 	}
-		// }
+		
 	}
 }
 .investor-banner__img{
 	position: absolute;
-	top: 50px;
-	right: -27px;
-	z-index: 5;
-	@media(max-width:1199px){
-		width: 60%;
-		top:auto;
-		bottom: -64px;
-		right: -15px;
+	width: 50%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 9;
+	.investor-banner__laptop,
+	.investor-banner__chart,
+	.investor-banner__money,
+	.investor-banner__man {
+		position: absolute;
+	}
+	.investor-banner__man{
+		left: 46%;
+		bottom: -35px;
+		transform:translateX(-50%);
+	}
+	.investor-banner__laptop{
+		top: 48px;
+		right: 60px;
+	}
+	.investor-banner__money{
+		right: -18px;
+		bottom: 18%;
+	}
+	.investor-banner__chart{
+		left: -33px;
+		top: 43%;
 	}
 	@media(max-width:1023px){display: none;}
 	

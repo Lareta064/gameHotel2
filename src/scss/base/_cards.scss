@@ -47,13 +47,27 @@
 		}
 	}
 }
-.card-light:hover{
+.investor-cta .card-light:last-child{
+	@media(min-width:768px){
 	background: #7256FF;
 	box-shadow: 0px 5px 16px rgba(221, 213, 245, 0.8);
 	color: #fff;
 	.card-light__text {
 		color: rgba(255, 255, 255, 0.7);
 	}
+}
+}
+.swiper-investor-cta  .card-light--special{
+	background: #7256FF;
+	box-shadow: 0px 5px 16px rgba(221, 213, 245, 0.8);
+	color: #fff;
+
+	.card-light__text {
+		color: rgba(255, 255, 255, 0.7);
+	}
+}
+.card-light:hover {	
+	box-shadow: 0px 5px 16px rgba(221, 213, 245, 0.28);	
 }
 .arr-card{
 	position: relative;

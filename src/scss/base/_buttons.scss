@@ -19,8 +19,7 @@
 		outline: none ;
 	}
 	&:hover{
-		background: #FFFFFF;
-	color: $text;
+		opacity: .7;
 	}
 	
 }
@@ -46,10 +45,7 @@ background: $pr;
 	border: 1px solid #7256FF;
 	color: #ffffff;
 	&:hover{
-	
-		background-color: #E857D1;
-		border-color: #E857D1;
-		color: #fff;
+	opacity: .7;
 		
 	}
 }
@@ -88,9 +84,7 @@ background: $pr;
 	color: #fff;
 
 	&:hover {
-		background-color: #fff;
-		color: #0A0522;
-		border-color: #fff;
+		opacity: .7;
 	}
 }
 
@@ -100,9 +94,7 @@ background: $pr;
 	border-color: #fff;
 
 	&:hover {
-		background-color: #E857D1;
-		border-color: #E857D1;
-		color: #fff;
+		opacity: .7;
 	}
 }
 svg#arrRight{
