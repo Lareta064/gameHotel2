@@ -1,4 +1,113 @@
 document.addEventListener("DOMContentLoaded", function (){
+	/* анимация свг-диаграммы-круг */
+	const target = document.querySelectorAll('.board-chart .chart-path');
+	
+	if(target){
+		const target1 = [];
+		for(let i = 0; i<12; i++){
+			const querySel = `[data-path="${i+1}"]`;
+			target1.push(document.querySelector(querySel));
+		}
+		
+		let Visible = function (target) {
+			// Все позиции элемента
+			let targetPosition = {
+					top: window.pageYOffset + target.getBoundingClientRect().top,
+					left: window.pageXOffset + target.getBoundingClientRect().left,
+					right: window.pageXOffset + target.getBoundingClientRect().right,
+					bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+				},
+				// Получаем позиции окна
+				windowPosition = {
+					top: window.pageYOffset,
+					left: window.pageXOffset,
+					right: window.pageXOffset + document.documentElement.clientWidth,
+					bottom: window.pageYOffset + document.documentElement.clientHeight
+				};
+
+			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+				// Если элемент полностью видно, то запускаем следующий код
+				target.style.opacity=1;
+			}
+		};
+
+		// Запускаем функцию при прокрутке страницы
+		window.addEventListener('scroll', function () {
+			let delay = 0;
+			for (let item of target1) {
+				setTimeout(function () {
+					Visible(item);
+				}, 50 + delay)
+				delay += 150;
+			}
+		});
+
+		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+		let delay = 0;
+		for (let item of target1) {
+		
+			setTimeout(function () {
+				Visible(item);
+			}, 50 + delay)
+			delay += 200;
+		}
+	}
+	
+	//========== ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ=========
+	let headerSection = document.querySelector('.investor-banner')
+	let bg1 = document.querySelector('.parallax-item1');
+	let bg2 = document.querySelector('.parallax-item2');
+	let bg3 = document.querySelector('.parallax-item3');
+	window.addEventListener('mousemove', function (e) {
+		let x = e.clientX / window.innerWidth;
+		let y = e.clientY / window.innerHeight;
+		
+		bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
+		bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
+		bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
+	
+
+	});
+	//===============perspective-effect ==============
+	$(function(){
+			const card = $('.possibl-card');
+			
+			card.on('mousemove', function (e) {
+				
+				var x = e.clientX - $(this).offset().left + $(window).scrollLeft();
+				var y = e.clientY - $(this).offset().top + $(window).scrollTop();
+				
+				var rY = map(x, 0, $(this).width(), -17, 17);
+				var rX = map(y, 0, $(this).height(), -17, 17);
+			
+				$(this).css("transform", "perspective(1200px)  rotateY(" + rY + "deg)" + " " + "rotateX(" + -rX + "deg) ");
+			});
+			
+			card.on('mouseenter', function () {
+				$(this).css({
+					transition: "all " + 0.05 + "s" + " linear",
+				});
+			});
+		
+			card.on('mouseleave', function () {
+				$(this).css({
+					transition: "all " + 0.2 + "s" + " linear",
+				});
+		
+				$(this).css("transform", "rotateY(" + 0 + "deg)" + " " + "rotateX(" + 0 + "deg)");
+			});
+				
+			function map(x, in_min, in_max, out_min, out_max)
+			{
+				return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+			}
+		
+	});
+
+	
 	// ========= КАСТОМНЫЙ СЕЛЕКТ =============
 	const customSelect = document.querySelector('.custom-select');
 	if(customSelect){	
@@ -148,11 +257,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			slidesPerView: 1, 
 			spaceBetween: 24,
 			loop: true,
-			speed:800,
+			speed:1500,
+			
 			pagination: {
 				el: ".swiper-pagination-info",
 				clickable: true,
 			},
+			autoplay: {
+				delay: 3000,
+				},
 			breakpoints: {
 				574: {
 					slidesPerView: 1.5,
@@ -168,7 +281,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			slidesPerView: 'auto', 
 			spaceBetween: 24,
 			loop: true,
-			speed:800,
+			speed:1500,
+			autoplay: {
+				delay: 3000,
+				},
 			pagination: {
 				el: ".swiper-pagination-team",
 				clickable: true,
