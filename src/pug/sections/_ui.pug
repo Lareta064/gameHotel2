@@ -57,35 +57,56 @@
 				a(href="#!") PvP
 				a(href="#!") Игровые карты
 	.wr(style="margin-bottom:40px;")
-		+breadcrumb('Главная','Игры', 'Axie Infinity')
-.button.button--color.button-icon
-	span Войти
-	svg(width="16" height="16")
-		use(xlink:href="./img/svg-sprite.svg#arrRight")
-.card-light
-	.card-light__head
-		h4 Легальный найм
-		span 01
-	.card-light__text
+		.button.button--color.button-icon
+			span Войти
+			svg(width="16" height="16")
+	.wr(style="margin-bottom:40px;")
+		.card-light
+			.card-light__head
+				h4 Легальный найм
+				span 01
+			.card-light__text
+	.wr(style="margin-bottom:40px;")
+		.form-field
+			span.form-field-icon
+				svg.phone-svg
+					use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+			input(type="text")
+	.wr(style="margin-bottom:40px;")
+		.profile-panel
+			.profile-icon
+				.icon-notify
+					p.label
+						span 2
+			.profile-persone
+				.profile-persone__img
+					img(src="./img/ava.png", width="38" alt="ava")
+				.profile-persone__arrow#profile-arrow
+					svg(width="10" height="6")
+						use(xlink:href="./img/svg-sprite.svg#iconArr")
+				.profile-persone__row
+					p 0x...263a
+				.profile-persone__drop#profile-menu
 
-.form-field
-	span.form-field-icon
-		svg.phone-svg
-			use(xlink:href="./img/svg-sprite.svg#phoneSvg")
-	input(type="text")
-
-.profile-panel
-	.profile-icon
-		.icon-notify
-			p.label
-				span 2
-	.profile-persone
-		.profile-persone__img
-			img(src="./img/ava.png", width="38" alt="ava")
-		.profile-persone__arrow#profile-arrow
-			svg(width="10" height="6")
-				use(xlink:href="./img/svg-sprite.svg#iconArr")
-		.profile-persone__row
-			p 0x...263a
-		.profile-persone__drop#profile-menu
-
+	.wr(style="margin-bottom:40px;")
+		.hero-card
+			.hero-card__img
+				img(src="./img/aboutGame/hero-1.png", width="128" alt="alt")
+			.hero-card__text
+				h4.text-15 Aquantic
+				ul
+					li
+						span.text-grey Здоровье
+						span.text-green 45,
+					li
+						span.text-grey Скорость
+						span.text-green 57,
+					li
+						span.text-grey Навык
+						span.text-green 35,
+					li
+						span.text-grey Мораль
+						span.text-green 27
+	.wr(style="margin-bottom:40px;")	
+		a(href="#!").bg-link Показать еще
+						

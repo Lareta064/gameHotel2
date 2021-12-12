@@ -318,9 +318,57 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}
 		});
-
+		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
+			slidesPerView: 1.2, 
+			spaceBetween: 24,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".hero-card-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				768: {
+						slidesPerView: 3,
+						spaceBetween: 24,
+					}
+				
+			}
+		});
+		
 	swips.init();
 	})();
+
+	let locCradsSwiper = new Swiper(".location-cards-swiper", {
+       slidesPerView: 1.1,
+        navigation: {
+          nextEl: ".locSwiper-button-next",
+          prevEl: ".locSwiper-button-prev",
+        }, 
+		speed:800,
+	
+		loop: true,     
+		breakpoints: {			
+			575: {
+				slidesPerView: 1.8,
+				spaceBetween: 24,
+			},
+			768: {
+					slidesPerView: 2.5,
+					spaceBetween: 32,
+				}
+				,
+			1024: {
+					slidesPerView: 3,
+					spaceBetween: 32,
+				}			
+		}
+      });
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
 	const bodyEl = document.body;
@@ -383,9 +431,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	if (videoContent) {
 		const videoBtn = videoContent.querySelector('.video-play-btn');
 		const videoClip = document.querySelector('#gameVideoClip');
-		document.addEventListener('click',function(e){
-			console.log(e.target);
-		})
+		
 		videoContent.addEventListener('click', function (e) {
 			
 			if (videoClip.paused) {
