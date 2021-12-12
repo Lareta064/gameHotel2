@@ -17,6 +17,15 @@
 		width: 22.5%;
 	}
 }
+.page-content-columns{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	.page-content-right{
+		position: sticky;
+		top: 72px;
+	}
+}
 .about-game-header {
 	padding-bottom: 24px;
 	
@@ -91,24 +100,37 @@
 	padding-bottom: 40px;
 	padding-right: 24px;
 	justify-content: space-between;
+	@media(max-width:1023px) {
+		flex-direction: column;
+	}
 	li{
 		width: 48%;
 		max-width:200px;
 		white-space: nowrap;
+		span+p {
+			margin-top: 6px;
+		}
 		& +li{
 			margin-left: 64px;
+			@media(max-width:1023px) {
+				margin-left: 0;
+				margin-top: 32px;
+			}
 		}
 		
 	}
 }
 .result-info-content .d-flex{
 	justify-content: space-between;
-	// align-items: center;
+	align-items: flex-end;
+	
 }
+
 .about-game-parametrs ul{
 	display: grid;
 	grid-template-columns:repeat(3, 1fr) ;
 	row-gap: 32px;
+	column-gap:48px;
 }
 .about-game-parametrs li{
 	white-space: nowrap;
@@ -118,4 +140,25 @@
 	}
 	.badge +.badge{margin-left: 12px;}
 }
-.about-game-parametrs li+li{margin-top: 6px;}
+.about-game-parametrs {
+	span + p{margin-top: 6px;}
+}
+
+.text-block .button{
+	margin-top: 24px;
+}
+/***СВАЙП-СЕТКА ДЛЯ КАРТОЧЕК**/
+.grid-column-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 32px;
+	row-gap:32px;
+}
+.text-block--game-types{
+	.card-light{
+		width: 250px;
+		p{ -webkit-line-clamp: 4;}
+	  
+	}
+	
+}
