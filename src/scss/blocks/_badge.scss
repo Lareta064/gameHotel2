@@ -7,11 +7,15 @@
 	text-align: center;
 	
 	justify-content: center;
-	font-family: $ms;
+	font-family: $mr;
 	font-size: 14px;
 	color: #fff;
 	border-radius: 24px;
 }
+.header-group .badge{font-family: $ms;}
 .badge--green{
 	background-color: #33A661;
+}
+.badge--black {
+	background-color: #0A0522
 }

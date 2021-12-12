@@ -105,3 +105,17 @@
 	justify-content: space-between;
 	// align-items: center;
 }
+.about-game-parametrs ul{
+	display: grid;
+	grid-template-columns:repeat(3, 1fr) ;
+	row-gap: 32px;
+}
+.about-game-parametrs li{
+	white-space: nowrap;
+	a{
+		font-family: $ms;
+		color: $pr;
+	}
+	.badge +.badge{margin-left: 12px;}
+}
+.about-game-parametrs li+li{margin-top: 6px;}
