@@ -1,0 +1,22 @@
+section.about-game
+	.about-game-video
+		.about-game-video__content#gameVideo
+			.video-play-btn
+			video#gameVideoClip( poster="./img/aboutGame/video-poster.jpg" width="100%")
+				source(src="video/video.ogv", type="video/ogg;")
+				source(src="video/video.mp4", type="video/mp4")
+				source(src="video/video.webm", type="video/webm")
+	.about-game-info
+		article.result-info
+			.result-info-content.gradient-box
+				.gradient-box__inner.d-flex 
+					ul
+						li
+							span.text-grey Средний доход
+							p.text-24 до $ 1 200 / мес.
+						li
+							span.text-grey Временные затраты
+							p.text-24 1-3 часа в день
+					.result-info__right
+						img(src="./img/aboutGame/gif.png", width="176" alt="alt")
+	

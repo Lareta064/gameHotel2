@@ -4,27 +4,16 @@ block content
 
 	include ../sections/_aside-menu.pug
 	include ../sections/_header_2.pug
-	include ../sections/_header_3.pug
 	main.aboutGame-page
-		include ../sections/_investor-banner.pug
-		include ../sections/_our-offer.pug
-		include ../sections/_investor-cta.pug
-		include ../blocks/_animate-line.pug
-		include ../sections/_game-news.pug
-		include ../sections/_road-map.pug
-		include ../sections/_token-usage.pug
-		include ../sections/_information-tablo.pug
-		
-		include ../sections/_our-team.pug
-		include ../sections/_our-experts.pug
-		include ../sections/_vertical-slider.pug
-		include ../sections/_how-bay-mobile.pug
-		include ../sections/_partners.pug
-		include ../sections/_faq.pug
+		.page-content-wrapper
+			.container
+				+breadcrumb('Главная','Игры', 'Axie Infinity')
+				.page-content-left
+					.page-content-left__block
+						include ../sections/_about-game-header
+						include ../sections/_about-game-description
+				.page-content-right
 		include ../sections/_footer.pug
-	
-	include ../sections/_registr-forms.pug	
-	
 	
 block variables
 	-var title = "About Game";

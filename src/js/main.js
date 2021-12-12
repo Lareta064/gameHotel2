@@ -2,13 +2,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
-	if(target){
+	if(target .lenth >0 ){
 		const target1 = [];
 		for(let i = 0; i<12; i++){
 			const querySel = `[data-path="${i+1}"]`;
 			target1.push(document.querySelector(querySel));
-		}
-		
+		}		
 		let Visible = function (target) {
 			// Все позиции элемента
 			let targetPosition = {
@@ -47,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 		let delay = 0;
-		for (let item of target1) {
-		
+		for (let item of target1) {		
 			setTimeout(function () {
 				Visible(item);
 			}, 50 + delay)
@@ -61,16 +59,17 @@ document.addEventListener("DOMContentLoaded", function (){
 	let bg1 = document.querySelector('.parallax-item1');
 	let bg2 = document.querySelector('.parallax-item2');
 	let bg3 = document.querySelector('.parallax-item3');
-	window.addEventListener('mousemove', function (e) {
-		let x = e.clientX / window.innerWidth;
-		let y = e.clientY / window.innerHeight;
+	if(bg1){
 		
-		bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
-		bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
-		bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
-	
+		window.addEventListener('mousemove', function (e) {
+			let x = e.clientX / window.innerWidth;
+			let y = e.clientY / window.innerHeight;			
+			bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
+			bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
+			bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
 
-	});
+		});
+	}
 	//===============perspective-effect ==============
 	$(function(){
 			const card = $('.possibl-card');
@@ -379,6 +378,27 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 });
+/**===========  VIDEO ABOUT GAME PAGE==========*/
+	const videoContent = document.querySelector('#gameVideo');
+	if (videoContent) {
+		const videoBtn = videoContent.querySelector('.video-play-btn');
+		const videoClip = document.querySelector('#gameVideoClip');
+		document.addEventListener('click',function(e){
+			console.log(e.target);
+		})
+		videoContent.addEventListener('click', function (e) {
+			
+			if (videoClip.paused) {
+				videoClip.play();
+				videoBtn.style.opacity = "0";
+				this.classList.add("active");
+			} else {
+				videoClip.pause();
+				videoBtn.style.opacity = "1";
+				this.classList.remove("active");
+			}			
+		});		
+	}
 	// ========= ВЫПАДАЮЩЕЕ МЕНЮ =============
 	// const headerProfileArrow = document.getElementById('profile-arrow');
 	// const headerProfileDrop = document.getElementById('profile-menu');

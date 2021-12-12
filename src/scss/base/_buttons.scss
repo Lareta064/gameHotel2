@@ -27,6 +27,7 @@
 background: #EEF5FF;
 svg{fill: $pr;}
 span{color: $pr;}
+color: #7256FF;
 border-color: #EEF5FF;
 &:hover{
 border-color: $pr;
@@ -108,5 +109,31 @@ svg#arrRight{
 		fill:#fff;
 		margin-left: 12px;
 		margin-right: 0;
+	}
+}
+.button--label{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	span +span{
+		margin-left: 12px;
+		color: #E857D1;
+		font-size: 13px;
+		font-family: $os;
+		background-color: #fff;
+		padding-left: 8px;
+		padding-right: 8px;
+		height: 20px;
+		line-height: 20px;
+		border-radius: 16px;
+	}
+}
+.button--label .button--label--color{
+	span+span {color: $pr;}
+}
+.button--label.button--white{
+	span+span {
+		color: #fff;
+		background-color: $pr;
 	}
 }

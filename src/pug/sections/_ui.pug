@@ -3,16 +3,61 @@
 	
 	
 	.button Купить $Hotel
-	.button--color.button Купить $Hotel
-	.button--color.button.button--flex
-		svg( width="16" height="16")
-			use( xlink:href="./img/svg-sprite.svg#icon-pool")
-		span Купить $Hotel
-	.btn-group
-		.btn-group__img
-			img(src="./img/gamepad.png", width="80" alt="img")
-		.button--color.button Стать игроком
+	.wr(style="margin-bottom:40px;")
+		.button--color.button Купить $Hotel
+		p .button--color.button
+	.wr(style="margin-bottom:40px;")
+		.button--color.button.button--flex
+			svg( width="16" height="16")
+				use( xlink:href="./img/svg-sprite.svg#icon-pool")
+			span Купить $Hotel
+		pre.
+			.button--color.button.button--flex
+				svg( width="16" height="16")
+					use( xlink:href="./img/svg-sprite.svg#icon-pool")
+				span Купить $Hotel
+	.wr(style="margin-bottom:40px; ")
+		.btn-group
+			.btn-group__img
+				img(src="./img/gamepad.png", width="80" alt="img")
+			.button--color.button Стать игроком
+		pre.
+			.btn-group
+				.btn-group__img
+					img(src="./img/gamepad.png", width="80" alt="img")
+				.button--color.button Стать игроком
+	.wr(style="margin-bottom:40px;")
+		button.button.button-light Button
+		p .button.button-light
+	
+	.wr(style="margin-bottom:40px;")
+		button.button.button--pink Button
+		p .button.button--pink
+	.wr(style="margin-bottom:40px;")
+		button.button.button--pink.button--label
+			span Научиться играть
+			span Free
+		p .button.button--pink.button--label
 
+	.wr(style="margin-bottom:40px;")
+		button.button.button--label.button--white
+			span Научиться играть
+			span Free
+		p .button.button--label.button--white
+
+	.wr(style="margin-bottom:40px;")
+		.nav-list
+			nav
+				a(href="#!") Описание
+				a(href="#!").active Как заработать
+				a(href="#!") Как играть
+				a(href="#!") Классы
+				a(href="#!") Локации
+				a(href="#!") PvE
+				a(href="#!") PvP
+				a(href="#!") Игровые карты
+	.wr(style="margin-bottom:40px;")
+		+breadcrumb('Главная','Игры', 'Axie Infinity')
 .button.button--color.button-icon
 	span Войти
 	svg(width="16" height="16")
@@ -22,78 +67,12 @@
 		h4 Легальный найм
 		span 01
 	.card-light__text
+
 .form-field
 	span.form-field-icon
 		svg.phone-svg
 			use(xlink:href="./img/svg-sprite.svg#phoneSvg")
 	input(type="text")
-.information-board__list
-	.label-text.label-text--dashed
-		.label-text__top
-			span 20%
-			p Продажа токена
-		.label-text__bottom
-			p $2.5 млн. (20 000 000 GHot)
-
-	.label-text.label-text--pink
-		.label-text__top
-			span 50%
-			p Поддержка и развитие проекта
-		.label-text__bottom
-			75 000 000 GHot
-
-	.label-text.label-text--purple
-		.label-text__top
-			span 2,5%
-			p Маркетинг на поздних стадиях
-		.label-text__bottom
-			p 37 500 000 GHot
-	.label-text.label-text--red
-		.label-text__top
-			span 5%
-			p Маркетинг при токенсейле
-		.label-text__bottom
-			p 37 500 000 GHot
-	
-	.label-text.label-text--blue
-		.label-text__top
-			span 2,5%
-			p Экосистема и партнерства
-		.label-text__bottom
-			p 37 500 000 GHot
-	
-	.label-text.label-text--green
-		.label-text__top
-			span 4%
-			p Резервный фонд
-		.label-text__bottom
-			p 37 500 000 GHot
-	
-	.label-text.label-text--aqua
-		.label-text__top
-			span 5%
-			p Продажа токена
-		.label-text__bottom
-			p 37 500 000 GHot
-	
-	.label-text.label-text--lime
-		.label-text__top
-			span 1%
-			p Фонд для соучастников
-		.label-text__bottom
-			p 37 500 000 GHot
-
-	.label-text.label-text--bull
-		.label-text__top
-			p Продажа токена
-		.label-text__bottom
-			p 37 500 000 GHot
-	
-	.label-text.label-text--star
-		.label-text__top
-			p Продажа токена
-		.label-text__bottom
-			p 37 500 000 GHot
 
 .profile-panel
 	.profile-icon
