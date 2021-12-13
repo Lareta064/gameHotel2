@@ -1,0 +1,134 @@
+/***swiper pagination***/
+.swiper {
+	overflow: unset;
+	padding: 0;
+	padding-bottom: 0;
+
+	@media(max-width: 1023px) {
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		overflow: hidden;
+		list-style: none;
+		padding: 0;
+		z-index: 1;
+		padding-bottom: 0;
+	}
+}
+
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+
+	display: none;
+
+	@media(max-width:767px) {
+		display: flex;
+	}
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: 10px;
+}
+
+.card-grid-duo.swiper-wrapper,
+.card-grid-trio.swiper-wrapper {
+	@media(max-width:767px) {
+		display: flex;
+	}
+}
+
+.swiper-our-experts .card-grid-trio.swiper-wrapper,
+.our-team .card-grid-trio.swiper-wrapper,
+.road-map .card-grid-trio.swiper-wrapper,
+.game-news-cards .card-grid-trio.swiper-wrapper,
+.our-team__cards.swiper-wrapper,
+.hero-cards-swiper .card-grid-trio.swiper-wrapper,
+.game-cards-swiper .card-grid-trio.swiper-wrapper {
+	@media(max-width:1023px) {
+		display: flex;
+		grid-template-columns: unset;
+		column-gap: unset;
+		row-gap: unset;
+	}
+}
+
+.hero-cards-swiper .card-grid-trio,
+.game-cards-swiper .card-grid-trio {
+	@media(min-width:1024px) {
+		column-gap: 32px;
+		row-gap: 32px;
+	}
+}
+
+.swiper-wrapper.flex-1023,
+.road-map .card-grid-trio.swiper-wrapper,
+.game-news .card-grid-trio.swiper-wrapper,
+.swiper-pagination.hide-1024 {
+	@media(max-width:1023px) {
+		display: flex;
+	}
+}
+
+.game-cards-swiper {
+	width: 100%;
+
+	@media(max-width:1023px) {
+		height: 420px;
+
+		.swiper-slide {
+			height: calc((100% - 55px) / 2);
+		}
+	}
+
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet:active,
+.swiper-pagination-bullet:focus {
+	outline: none;
+}
+
+/*точки пагинации bullet*/
+.swiper-pagination-info {
+	.swiper-pagination-bullet {
+		background: #fff;
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: #7256FF;
+	}
+
+}
+
+.swiper-wrapper {
+	@media(max-width:1023px) {
+		padding-bottom: 40px;
+		/*-видеть точки пагинации, иначе образеются*/
+	}
+}
+
+.slider-btn-next,
+.slider-btn-prev {
+	background: #EEF5FF;
+	border-radius: 9px;
+	width: 32px;
+	height: 32px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.66666 7.3333V8.66664H10.6667L6.99999 12.3333L7.94666 13.28L13.2267 7.99997L7.94666 2.71997L6.99999 3.66664L10.6667 7.3333H2.66666Z' fill='%237256FF'/%3e%3c/svg%3e");
+	background-position: center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+.slider-btn-next {
+	transform: rotate(180deg);
+	margin-right: 12px;
+}
+/***********************************/

@@ -1,0 +1,13 @@
+.sidebar>* +*{
+	margin-top: 16px;
+}
+.sidebar .button{
+	text-align: center;
+	width: 100%;
+}
+.sidebar{
+	@media(max-width:1279px){
+		display: none;
+		width: 0;
+	}
+}

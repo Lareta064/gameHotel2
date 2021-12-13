@@ -1,0 +1,32 @@
+.badge{
+	display: inline-flex;
+	padding-left: 12px;
+	padding-right: 12px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	
+	justify-content: center;
+	font-family: $mr;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 24px;
+}
+.bagde-medium{
+	height: 24px;
+	line-height: 24px;
+	padding-left: 8px;
+	padding-right: 8px;
+	display: inline-flex;
+}
+.header-group .badge{font-family: $ms;}
+.badge--green{
+	background-color: #33A661;
+}
+.badge--black {
+	background-color: #0A0522
+}
+.badge--white{
+	background-color: #fff;
+	color: #0A0522;
+}

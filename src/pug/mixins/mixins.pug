@@ -16,3 +16,10 @@ mixin social-block
 		a(href="").contact-icons__item
 			svg.tg-svg
 				use(xlink:href="./img/svg-sprite.svg#tgIcon")
+
+mixin breadcrumb(...items)
+	.page-breadcrumb
+		ul
+			each item in items
+				li
+					a(href="#!") #{item}

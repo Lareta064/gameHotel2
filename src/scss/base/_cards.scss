@@ -47,6 +47,9 @@
 		}
 	}
 }
+.card-light.card-light--bg{
+	background-color: #EEF5FF;
+}
 .investor-cta .card-light:last-child{
 	@media(min-width:768px){
 	background: #7256FF;
@@ -234,4 +237,63 @@ p{
 		column-gap: 15px;
 	}
 
+}
+/********hero card********/
+.hero-card{
+	background: #FFFFFF;	
+	border: 1px solid #C8D2E1;
+	box-sizing: border-box;
+	border-radius: 16px;
+	max-width:256px;
+	overflow:hidden;
+	&__img{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 128px;
+	}
+	.hero-card__text{
+		padding: 16px;
+		.text-15{
+			font-family: $ms;
+			margin-bottom: 8px;
+		}
+		ul{
+			display: flex; flex-wrap: wrap;
+		}
+		li{
+			display: flex;
+			font-family: $ms;
+			span{
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+		}
+	}
+}
+.hero-cards .card-grid-trio {	
+	column-gap: 32px;
+	row-gap:32px;
+}
+.picture-card {
+	position: relative;
+	border-radius: 16px;
+	width: 256px;
+	height: 168px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+.picture-card .badge {
+	top: 14px;
+	left: 16px;
+	position: absolute;
+	z-index: 2;
+}
+
+.picture-card.badge-center .badge {
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
 }

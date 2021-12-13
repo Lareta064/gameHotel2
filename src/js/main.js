@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
-	if(target){
+	if(target.length > 0){
 		const target1 = [];
 		for(let i = 0; i<12; i++){
 			const querySel = `[data-path="${i+1}"]`;
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 	});
 
-	
 	// ========= КАСТОМНЫЙ СЕЛЕКТ =============
 	const customSelect = document.querySelector('.custom-select');
 	if(customSelect){	
@@ -319,9 +318,78 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}
 		});
+		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
+			slidesPerView: 1.2,
+			spaceBetween: 24,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".hero-card-pagination",
+				clickable: true,
+			},
+			breakpoints: {
 
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				768: {
+						slidesPerView: 3,
+						spaceBetween: 24,
+					}
+
+			}
+		});
+		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
+			slidesPerView: 1,
+			grid: {
+				rows: 2,
+			},
+			spaceBetween: 24,
+			pagination: {
+			el: ".game-cards-swiper-pagination",
+			clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				768: {
+						slidesPerView: 2.5,
+						spaceBetween: 24,
+					}
+
+			}
+		});
 	swips.init();
 	})();
+	let locCradsSwiper = new Swiper(".location-cards-swiper", {
+       slidesPerView: 1.1,
+        navigation: {
+          nextEl: ".locSwiper-button-next",
+          prevEl: ".locSwiper-button-prev",
+        },
+		speed:800,
+
+		loop: true,
+		breakpoints: {
+			575: {
+				slidesPerView: 1.8,
+				spaceBetween: 24,
+			},
+			768: {
+					slidesPerView: 2.5,
+					spaceBetween: 32,
+				}
+				,
+			1024: {
+					slidesPerView: 3,
+					spaceBetween: 32,
+				}
+		}
+      });
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
 	const bodyEl = document.body;
@@ -377,20 +445,44 @@ document.addEventListener("DOMContentLoaded", function (){
 			lazy: false
 		});
 	}
+	/*================about game жалюзи на большой картинке =============*/
+	const imgBlind = document.querySelector('.blind-img-block');
+	if(imgBlind){
+		
+		let Visible = function (target) {
+			// Все позиции элемента
+			let targetPosition = {
+					top: window.pageYOffset + target.getBoundingClientRect().top,
+					left: window.pageXOffset + target.getBoundingClientRect().left,
+					right: window.pageXOffset + target.getBoundingClientRect().right,
+					bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+				},
+				// Получаем позиции окна
+				windowPosition = {
+					top: window.pageYOffset,
+					left: window.pageXOffset,
+					right: window.pageXOffset + document.documentElement.clientWidth,
+					bottom: window.pageYOffset + document.documentElement.clientHeight
+				};
 
+			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+				// Если элемент полностью видно, то запускаем следующий код
+				setTimeout(function(){
+					target.classList.add('blind-img-block--hide')
+				}, 500)
+				
+			}
+		};
+
+		// Запускаем функцию при прокрутке страницы
+		window.addEventListener('scroll', function () {
+			Visible(imgBlind);
+		});
+
+		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+		Visible(imgBlind);
+	}
 });
-	// ========= ВЫПАДАЮЩЕЕ МЕНЮ =============
-	// const headerProfileArrow = document.getElementById('profile-arrow');
-	// const headerProfileDrop = document.getElementById('profile-menu');
-	// if(headerProfileArrow){
-	// 	headerProfileArrow.addEventListener('click', function(){
-	// 		if(this.classList.contains('active')){
-	// 			this.classList.remove('active');
-	// 			headerProfileDrop.classList.remove('active');
-
-	// 		}else{
-	// 			this.classList.add('active');
-	// 			headerProfileDrop.classList.add('active');
-	// 		}
-	// 	});
-	// }
