@@ -1,10 +1,15 @@
 @import "base/_var";
 @import "base/_base";
+@import "base/_typography";
 @import "sections/_aside-menu";
 @import "base/_buttons";
 @import "base/_animation";
 @import "base/_cards";
- @import "base/modal";
+@import "base/modal";
+@import "base/wrapper-class";
+
+ @import "blocks/swiper-styles";
+ 
 //blocks
  @import "blocks/custom-select";
  @import "blocks/header";

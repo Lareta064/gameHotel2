@@ -1,0 +1,119 @@
+/********typography********/
+.main-title {
+	font-size: 28px;
+	line-height: 40px;
+	color: #0A0522;
+	font-family: $ms;
+
+}
+
+.title-3,
+.section-title {
+	font-size: 32px;
+	line-height: 1.375;
+	font-family: $ms;
+
+	@media(max-width:767px) {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+}
+
+.section-title--special {
+	font-family: $mr;
+
+	span {
+		font-family: $ms;
+	}
+}
+
+.section-title {
+	margin-bottom: 56px;
+
+	@media(max-width:767px) {
+		margin-bottom: 24px;
+	}
+}
+
+.text-14 {
+	font-size: 14px;
+	line-height: 20px;
+	font-family: $os;
+}
+
+.text-13 {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.text-15,
+.text-16 {
+	font-family: $ms;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #0A0522;
+}
+
+.text-15 {
+	font-size: 15px;
+}
+
+.text-20,
+.text-20 p {
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: $mr;
+}
+
+.text-24,
+.text-24 p,
+.text-24 span,
+.text-24 h2,
+.text-24 h3 {
+	color: #0A0522;
+	font-size: 24px;
+	line-height: 1.5;
+	font-family: $ms;
+}
+
+.text-32,
+.text-32 p {
+	font-size: 32px;
+	line-height: 1.375;
+
+	span {
+		font-family: $ms;
+	}
+
+	@media(max-width:1023px) {
+		font-size: calc((100vw + 30rem)/(80 - 30) * (1.5 - 1) + 1rem);
+	}
+
+	@media(max-width:767px) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.text-grey {
+	color: #3B4E6A;
+}
+
+.text-green {
+	color: #33A661;
+}
+
+.text-link {
+	color: #7256FF;
+}
+
+.bg-link {
+	background: #EEF5FF;
+	color: #7256FF;
+	font-family: $ms;
+	transition: .3s;
+
+	&:hover {
+		opacity: .7;
+	}
+}
