@@ -220,6 +220,12 @@
 	}
 	
 }
+.container--special{
+	@media(max-width:767px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 .center-wrapper{
 	display: flex;
 	justify-content: center;
