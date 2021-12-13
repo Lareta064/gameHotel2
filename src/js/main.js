@@ -61,16 +61,18 @@ document.addEventListener("DOMContentLoaded", function (){
 	let bg1 = document.querySelector('.parallax-item1');
 	let bg2 = document.querySelector('.parallax-item2');
 	let bg3 = document.querySelector('.parallax-item3');
-	window.addEventListener('mousemove', function (e) {
-		let x = e.clientX / window.innerWidth;
-		let y = e.clientY / window.innerHeight;
+	if(bg1 && bg2 && bg3){
+		window.addEventListener('mousemove', function (e) {
+			let x = e.clientX / window.innerWidth;
+			let y = e.clientY / window.innerHeight;
+			
+			bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
+			bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
+			bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
 		
-		bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
-		bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
-		bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
 	
-
-	});
+		});
+	}
 	//===============perspective-effect ==============
 	$(function(){
 			const card = $('.possibl-card');
@@ -340,8 +342,9 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
+		 /*  карточки игровые карты на стр about game*/
 		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
-			slidesPerView: 1,
+			slidesPerView: 1.2,
 			grid: {
 				rows: 2,
 			},
@@ -365,6 +368,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	swips.init();
 	})();
+	 /*  карточки location на стр about game*/
 	let locCradsSwiper = new Swiper(".location-cards-swiper", {
        slidesPerView: 1.1,
         navigation: {
@@ -390,6 +394,40 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 		}
       });
+	  /*  карточки новостей на стр about game*/
+	  let gameNewsSwiper = new Swiper(".gn-cards-full", {
+		//   observer: true,
+        //     observeParents: true,
+       slidesPerView: 1,
+	   spaceBetween: 16,
+        navigation: {
+          nextEl: ".game-news-next",
+          prevEl: ".game-news-prev",
+        },
+		speed:800,
+
+		loop: true,
+		breakpoints: {
+			575: {
+				slidesPerView: 1.5,
+				spaceBetween: 24,
+			},
+			768: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				}
+				,
+			1024: {
+					slidesPerView: 2,
+					spaceBetween: 32,
+				},
+			1200: {
+					slidesPerView: 2.2,
+					spaceBetween: 24,
+				}
+		}
+      });
+	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
 	const bodyEl = document.body;

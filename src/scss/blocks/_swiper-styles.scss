@@ -131,4 +131,11 @@
 	transform: rotate(180deg);
 	margin-right: 12px;
 }
+.gn-cards-full.swiper{
+	overflow: hidden;
+}
+.slider-container{
+	width: calc(100% + 20px);
+	overflow: hidden;
+}
 /***********************************/

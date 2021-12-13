@@ -9,24 +9,30 @@
 	}
 	.page-content-left{
 		width: 74%;
-		box-shadow:0px 5px 16px rgba(216, 207, 244, 0.8);
-		background-color: #fff;
-		border-radius: 24px;
+		
+		
 		@media(max-width:1279px) {
 			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		@media(max-width:767px) {
-			box-shadow: none;
-		}
+		
 	}
 	.page-content-left__block{
+		box-shadow:0px 5px 16px rgba(216, 207, 244, 0.8);
+		background-color: #fff;
 		padding: 24px 32px;
+		border-radius: 24px;
 		@media(max-width:767px){
 			padding-left: 0;
 			padding-right: 0;
+			box-shadow: none;
+
 		}
+		
+	}
+	.page-content-left__block+.page-content-left__block{
+		margin-top: 40px;
 	}
 	.page-content-right {
 		width: 22.5%;
@@ -282,3 +288,11 @@ article .flex-header {
 	margin-bottom: 24px;
 }
 .location-cards .center-wrapper{margin-top: 24px;}
+
+/*======slider game news======*/
+.gn-cards-full{
+	.card-light--pic{
+		width: 368px;
+		flex-shrink:0;
+	}
+}

@@ -16,12 +16,15 @@
 	.card-light__text h4{
 		height: auto;
 		-webkit-line-clamp: 1;
+		margin-bottom: 8px;
 	}
 	.card-light{
 		background: #EEF5FF;
 		height: 144px;
+		transition: .3s;
 		&:hover{
 			background: #7256FF;
+			h4, p, span{color: #fff;}
 		}
 		@media(max-width:991px){
 			padding: 16px;
@@ -66,4 +69,7 @@
 			}
 		}
 	}
+}
+.gn-cards-full{
+	
 }
