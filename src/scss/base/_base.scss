@@ -65,7 +65,7 @@
   h1,
   h2,
   h3,
-  h4,
+  h4,h5,h6,
   p {
 	padding: 0;
 	margin: 0;
@@ -347,7 +347,16 @@
 		font-family: $os;
 	}	
 	p +p {margin-top: 24px;}
-	
+	p>img{
+		border-radius: 15px;		
+	}
+	p>.img-right{
+		float:right;
+		display:inline;
+		margin-bottom: 16px;
+		margin-left: 16px;
+	}
+	p>span.text-15{display: block;}
 }
 .flex-header{
 	display: flex;
@@ -626,19 +635,37 @@ svg.tg-svg{
 .road-map .card-grid-trio.swiper-wrapper,
 .game-news-cards .card-grid-trio.swiper-wrapper,
 .our-team__cards.swiper-wrapper,
-.hero-cards-swiper .card-grid-trio.swiper-wrapper {
+.hero-cards-swiper .card-grid-trio.swiper-wrapper,
+.game-cards-swiper .card-grid-trio.swiper-wrapper {
 	@media(max-width:1023px) {
 		display: flex;
+		grid-template-columns: unset;
+		column-gap:unset;
+		row-gap:unset;
+	}
+}
+.hero-cards-swiper .card-grid-trio,
+.game-cards-swiper .card-grid-trio{
+	@media(min-width:1024px){
+		column-gap: 32px;
+		row-gap:32px;
 	}
 }
 
-.swiper-pagination-info,
+.swiper-wrapper.flex-1023,
 .road-map .card-grid-trio.swiper-wrapper,
 .game-news .card-grid-trio.swiper-wrapper,
-.swiper-pagination-roadMap.swiper-pagination,
 .swiper-pagination.hide-1024 {
 	@media(max-width:1023px) {
 		display: flex;
+	}	
+}
+.game-cards-swiper {
+	width: 100%;
+	@media(max-width:1023px){
+		height: 420px;
+	.swiper-slide {		
+		height: calc((100% - 55px) / 2);}	
 	}
 	
 }
@@ -647,6 +674,7 @@ svg.tg-svg{
 .swiper-pagination-bullet:focus {
 	outline:none;
 }
+/*точки пагинации bullet*/
 .swiper-pagination-info{
 	.swiper-pagination-bullet {
 		background: #fff;
@@ -660,7 +688,7 @@ svg.tg-svg{
 }
 .swiper-wrapper{
 	@media(max-width:1023px){
-		padding-bottom: 40px;
+		padding-bottom: 40px;/*-видеть точки пагинации, иначе образеются*/
 	}
 }
 .slider-btn-next, .slider-btn-prev{

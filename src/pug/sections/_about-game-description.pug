@@ -134,7 +134,7 @@ section.about-game
 			.text-paragrafe
 				p В игре имеется 6 основных классов и 3 смешанных. Каждый основной класс имеет гены, которые передаются его потомкам Набор генов у каждого персонажа индивидуален, но не обязательно уникален Гены классов влияют на значения здоровья, скорости, навык, мораль, а также на 4 умения персонажа.
 			.hero-cards-swiper.swiper
-				.card-grid-trio.swiper-wrapper
+				.card-grid-trio.swiper-wrapper.gap-32
 					.swiper-slide
 						.hero-card
 							.hero-card__img
@@ -195,7 +195,7 @@ section.about-game
 				.hero-card-pagination.swiper-pagination.hide-1024
 		
 		article.location-cards.pt-48
-			.header-group.d-flex
+			.flex-header
 				h3.text-24 Локации
 				//==========slider btn ========
 				.location-cards-swiper__btn.slider-btn-wrapper
@@ -205,23 +205,62 @@ section.about-game
 			.location-cards-swiper.swiper
 				.swiper-wrapper
 					.swiper-slide
-						.location-card(style="background-image:url(./img/aboutGame/location-1.jpg)")
+						.picture-card(style="background-image:url(./img/aboutGame/location-1.jpg)")
 							.badge.badge--white Рынок
 					.swiper-slide
-						.location-card(style="background-image:url(./img/aboutGame/location-2.jpg)")
+						.picture-card(style="background-image:url(./img/aboutGame/location-2.jpg)")
 							.badge.badge--white Сад
 					.swiper-slide
-						.location-card(style="background-image:url(./img/aboutGame/location-3.jpg)")
+						.picture-card(style="background-image:url(./img/aboutGame/location-3.jpg)")
 							.badge.badge--white Руины
 					.swiper-slide
-						.location-card(style="background-image:url(./img/aboutGame/location-1.jpg)")
+						.picture-card(style="background-image:url(./img/aboutGame/location-1.jpg)")
 							.badge.badge--white Рынок
 					.swiper-slide
-						.location-card(style="background-image:url(./img/aboutGame/location-2.jpg)")
+						.picture-card(style="background-image:url(./img/aboutGame/location-2.jpg)")
 							.badge.badge--white Сад
 					.swiper-slide
-						.location-card(style="background-image:url(./img/aboutGame/location-3.jpg)")
+						.picture-card(style="background-image:url(./img/aboutGame/location-3.jpg)")
 							.badge.badge--white Руины
 			.center-wrapper
 				a(href="#!").bg-link.bagde-medium Показать еще
+		
+		article.text-block.pt-48
+			h3.text-24  PvE Сражения
+			.text-paragrafe
+				p #[span.text-15 Основная механика игры заключается в следующем:]	Любое сражение, вне зависимости от режима, состоит из раундов. В начале первого рануда выдается определенное количество случайных карт с умениями ваших axies, а также начисляется определенное кол-во энергии для применения этих умений.
+				p  #[img.img-right(src="./img/aboutGame/game-banner.jpg", width="492" alt="alt")] #[span.text-15 В режиме PVE нам предстоит сражаться с NPC на различных точках карты приключений:] В зависимости от точки, нам предстоит преодолеть от 1 до 5 ранудов, ликвидировать всех NPC и получить в награду SLP (если точка пройдена «на отлично» и никто из axie не погиб, то мы сможем разово заработать дополнительную награду). Чем дальше точка от начала, тем выше будет уровень NPC, и тем сложнее нам будет их победить. Но наши axie также смогут повышать свой уровень, увеличивая свои характеристики, но для этого нужно играть в PVE при наличии на аккаунте энергии. #[br] В день на прокачку мы, имея на аккаунте 3 акси, сможем потратить только 20 энергии. На вознаграждение в виде SLP энергия аккаунта не влияет, но есть ограничение: в режиме PVE можно заработать только 50 SLP в день. #[br] Чтобы заработать больше SLP, нам необходимо будет выигрывать матчи в режиме PVP, против других игроков. На этот режим уровень axie не влияет, и ваши axie, и axie вашего противника будут иметь базовые параметры, как на 1 уровне. Но нужно помнить, что вознаграждение, в случае победы, мы получим только при наличии энергии на аккаунте. Как только энергия кончится мы и дальше сможем играть, однако SLP за победу получать не будем. 
+
+		article.text-block.pt-48
+			h3.text-24  PvP Сражения
+			.text-paragrafe
+				p  #[img.img-right(src="./img/aboutGame/game-banner.jpg", width="492" alt="alt")] #[span.text-15 На картинке можно увидеть, в каком порядке будут выполнять ход ваши axies, и axies противника.] В каждом из ходов можно выбрать, какие именно умения будет применять ваш axie, выбрав соответствующую карту. На применение каждой из карт требуется определенное кол-во энергии, указанной на карте. После совершения выбора игрок подтверждает завершение хода, после чего изменить или добавить карты нельзя. После того, как оба игрока подтвердят ход все axie в порядке очереди начинают применять свои умения, нанося урон противнику, защищая себя щитами и так далее.  #[br] Также нужно отметить, что большинство карт имеют дополнительный эффект, который сработает только в определенных условиях ( к примеру, за 1 ход axie разыграет определенное количество карт, или урон от карты будет нанесен самому быстрому axie противника, и так далее).  #[br] Это, если можно так сказать, краткая выжимка игрового процесса, в котором, на самом деле, крайне много особенностей, которые зависят от типа axie, его параметров, его умений и даже линии, на которой он стоит (в игре их 3, по 2 позиции на линии).
+		article.game-cards.pt-48
+			.flex-header
+				h3.text-24 Игровые карты
+				a(href="#!").button.button--pink Перейти в каталог
+			
+			.game-cards-swiper.swiper
+				.card-grid-trio.swiper-wrapper.flex-1023
+					.swiper-slide
+						.picture-card.badge-center(style="background-image:url(./img/aboutGame/game-card1.jpg)")
+							.badge.badge--white Рынок
+					.swiper-slide
+						.picture-card.badge-center(style="background-image:url(./img/aboutGame/game-card2.jpg)")
+							.badge.badge--white Сад
+					.swiper-slide
+						.picture-card.badge-center
+							.badge.badge--white Руины
+					.swiper-slide
+						.picture-card.badge-center
+							.badge.badge--white Рынок2
+					.swiper-slide
+						.picture-card.badge-center
+							.badge.badge--white Сад2
+					.swiper-slide
+						.picture-card.badge-center
+							.badge.badge--white Руины2
+					
+				.game-cards-swiper-pagination.swiper-pagination.hide-1024
+
 				

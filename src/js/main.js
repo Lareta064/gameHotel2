@@ -2,12 +2,13 @@ document.addEventListener("DOMContentLoaded", function (){
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
-	if(target .lenth >0 ){
+	if(target){
 		const target1 = [];
 		for(let i = 0; i<12; i++){
 			const querySel = `[data-path="${i+1}"]`;
 			target1.push(document.querySelector(querySel));
-		}		
+		}
+		
 		let Visible = function (target) {
 			// Все позиции элемента
 			let targetPosition = {
@@ -46,30 +47,31 @@ document.addEventListener("DOMContentLoaded", function (){
 
 		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 		let delay = 0;
-		for (let item of target1) {		
+		for (let item of target1) {
+		
 			setTimeout(function () {
 				Visible(item);
 			}, 50 + delay)
 			delay += 200;
 		}
 	}
+
 	
 	//========== ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ=========
 	let headerSection = document.querySelector('.investor-banner')
 	let bg1 = document.querySelector('.parallax-item1');
 	let bg2 = document.querySelector('.parallax-item2');
 	let bg3 = document.querySelector('.parallax-item3');
-	if(bg1){
+	window.addEventListener('mousemove', function (e) {
+		let x = e.clientX / window.innerWidth;
+		let y = e.clientY / window.innerHeight;
 		
-		window.addEventListener('mousemove', function (e) {
-			let x = e.clientX / window.innerWidth;
-			let y = e.clientY / window.innerHeight;			
-			bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
-			bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
-			bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
+		bg1.style.transform = 'translate(+' + x * 20 + 'px, -' + y * 35 + 'px)';
+		bg2.style.transform = 'translate(-' + y * 15 + 'px, -' + x * 15 + 'px)';
+		bg3.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 20 + 'px)';
+	
 
-		});
-	}
+	});
 	//===============perspective-effect ==============
 	$(function(){
 			const card = $('.possibl-card');
@@ -319,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
-			slidesPerView: 1.2, 
+			slidesPerView: 1.2,
 			spaceBetween: 24,
 			loop: true,
 			speed:800,
@@ -328,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-				
+
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -337,23 +339,44 @@ document.addEventListener("DOMContentLoaded", function (){
 						slidesPerView: 3,
 						spaceBetween: 24,
 					}
-				
+
 			}
 		});
-		
+		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
+			slidesPerView: 1,
+			grid: {
+				rows: 2,
+			},
+			spaceBetween: 24,
+			pagination: {
+			el: ".game-cards-swiper-pagination",
+			clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				768: {
+						slidesPerView: 2.5,
+						spaceBetween: 24,
+					}
+
+			}
+		});
 	swips.init();
 	})();
-
 	let locCradsSwiper = new Swiper(".location-cards-swiper", {
        slidesPerView: 1.1,
         navigation: {
           nextEl: ".locSwiper-button-next",
           prevEl: ".locSwiper-button-prev",
-        }, 
+        },
 		speed:800,
-	
-		loop: true,     
-		breakpoints: {			
+
+		loop: true,
+		breakpoints: {
 			575: {
 				slidesPerView: 1.8,
 				spaceBetween: 24,
@@ -366,7 +389,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			1024: {
 					slidesPerView: 3,
 					spaceBetween: 32,
-				}			
+				}
 		}
       });
 	/*===========MODAL FORM==========*/
@@ -426,37 +449,3 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 });
-/**===========  VIDEO ABOUT GAME PAGE==========*/
-	const videoContent = document.querySelector('#gameVideo');
-	if (videoContent) {
-		const videoBtn = videoContent.querySelector('.video-play-btn');
-		const videoClip = document.querySelector('#gameVideoClip');
-		
-		videoContent.addEventListener('click', function (e) {
-			
-			if (videoClip.paused) {
-				videoClip.play();
-				videoBtn.style.opacity = "0";
-				this.classList.add("active");
-			} else {
-				videoClip.pause();
-				videoBtn.style.opacity = "1";
-				this.classList.remove("active");
-			}			
-		});		
-	}
-	// ========= ВЫПАДАЮЩЕЕ МЕНЮ =============
-	// const headerProfileArrow = document.getElementById('profile-arrow');
-	// const headerProfileDrop = document.getElementById('profile-menu');
-	// if(headerProfileArrow){
-	// 	headerProfileArrow.addEventListener('click', function(){
-	// 		if(this.classList.contains('active')){
-	// 			this.classList.remove('active');
-	// 			headerProfileDrop.classList.remove('active');
-
-	// 		}else{
-	// 			this.classList.add('active');
-	// 			headerProfileDrop.classList.add('active');
-	// 		}
-	// 	});
-	// }
