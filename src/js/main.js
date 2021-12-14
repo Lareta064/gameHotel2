@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function (){
+	/*bottom fix-menu mob version*/
+	const fixMobMenu = document.querySelector('.fix-mobile-menu');
+	if(fixMobMenu){
+		const openFixMenu = fixMobMenu.querySelector('#open-fixMenu');
+		const closeFixMenu = fixMobMenu.querySelector('#close-fixMenu');
+		const listFixMenu = fixMobMenu.querySelector('.fix-menu-list');
+		openFixMenu.addEventListener('click', function(){
+			this.classList.remove('active');
+			 closeFixMenu.classList.add('active');
+			 listFixMenu.classList.add('active');
+		});
+		closeFixMenu.addEventListener('click', function(){
+			this.classList.remove('active');
+			openFixMenu.classList.add('active');
+			 listFixMenu.classList.remove('active');
+		});
+
+
+	}
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
@@ -264,9 +283,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				el: ".swiper-pagination-info",
 				clickable: true,
 			},
-			autoplay: {
-				delay: 3000,
-				},
+			
 			breakpoints: {
 				574: {
 					slidesPerView: 1.5,
@@ -283,9 +300,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			spaceBetween: 24,
 			loop: true,
 			speed:1500,
-			autoplay: {
-				delay: 3000,
-				},
+			
 			pagination: {
 				el: ".swiper-pagination-team",
 				clickable: true,
@@ -303,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
-			slidesPerView: .8, 
+			slidesPerView: 1.2, 
 			spaceBetween: 24,
 			loop: true,
 			speed:800,
@@ -313,8 +328,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			},
 			breakpoints: {
 				
-				768: {
-					slidesPerView: 1.5,
+				575: {
+					slidesPerView: 1.6,
 					spaceBetween: 24,
 				}
 				

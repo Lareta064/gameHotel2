@@ -7,8 +7,8 @@
 @import "base/_cards";
 @import "base/modal";
 @import "base/wrapper-class";
-
- @import "blocks/swiper-styles";
+@import "base/fix-mobile-menu";
+@import "blocks/swiper-styles";
  
 //blocks
  @import "blocks/custom-select";

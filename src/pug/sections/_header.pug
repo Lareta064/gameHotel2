@@ -1,4 +1,5 @@
-header.header
+//===========DESKTOP HEADER========
+header.header.header--desk
 	.header-content.d-flex
 		.header-left
 			.mobile-logo
@@ -31,8 +32,58 @@ header.header
 						a(href="#hoy-bay") Как купить GHOT?
 					li
 						a(href="#faq") Часты вопросы
+		//====LOGIN=====
+		//- .header-right
+		//- 	.login-block
+		//- 		.login-block__img
+		//- 			img(src="./img/login.png", width="31" alt="alt")
+		//- 		button.login-btn(type="button" data-btn="logIn") Войти
+
+		//====LOGIN=====
 		.header-right
-			.login-block
-				.login-block__img
-					img(src="./img/login.png", width="31" alt="alt")
-				button.login-btn(type="button" data-btn="logIn") Войти
+			.profile-panel
+				.profile-icon
+					.icon-notify
+						p.label
+							span 2
+				.profile-persone
+					.profile-persone__img
+						img(src="./img/ava.png", width="38" alt="ava")
+					.profile-persone__arrow#profile-arrow
+						svg(width="10" height="6")
+							use(xlink:href="./img/svg-sprite.svg#iconArr")
+					.profile-persone__row
+						p 0x...263a
+
+//===========MOBILE HEADER========
+header.header.header--mob
+	.header-content.d-flex
+		.header-left
+			.mobile-logo
+				a(href="#!")
+					svg(width="42" height="24")
+						use(xlink:href="./img/svg-sprite.svg#footer-logo")
+		//====LOGOUT=====
+		//- .header-right
+		//- 	.login-block
+		//- 		.login-block__img
+		//- 			img(src="./img/login.png", width="31" alt="alt")
+		//- 		button.login-btn(type="button" data-btn="logIn") Войти
+		
+		
+		//====LOGIN=====
+		.header-right
+			.profile-panel
+				.profile-icon
+					.icon-notify
+						p.label
+							span 2
+				.profile-persone
+					.profile-persone__img
+						img(src="./img/ava.png", width="38" alt="ava")
+					.profile-persone__arrow#profile-arrow
+						svg(width="10" height="6")
+							use(xlink:href="./img/svg-sprite.svg#iconArr")
+					.profile-persone__row
+						p 0x...263a
+

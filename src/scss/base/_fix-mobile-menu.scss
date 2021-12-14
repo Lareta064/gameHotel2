@@ -1,0 +1,72 @@
+.fix-mobile-menu{
+	width:calc(50% + 50vw - 20px);
+	position: fixed;
+	z-index: 20;
+	left: 20px;
+	bottom: 82px;
+	display: flex;
+	align-items: center;
+	.fix-menu-list{
+		ul{
+			display: flex;
+			align-items: center;
+		}
+		li{margin-left: 8px;}
+	}
+	.fix-menu-list a,
+	.fix-menu-toggle {
+		cursor:pointer;
+		height: 24px;
+		line-height: 16px;
+		background-color: #0A0522;
+		color: #fff;
+		font-size: 12px;
+		font-family: $ms;
+		padding: 4px 8px;
+		border-radius: 16px;
+		white-space:nowrap;
+		display: inline-block;
+		height: 24px;
+	}
+	.fix-menu-list a{
+		background-color: #fff;
+		color: #3B4E6A;
+		&:hover{
+			background-color: $pr;
+			color: #fff;
+		}
+	}
+	.fix-menu-list{
+		width: calc(100% - 50px);
+		overflow: hidden;
+		padding-bottom: 2px;
+		overflow-x: auto;
+		display: none;
+		scrollbar-width:none;
+		&::-webkit-scrollbar{
+			display: none;
+		}
+		&.active{
+			display: block;
+		}
+	}
+	.fix-menu-toggle {
+		display: none;
+		margin-right: 10px;
+		&.active{display: block;}
+	}
+	#close-fixMenu{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.25 1.8075L10.1925 0.75L6 4.9425L1.8075 0.75L0.75 1.8075L4.9425 6L0.75 10.1925L1.8075 11.25L6 7.0575L10.1925 11.25L11.25 10.1925L7.0575 6L11.25 1.8075Z' fill='white'/%3e%3c/svg%3e");
+		width: 10px;
+		height: 10px;
+		background-position: center;
+		background-size: auto;
+		background-repeat: no-repeat;
+		height: 24px;
+		width: 34px;
+	}
+
+	@media(min-width:1024px){
+		display: none;
+	}
+}

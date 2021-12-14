@@ -44,3 +44,30 @@
 		}
 	}
 }
+.our-experts__cards{
+	
+	.double-card{background-color: #EEF5FF;}
+	.double-card--darkLabel{
+		.double-card__top{background-color: #fff;}
+		.double-card__bottom {
+			background-color: #EEF5FF;
+		}
+	}
+	.double-card__label{
+		p{color: #fff;}
+		p:first-child{
+			display: block;
+			@media(max-width:1023px){
+				display: none;
+			}
+		}
+		p+p{
+			display: none;
+
+			@media(max-width:1023px) {
+				display: block;
+			}
+		}
+		background-color: #0A0522;
+	}
+}
