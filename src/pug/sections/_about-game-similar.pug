@@ -1,21 +1,60 @@
 //========= ПОХОЖИЕ ИГРЫ===========
-article.games-similare.pt-48
+article.games-similare
 	.column-container
 		.flex-header
 			h3.text-24 Похожие игры
-			a(href="#!").bg-link.bagde-medium Смотреть все
-			.game-cards-swiper.swiper
-				.card-grid-trio.swiper-wrapper.flex-1023
-					.swiper-slide
-						a(href="#!") link.game-card-large
-							.badge.badge--white ранний доступ
-							.game-card-large__img
-							.game-card-large__info
+			a(href="#!").button-medium.button-light Смотреть все
+		//=======слайдер======
+		.game-cards-swiper.swiper
+			.card-grid-trio.swiper-wrapper.flex-1023
+				//=====один слайд =====
+				.swiper-slide
+					a(href="#!").game-card-large
+						.badge.badge--white Ранний доступ
+						.game-card-large__img(style="background: #F3EAFF url(./img/aboutGame/game-card3.jpg)")
+						.game-card-large__info
+							.game-card__body
 								.game-card__title
 									span.badge.badge--green 8.9
-									h4.main-title Axie Infinity
-								.game-card__body
-									p Пошаговая, карточная
-								.game-card__footer
-									img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
-									span.bg-link.bagde-medium Смотреть все
+									h4.text-15 Axie Infinity
+								p.text-14 Пошаговая, карточная
+							.game-card__footer
+								img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
+								span.button.button-light.button--flex
+									span Изучить
+									svg(width="16" height="16")
+										use(xlink:href="./img/svg-sprite.svg#arrRight")
+				//=====один слайд =====
+				.swiper-slide
+					a(href="#!").game-card-large
+						.badge.badge--white Доступен
+						.game-card-large__img(style="background: #F2CF68")
+						.game-card-large__info
+							.game-card__body
+								.game-card__title
+									span.badge.badge--green 8.9
+									h4.text-15 Axie Infinity
+								p.text-14 Пошаговая, карточная
+							.game-card__footer
+								img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
+								span.button.button-light.button--flex
+									span Изучить
+									svg(width="16" height="16")
+										use(xlink:href="./img/svg-sprite.svg#arrRight")
+				//=====один слайд =====
+				.swiper-slide
+					a(href="#!").game-card-large
+						.badge.badge--white Доступен
+						.game-card-large__img(style="background:  #7EE4ED ")
+						.game-card-large__info
+							.game-card__body
+								.game-card__title
+									span.badge.badge--green 8.9
+									h4.text-15 Axie Infinity
+								p.text-14 Пошаговая, карточная
+							.game-card__footer
+								img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
+								span.button.button-light.button--flex
+									span Изучить
+									svg(width="16" height="16")
+										use(xlink:href="./img/svg-sprite.svg#arrRight")

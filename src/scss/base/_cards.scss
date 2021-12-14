@@ -297,3 +297,60 @@ p{
 	left: 50%;
 	transform:translate(-50%, -50%);
 }
+.game-card-large{
+	position: relative;
+	display: block;
+	background: #EEF5FF;
+	border-radius: 16px;
+	overflow: hidden;
+	padding-bottom: 12px;
+	transition: .3s;
+	.badge{
+		position: absolute;
+		top: 14px;
+		left: 16px;
+		z-index: 2;
+		font-size: 13px;		
+	}
+	.game-card__title{
+		display: flex;
+		align-items: center;
+		margin-bottom: 4px;
+		.badge{position: relative; margin-right: 12px; top:auto; left:auto; font-size: 12px; height: 16px;line-height: 16px;}
+	}
+	&__img{
+		height: 216px;
+		overflow:hidden;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.game-card__body{
+		padding: 16px;
+		p{
+			color: #3B4E6A;
+		}	
+	}
+	.game-card__footer{
+		padding-left: 16px;
+		padding-right: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.button{
+			height: 32px;
+			line-height: 30px;			
+		}
+
+	}
+}
+
+.game-card-large:hover{
+	// box-shadow: 0 0 15px rgba(0,0,0, .08);
+	filter: drop-shadow(0px 5px 16px rgba(216, 207, 244, 0.8));
+	background-color: #fff;
+	.game-card__footer .button {
+		opacity: .7;
+		
+	}
+}

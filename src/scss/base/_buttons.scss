@@ -30,13 +30,12 @@
 	color: $pr;
 	background-color: $light;
 }
+
 .button-medium{
 	height: 36px;
 	line-height: 34px;
 }
-.button-link{
 
-}
 .button-light{
 background: #EEF5FF;
 svg{fill: $pr;}
@@ -44,15 +43,7 @@ span{color: $pr;}
 color: #7256FF;
 border-color: #EEF5FF;
 &:hover{
-border-color: $pr;
-background: $pr;
-	svg {
-		fill: #fff;
-	}
-
-	span {
-		color: #fff;
-	}
+opacity: .7;
 	}
 }
 .button--color {
