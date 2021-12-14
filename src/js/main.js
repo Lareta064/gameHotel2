@@ -366,6 +366,37 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
+		swips.addSwiper(".games-cards-large", "min-width:1024px", {
+			slidesPerView: 1.2,
+			spaceBetween: 24,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".cards-large-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/

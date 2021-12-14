@@ -342,3 +342,9 @@ article .flex-header {
 		flex-shrink:0;
 	}
 }
+
+.games-similare .card-grid-trio{
+	@media(min-width:1024px){
+		column-gap:26px;
+	}
+}
