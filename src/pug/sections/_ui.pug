@@ -2,7 +2,10 @@
 .container
 	
 	
-	.button Купить $Hotel
+	.wr(style="margin-bottom:40px;")
+		.button--square
+			svg( width="16" height="16")
+				use( xlink:href="./img/svg-sprite.svg#icon-pool")
 	.wr(style="margin-bottom:40px;")
 		.button--color.button Купить $Hotel
 		p .button--color.button
@@ -16,6 +19,8 @@
 				svg( width="16" height="16")
 					use( xlink:href="./img/svg-sprite.svg#icon-pool")
 				span Купить $Hotel
+	.wr(style="margin-bottom:40px;")
+		a(href="#!").bg-link Показать еще
 	.wr(style="margin-bottom:40px; ")
 		.btn-group
 			.btn-group__img
@@ -29,7 +34,18 @@
 	.wr(style="margin-bottom:40px;")
 		button.button.button-light Button
 		p .button.button-light
-	
+	.wr(style="margin-bottom:40px;")
+		button.button.button-light.button--flex
+			span Купить $Hotel Button
+			svg(width="16" height="16")
+				use(xlink:href="./img/svg-sprite.svg#arrRight")
+			
+		pre.
+			button.button.button-light.button--flex
+				span Купить $Hotel Button
+				svg( width="16" height="16")
+					use( xlink:href="./img/svg-sprite.svg#icon-pool")
+				
 	.wr(style="margin-bottom:40px;")
 		button.button.button--pink Button
 		p .button.button--pink
@@ -57,9 +73,10 @@
 				a(href="#!") PvP
 				a(href="#!") Игровые карты
 	.wr(style="margin-bottom:40px;")
-		.button.button--color.button-icon
+		.button.button--color.button--flex
 			span Войти
 			svg(width="16" height="16")
+				use(xlink:href="./img/svg-sprite.svg#arrRight")
 	.wr(style="margin-bottom:40px;")
 		.card-light
 			.card-light__head
@@ -107,8 +124,7 @@
 					li
 						span.text-grey Мораль
 						span.text-green 27
-	.wr(style="margin-bottom:40px;")
-		a(href="#!").bg-link Показать еще
+	
 	
 	.wr(style="margin-bottom:40px;")
 		.flex-header

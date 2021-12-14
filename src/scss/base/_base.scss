@@ -492,9 +492,9 @@ svg.tg-svg{
 	}
 }
 .contact-icons--vertical{
-	position: absolute;
+	position: fixed;
 	right: 0;
-	top: 39%;
+	top: 45%;
 	transform: translateY(-50%);
 	z-index: 11;
 	flex-direction: column;
@@ -516,5 +516,8 @@ svg.tg-svg{
 		&:hover{
 			background-color: #eef5ff;
 		}
+	}
+	@media(max-width:767px){
+		display: none;
 	}
 }

@@ -1,3 +1,5 @@
+.button-medium,
+.button-link,
 .button{
 	padding: 0;
 	cursor:pointer;
@@ -21,7 +23,19 @@
 	&:hover{
 		opacity: .7;
 	}
-	
+}
+.button-link{
+	height: 24px;
+	line-height: 22px;
+	color: $pr;
+	background-color: $light;
+}
+.button-medium{
+	height: 36px;
+	line-height: 34px;
+}
+.button-link{
+
 }
 .button-light{
 background: #EEF5FF;
@@ -51,7 +65,11 @@ background: $pr;
 	}
 }
 
-.button--color svg{
+.button--color span +svg{
+	fill: #ffffff;
+	margin-left: 14px;
+}
+.button--color svg +span {
 	fill: #ffffff;
 	margin-right: 14px;
 }
@@ -63,8 +81,11 @@ background: $pr;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	svg{
-		margin-right: 12px;
+	svg + span{
+		margin-left: 12px;
+	}
+	span+svg {
+		margin-left: 12px;
 	}
 }
 .btn-group{
@@ -136,4 +157,14 @@ svg#arrRight{
 		color: #fff;
 		background-color: $pr;
 	}
+}
+.button--square{
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $light;
+	svg{fill: $pr;}
+	color: $pr;
 }
