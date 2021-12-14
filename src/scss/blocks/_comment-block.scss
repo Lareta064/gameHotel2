@@ -80,8 +80,9 @@
 	}
 	.replay-text{
 		position: relative;
-		margin-left: 12px;
-		padding-left: 20px;
+		margin-left: 16px;
+		padding-left: 8px;
+		
 		&:before{
 			content: '';
 			width: 18px;
@@ -122,6 +123,7 @@
 		font-size: 13px;
 		line-height: 20px;
 		color: #7256FF;
+		cursor:pointer;
 	}
 	li>ul{
 		.comments-block__avatar{

@@ -1,76 +1,77 @@
 //===== COMMENTS BLOCK ==========
-.comments-block
-	.comments-block-form
-		.comments-block__avatar(style="background-image: url(./img/default-avatar.jpg")
-			//- img(src="./img/ava.png", width="44" alt="img")
-		form.comment-form(action="" method="")
-			.form-field
-				.form-field-icon
-				input(type="text" required placeholder="Комментарий...")
-				button(type="submit").form-btn.send-btn
-	.comments-block-tree
-		ul
-			//====== один комментарий ====
-			li
-				.comments-block-tree__item
-					.comments-block__avatar(style="background-image: url(./img/comment1.jpg")
-						//- img(src="./img/comment1.jpg", width="44" alt="img")
+section.comments-block
+	.column-container
+		.comments-block-form
+			.comments-block__avatar(style="background-image: url(./img/default-avatar.jpg")
+				//- img(src="./img/ava.png", width="44" alt="img")
+			form.comment-form(action="" method="")
+				.form-field
+					.form-field-icon
+					input(type="text" required placeholder="Комментарий...")
+					button(type="submit").form-btn.send-btn
+		.comments-block-tree
+			ul
+				//====== один комментарий ====
+				li
+					.comments-block-tree__item
+						.comments-block__avatar(style="background-image: url(./img/comment1.jpg")
+							//- img(src="./img/comment1.jpg", width="44" alt="img")
 
-					.comments-block__details
-						.comments-block__details-info
-							.comment-info-group
-								p Rayna Aminoff
-								span  Сегодня в 13:32
-							.comment-info-count
-								span.decrem-btn
-								input(type="text" readonly value="20")
-								span.increm-btn
+						.comments-block__details
+							.comments-block__details-info
+								.comment-info-group
+									p Rayna Aminoff
+									span  Сегодня в 13:32
+								.comment-info-count
+									span.decrem-btn
+									input(type="text" readonly value="20")
+									span.increm-btn
 
-						.comments-block__details-text
-							p В течении двадцатого века было предложено множество теорий всего, но ни одна из них не смогла пройти экспериментальную проверку.
-						.replay-btn Ответить
-		
-			//====== один комментарий ====
-			li
-				.comments-block-tree__item
-					.comments-block__avatar(style="background-image: url(./img/comment2.jpg")
-						//- img(src="./img/comment1.jpg", width="44" alt="img")
+							.comments-block__details-text
+								p В течении двадцатого века было предложено множество теорий всего, но ни одна из них не смогла пройти экспериментальную проверку.
+							.replay-btn Ответить
+			
+				//====== один комментарий ====
+				li
+					.comments-block-tree__item
+						.comments-block__avatar(style="background-image: url(./img/comment2.jpg")
+							//- img(src="./img/comment1.jpg", width="44" alt="img")
 
-					.comments-block__details
-						.comments-block__details-info
-							.comment-info-group
-								p Alena Curtis
-								span  Сегодня в 13:45
-							.comment-info-count
-								span.decrem-btn
-								input(type="text" readonly value="20")
-								span.increm-btn
+						.comments-block__details
+							.comments-block__details-info
+								.comment-info-group
+									p Alena Curtis
+									span  Сегодня в 13:45
+								.comment-info-count
+									span.decrem-btn
+									input(type="text" readonly value="20")
+									span.increm-btn
 
-						.comments-block__details-text
-							p Основная проблема построния научной теории всего состоит в том, что квантовая механика и общая теория относительности имеют разные области применения.
-						.replay-btn Ответить	
-				
-				//====== ответ на комментарий ====
-				ul
-					//====== один ответ на комментарий ====
-					li
-						.comments-block-tree__item
-							.comments-block__avatar(style="background-image: url(./img/comment3.jpg")
-								//- img(src="./img/ava.png", width="44" alt="img")
+							.comments-block__details-text
+								p Основная проблема построния научной теории всего состоит в том, что квантовая механика и общая теория относительности имеют разные области применения.
+							.replay-btn Ответить	
+					
+					//====== ответ на комментарий ====
+					ul
+						//====== один ответ на комментарий ====
+						li
+							.comments-block-tree__item
+								.comments-block__avatar(style="background-image: url(./img/comment3.jpg")
+									//- img(src="./img/ava.png", width="44" alt="img")
 
-							.comments-block__details
-								.comments-block__details-info
-									.comment-info-group
-										p Cooper Kenter
-										span  Сегодня в 15:12
-										.replay-text
-											span Alena Curtis
-									.comment-info-count
-										span.decrem-btn
-										input(type="text" readonly value="20")
-										span.increm-btn
+								.comments-block__details
+									.comments-block__details-info
+										.comment-info-group
+											p Cooper Kenter
+											span  Сегодня в 15:12
+											.replay-text
+												span Alena Curtis
+										.comment-info-count
+											span.decrem-btn
+											input(type="text" readonly value="20")
+											span.increm-btn
 
 
-								.comments-block__details-text
-									p Теория струн сочетает в себе идеи квантовой механики и теории относительности, поэтому на ее основе, возможно, будет построена будущая теория квантовой гравитации.
-								.replay-btn Ответить
+									.comments-block__details-text
+										p Теория струн сочетает в себе идеи квантовой механики и теории относительности, поэтому на ее основе, возможно, будет построена будущая теория квантовой гравитации.
+									.replay-btn Ответить
