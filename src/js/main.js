@@ -336,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
-			slidesPerView: 1.2,
+			slidesPerView: 1.3,
 			spaceBetween: 24,
 			loop: true,
 			speed:800,
@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	})();
 	 /*  карточки location на стр about game*/
 	let locCradsSwiper = new Swiper(".location-cards-swiper", {
-       slidesPerView: 1.1,
+       slidesPerView: 1.2,
         navigation: {
           nextEl: ".locSwiper-button-next",
           prevEl: ".locSwiper-button-prev",
