@@ -57,14 +57,20 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	@media(max-width:1279px){
-		display: block;
-	}
+	
 	.page-content-right{
 		position: sticky;
 		top: 72px;
 	}
 }
+@media(max-width:1279px) {
+	.page-content-wrapper .page-content-columns {
+		display: block;
+	}
+	.page-content-wrapper .page-content-right {
+		display: none;
+		}
+	}
 .about-game-header {
 	padding-bottom: 24px;
 	// padding-top: 24px;
