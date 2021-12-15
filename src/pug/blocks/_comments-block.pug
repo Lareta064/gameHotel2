@@ -1,9 +1,18 @@
 //===== COMMENTS BLOCK ==========
 section.comments-block
 	.column-container
+		.flex-header
+			.text-group
+				h3.text-24 Комментрии
+				span.badge.badge--black 3
+			
+			.comments-block-filters.filter-btn-block
+				.filter-btn по популярности
+				.filter-btn.active по новизне
+
 		.comments-block-form
 			.comments-block__avatar(style="background-image: url(./img/default-avatar.jpg")
-				//- img(src="./img/ava.png", width="44" alt="img")
+				
 			form.comment-form(action="" method="")
 				.form-field
 					.form-field-icon
@@ -15,7 +24,7 @@ section.comments-block
 				li
 					.comments-block-tree__item
 						.comments-block__avatar(style="background-image: url(./img/comment1.jpg")
-							//- img(src="./img/comment1.jpg", width="44" alt="img")
+							
 
 						.comments-block__details
 							.comments-block__details-info
@@ -35,7 +44,7 @@ section.comments-block
 				li
 					.comments-block-tree__item
 						.comments-block__avatar(style="background-image: url(./img/comment2.jpg")
-							//- img(src="./img/comment1.jpg", width="44" alt="img")
+							
 
 						.comments-block__details
 							.comments-block__details-info
