@@ -218,19 +218,12 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		swips.addSwiper(".swiper-investor-cta", "", {
 			loop: true,
-			slidesPerView: 1.4,        
+			slidesPerView: 1.2,
 			spaceBetween: 24,
 			speed:800,
 			pagination: {
 				el: ".swiper-pagination-cta",
 				clickable: true,
-			},
-			breakpoints: {
-				
-				575: {
-					slidesPerView: 2,
-					spaceBetween: 24,
-				}
 			}
 		});
 		swips.addSwiper(".game-news-cards", "min-width:1024px", {

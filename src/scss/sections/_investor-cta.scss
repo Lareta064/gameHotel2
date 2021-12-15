@@ -191,7 +191,9 @@
 }
 .swiper-investor-cta{
 	margin-top: 34px;
-	
+	.card-light__text p {
+		height: 72px;
+	}
 	@media(max-width:767px) {			
 	
 		width: calc(50% + 50vw);
