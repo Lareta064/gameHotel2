@@ -232,7 +232,12 @@
 	
 }
 .text-block--game-types{
-	.grid-column-3{max-width:832px}
+	.grid-column-3{
+		max-width:832px;
+		@media(max-width:1023px){
+			padding-right: 20px;
+		}
+	}
 	.card-light{
 		width: 250px;
 		p{ -webkit-line-clamp: 4;}

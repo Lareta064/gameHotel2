@@ -122,7 +122,8 @@
 				line-height: 20px;
 				transition: .3s;
 				position: relative;
-			padding-right: 30px;
+				padding-right: 30px;
+				white-space:nowrap;
 				&:after{
 					content: '';
 					background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.442505 8.435L3.8775 5L0.442505 1.5575L1.5 0.5L6 5L1.5 9.5L0.442505 8.435Z' fill='%233B4E6A'/%3e%3c/svg%3e");
@@ -155,13 +156,23 @@
 		}
 	}
 }
-.hidden-layout{
-	display: none;
-	@media(max-width:1199px){
-		height: 64px;
-		display: block;
+.container--special .page-breadcrumb{
+	@media(max-width:767px){
+		padding-left: 20px;
+		padding-right: 16px;
+		ul{
+			flex-wrap:wrap;	
+		}
+		
 	}
 }
+// .hidden-layout{
+// 	display: none;
+// 	@media(max-width:1199px){
+// 		height: 64px;
+// 		display: block;
+// 	}
+// }
 
 .bg-lightBlue {
 	background-color: #E7FBFF;
