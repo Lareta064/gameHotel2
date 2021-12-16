@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
       });
 	  
-	  let bannersSlider = new Swiper(".banners-slider", {
+	  let bannersSlider = new Swiper(".header-slider-swiper", {
 		//   observer: true,
         //     observeParents: true,
        slidesPerView: 1,
@@ -489,15 +489,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			1440: {
 					slidesPerView: 1.4,
 					spaceBetween: 48,
-				},
-			1600:{
-					slidesPerView: 2.2,
-        			centeredSlides: true,
-					spaceBetween: 72,
-					
-			}	
-
-		}
+				}
+			}
       });
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
