@@ -23,3 +23,22 @@ mixin breadcrumb(...items)
 			each item in items
 				li
 					a(href="#!") #{item}
+
+mixin game-card-large(rang, title, text, logoSrc, badge)
+	a(href="#!" style="width:260px").game-card-large
+		if badge
+			.badge.badge--white !{badge}
+		.game-card-large__img(style="background: #F3EAFF url(./img/aboutGame/game-card3.jpg)")
+		.game-card-large__info
+			.game-card__body
+				.game-card__title
+					span.badge.badge--green !{rang}
+					h4.text-15 !{title}
+				p.text-14 !{text}
+			.game-card__footer
+				img(src="./img/aboutGame/"+ logoSrc +".png", width="82" alt="alt")
+				span.button.button-light.button--flex
+					span Изучить
+					svg(width="16" height="16")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
+		

@@ -466,6 +466,39 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 		}
       });
+	  
+	  let bannersSlider = new Swiper(".banners-slider", {
+		//   observer: true,
+        //     observeParents: true,
+       slidesPerView: 1,
+	   spaceBetween: 72,
+	   centeredMode: true,
+        navigation: {
+          nextEl: ".game-news-next",
+          prevEl: ".game-news-prev",
+        },
+		speed:800,
+
+		loop: true,
+		breakpoints: {
+			
+			768: {
+					slidesPerView: 1.2,
+					spaceBetween: 32,
+				},
+			1440: {
+					slidesPerView: 1.4,
+					spaceBetween: 48,
+				},
+			1600:{
+					slidesPerView: 2.2,
+        			centeredSlides: true,
+					spaceBetween: 72,
+					
+			}	
+
+		}
+      });
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
