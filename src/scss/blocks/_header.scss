@@ -42,6 +42,7 @@ header.header{
 }
 .header-left .custom-select{
 	width: 60px;
+	li a {display: block;}
 	
 }
 .header-menu{
@@ -158,7 +159,7 @@ header.header{
 		border-radius: 50%;
 		overflow: hidden;
 		position: absolute;
-		left: -13px;
+		left: -5px;
 		top: 0;
 		z-index: 2;
 		background-color: #7EE4ED;
@@ -168,7 +169,7 @@ header.header{
 		font-family: $ms;
 		padding-right: 12px;
 		border-radius: 20px;
-		padding-left: 27px;
+		padding-left: 35px;
 		height: 31px;
 		line-height: 31px;
 		background-color: #EEF5FF;

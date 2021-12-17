@@ -207,3 +207,26 @@
 @media(min-width:768px){
 	.swiper-investor-cta{display: none;}
 }
+.btn-group--offerDesk {
+	display: block;
+}
+
+.btn-group--offerMob {
+	display: none;
+}
+@media (max-width: 767px) {
+	
+	.btn-group--offerDesk {
+		display: none;
+	}
+
+	.btn-group--offerMob {
+		display: flex;
+		margin-top: 30px;
+	}
+
+	.btn-group--offerMob .button {
+		width: 220px;
+		text-align: center;
+	}
+}

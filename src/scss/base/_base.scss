@@ -166,13 +166,6 @@
 		
 	}
 }
-// .hidden-layout{
-// 	display: none;
-// 	@media(max-width:1199px){
-// 		height: 64px;
-// 		display: block;
-// 	}
-// }
 
 .bg-lightBlue {
 	background-color: #E7FBFF;
@@ -240,6 +233,9 @@
 .center-wrapper{
 	display: flex;
 	justify-content: center;
+}
+.br-desktop{
+  display: block;
 }
 .mt-64{
 	margin-top: 64px;
