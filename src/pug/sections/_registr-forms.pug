@@ -57,6 +57,12 @@
 					.codeValue__item
 						input(type="text"  name="" required)
 						span
+					.codeValue__item
+						input(type="text"  name="" required)
+						span
+					.codeValue__item
+						input(type="text"  name="" required)
+						span
 				.register-step-btn
 					button.button.button--color.button-icon
 						span Войти
@@ -99,7 +105,7 @@
 			p.text-13 Нажимая на кнопку вы соглашаетесь с правилам и обработкой и политикой конфиденциальности.
 
 //================= АВТОРИЗАЦИЯ ШАГ 2/3 =====================
-.page-modal.login-modal.login-modal--yellow(data-modal)
+.page-modal.login-modal.login-modal--yellow.visible(data-modal)
 	.page-modal__header
 		h3.text-16 Авторизация
 		button.close-btn(data-close) &#10006;
@@ -117,6 +123,12 @@
 				.form-field.codeValue-group
 					.codeValue__item
 						input(type="text"  name="" value="1" required)
+						span
+					.codeValue__item
+						input(type="text"  name="" required)
+						span
+					.codeValue__item
+						input(type="text"  name="" required)
 						span
 					.codeValue__item
 						input(type="text"  name="" required)
@@ -147,7 +159,12 @@
 		.image-group
 			img(src="./img/hand.png", width="177" alt="alt")
 	.page-modal__body
-		p.text-14 Наши основатели скоро с вами свяжутся от telegram аккаунта @ldmco или @MASflor
+		.register-step
+			.register-step-title
+				span &#10004;
+				p.text-15 Спасибо за регистрацию
+
+			p.text-14 Наши основатели скоро с вами свяжутся от telegram аккаунта @ldmco или @MASflor
 		
 	.page-modal__footer
 		button.button.button-light.button--flex
