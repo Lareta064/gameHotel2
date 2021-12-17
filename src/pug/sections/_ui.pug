@@ -166,12 +166,51 @@
 			.header-text
 				h3.text-24 Новости
 				p.text-18 Статьи	
-	.wr(style="margin-bottom:40px; overflow:hidden;")
+	.wr(style="margin-bottom:40px; overflow:hidden; width:260px")
 		+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная', 'axie-card','game-logo', 'Ранний доступ')
-		+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная','axie-card', 'game-logo')
+	.wr(style="margin-bottom:40px; overflow:hidden; width:376px;")
+		+game-card-medium('8.9', 'Axie Infinity', 'Пошаговая, карточная','favor-card', 'game-logo')
 		pre.
 			+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная','axie-card', 'game-logo', 'Ранний доступ')
+	.wr(style="margin-bottom:40px; overflow:hidden; ")
+		a(href="#!").action-card
+			.action-card-img(style="background: #F3EAFF url(./img/action-card1.jpg)")
+			.action-card-content
+				p.text-20 Обучение и гайды от GameFI
+				p.text-15 Game Hotel подготовил подробные гайды<br> по всем играм, доступным на платформе
+			.action-card-arrow
+		a(href="#!").action-card
+			.action-card-img(style="background: #F3EAFF url(./img/action-card2.jpg)")
+			.action-card-content
+				p.text-20 Новости GameFI
+				p.text-15 Будьте в курсе происходящего в мире блокчейна.<br> Рассказываем о самом важном и интересном
+			.action-card-arrow
+
 	
+	.wr(style="margin-bottom:40px;")
+		.gradient-text
+			h1 Gradient text
+			pre.
+				.gradient-text
+					h1 Gradient text
+	.wr(style="margin-bottom:40px; background-color: blue;")
+		+game-card-category('axie', 'Axie Infinity')
+		pre.
+			+game-card-category(imgSrc, title)
+
+	.wr(style="margin-bottom:40px; max-width:376px;")
+		.game-card__info
+			.game-card__body
+				.game-card__title
+					span.badge.badge--green 8.9
+					h4.text-15 Axie Infinity
+				p.text-14 Пошаговая, карточная
+			.game-card__footer
+				img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
+				span.button.button-light.button--flex
+					span Изучить
+					svg(width="16" height="16")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
 	.wr(style="margin-bottom:40px; overflow:hidden;")
 		.flex-header
 			h3.text-24 Локации

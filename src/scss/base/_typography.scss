@@ -121,3 +121,10 @@
 		opacity: .7;
 	}
 }
+.gradient-text >*{
+	 background: linear-gradient(45deg, #E14FAD 33%, #F9D423 66%);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 color: #E14FAD;
+	 display: table;
+}
