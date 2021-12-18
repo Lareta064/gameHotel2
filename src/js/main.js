@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	//===============perspective-effect ==============
 	$(function(){
-			const card = $('.possibl-card');
+			const card = $('.persone-card');
 			
 			card.on('mousemove', function (e) {
 				
@@ -319,8 +319,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".swiper-team", "min-width:1024px", {
-			slidesPerView: 'auto', 
-			spaceBetween: 24,
+			slidesPerView: 1.2, 
+			spaceBetween: 16,
 			loop: true,
 			speed:1500,
 			
@@ -330,11 +330,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			},
 			breakpoints: {
 				574: {
-					slidesPerView: 1.5,
+					slidesPerView: 1.8,
 					spaceBetween: 24,
 				},
 				768: {
-					slidesPerView: 2.5,
+					slidesPerView: 2.2,
 					spaceBetween: 24,
 				}
 				
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
 			slidesPerView: 1.2, 
-			spaceBetween: 24,
+			// spaceBetween: 24,
 			loop: true,
 			speed:800,
 			pagination: {

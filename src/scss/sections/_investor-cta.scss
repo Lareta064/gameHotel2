@@ -6,6 +6,29 @@
 		overflow:hidden;
 	}
 }
+.investor-cta .btn-group--mob {
+	display: none;
+}
+
+.investor-cta .btn-group--offerDesk {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.investor-cta .btn-group--offerDesk {
+		display: none;
+	}
+
+	.investor-cta .btn-group--mob {
+		display: flex;
+		margin-top: 40px;
+	}
+
+	.investor-cta .btn-group--mob .button {
+		width: 220px;
+		text-align: center;
+	}
+}
 .investor-cta-header{
 	justify-content: space-between;
 	align-items: flex-start;

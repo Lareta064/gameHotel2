@@ -1,66 +1,128 @@
+//==========team============
 section.our-team#team
 	.container
 		h2.section-title.section-title--special #[span Команда] Game Hotel
 		.swiper-team.swiper
 			.our-team__cards.card-grid-duo.swiper-wrapper
 				//=====team card ======
-				.double-card.double-card--blue.swiper-slide
-					.double-card__content
-						.double-card__top
-							.double-card__top-text
-								h4 Межуев Андрей
-								p со-основатель Game Hotel
-								.double-card__label
-									p Процессы и финансы
-							.double-card__top-img
-								img(src="./img/team1.jpg",width="104" alt="alt")
-						.double-card__bottom
+				.swiper-slide 
+					.persone-card
+						.persone-card__top
+							.persone-card__info
+								.persone-card__foto
+									img(src="./img/team1.jpg",width="104" alt="alt")
+								.persone-card__row
+									.persone-card__text
+										.persone-card__col
+											h4 Межуев Андрей
+											p сооснователь Game Hotel
+										.card-social
+											a(href="#!").icon-fb
+											a(href="#!").icon-tw
+									.persone-card__badge
+										p Процессы и финансы
+						.persone-card__bottom
 							p Эксперт в области операционного управления и автоматизации бизнеса, финансового инжиниринга.
+				
 				//=====team card ======
-				.double-card.double-card--pink.swiper-slide
-					.double-card__content
-						.double-card__top
-							.double-card__top-text
-								h4 Дмитрий Лукьян
-								p со-основатель Game Hotel
-								.double-card__label
-									p Продукт и маркетинг
-							.double-card__top-img
-								img(src="./img/team2.jpg",width="104" alt="alt")
-						.double-card__bottom
-							p Эксперт в области операционного управления и автоматизации бизнеса, финансового инжиниринга.
+				.swiper-slide
+					.persone-card.persone-card--2
+						.persone-card__top
+							.persone-card__info
+								.persone-card__foto
+									img(src="./img/team2.jpg",width="104" alt="alt")
+								.persone-card__row
+									.persone-card__text
+										.persone-card__col
+											h4 Дмитрий Лукьян
+											p сооснователь Game Hotel
+										.card-social
+											a(href="#!").icon-fb
+											a(href="#!").icon-tw
+									.persone-card__badge
+										p Продукт и маркетинг
+						.persone-card__bottom
+							p Эксперт в области автоматизиции технологических процессов, маркетинговой упаковки и Usability.
+				
 				//=====team card ======
-				.double-card.double-card--yellow.swiper-slide
-					.double-card__content
-						.double-card__top
-							.double-card__top-text
-								h4 Гаганчиков Павел
-								p Разработчик Game Hotel
-								.double-card__label
-									p Web разработка
-							.double-card__top-img
-								img(src="./img/team3.jpg",width="104" alt="alt")
-						.double-card__bottom
-							p Эксперт в области операционного управления и автоматизации бизнеса, финансового инжиниринга.
-
+				.swiper-slide
+					.persone-card.persone-card--3
+						.persone-card__top
+							.persone-card__info
+								.persone-card__foto
+									img(src="./img/team3.jpg",width="104" alt="alt")
+								.persone-card__row
+									.persone-card__text
+										.persone-card__col
+											h4 Гаганчиков Павел
+											p Разработчик Game Hotel
+										.card-social
+											a(href="#!").icon-tw
+									.persone-card__badge
+										p Web разработка
+						.persone-card__bottom
+							p Эксперт по созданию ERP и SAAS решений, программист высокого уровня с 13&#8209;летним опытом
 				//=====team card ======
-				.double-card.double-card--aqua.swiper-slide
-					.double-card__content
-						.double-card__top
-							.double-card__top-text
-								h4 Борис Секретный
-								p Спец по безопасности Game Hotel
-								.double-card__label
-									p Software Разработка
-							.double-card__top-img
-								img(src="./img/team4.jpg",width="104" alt="alt")
-						.double-card__bottom
-							p 12 лет в разработке. Эксперт по защите ПО и низкоуровневому программированию.
+				.swiper-slide
+					.persone-card.persone-card--4
+						.persone-card__top
+							.persone-card__info
+								.persone-card__foto
+									img(src="./img/team4.jpg",width="104" alt="alt")
+								.persone-card__row
+									.persone-card__text
+										.persone-card__col
+											h4 Борис Секретный
+											p Специалист по безопасности Game Hotel
+									.persone-card__badge
+										p Software-разработка
+						.persone-card__bottom
+							p Эксперт по защите ПО и низкоуровневому программированию с 12&#8209;летним опытом
 
 			.swiper-pagination-team.swiper-pagination.hide-1024
 
-
-						
-
-
-
+//========experts========
+section.our-experts
+	.container
+		h2.section-title.section-title--special #[span Советники] Game Hotel
+		.swiper-our-experts.swiper
+			.our-experts__cards.card-grid-duo.swiper-wrapper
+				//=====team card ======
+				.swiper-slide
+					.persone-card
+						.persone-card__top
+							.persone-card__info
+								.persone-card__foto
+									img(src="./img/team5.jpg",width="104" alt="alt")
+								.persone-card__row
+									.persone-card__text
+										.persone-card__col
+											h4 Евгений Галиахметов
+											p сооснователь DAO.VC
+										.card-social
+											a(href="#!").icon-fb
+											a(href="#!").icon-tw
+									.persone-card__badge
+										p Взаимоотношения с инвесторами
+						.persone-card__bottom
+							p Бизнес-ангел, венчурный инвестор, сооснователь клуба Angelsdeck.com,           сооснователь и управляющий партнер Altergate.vc
+				//=====team card ======
+				.swiper-slide
+					.persone-card
+						.persone-card__top
+							.persone-card__info
+								.persone-card__foto
+									img(src="./img/team6.jpg",width="104" alt="alt")
+								.persone-card__row
+									.persone-card__text
+										.persone-card__col
+											h4 Георгий Галоян
+											p исполнительный директор DAO.VC
+										.card-social
+											a(href="#!").icon-fb
+											a(href="#!").icon-tw
+									.persone-card__badge
+										p Эксперт в области технологий&nbsp;и&nbsp;инноваций
+						.persone-card__bottom
+							p Руководитель направления стартап-предпринимательства блокчейн-ассоциации Армении. Член инициативы «Цифровая Грузия».
+			.swiper-pagination-experts.swiper-pagination.hide-1024
