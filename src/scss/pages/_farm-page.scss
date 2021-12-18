@@ -1,0 +1,184 @@
+/*========.farm-header=========*/
+.farm-page{
+	background-color: #EEF5FF;
+	
+}
+.farm-header{
+	.farm-header-content{
+		background-color: #fff;
+		border-radius: 24px;
+		align-items: stretch;
+		@media(max-width:1199px){
+			flex-direction: column;
+		}
+	} 
+	.farm-header-left,
+	.farm-header-right {
+		width: 50%;
+		padding: 40px 48px;
+		padding-bottom: 30px;
+		
+	}
+	.farm-header-column{
+		max-width: 445px;
+	}
+	.farm-title{
+		h1{
+			font-size: 28px;
+			line-height: 1.43;
+			font-family: $mr;
+			font-weight: 400;
+			span{font-family: $ms;}
+		}
+	}
+	.farm-info{
+		padding-top: 40px;
+		padding-bottom: 63px;
+		background: url(../img/farm-grid.svg);
+		background-position: center;
+		background-size: auto;
+		background-repeat: no-repeat;
+		li{
+			display: flex;
+			justify-content: space-between;
+		}
+		li +li{margin-top: 48px;}
+	}
+	.farm-info-col {
+		p{
+			font-size: 24px;
+			line-height: 1.5;
+			font-family: $ms;
+		}
+		p+p{
+			font-size: 14px;
+			line-height: 20px;
+			font-family: $mr;
+		}
+
+	}
+	.farm-info-btn{
+		margin-top: 55px;
+	}
+	.farm-header-text {
+		p{
+			font-size: 15px;
+			line-height: 1.5;
+			span{
+				font-family: $ms;
+			}
+		}
+	}
+	/*right column*/
+	.farm-header-right{
+		background: linear-gradient(270deg, #7256FF 0%, #32D098 100%);
+
+	}
+	.farm-header-right__title {
+		margin-bottom: 20px;
+		p{
+			font-size: 28px;
+			line-height: 1.43;
+			color: #FFFFFF;
+		}
+	}
+}
+.farm-card{
+	background-color: #fff;
+	box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.16);
+	border-radius: 16px;
+	padding: 28px 32px;
+	
+}
+.farm-card{
+	.farm-card-row{
+		display: flex;
+		justify-content: space-between;
+
+	}
+	.farm-card-row+.farm-card-row{margin-top: 28px;}
+	.farm-card__value{
+		display: flex;
+		align-items: center;
+		p{
+			font-size: 24px;
+			line-height: 1.43;
+			font-family: $ms;
+			white-space: nowrap;
+		}
+		p+p{
+			font-size: 14px;
+			line-height: 20px;
+			color: #3B4E6A;
+			margin-left: 16px;
+			white-space: nowrap;
+		}
+	}
+}	
+	
+.farm-assets-card  .farm-assets-row .button {
+	height: 40px;
+	line-height: 38px;
+	padding-left: 12px;
+	padding-right: 12px;
+	font-size: 13px;
+	span +span{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-left: 12px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.8332 6.83329H6.83317V11.8333H5.1665V6.83329H0.166504V5.16663H5.1665V0.166626H6.83317V5.16663H11.8332V6.83329Z' fill='white'/%3e%3c/svg%3e");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto;
+	}
+}
+
+
+.farm-card+.farm-card{margin-top: 32px;}
+.farm-withdrawal-card{
+	.farm-card__value p{
+		color: #33A661;
+	}
+	
+}
+.form-checkbox{
+
+	label{
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		
+		input{
+			width: 0.01px;
+			height: 0.01px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+		span.fake-checkbox{
+			width: 20px;
+			height: 20px;
+			border-radius: 6px;
+			background: #EEF5FF;
+			border: 1px solid #9BADCA;
+			margin-right: 12px;
+			font-size: 14px;
+			line-height: 20px;
+			color:  #3B4E6A;
+			background: url(../img/icons/check.svg);
+			background-position: center -50px;
+			background-repeat: no-repeat;
+			background-size: auto;
+			transition: .3s;
+
+		}
+		input[type="checkbox"]:checked+span.fake-checkbox{
+			background-color: $pr;
+			background-position: center center;
+			
+		}
+	}
+}

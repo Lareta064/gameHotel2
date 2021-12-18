@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+
+	include ../sections/_aside-menu.pug
+	include ../sections/_header.pug
+	main.farm-page
+		include ../sections/_farm-header.pug
+		
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Farm page";
