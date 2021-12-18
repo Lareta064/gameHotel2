@@ -68,3 +68,28 @@
 	row-gap: 32px;
 
 }
+/****заголовок на баннерах ***/
+
+.main-header__content{
+	position: relative;
+	z-index: 3;
+	display: flex;
+	height: 100%;
+	width: 70%;
+	max-width:416px;
+	flex-direction: column;
+	.title-1{
+		margin-bottom: 32px;
+		img{margin-right: 20px;}
+	}
+	.title-1, p{color: #ffffff;}
+	p{
+		font-size: 17px;
+		line-height: 1.53;
+	}
+	.btn-group{
+		margin-top: auto;
+		padding-left: 0;
+		.button +.button{margin-left: 24px;}
+	}
+}

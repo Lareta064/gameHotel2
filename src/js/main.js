@@ -468,18 +468,16 @@ document.addEventListener("DOMContentLoaded", function (){
       });
 	  
 	  let bannersSlider = new Swiper(".header-slider-swiper", {
-		//   observer: true,
-        //     observeParents: true,
+		
        slidesPerView: 1,
 	   spaceBetween: 72,
 	   centeredMode: true,
-        navigation: {
-          nextEl: ".game-news-next",
-          prevEl: ".game-news-prev",
+	   speed:800,
+	   navigation: {
+          nextEl: ".header-slider-next",
+          prevEl: ".header-slider-prev",
         },
-		speed:800,
-
-		loop: true,
+		// loop: true,
 		breakpoints: {
 			
 			768: {
