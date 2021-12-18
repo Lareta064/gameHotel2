@@ -109,7 +109,7 @@
 		position: absolute;
 	}
 	.investor-banner__man{
-		left: 46%;
+		left: 50%;
 		bottom: -35px;
 		transform:translateX(-50%);
 	}
@@ -144,6 +144,10 @@
 .investor-banner__benefits{
 	position: relative;
 	z-index: 5;
+	.d-flex{
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
+	}
 	@media(max-width:1023px){
 		padding-left: 15px;
 		padding-right: 15px;

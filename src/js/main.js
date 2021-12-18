@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	//===============perspective-effect ==============
 	$(function(){
-			const card = $('.possibl-card');
+			const card = $('.persone-card');
 			
 			card.on('mousemove', function (e) {
 				
@@ -226,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			}
 		});
+		
 		swips.addSwiper(".game-news-cards", "min-width:1024px", {
 			loop: true,
 			slidesPerView: 1.2, 
@@ -242,6 +243,35 @@ document.addEventListener("DOMContentLoaded", function (){
 				},
 				768: {
 					slidesPerView: 2.5,
+					spaceBetween: 24,
+				},
+			}
+		});
+		//===news slider one game page =====
+		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
+			loop: true,
+			slidesPerView: 1.2, 
+			spaceBetween: 24,
+			speed:800,
+			pagination: {
+				el: ".swiper-pagination-news",
+				clickable: true,
+			},
+			breakpoints: {
+				574: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				768: {
+					slidesPerView: 1.7,
+					spaceBetween: 24,
+				},
+				1024: {
+					slidesPerView: 2.3,
+					spaceBetween: 24,
+				},
+				1200: {
+					slidesPerView: 2.8,
 					spaceBetween: 24,
 				},
 			}
@@ -289,8 +319,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".swiper-team", "min-width:1024px", {
-			slidesPerView: 'auto', 
-			spaceBetween: 24,
+			slidesPerView: 1.2, 
+			spaceBetween: 16,
 			loop: true,
 			speed:1500,
 			
@@ -300,11 +330,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			},
 			breakpoints: {
 				574: {
-					slidesPerView: 1.5,
+					slidesPerView: 1.8,
 					spaceBetween: 24,
 				},
 				768: {
-					slidesPerView: 2.5,
+					slidesPerView: 2.2,
 					spaceBetween: 24,
 				}
 				
@@ -312,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
 			slidesPerView: 1.2, 
-			spaceBetween: 24,
+			// spaceBetween: 24,
 			loop: true,
 			speed:800,
 			pagination: {
@@ -465,6 +495,34 @@ document.addEventListener("DOMContentLoaded", function (){
 					spaceBetween: 24,
 				}
 		}
+      });
+	  
+	  let bannersSlider = new Swiper(".header-slider-swiper", {
+		
+       slidesPerView: 1,
+	   spaceBetween: 72,
+	   centeredMode: true,
+	   speed:800,
+	   navigation: {
+          nextEl: ".header-slider-next",
+          prevEl: ".header-slider-prev",
+        },
+		// loop: true,
+		breakpoints: {
+			
+			768: {
+					slidesPerView: 1.1,
+					spaceBetween: 32,
+				},
+			1200: {
+					slidesPerView: 1.3,
+					spaceBetween: 48,
+				},
+			1440: {
+					slidesPerView: 1.4,
+					spaceBetween: 48,
+				}
+			}
       });
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/

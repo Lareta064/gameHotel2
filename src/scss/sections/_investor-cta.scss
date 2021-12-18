@@ -6,6 +6,29 @@
 		overflow:hidden;
 	}
 }
+.investor-cta .btn-group--mob {
+	display: none;
+}
+
+.investor-cta .btn-group--offerDesk {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	.investor-cta .btn-group--offerDesk {
+		display: none;
+	}
+
+	.investor-cta .btn-group--mob {
+		display: flex;
+		margin-top: 40px;
+	}
+
+	.investor-cta .btn-group--mob .button {
+		width: 220px;
+		text-align: center;
+	}
+}
 .investor-cta-header{
 	justify-content: space-between;
 	align-items: flex-start;
@@ -206,4 +229,30 @@
 }
 @media(min-width:768px){
 	.swiper-investor-cta{display: none;}
+}
+.btn-group--offerDesk {
+	display: block;
+}
+
+.btn-group--offerMob {
+	display: none;
+}
+@media (max-width: 767px) {
+	
+	.btn-group--offerDesk {
+		display: none;
+	}
+
+	.btn-group--offerMob {
+		display: flex;
+		margin-top: 30px;
+	}
+
+	.btn-group--offerMob .button {
+		width: 220px;
+		text-align: center;
+	}
+}
+.swiper-investor-cta.swiper {
+	padding-top: 10px;
 }

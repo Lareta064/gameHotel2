@@ -1,6 +1,7 @@
 @import "base/_var";
 @import "base/_base";
 @import "base/_typography";
+@import "base/_svg-bg";
 @import "sections/_aside-menu";
 @import "base/_buttons";
 @import "base/_animation";
@@ -34,7 +35,9 @@
  @import "sections/vertical-slider";
  @import "sections/how-bay-mobile";
  @import "sections/partners";
+ @import "sections/header-slider";
  @import "sections/faq";
+
  @import "sections/footer";
  
  @import "pages/investor-page";

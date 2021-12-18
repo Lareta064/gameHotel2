@@ -8,6 +8,10 @@
 }
 
 .title-3,
+.title-1,
+.title-1 h3,
+.title-1 h1,
+.title-1 h2, .title-1 p,
 .section-title {
 	font-size: 32px;
 	line-height: 1.375;
@@ -21,6 +25,7 @@
 
 .section-title--special {
 	font-family: $mr;
+	font-weight: 400;
 
 	span {
 		font-family: $ms;
@@ -120,4 +125,11 @@
 	&:hover {
 		opacity: .7;
 	}
+}
+.gradient-text >*{
+	 background: linear-gradient(45deg, #E14FAD 33%, #F9D423 66%);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 color: #E14FAD;
+	 display: table;
 }

@@ -138,4 +138,19 @@
 	width: calc(100% + 20px);
 	overflow: hidden;
 }
+
+.header-slider-nav {
+	.swiper-button-next, .swiper-button-prev{
+		transition: .3s;
+		color: #ffffff;
+		&.swiper-button-disabled{opacity: 0;}
+		&:hover{opacity: 0.5;}
+	}
+}
+.header-slider-nav {
+	.swiper-button-next{
+		right: 80px;
+		@media(max-width:1199px){right: 30px;}
+	}
+}
 /***********************************/

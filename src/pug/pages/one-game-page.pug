@@ -1,0 +1,22 @@
+extends ../layouts/layout.pug
+
+block content
+
+	include ../sections/_aside-menu.pug
+	include ../sections/_header_2.pug
+	//========= тег main =========
+	main.about-game-main
+		include ../sections/_header-slider
+		.page-content-wrapper
+			.container.container--special
+				.page-content-columns
+					.page-content-left
+						.page-content-left__block
+							include ../sections/_one-game-similar
+						
+					.page-content-right
+						include ../sections/_one-game-aside
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = " Game";

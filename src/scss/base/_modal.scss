@@ -93,7 +93,7 @@
 		}
 	}
 }
-.register-form {
+.register-step {
 	.register-step-title {
 		display: flex;
 		align-items: center;
@@ -109,7 +109,9 @@
 }
 .login-modal--blue .register-step-title span{
 	background-color: #33A661;
+	width: 34px;
 	color: #fff;
+	text-align: center;
 }
 .login-modal--yellow .page-modal__img{
 	background-color: #FEF8E8;
