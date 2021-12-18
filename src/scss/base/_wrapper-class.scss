@@ -92,4 +92,7 @@
 		padding-left: 0;
 		.button +.button{margin-left: 24px;}
 	}
+	@media(max-width:1023px){
+		p {font-size: 15px;}
+	}
 }

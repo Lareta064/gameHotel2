@@ -147,4 +147,10 @@
 		&:hover{opacity: 0.5;}
 	}
 }
+.header-slider-nav {
+	.swiper-button-next{
+		right: 80px;
+		@media(max-width:1199px){right: 30px;}
+	}
+}
 /***********************************/

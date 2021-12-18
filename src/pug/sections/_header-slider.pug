@@ -1,23 +1,61 @@
 .header-slider
-	.container
-		.header-slider-nav
-			.header-slider-next.swiper-button-next
-			.header-slider-prev.swiper-button-prev
-		.header-slider-swiper.swiper
-			.swiper-wrapper
-				.swiper-slide
-					.game-banner(style="background-image: url(./img/games/thetan-banner.jpg)")
-						.main-header__content
-							h1.title-1
-								img(src="./img/games/axie-logo.png", width="99"  alt="logo")
-								| Axie Infinity
-							p Axie Infinity, игра на блокчейне, популярность которой в мире, и в частности на Филиппинах, экспоненциально выросла на фоне пандемии
-							.btn-group
-								a(href="#!").button.button--pink Об игре
-								a(href="#!").button.button--white Получить аккаунт
-				.swiper-slide
-					.game-banner(style="background-image: url(./img/games/axie-banner.jpg)")
-				.swiper-slide
-					.game-banner(style="background-image: url(./img/games/thetan-banner.jpg)")
-				.swiper-slide
-					.game-banner(style="background-image: url(./img/games/axie-banner.jpg)")
+	//========banner slider ========
+	.header-slider__top
+		.container
+			.header-slider-nav
+				.header-slider-next.swiper-button-next
+				.header-slider-prev.swiper-button-prev
+			.header-slider-swiper.swiper
+				.swiper-wrapper
+					.swiper-slide
+						.game-banner(style="background-image: url(./img/games/thetan-banner.jpg)")
+							.main-header__content
+								h1.title-1
+									img(src="./img/games/axie-logo.png", width="99"  alt="logo")
+									| Axie Infinity
+								p Axie Infinity, игра на блокчейне, популярность которой в мире, и в частности на Филиппинах, экспоненциально выросла на фоне пандемии
+								.btn-group
+									a(href="#!").button.button--pink Об игре
+									a(href="#!").button.button--white Получить аккаунт
+					.swiper-slide
+						.game-banner(style="background-image: url(./img/games/axie-banner.jpg)")
+					.swiper-slide
+						.game-banner(style="background-image: url(./img/games/thetan-banner.jpg)")
+					.swiper-slide
+						.game-banner(style="background-image: url(./img/games/axie-banner.jpg)")
+	//========small slider ========
+	.header-slider__bottom
+		.container
+			.game-news-cards.game-news-cards--1365.swiper
+				.card-grid-trio.swiper-wrapper
+					//=======one card ======
+					a(href="#!").card-light.card-light--pic.swiper-slide
+						.card-light__img
+							img(src="./img/game-news1.jpg", width="104" height="104" alt="alt")
+						.card-light__text
+							h4 Киберспорт
+							p Победа Natus Vincere в заветном мейджоре и влия...
+							.card-light__details
+								p 14.10.2021
+								span
+					//=======one card ======
+					a(href="#!").card-light.card-light--pic.swiper-slide
+						.card-light__img
+							img(src="./img/game-news2.jpg", width="104" height="104" alt="alt")
+						.card-light__text
+							h4 Секреты лучших
+							p Обсуждаем с про игроком секреты тактики в Axie...
+							.card-light__details
+								p 14.10.2021
+								span
+					//=======one card ======
+					a(href="#!").card-light.card-light--pic.swiper-slide
+						.card-light__img
+							img(src="./img/game-news3.jpg", width="104" height="104" alt="alt")
+						.card-light__text
+							h4 JRPG и Game Fi
+							p Как Япония оказывает влияние на индустрию...
+							.card-light__details
+								p 14.10.2021
+								span
+				.swiper-pagination-news.swiper-pagination

@@ -226,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			}
 		});
+		
 		swips.addSwiper(".game-news-cards", "min-width:1024px", {
 			loop: true,
 			slidesPerView: 1.2, 
@@ -242,6 +243,35 @@ document.addEventListener("DOMContentLoaded", function (){
 				},
 				768: {
 					slidesPerView: 2.5,
+					spaceBetween: 24,
+				},
+			}
+		});
+		//===news slider one game page =====
+		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
+			loop: true,
+			slidesPerView: 1.2, 
+			spaceBetween: 24,
+			speed:800,
+			pagination: {
+				el: ".swiper-pagination-news",
+				clickable: true,
+			},
+			breakpoints: {
+				574: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				768: {
+					slidesPerView: 1.7,
+					spaceBetween: 24,
+				},
+				1024: {
+					slidesPerView: 2.3,
+					spaceBetween: 24,
+				},
+				1200: {
+					slidesPerView: 2.8,
 					spaceBetween: 24,
 				},
 			}
@@ -481,8 +511,12 @@ document.addEventListener("DOMContentLoaded", function (){
 		breakpoints: {
 			
 			768: {
-					slidesPerView: 1.2,
+					slidesPerView: 1.1,
 					spaceBetween: 32,
+				},
+			1200: {
+					slidesPerView: 1.3,
+					spaceBetween: 48,
 				},
 			1440: {
 					slidesPerView: 1.4,

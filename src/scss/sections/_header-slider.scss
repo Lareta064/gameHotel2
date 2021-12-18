@@ -32,6 +32,8 @@
 .header-slider-swiper {
 	overflow: hidden;
 	width:calc(50% + 50vw);
+	.swiper-wrapper{padding-bottom: 0;}
+	
 	.swiper-slide .game-banner{
 		height: 444px;
 		padding: 64px;
@@ -41,6 +43,9 @@
 		border-radius: 24px;
 		position: relative;
 		overflow:hidden;
+		@media(max-width:1023px) {
+			padding: 32px;
+		}
 		&:after{
 			content: '';
 			position: absolute;
@@ -59,6 +64,42 @@
 		}
 		@media(max-width:1023px){
 			height: 330px;
+		}
+	}
+}
+.header-slider .header-slider__bottom {
+	margin-top: 56px;
+	h4,
+	p {
+		transition: .3s;
+	}
+	.card-light:hover{
+		background-color: rgba(255,255,255, .2);
+		h4, p{color: #fff;}
+	}
+	.swiper-pagination{
+		@media(max-width:1364px){
+			display: flex;
+			.swiper-pagination-bullet{
+				background: rgba(255,255,255, 1);
+				opacity: .5;
+				&-active{opacity: 1;}
+			}
+		}
+	}
+	.game-news-cards--1365 .card-grid-trio {
+		.card-light__details{padding-top: 12px;}
+		.card-light h4{
+			height: auto;
+			padding-bottom: 8px;
+		}
+		@media(max-width:1364px){
+			display: flex;
+			padding-bottom: 40px;
+			
+			.swiper-slide{
+				min-height: 100%;
+			}
 		}
 	}
 }
