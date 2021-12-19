@@ -6,24 +6,31 @@
 					.farm-title
 						h1 Диверсифицированный#[br] #[span майнинг в GameFi проектах]
 					.farm-info
-						ul
-							li
-								.farm-info-col
-									p 23 434 GHOT
-									p Заблокировано из 100 млн GHOT
-								.farm-info-col
-									p 38.42%
-									p APR
-							li
-								.farm-info-col
-									p ≈ $ 123 320
-									p Общая добыча в этом сезоне
-								.farm-info-col
-									p 83.16%
-									p APY
+						.farm-info-list.swiper
+							.swiper-wrapper
+								.farm-info-list__item.swiper-slide
+									.farm-info-col
+										p 23 434 GHOT
+										p Заблокировано из #[span 100 млн GHOT]
+									.farm-info-col
+										p 38.42%
+										p APR
+								.farm-info-list__item.swiper-slide
+									.farm-info-col
+										p ≈ $ 123 320
+										p Общая добыча в этом сезоне
+									.farm-info-col
+										p 83.16%
+										p APY
+							.farm-info-pagination.swiper-pagination.hide-1024
+						
+						.farm-header-text.d-block.d-md-none
+							p #[span Выплачиваем 40% прибыли#[br] от игрового майнинга] держателям #[br]токена GHOT и участвующим в добыче
+						
 						.farm-info-btn
 							a(href="#!").button.button--pink Купить GHOT
-					.farm-header-text
+					
+					.farm-header-text.d-none.d-md-block
 						p #[span Выплачиваем 40% прибыли#[br] от игрового майнинга] держателям #[br]токена GHOT и участвующим в добыче
 			.farm-header-right
 				.farm-header-right__title
@@ -53,21 +60,37 @@
 									span
 
 					.farm-withdrawal-card.farm-card
-						.farm-card-row
-							.farm-card-row__left
-								.farm-card__value
-									p $ 2 913
-								.farm-card__type
-									span Доступно для вывода
-							.farm-card-row__right
-								button.button.button-light.disable Clame & Swap in USDT
-						.farm-card-row
-							.farm-card-row__left
-								.farm-card__type
-									span Список валют
-							.farm-card-row__right
-								.form-checkbox
-									label
-										input(type="checkbox" name="")
-										span.fake-checkbox
-										span Авто реинвестиция
+						.farm-card-body
+							.farm-card-row
+								.farm-card-row__left
+									.farm-card__block
+										.farm-card__value
+											p $ 2 913
+										.farm-card__type
+											span Доступно для вывода
+									.farm-card__type.farm-card__block
+										span Список валют
+								.farm-card-row__right
+									.farm-card__block
+										button.button.button-light.disable Clame & Swap in USDT
+									.farm-card__block
+										.form-checkbox
+											label
+												input(type="checkbox" name="")
+												span.fake-checkbox
+												.form-checkbox__block
+													span Авто реинвестиция
+													.tooltip-box
+														span.info-icon i
+														.tooltip-box-content
+															p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+						.farm-card-footer
+							.timeline-block 
+								.timeline-block-range
+									.timeline-scale
+										span
+								.timeline-block-text
+									.timeline-input
+										span
+										input(type="text" readonly value= "10 д. 2 ч.")

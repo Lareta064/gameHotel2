@@ -434,7 +434,34 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		
+		//====farm-page-header====
+		swips.addSwiper(".farm-info-list.swiper", "min-width:768px", {
+			slidesPerView: 1.2,
+			spaceBetween: 48,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".farm-info-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 48,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 48,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 48,
+				}
+
+			}
+		});
+
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/
