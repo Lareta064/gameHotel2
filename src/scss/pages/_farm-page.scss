@@ -269,6 +269,24 @@
 				width: fit-content;
 			}
 		}
+	.exchange-value{
+		p{
+			color: #3B4E6A;
+			font-size: 24px;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+		span{
+			font-size: 14px;
+			line-height: 20px;
+			color: $pr;
+			display: inline-block;
+			margin-top: 4px;
+		}
+		@media(max-width:767px){
+			p{font-size: 16px;}
+		}
+	}
 }
 /*timeline*/
  .timeline-scale {
@@ -462,4 +480,59 @@
 			
 		}
 	}
+}
+/*************.farm-projects*************/
+.farm-projects{
+	padding-top: 64px;
+	padding-bottom: 72px;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+	@media(max-width:767px){
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	.farm-projects-pic{
+		position: absolute;
+		top: 70px;
+		right: 0;
+		transform: translateX(55%);
+		z-index: 5;
+		width:350px;
+		@media(max-width:1279px) {width: 25vw;}
+		
+		@media(max-width:1023px){
+			top: auto;
+			bottom: -15%;
+			transform: translateX(63%);
+			width: 50vw;
+			
+		}
+	}
+}
+.farm-projects-card{
+	 background-color: #EEF5FF;
+	border-radius: 16px;
+	overflow: hidden;
+	max-width:272px;
+	.farm-projects-logo{
+		padding: 12px;
+		text-align: center;
+	}
+}
+
+.farm-projects-block {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 40px;
+	row-gap: 40px;
+	@media(max-width:1023px){
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 24px;
+		row-gap: 24px;
+		max-width:570px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
 }

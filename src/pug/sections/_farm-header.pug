@@ -1,3 +1,4 @@
+//===========FARM HEADER ===========
 .farm-header
 	.container
 		.farm-header-content.d-flex
@@ -36,6 +37,7 @@
 				.farm-header-right__title
 					p Мой фарминг
 				.farm-cards
+					//============farm card ==========
 					.farm-assets-card.farm-card
 						.farm-card-row
 							.farm-card-row__left
@@ -58,7 +60,8 @@
 								button.button.button--color.button--flex
 									span Добавить GHOT
 									span
-
+					
+					//============farm card ==========
 					.farm-withdrawal-card.farm-card
 						.farm-card-body
 							.farm-card-row
@@ -72,7 +75,10 @@
 										span Список валют
 								.farm-card-row__right
 									.farm-card__block
-										button.button.button-light.disable Clame & Swap in USDT
+										//- button.button.button-light.disable Clame & Swap in USDT
+										.exchange-value
+											p 384 GHOT
+											span Реинвестировано за 12.12.2021
 									.farm-card__block
 										.form-checkbox
 											label
@@ -94,3 +100,33 @@
 									.timeline-input
 										span
 										input(type="text" readonly value= "10 д. 2 ч.")
+
+section.farm-projects
+	.farm-projects-pic
+		img(src="./img/farm-man.png", width="350" alt="img")
+	.container
+		h2.section-title.section-title--special #[span GameFi проекты] #[br] в которых добываются игровые ценности
+		.farm-projects-block
+			.farm-projects-card
+				.farm-projects-img
+					img(src="./img/farm-games/axier.jpg", width="272" alt="img")
+				.farm-projects-logo
+					img(src="./img/farm-games/axie-logo.png", width="80" alt="img")
+		
+			.farm-projects-card
+				.farm-projects-img
+					img(src="./img/farm-games/snake.jpg", width="272" alt="img")
+				.farm-projects-logo
+					img(src="./img/farm-games/snake-logo.png", width="80" alt="img")
+		
+			.farm-projects-card
+				.farm-projects-img
+					img(src="./img/farm-games/ember.jpg", width="272" alt="img")
+				.farm-projects-logo
+					img(src="./img/farm-games/ember-logo.png", width="80" alt="img")
+	
+			.farm-projects-card
+				.farm-projects-img
+					img(src="./img/farm-games/fara.jpg", width="272" alt="img")
+				.farm-projects-logo
+					img(src="./img/farm-games/fara-logo.png", width="80" alt="img")

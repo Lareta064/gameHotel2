@@ -461,6 +461,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
+		
 
 	swips.init();
 	})();
