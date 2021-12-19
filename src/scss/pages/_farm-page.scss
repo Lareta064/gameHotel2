@@ -329,7 +329,7 @@
 	position: absolute;
 	right: -26px;
 	top: -1px;
-	@media(max-width:767px){top: -1px;}
+	@media(max-width:767px){top: 1px;}
 	.info-icon{
 		width: 16px;
 	height: 16px;border:1px solid  #788CAB;
@@ -482,23 +482,31 @@
 	}
 }
 /*************.farm-projects*************/
-.farm-projects{
+.padding-64{
 	padding-top: 64px;
 	padding-bottom: 72px;
-	background-color: #fff;
-	overflow: hidden;
-	position: relative;
-	@media(max-width:767px){
+	@media(max-width:767px) {
 		padding-top: 32px;
 		padding-bottom: 32px;
 	}
+}
+.farm-projects{
+	
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+	
 	.farm-projects-pic{
 		position: absolute;
 		top: 70px;
 		right: 0;
-		transform: translateX(55%);
+		transform: translate(10%,100%);
 		z-index: 5;
 		width:350px;
+		@media(max-width:1599px) {
+
+			transform: translateX(55%);
+		}
 		@media(max-width:1279px) {width: 25vw;}
 		
 		@media(max-width:1023px){
@@ -535,4 +543,132 @@
 		margin-right: auto;
 	}
 	
+}
+
+/*********increase-profits*********/
+.increase-profits{
+	overflow: hidden;
+	.flex-header{
+		margin-bottom: 48px;
+		.button-light{
+			background-color: #fff;
+			min-width:166px;
+			text-align: center;
+		}
+		.section-title{
+			margin-bottom: 0;
+			margin-right: 39px;
+		}
+		@media(max-width:767px){
+			margin-bottom: 24px;
+			.text-group{
+				display: block;
+				&>*+*{margin-left: 0;}
+			}
+			.button{display: none;}
+		}
+	}
+	.flex-header .gradient-text{
+		font-size: 20px;
+		line-height: 1.4;
+	}
+	.center-wrapper .button{
+		background-color: #fff;
+		width: 100%;
+		max-width:360px;
+		text-align: center;
+	}
+}
+.profit-card{	
+	border-radius: 24px;
+	max-width:272px;
+	background-color: #fff;
+	.profit-card__header{
+		height: 216px;
+		background: rgba(120, 140, 171, .2);
+		position: relative;
+		overflow: hidden;
+		border-radius: 24px 24px 0 0;
+		
+		.button--square{
+			background-color: #788CAB;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.8332 6.83329H6.83317V11.8333H5.1665V6.83329H0.166504V5.16663H5.1665V0.166626H6.83317V5.16663H11.8332V6.83329Z' fill='white'/%3e%3c/svg%3e");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+		}
+	}
+
+	.profit-card__body{
+		padding: 16px;
+		padding-bottom: 4px;
+		h4{
+			font-family: $ms;
+			font-size: 15px;
+			line-height: 24px;
+			color: #0A0522;
+		}
+		p{
+			font-family: $os;
+			font-size: 14px;
+			line-height: 20px;			
+			color: #3B4E6A;
+		}
+	}
+	.profit-card__footer {
+		padding: 16px;
+		padding-top: 12px;
+		.button{width: 100%;}
+		.button + .button{margin-top: 12px;}
+
+	}
+}
+.profit-cards-wrapper{
+	overflow: hidden;
+	.swiper-wrapper{
+		display: grid;
+		column-gap: 40px;
+		grid-template-columns: repeat(4, 1fr);
+		.swiper-slide{
+			width: 272px;
+		}
+	}
+	.profit-cards-pagination{
+		display: none;
+	}
+	@media(max-width:1279px){
+		width: calc(50% + 50vw);
+		padding-bottom: 30px;
+		.swiper-wrapper{
+			display: flex;
+			column-gap: unset;
+			.swiper-slide {
+				width: auto;
+			}
+		}
+		.profit-cards-pagination {display: flex;}
+	}
+	
+}
+.animate-imgMan{
+	animation-name:bgMan;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+}
+@keyframes bgMan{
+	0%{
+		transform: translate(10%,300%);
+	}
+	50%{
+		transform: translate(10%,250%);
+	}
+	100%{
+		transform: translate(10%,200%);
+	}
 }

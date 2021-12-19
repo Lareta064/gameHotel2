@@ -74,7 +74,45 @@ document.addEventListener("DOMContentLoaded", function (){
 			delay += 200;
 		}
 	}
+	/************************** */
+	/* анимация свг-диаграммы-круг */
+	const bgImgMan = document.querySelector('.farm-projects-pic');
 	
+	if( bgImgMan){
+		let Visible = function (bgImgMan) {
+			// Все позиции элемента
+			let targetPosition = {
+					top: window.pageYOffset + bgImgMan.getBoundingClientRect().top,
+					left: window.pageXOffset + bgImgMan.getBoundingClientRect().left,
+					right: window.pageXOffset + bgImgMan.getBoundingClientRect().right,
+					bottom: window.pageYOffset + bgImgMan.getBoundingClientRect().bottom
+				},
+				// Получаем позиции окна
+				windowPosition = {
+					top: window.pageYOffset,
+					left: window.pageXOffset,
+					right: window.pageXOffset + document.documentElement.clientWidth,
+					bottom: window.pageYOffset + document.documentElement.clientHeight
+				};
+
+			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+				// Если элемент полностью видно, то запускаем следующий код
+				bgImgMan.classList.add('animate-imgMan');
+			}
+		};
+
+		// Запускаем функцию при прокрутке страницы
+		window.addEventListener('scroll', function () {
+			Visible(bgImgMan);
+		});
+
+		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+		
+		Visible(bgImgMan);
+	}
 	//========== ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ=========
 	let headerSection = document.querySelector('.investor-banner')
 	let bg1 = document.querySelector('.parallax-item1');
@@ -461,6 +499,41 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
+		swips.addSwiper(".profit-cards-wrapper", "min-width:1280px", {
+			slidesPerView: 1.1,
+			spaceBetween: 24,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".profit-cards-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				424: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2.2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2.7,
+					spaceBetween: 32,
+				},
+				991:{
+					slidesPerView: 3.5,
+					spaceBetween: 32,
+				},
+				1200:{
+					slidesPerView: 3.8,
+					spaceBetween: 32,
+				}
+
+			}
+		});
+
 		
 
 	swips.init();

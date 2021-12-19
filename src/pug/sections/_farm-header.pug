@@ -75,10 +75,10 @@
 										span Список валют
 								.farm-card-row__right
 									.farm-card__block
-										//- button.button.button-light.disable Clame & Swap in USDT
-										.exchange-value
-											p 384 GHOT
-											span Реинвестировано за 12.12.2021
+										button.button.button-light.disable Clame & Swap in USDT
+										//- .exchange-value
+										//- 	p 384 GHOT
+										//- 	span Реинвестировано за 12.12.2021
 									.farm-card__block
 										.form-checkbox
 											label
@@ -101,7 +101,8 @@
 										span
 										input(type="text" readonly value= "10 д. 2 ч.")
 
-section.farm-projects
+//=============farm-projects============
+section.farm-projects.padding-64
 	.farm-projects-pic
 		img(src="./img/farm-man.png", width="350" alt="img")
 	.container
@@ -130,3 +131,61 @@ section.farm-projects
 					img(src="./img/farm-games/fara.jpg", width="272" alt="img")
 				.farm-projects-logo
 					img(src="./img/farm-games/fara-logo.png", width="80" alt="img")
+
+//=============farm-повысить доход============
+section.increase-profits.padding-64
+	.container
+		.flex-header
+			.text-group
+				h2.section-title Повысить доход
+				.gradient-text
+					p Скоро будет доступно 
+			
+			a(href="#!").button.button-light.h-40 Есть вопросы?
+		
+		//====cards-wrapper=====
+		.profit-cards-wrapper.swiper
+			.swiper-wrapper
+				.swiper-slide
+					.profit-card
+						.profit-card__header
+							a(href="#!").button.button--square
+						.profit-card__body
+							h4 Добавить NFT
+							p Вычислительная зависит от имеющегося у вас NFT
+						.profit-card__footer
+							button.button.button--grey.h-40 Поставить залог
+							button.button.button-light.disable.h-40 Clame & Swap in USDT
+				.swiper-slide
+					.profit-card
+						.profit-card__header
+							a(href="#!").button.button--square
+						.profit-card__body
+							h4 Добавить NFT
+							p Вычислительная зависит от имеющегося у вас NFT
+						.profit-card__footer
+							button.button.button--grey.h-40 Поставить залог
+							button.button.button-light.disable.h-40 Clame & Swap in USDT
+				.swiper-slide
+					.profit-card
+						.profit-card__header
+							a(href="#!").button.button--square
+						.profit-card__body
+							h4 Добавить NFT
+							p Вычислительная зависит от имеющегося у вас NFT
+						.profit-card__footer
+							button.button.button--grey.h-40 Поставить залог
+							button.button.button-light.disable.h-40 Clame & Swap in USDT
+				.swiper-slide
+					.profit-card
+						.profit-card__header
+							a(href="#!").button.button--square
+						.profit-card__body
+							h4 Добавить NFT
+							p Вычислительная зависит от имеющегося у вас NFT
+						.profit-card__footer
+							button.button.button--grey.h-40 Поставить залог
+							button.button.button-light.disable.h-40 Clame & Swap in USDT
+			.profit-cards-pagination.swiper-pagination
+		.center-wrapper.d-block.d-md-none
+			a(href="#!").button.button-light.h-40 Есть вопросы?

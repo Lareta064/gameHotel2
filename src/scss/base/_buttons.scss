@@ -36,6 +36,11 @@
 	height: 36px;
 	line-height: 34px;
 }
+.button.h-40 {
+height: 40px;
+line-height: 38px;
+border-radius: 9px;
+}
 .filter-btn{
 	border-color:#C8D2E1;
 	color:#0A0522;
@@ -170,4 +175,9 @@ svg#arrRight{
 }
 .button-light.disable{
 	color: rgba(59, 78, 106, .5);
+}
+.button--grey{
+background: #788CAB;
+color: #fff;
+text-align: center;	
 }
