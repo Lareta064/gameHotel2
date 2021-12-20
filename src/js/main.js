@@ -379,8 +379,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
-			slidesPerView: 1.2, 
-			// spaceBetween: 24,
+			slidesPerView: 1.1, 
+			spaceBetween: 24,
 			loop: true,
 			speed:800,
 			pagination: {

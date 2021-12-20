@@ -1,0 +1,17 @@
+/*=========best games====*/
+.popular-games{	
+	background: url(../img/purpleBg.svg);
+	background-position: center;
+	background-size: cover;
+	height: 700px;
+	background-repeat: no-repeat;
+	.section-title {
+		color: #fff;
+	}
+	.popular-games-block{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap:40px;
+	}
+	.game-card-large__img{height: 244px;}
+}

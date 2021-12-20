@@ -24,11 +24,15 @@ mixin breadcrumb(...items)
 				li
 					a(href="#!") #{item}
 
-mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge)
-	a(href="#!" style="width:260px").game-card-large
+mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge, cardWidth)
+	a.game-card-large(href="#!")&attributes(attributes)
 		if badge
 			.badge.badge--white !{badge}
-		.game-card-large__img(style="background: #F3EAFF url(./img/games/"+imgSrc+".jpg)")
+		.game-card-large__img
+			if cardWidth
+				img(src="./img/games/"+imgSrc+".jpg", width=""+cardWidth  alt="img")
+			else
+				img(src="./img/games/"+imgSrc+".jpg",  alt="img")
 		.game-card__info
 			.game-card__body
 				.game-card__title

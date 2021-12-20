@@ -1,3 +1,4 @@
+/*********page about game********/
 .about-game-main{
 .page-content-wrapper {
 	padding-bottom: 157px;
@@ -5,7 +6,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding-top: 24px;
+	padding-top: 64px;
+	padding-bottom: 64px;
 	@media(max-width:1023px) {
 		padding-bottom: 80px;
 	}
@@ -361,4 +363,24 @@ article .flex-header {
 
 		}
 	}
+}
+.page-content-wrapper--games {
+	position: relative;
+	background: url(../img/lightblueBg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+/*======start whis us====*/
+.cta{
+	background: url(../img/lightBg.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.cta .cta-cards  {
+	display: flex;
+	justify-content: space-between;
+
 }

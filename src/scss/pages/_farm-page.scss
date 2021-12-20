@@ -398,7 +398,7 @@
 	.timeline-block-text{
 		flex-shrink: 0;
 		margin-left: 16px;
-		max-width:100px;
+		width:fit-content;
 		input{
 			width: 100%;
 			font-size: 13px;
@@ -534,6 +534,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 40px;
 	row-gap: 40px;
+	margin-top: 48px;
 	@media(max-width:1023px){
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 24px;
@@ -541,6 +542,7 @@
 		max-width:570px;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 24px;
 	}
 	
 }
@@ -555,7 +557,7 @@
 			min-width:166px;
 			text-align: center;
 		}
-		.section-title{
+		.text-28{
 			margin-bottom: 0;
 			margin-right: 39px;
 		}
