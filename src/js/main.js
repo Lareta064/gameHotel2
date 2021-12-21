@@ -167,12 +167,14 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	// ========= КАСТОМНЫЙ СЕЛЕКТ =============
-	const customSelect = document.querySelector('.custom-select');
+	const customSelect = document.querySelectorAll('.custom-select');
 	if(customSelect){	
-		customSelect.addEventListener('click', function(e){
-			const thisList = customSelect.querySelector('.select-list');
-			const thisInput = customSelect.querySelector('input');
-			const thisListItem = customSelect.querySelectorAll('li');
+		
+	for(let item of customSelect){
+		item.addEventListener('click', function(e){
+			const thisList = item.querySelector('.select-list');
+			const thisInput = item.querySelector('input');
+			const thisListItem = item.querySelectorAll('li');
 
 			if(e.target.tagName == 'INPUT'){
 
@@ -198,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
-
+}
 	// ========vertical-scroll=============
 	function vertSlider(textBlockClassName, imageBlockClassName) {
 
