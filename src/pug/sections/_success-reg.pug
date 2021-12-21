@@ -1,4 +1,12 @@
-.success-header
+.success-header.success-header--mobile
+	.container
+		.success-header-banner
+			.success-header_img
+				img(src="./img/hand.png", width="170" alt="img")
+			.success-header__title.text-20
+				p Спасибо за регистрацию.
+				p Осталось добавить важные мелочи...
+.success-header.success-header--desktop
 	.container
 		.success-header-banner
 			.success-header_img
@@ -30,13 +38,21 @@
 
 			.info-card
 				.info-card-col
-					.info-card-img
-						img(src="./img/ava-placeholder.jpg", width="144" alt="img")
+					.info-card-col-flex
+						.info-card-img
+							img(src="./img/ava-placeholder.jpg", width="144" alt="img")
+						.info-card-visible-mobile
+							.info-card__head
+								p Аватар
+							.info-card__body.text-14
+								p Формат изображения: jpeg, jpg, png, gif. Максимальный размер: 10 Мб
+						
 				.info-card-col
-					.info-card__head
-						p Аватар
-					.info-card__body.text-14
-						p Формат изображения: jpeg, jpg, png, gif. Максимальный размер: 10 Мб
+					.info-card-visible-desk
+						.info-card__head
+							p Аватар
+						.info-card__body.text-14
+							p Формат изображения: jpeg, jpg, png, gif. Максимальный размер: 10 Мб
 					.info-card__footer
 						form
 							
