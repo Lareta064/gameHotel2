@@ -34,40 +34,39 @@
 	display: flex;
 	justify-content: center;
 	input{
-		width: 43px;
-		background-color: #EEF5FF;
-		border: 1px solid #D4DFF1;
+		width: 100%;
+		// background-color: #EEF5FF;
+		// border: 1px solid #D4DFF1;
+		border:none;
 		border-radius: 12px;
-		flex-shrink: 0;
-		text-align: center;
+		flex-shrink: 0;		
 		color: #0A0522;
-		font-size: 18px;
-		text-align: center;
+		font-size: 18px;		
 		font-family: $ms;
 		padding: 0;
-		
+		padding-left: 22px;
+		padding-right: 16px;
+		letter-spacing: 45px;
 	
 	}
 	input:focus,
 	input:valid{
 		background: #fff;
 	}
-	.codeValue__item{position: relative;
-	}
-	span {
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		transform:translateX(-50%);
-		width: 9px;
-		height: 1px;
-		background-color: #0A0522;
-		display: block;
+	.dashed-bg{
 		position: relative;
-		bottom: 15px;
-		z-index: 2;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 4px;
+		padding-right: 4px;
+		
+	}
 
+	.dashed-bg span {
+		width: 43px;
+		height: 1px;
+		background-color:  #D8E1EF;
 	}
 	.codeValue__item+.codeValue__item {
 		margin-left: 12px;

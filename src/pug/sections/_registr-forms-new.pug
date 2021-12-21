@@ -134,7 +134,7 @@
 
 
 //================= PHONE АВТОРИЗАЦИЯ ШАГ 2/3 =====================
-.modal-block
+.modal-block.visible
 	.page-modal.login-modal
 		.page-modal-content
 			.page-modal-left
@@ -145,18 +145,27 @@
 					.reg-form-step.text-center
 						.register-step-title
 							p.text-15 Введите код из сообщения
-						
 						.form-field.codeValue-group
 							.form-field
-								input(type="text"  name="" value="1" required)
-						p.text-link.text-center Изменить номер телефона
+								input(type="text" max="6" name="" )
+								.dashed-bg
+									span
+									span
+									span
+									span
+									span
+									span
+						
 						
 						.register-step-btn
 							button.button.button--color.button-icon
 								span Продолжить
 								svg(width="16" height="16")
 									use(xlink:href="./img/svg-sprite.svg#arrRight")
+							
+							p.text-link Изменить номер телефона
 						.step2-text
+							
 							p.text-14 Мы отправили SMS код для проверки на ваш телефон #[span + 7 *** *** 34 44.]
 							p  #[button(type="button") Отправить повторно] через #[span 60] секунд
 		
@@ -260,35 +269,27 @@
 							p.text-15 Введите код из сообщения
 						
 						.form-field.codeValue-group
-							.codeValue__item
-								input(type="text"  name="" value="1" required)
-								span
-							.codeValue__item
-								input(type="text"  name="" required)
-								span
-							.codeValue__item
-								input(type="text"  name="" required)
-								span
-							.codeValue__item
-								input(type="text"  name="" required)
-								span
-							.codeValue__item
-								input(type="text"  name="" required)
-								span
-							.codeValue__item
-								input(type="text"  name="" required)
-								span
-						p.text-link.text-center Изменить номер телефона
+							.form-field
+								input(type="text" max="6" name="" )
+								.dashed-bg
+									span
+									span
+									span
+									span
+									span
+									span
 						
 						.register-step-btn
 							button.button.button--color.button-icon
 								span Продолжить
 								svg(width="16" height="16")
 									use(xlink:href="./img/svg-sprite.svg#arrRight")
+							p.text-link Изменить E–mail
 						.step2-text
+							
 							p.text-14 Мы отправили письмо с кодом для входа на ваш E–mail #[span this....@gmail.com.]
 							p  #[button(type="button") Отправить повторно] через #[span 60] секунд
-							p.text-link Изменить E–mail
+							
 								  
 		
 				.page-modal__footer
@@ -322,7 +323,7 @@
 					span E–mail
 
 //================= telegram АВТОРИЗАЦИЯ  =====================
-.modal-block.visible
+.modal-block
 	.page-modal.login-modal.login-modal--tg
 		.page-modal-content
 			.page-modal-left

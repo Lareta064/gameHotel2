@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/************************** */
 	/* анимация свг-диаграммы-круг */
-	const bgImgMan = document.querySelector('.farm-projects-pic');
+	// const bgImgMan = document.querySelector('.farm-projects-pic');
 	
 	if( bgImgMan){
 		let Visible = function (bgImgMan) {
