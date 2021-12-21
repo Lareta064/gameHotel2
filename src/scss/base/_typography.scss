@@ -58,7 +58,11 @@
 	line-height: 1.5;
 	color: #0A0522;
 }
-
+.text-bold p,
+.text-bold span,
+.text-bold {
+	font-family: $ms;
+}
 .text-15 {
 	font-size: 15px;
 }

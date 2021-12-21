@@ -1,4 +1,99 @@
 .success-header
 	.container
 		.success-header-banner
-			
+			.success-header_img
+				img(src="./img/hand.png", width="170" alt="img")
+			.success-header__title.text-20
+				p Спасибо за регистрацию.
+				p Осталось добавить важные мелочи...
+
+
+
+.success-reg-block
+	.container
+		.success-reg__title
+			p Немного информации о вас 
+		.success-info-cards
+			.info-card
+				.info-card-col
+					.info-card__head
+						p Укажите ник
+					.info-card__body.text-14
+						p Будет отображаться в вашем профиле, чате и в комментариях на портале Game Hotel.
+					.info-card__footer
+						form.generate-nickname
+							.form-field
+								input(type="text" name="" placeholder="Введите ник")
+								button.text-link Сгенерировать
+							.form-btn
+								button.button.button--color(type='submit') ок
+
+			.info-card
+				.info-card-col
+					.info-card-img
+						img(src="./img/ava-placeholder.jpg", width="144" alt="img")
+				.info-card-col
+					.info-card__head
+						p Аватар
+					.info-card__body.text-14
+						p Формат изображения: jpeg, jpg, png, gif. Максимальный размер: 10 Мб
+					.info-card__footer
+						form
+							
+							.file-download__btn
+								input#file.inputfile.inputfile--btn(type="file", data-multiple-caption="{count} файлов выбрано", multiple)
+								label.form-label.button.button--color(for="file")
+									span  Выбрать файл
+
+.success-reg-block
+	.container
+		.success-reg__title
+			p Чтобы были доступны все функции портала
+		.success-info-wrapper
+			.success-info-column
+				.success-info-column__title
+					p Личные данные
+				.info-card
+					.info-card-col
+						.info-card__head
+							p KYC
+						
+						.info-card__body.text-14
+							p Чтобы получать пассивный доход и брать игровые аккаунты в аренду.
+						
+						.info-card__footer
+							button.button.button--color 
+								span Подтвердить личность
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
+			.success-info-column
+				.success-info-column__title
+					p Платежные средства
+				.success-info-cards
+					.info-card
+						.info-card-col
+							.info-card__head
+								p Metamask
+							
+							.info-card__body.text-14
+								p Потребуется для приобретения наших токенов GHOT и пассивного дохода в разделе«Добыча».
+							
+							.info-card__footer
+								button.button.button-light.button--flex
+									svg(width="18" height="16")
+										use(xlink:href="./img/svg-sprite.svg#metam2Icon")
+									span Подтвердить личность
+					.info-card
+						.info-card-col
+							.info-card__head
+								p Кредитная карта
+							
+							.info-card__body.text-14
+								p Нужна для того чтобы получать деньги за выполнение заданий в играх на портале.
+							
+							.info-card__footer
+								button.button.button-light.button--flex
+									svg(width="21" height="20")
+										use(xlink:href="./img/svg-sprite.svg#walletIcon")
+									span Указать данные карты
+								
