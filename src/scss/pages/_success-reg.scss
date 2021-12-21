@@ -101,6 +101,7 @@
 	}
 	.generate-nickname .form-field{
 		width: 95%;
+		margin-bottom: 0;
 		.text-link{
 			position: absolute;
 			right: 16px;
@@ -289,3 +290,31 @@
 		}
 	}
  }
+.info-card .badge-check{display: none;}
+.info-card .button-confirm{display: none;}
+.info-card.info-card--confirm{
+	background: #EEF5FF;
+	border: 1px solid #D8E1EF;
+	.badge-check {
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: $pr;
+		color: #fff;
+		text-align: center;
+	}
+	 .info-card__head{
+		 display: flex;
+		 justify-content: space-between;
+		 align-items: center;
+	 }
+	.button.button-confirm {
+		display: inline-block;
+		background-color: #D8E1EF;
+		border-color: #D8E1EF;
+		color: #3B4E6A;
+		font-family: $mr;
+	}
+	.button.button--color{display: none;}
+}

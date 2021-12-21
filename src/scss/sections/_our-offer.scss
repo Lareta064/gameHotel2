@@ -55,9 +55,9 @@
 	z-index: 3;
 	.our-offer__img{
 		position: absolute;
-		top:-99%;
+		top:-44%;
 		right:-80px;
-		width: 76%;
+		width: 53%;
 		z-index: 2;
 		@media(max-width:1799px) {
 			right:80px;		
@@ -89,6 +89,12 @@
 			max-width:725px;
 			
 		}
+	}
+}
+@media(min-width:1024px){
+	.our-offer .our-offer__text.text-32 p span{
+		font-family: 'Montserrat',	sans-serif;
+		font-weight: 700;
 	}
 }
 /* //our-offer*/

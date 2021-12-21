@@ -9,7 +9,7 @@
 .success-header.success-header--desktop
 	.container
 		.success-header-banner
-			.success-header_img
+			.success-header_img(data-aos="zoomIn" data-aos-delay="100" data-aos-duration="600")
 				img(src="./img/hand.png", width="170" alt="img")
 			.success-header__title.text-20
 				p Спасибо за регистрацию.
@@ -69,19 +69,23 @@
 			.success-info-column
 				.success-info-column__title
 					p Личные данные
-				.info-card
+				.info-card.info-card--confirm
+
 					.info-card-col
 						.info-card__head
 							p KYC
+							.badge-check &#10004;
 						
 						.info-card__body.text-14
 							p Чтобы получать пассивный доход и брать игровые аккаунты в аренду.
 						
 						.info-card__footer
-							button.button.button--color 
+							button.button.button--color.button--flex
 								span Подтвердить личность
 								svg(width="16" height="16")
 									use(xlink:href="./img/svg-sprite.svg#arrRight")
+							button.button.button-confirm Личность подтверждена
+								
 			.success-info-column
 				.success-info-column__title
 					p Платежные средства
