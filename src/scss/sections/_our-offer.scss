@@ -56,16 +56,21 @@
 	.our-offer__img{
 		position: absolute;
 		top:-44%;
-		right:-80px;
-		width: 53%;
+		right:0;
+		width: 680px;
 		z-index: 2;
 		@media(max-width:1799px) {
 			right:80px;		
 		}
+		@media(max-width:1279px) {
+			
+			right: 0;
+			
+		}
 		@media(max-width:1023px) {
-			top:-50%;
+			top:-15%;
 			right:0;
-			width: 66%;
+			width: 420px;
 		}
 		@media(max-width:767px){
 			display: none;
