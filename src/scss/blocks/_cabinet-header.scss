@@ -1,6 +1,30 @@
 .cabinet-header{
 	background-color: $pr;
-	background: url(./img/cabinet-headerBg.svg);
+	background: url(../img/cabinet-headerBg.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	.cabinet-header-content{
+		
+	}
+	.cabinet-header__total{
+		font-size: 16px;
+		line-height: 20px;
+		font-family: $ms;
+		color: #fff;
+		margin-left: 20px;
+		span{
+			font-family: $os;
+			font-size: 14px;
+			line-height: 20px;
+			display: inline-block;
+		}
+	}
+	.cabinet-header__drop{
+		li>p{
+			display: flex; align-items: center;
+			svg{margin-right: 12px;}
+		}
+	}
 }

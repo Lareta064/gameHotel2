@@ -756,3 +756,37 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 }( document, window, 0 ));
 
+/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
+ *  по клику на выпадашку менять класс current  у <li> */
+const customDrop = document.querySelectorAll('.custom-dropdown');
+if(customDrop){
+	for(let item of customDrop){
+		const customDropField = item.querySelector('.custom-dropdown__field');
+		const customDropIcon = item.querySelector('.custom-dropdown__icon');
+		const customDropList = item.querySelector('.custom-dropdown__wrapper');
+		const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
+
+		customDropField.addEventListener('click', function(e){
+			console.log(e.target);
+			if(this.classList.contains('active')){
+				this.classList.remove('active');
+				customDropIcon.classList.remove('icon-rotate');
+				customDropList.classList.remove('active');
+			}else{
+				this.classList.add('active');
+				customDropIcon.classList.add('icon-rotate');
+				customDropList.classList.add('active');
+			}			
+		});
+		for(let item of customDropListItem){
+			item.addEventListener('click',()=>{
+				for(let i = 0; i < customDropListItem.length; i++){
+				customDropListItem[i].classList.remove('current');
+			}
+			item.classList.add('current');
+			})
+		}
+		
+	}
+}
+
