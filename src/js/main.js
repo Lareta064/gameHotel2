@@ -74,45 +74,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			delay += 200;
 		}
 	}
-	/************************** */
-	/* анимация свг-диаграммы-круг */
-	const bgImgMan = document.querySelector('.farm-projects-pic');
 	
-	if( bgImgMan){
-		let Visible = function (bgImgMan) {
-			// Все позиции элемента
-			let targetPosition = {
-					top: window.pageYOffset + bgImgMan.getBoundingClientRect().top,
-					left: window.pageXOffset + bgImgMan.getBoundingClientRect().left,
-					right: window.pageXOffset + bgImgMan.getBoundingClientRect().right,
-					bottom: window.pageYOffset + bgImgMan.getBoundingClientRect().bottom
-				},
-				// Получаем позиции окна
-				windowPosition = {
-					top: window.pageYOffset,
-					left: window.pageXOffset,
-					right: window.pageXOffset + document.documentElement.clientWidth,
-					bottom: window.pageYOffset + document.documentElement.clientHeight
-				};
-
-			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-				// Если элемент полностью видно, то запускаем следующий код
-				bgImgMan.classList.add('animate-imgMan');
-			}
-		};
-
-		// Запускаем функцию при прокрутке страницы
-		window.addEventListener('scroll', function () {
-			Visible(bgImgMan);
-		});
-
-		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-		
-		Visible(bgImgMan);
-	}
 	//========== ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ=========
 	let headerSection = document.querySelector('.investor-banner')
 	let bg1 = document.querySelector('.parallax-item1');
@@ -167,12 +129,14 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	// ========= КАСТОМНЫЙ СЕЛЕКТ =============
-	const customSelect = document.querySelector('.custom-select');
+	const customSelect = document.querySelectorAll('.custom-select');
 	if(customSelect){	
-		customSelect.addEventListener('click', function(e){
-			const thisList = customSelect.querySelector('.select-list');
-			const thisInput = customSelect.querySelector('input');
-			const thisListItem = customSelect.querySelectorAll('li');
+		
+	for(let item of customSelect){
+		item.addEventListener('click', function(e){
+			const thisList = item.querySelector('.select-list');
+			const thisInput = item.querySelector('input');
+			const thisListItem = item.querySelectorAll('li');
 
 			if(e.target.tagName == 'INPUT'){
 
@@ -198,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
-
+}
 	// ========vertical-scroll=============
 	function vertSlider(textBlockClassName, imageBlockClassName) {
 
@@ -534,7 +498,38 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
+		swips.addSwiper(".task-board", "min-width:1600px",  {
 		
+		slidesPerView: 1.1,
+		 slidesPerColumn: 1,
+		spaceBetween: 0,
+		
+		speed:800,
+		navigation: {
+			nextEl: ".task-board-next",
+			prevEl: ".task-board-prev",
+			},
+			// loop: true,
+			breakpoints: {
+				
+				424: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768: {
+						slidesPerView: 2.5,
+						spaceBetween: 32,
+					},
+				1024: {
+						slidesPerView: 2.8,
+						spaceBetween: 24,
+					},
+				1200: {
+						slidesPerView: 3.2,
+						spaceBetween: 0,
+					}
+				}
+		})
 
 	swips.init();
 	})();
@@ -625,6 +620,8 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 			}
       });
+
+	
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
@@ -677,7 +674,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	let phoneInputs = document.getElementsByClassName('phone');
 	for(let i = 0; i<phoneInputs.length; i++){
 		new IMask(phoneInputs[i], {
-			mask: '+7(000)000-00-00',
+			mask: '+0(000)000-00-00',
 			lazy: false
 		});
 	}
@@ -722,3 +719,74 @@ document.addEventListener("DOMContentLoaded", function (){
 		Visible(imgBlind);
 	}
 });
+
+/*==================INPUT TYPE="FILE" ========*/
+( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName ) {
+
+				if ( label.firstChild.nodeType === Node.ELEMENT_NODE ) {
+					label.querySelector( 'span' ).innerHTML = fileName;
+				} else {
+					label.nextElementSibling.innerHTML = fileName;
+				}
+
+			}
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
+
+/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
+ *  по клику на выпадашку менять класс current  у <li> */
+const customDrop = document.querySelectorAll('.custom-dropdown');
+if(customDrop){
+	for(let item of customDrop){
+		const customDropField = item.querySelector('.custom-dropdown__field');
+		const customDropIcon = item.querySelector('.custom-dropdown__icon');
+		const customDropList = item.querySelector('.custom-dropdown__wrapper');
+		const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
+
+		customDropField.addEventListener('click', function(e){
+			console.log(e.target);
+			if(this.classList.contains('active')){
+				this.classList.remove('active');
+				customDropIcon.classList.remove('icon-rotate');
+				customDropList.classList.remove('active');
+			}else{
+				this.classList.add('active');
+				customDropIcon.classList.add('icon-rotate');
+				customDropList.classList.add('active');
+			}			
+		});
+		for(let item of customDropListItem){
+			item.addEventListener('click',()=>{
+				for(let i = 0; i < customDropListItem.length; i++){
+				customDropListItem[i].classList.remove('current');
+			}
+			item.classList.add('current');
+			})
+		}
+		
+	}
+}
+

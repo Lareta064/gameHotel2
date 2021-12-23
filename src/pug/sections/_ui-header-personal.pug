@@ -1,0 +1,51 @@
+.cabinet-header
+	.container
+		.cabinet-header-content.d-flex
+			//==== левая часть =====
+			.cabinet-header__balance.d-flex
+				.text-block
+					p $48.23
+					span Заработано за день
+				.text-block
+					p $348.34
+					span Заработано за месяц
+			//==== правая часть =====
+			.cabinet-header__col.d-flex
+				.cabinet-header__balance.d-flex
+					.cabinet-header__logo
+						img(src="./img/coin-logo.svg", width="44" alt="coin-logo")
+					.cabinet-header__total.text-block
+						p $118.53
+						span Баланс
+				.cabinet-header__drop
+					.custom-dropdown
+						.custom-dropdown__icon
+							svg(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.custom-dropdown__field
+							p Clam
+						
+						//====выпадающий список =====
+						.custom-dropdown__wrapper
+							.custom-dropdown__list
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p
+										svg.svg-wallet(width="21" height="20")
+											use(xlink:href="./img/svg-sprite.svg#walletIcon2")
+										span На карту
+									.badge до 5 дней
+								//====элемент списка =====
+								.custom-dropdown__list-item.current
+									p
+										svg(width="20" height="20")
+											use(xlink:href="./img/svg-sprite.svg#gHotSvg")
+										span В токене Ghot
+									.badge до 5 ч.
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p
+										svg(width="18" height="16")
+											use(xlink:href="./img/svg-sprite.svg#metam2Icon")
+										span На Metamask
+									.badge до 1 ч.

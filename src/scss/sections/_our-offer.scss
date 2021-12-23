@@ -55,17 +55,22 @@
 	z-index: 3;
 	.our-offer__img{
 		position: absolute;
-		top:-99%;
-		right:-80px;
-		width: 76%;
+		top:-44%;
+		right:0;
+		width: 680px;
 		z-index: 2;
 		@media(max-width:1799px) {
 			right:80px;		
 		}
+		@media(max-width:1279px) {
+			
+			right: 0;
+			
+		}
 		@media(max-width:1023px) {
-			top:-50%;
+			top:-15%;
 			right:0;
-			width: 66%;
+			width: 420px;
 		}
 		@media(max-width:767px){
 			display: none;
@@ -89,6 +94,12 @@
 			max-width:725px;
 			
 		}
+	}
+}
+@media(min-width:1024px){
+	.our-offer .our-offer__text.text-32 p span{
+		font-family: 'Montserrat',	sans-serif;
+		font-weight: 700;
 	}
 }
 /* //our-offer*/

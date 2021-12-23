@@ -20,6 +20,9 @@
 	display: inline-flex;
 }
 .header-group .badge{font-family: $ms;}
+.badge--light{
+	background-color: #EEF5FF;
+}
 .badge--green{
 	background-color: #33A661;
 }

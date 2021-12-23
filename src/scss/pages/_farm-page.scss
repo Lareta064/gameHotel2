@@ -14,6 +14,7 @@
 		background-color: #fff;
 		border-radius: 24px;
 		align-items: stretch;
+		overflow: hidden;
 		@media(max-width:1023px){
 			flex-direction: column;
 		}
@@ -440,47 +441,7 @@
 		display: block;
 	}
 }
-/*=============checkbox======*/
-.form-checkbox{
 
-	label{
-		display: flex;
-		align-items: center;
-		position: relative;
-		// overflow: hidden;
-		
-		input{
-			width: 0.01px;
-			height: 0.01px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			opacity: 0;
-		}
-		span.fake-checkbox{
-			width: 20px;
-			height: 20px;
-			border-radius: 6px;
-			background: #EEF5FF;
-			border: 1px solid #9BADCA;
-			margin-right: 12px;
-			font-size: 14px;
-			line-height: 20px;
-			color:  #3B4E6A;
-			background: url(../img/icons/check.svg);
-			background-position: center -50px;
-			background-repeat: no-repeat;
-			background-size: auto;
-			transition: .3s;
-
-		}
-		input[type="checkbox"]:checked+span.fake-checkbox{
-			background-color: $pr;
-			background-position: center center;
-			
-		}
-	}
-}
 /*************.farm-projects*************/
 .padding-64{
 	padding-top: 64px;
@@ -500,7 +461,7 @@
 		position: absolute;
 		top: 70px;
 		right: 0;
-		transform: translate(10%,100%);
+		transform: translateX(10%);
 		z-index: 5;
 		width:350px;
 		@media(max-width:1599px) {
@@ -657,20 +618,17 @@
 	}
 	
 }
-.animate-imgMan{
-	animation-name:bgMan;
-	animation-duration: 1s;
-	animation-delay: .5s;
-	animation-fill-mode: forwards;
-}
-@keyframes bgMan{
-	0%{
-		transform: translate(10%,300%);
-	}
-	50%{
-		transform: translate(10%,250%);
-	}
-	100%{
-		transform: translate(10%,200%);
+
+.profit-cards-wrapper{
+	position: relative;
+	&:after{
+		content:'';
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		backdrop-filter: blur(4px);
+		z-index: 5;
 	}
 }
