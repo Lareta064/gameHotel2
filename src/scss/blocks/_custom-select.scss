@@ -160,7 +160,7 @@
 		top: 11px;
 		right: 16px;
 		
-		svg{transition: .5s;}
+		svg{transition: .3s;}
 		&.icon-rotate svg{
 			transform:rotate(180deg);
 		}
@@ -223,9 +223,7 @@
 			}
 
 		}
-		.custom-dropdown__list-item:hover{
-			background-color: rgba(212, 229, 255, .4);
-		}
+		
 		.custom-dropdown__list-item+.custom-dropdown__list-item{margin-top: 4px;}
 		
 	}

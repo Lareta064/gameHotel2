@@ -35,8 +35,6 @@
 	justify-content: center;
 	input{
 		width: 100%;
-		// background-color: #EEF5FF;
-		// border: 1px solid #D4DFF1;
 		border:none;
 		border-radius: 12px;
 		flex-shrink: 0;		
@@ -44,22 +42,22 @@
 		font-size: 18px;		
 		font-family: $ms;
 		padding: 0;
-		padding-left: 22px;
-		padding-right: 16px;
-		letter-spacing: 45px;
-	
+		letter-spacing: 42px;
+		background-color: #fff;
+		position: relative;
+		right:-29px;
+		@media(max-width:399px){
+			letter-spacing: 39px;
+		}
 	}
-	// input:focus,
-	// input:valid{
-	// 	background: #fff;
-	// }
+	
 	.dashed-bg{
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-left: 4px;
-		padding-right: 4px;
+		padding-left: 10px;
+		padding-right: 12px;
 		
 	}
 
@@ -68,15 +66,7 @@
 		height: 1px;
 		background-color:  #D8E1EF;
 	}
-	// .codeValue__item+.codeValue__item {
-	// 	margin-left: 12px;
-	// }
-	// input+input {
-	// 	margin-left: 21px;
-	// }
-	// .codeValue__item input:valid +span,
-	// .codeValue__item input:focus +span{display: none;}
-	
+
 }
 .filter-btn-block{
 	display: flex;

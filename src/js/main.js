@@ -674,7 +674,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	let phoneInputs = document.getElementsByClassName('phone');
 	for(let i = 0; i<phoneInputs.length; i++){
 		new IMask(phoneInputs[i], {
-			mask: '+7(000)000-00-00',
+			mask: '+0(000)000-00-00',
 			lazy: false
 		});
 	}

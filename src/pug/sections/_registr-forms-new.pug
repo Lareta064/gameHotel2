@@ -94,7 +94,7 @@
 							span E–mail
 
 //================= PHONE АВТОРИЗАЦИЯ ШАГ 1/2=====================
-.modal-block
+.modal-block.visible
 	.page-modal.login-modal
 		.page-modal-content
 			.page-modal-left
@@ -110,7 +110,7 @@
 							span.form-field-icon
 								svg.phone-svg(width="20" height="20")
 									use(xlink:href="./img/svg-sprite.svg#phoneSvg")
-							input(type="text" class="phone" id="phone" name="phone" placeholder="+7(___)___-__-__")
+							input(type="text" class="phone" id="phone" name="phone" placeholder="+_(___)___-__-__")
 							
 						p.text-link.text-center У меня нет мобильного телефона
 						.register-step-btn
@@ -180,7 +180,7 @@
 							p.text-15 Введите код из сообщения
 						.form-field.codeValue-group
 							.form-field
-								input(type="text" max="6" name="" )
+								input(type="text" maxlength="6" name="" )
 								.dashed-bg
 									span
 									span
@@ -333,7 +333,7 @@
 						
 						.form-field.codeValue-group
 							.form-field
-								input(type="text" max="6" name="" )
+								input(type="text" maxlength="6" name="" )
 								.dashed-bg
 									span
 									span
