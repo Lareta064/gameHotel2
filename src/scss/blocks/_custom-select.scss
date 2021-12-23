@@ -173,6 +173,7 @@
 		left: auto;
 		right: 0;
 		display: none;
+		z-index: 10;
 		&.active{
 			display: block;
 		}
