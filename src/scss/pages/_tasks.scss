@@ -1,4 +1,9 @@
 /*========TASKS PAGE ==========*/
+@media(min-width:768px){
+	.tasks-page{
+		min-height: calc(100vh - 140px);
+	}
+}
 .tasks{
 	padding-top: 32px;
 	.flex-header-col{
