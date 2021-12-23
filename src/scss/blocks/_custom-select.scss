@@ -151,6 +151,7 @@
 		padding-right: 40px;
 		display: inline-block;
 		min-width:112px;
+		cursor:pointer;
 		p{
 			pointer-events: none;
 		}
@@ -205,12 +206,15 @@
 			margin-top: 2px;
 			margin-bottom: 2px;
 			border-radius: 9px;
+			transition: .3s;
+			cursor:pointer;
 			p{
 				display: flex;
 				align-items: center;
 				span{margin-left: 12px;}
 			}
 		}
+		.custom-dropdown__list-item:hover,
 		.custom-dropdown__list-item.current {
 			background-color: #D4E5FF;
 			color: #0A0522;
@@ -218,6 +222,9 @@
 				background-color: #fff;
 			}
 
+		}
+		.custom-dropdown__list-item:hover{
+			background-color: rgba(212, 229, 255, .4);
 		}
 		.custom-dropdown__list-item+.custom-dropdown__list-item{margin-top: 4px;}
 		
