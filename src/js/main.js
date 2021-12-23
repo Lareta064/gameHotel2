@@ -74,45 +74,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			delay += 200;
 		}
 	}
-	/************************** */
-	/* анимация свг-диаграммы-круг */
-	const bgImgMan = document.querySelector('.farm-projects-pic');
 	
-	if( bgImgMan){
-		let Visible = function (bgImgMan) {
-			// Все позиции элемента
-			let targetPosition = {
-					top: window.pageYOffset + bgImgMan.getBoundingClientRect().top,
-					left: window.pageXOffset + bgImgMan.getBoundingClientRect().left,
-					right: window.pageXOffset + bgImgMan.getBoundingClientRect().right,
-					bottom: window.pageYOffset + bgImgMan.getBoundingClientRect().bottom
-				},
-				// Получаем позиции окна
-				windowPosition = {
-					top: window.pageYOffset,
-					left: window.pageXOffset,
-					right: window.pageXOffset + document.documentElement.clientWidth,
-					bottom: window.pageYOffset + document.documentElement.clientHeight
-				};
-
-			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-				// Если элемент полностью видно, то запускаем следующий код
-				bgImgMan.classList.add('animate-imgMan');
-			}
-		};
-
-		// Запускаем функцию при прокрутке страницы
-		window.addEventListener('scroll', function () {
-			Visible(bgImgMan);
-		});
-
-		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-		
-		Visible(bgImgMan);
-	}
 	//========== ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ=========
 	let headerSection = document.querySelector('.investor-banner')
 	let bg1 = document.querySelector('.parallax-item1');
@@ -536,7 +498,38 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
+		swips.addSwiper(".task-board", "min-width:1600px",  {
 		
+		slidesPerView: 1.1,
+		 slidesPerColumn: 1,
+		spaceBetween: 0,
+		
+		speed:800,
+		navigation: {
+			nextEl: ".task-board-next",
+			prevEl: ".task-board-prev",
+			},
+			// loop: true,
+			breakpoints: {
+				
+				424: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768: {
+						slidesPerView: 2.5,
+						spaceBetween: 32,
+					},
+				1024: {
+						slidesPerView: 2.8,
+						spaceBetween: 24,
+					},
+				1200: {
+						slidesPerView: 3.2,
+						spaceBetween: 0,
+					}
+				}
+		})
 
 	swips.init();
 	})();
@@ -627,6 +620,8 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 			}
       });
+
+	
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
@@ -760,3 +755,4 @@ document.addEventListener("DOMContentLoaded", function (){
 		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
 	});
 }( document, window, 0 ));
+
