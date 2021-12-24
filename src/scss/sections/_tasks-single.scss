@@ -1,0 +1,106 @@
+/*=====single task======*/
+.single-task-modal{
+	width: 100%;
+	position: absolute;
+	max-width: 1112px;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	.page-modal__body{
+		padding:0;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.page-modal__body-sidebar{
+	width: 24.5%;
+	background-color: #fff;
+}
+.account-sidebar{
+	padding: 24px;
+	background-color: #fff;
+	.account-sidebar__img{
+		background: #FDE4FF;
+		border-radius: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 24px;
+	}
+	.account-sidebar__info{
+		padding: 24px;
+		&-item{
+			p+p{margin-top: 8px;}
+			.badge{
+				display: inline-flex;
+				align-items: center;
+				height: 24px;
+				border-radius: 16px;
+				background-color: $light;
+				
+				color: $pr;
+				
+				.account-input{
+					border: none;
+					background-color: transparent;
+					margin-left: 10px;
+					font-size: 15px;
+					font-family: $os;
+					color: $pr;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					width:fit-content;
+					display: inline-block;
+					
+				}
+
+			}
+			.text-15{
+				font-family: $os;
+			}
+		}
+	}
+	.account-sidebar__info-item+.account-sidebar__info-item{margin-top: 20px;}
+}
+.copy-icon{
+	width: 18px;
+	height: 18px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 0.75H3C2.175 0.75 1.5 1.425 1.5 2.25V12.75H3V2.25H12V0.75ZM14.25 3.75H6C5.175 3.75 4.5 4.425 4.5 5.25V15.75C4.5 16.575 5.175 17.25 6 17.25H14.25C15.075 17.25 15.75 16.575 15.75 15.75V5.25C15.75 4.425 15.075 3.75 14.25 3.75ZM14.25 15.75H6V5.25H14.25V15.75Z' fill='%237256FF'/%3e%3c/svg%3e");
+	@include pos;
+	transition: .3s;
+	cursor:pointer;
+	&:hover{
+		opacity: .5;
+	}
+}
+
+.page-modal__body-frame{
+	width: 75.5%;
+	padding: 24px;
+}
+.single-task-modal--queueing .page-modal__body {
+	background-color: #F3EAFF;
+}
+.task-info-line {
+	display: flex;
+	align-items: center;
+	&>* +*{
+		margin-left: 64px;
+	}
+	.task-card-badge ,.task-card-timeCounter, .task-info-coast{
+		font-size: 15px;
+		line-height: 24px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.task-info-coast{font-family: $ms;}
+	.task-card-badge{height: 24px;}
+}
+.task-info-text p{
+	font-size: 15px;
+	line-height: 24px;
+	padding-top: 24px;
+}
