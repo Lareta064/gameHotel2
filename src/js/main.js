@@ -789,4 +789,24 @@ if(customDrop){
 		
 	}
 }
-
+//============video clip play ===========
+const videoContent = document.querySelector('#gameVideo');
+if (videoContent) {
+	const videoBtn = videoContent.querySelector('.video-play-btn');
+	const videoClip = document.querySelector('#gameVideoClip');
+	document.addEventListener('click',function(e){
+		console.log(e.target);
+	})
+	videoContent.addEventListener('click', function (e) {
+		
+		if (videoClip.paused) {
+			videoClip.play();
+			videoBtn.style.opacity = "0";
+			this.classList.add("active");
+		} else {
+			videoClip.pause();
+			videoBtn.style.opacity = "1";
+			this.classList.remove("active");
+		} 
+	});  
+}
