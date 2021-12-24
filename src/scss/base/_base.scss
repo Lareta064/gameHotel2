@@ -103,6 +103,7 @@
 	  z-index: 9;
 	  display: none;
 	  &.active{display: block;}
+	  &.light-overlay{opacity: 0;}
   }
 
   input[type="radio"], input[type='checkbox'], input[type="submit"]{

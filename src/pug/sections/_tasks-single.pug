@@ -1,11 +1,14 @@
-.page-modal.single-task-modal.single-task-modal--queueing(data-modal="task_A" style="dispaly: block")
-	.page-modal-content
-		.page-modal-left
+.large-modal(data-modal="task_A" style="dispaly: block")
+	.large-modal-content
+		.single-task-modal.single-task-modal--queueing
+			//=== header =========
 			.page-modal__header
 				h3.text-16 10 побед на Арене (PvP)
 				.page-modal__header-btns
 					button.close-btn(data-close) &#10006;
+			
 			.page-modal__body
+				//============left sidebar ======
 				.page-modal__body-sidebar
 					.account-sidebar
 						.account-sidebar__img
@@ -39,6 +42,7 @@
 							.account-sidebar__info-item
 								p.text-14 Баланс
 								p.text-15 8 232 SLP
+				//============right frame ======
 				.page-modal__body-frame
 					.acor-container
 						.acor-container-block
@@ -70,3 +74,9 @@
 												source(src="video/video.mp4", type="video/mp4")
 												source(src="video/video.webm", type="video/webm")
 			.page-modal__footer
+				.btn-group
+					a(href="#!").button.button-light Назад
+					a(href="#!").button.button--color.button--flex
+						span Go
+						svg(width="16" height="16")
+							use(xlink:href="./img/svg-sprite.svg#arrRight")
