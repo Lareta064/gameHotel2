@@ -317,6 +317,11 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 24px;
+	@media(max-width:767px){
+		display: block;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 .large-modal .change-avatar{
 	.page-modal__body-sidebar{
@@ -324,10 +329,40 @@
 		padding: 20px;
 		width: 25%;
 		margin-left: 32px;
+		padding-top: 72px;
+		.change-avatar-big{width: 144px; height: 144px;overflow: hidden;}
+		 .change-avatar-medium {width: 44px; height: 44px;overflow: hidden;}
+		 .change-avatar-small{width: 32px; height: 32px;overflow: hidden;}
+		@media(max-width:1023px){
+			margin-left: 16px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media(max-width:767px) {
+			width: 100%;
+			display: flex;
+			padding-top: 24px;
+			padding-left: 0;
+			padding-right: 0;
+			align-items: flex-end;
+			&>*{flex-shrink: 0;}
+			
+
+			.change-avatar-medium ,.change-avatar-small {	
+				margin-left: 24px;
+			}
+			
+		}
 
 	}
 	.page-modal__body-frame{
 		flex-grow: 3;
+		@media(max-width:767px){
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			
+		}
 		/*КАСТОМНЫЙ ВЫБОР ФАЙЛА*/
 		.inputfile {
 			width: 0.1px;

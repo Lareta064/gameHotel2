@@ -37,6 +37,10 @@
 			.button+.button {
 				margin-right: 24px;
 			}
+			.button-light{
+				border: 1px solid #D4DFF1;
+
+			}
 		}
 	}
 }
@@ -46,6 +50,7 @@
 	position: relative;
 	border-radius: 24px;
 	max-width: 1112px;
+	
 }
 .single-task-modal{
 	width: 100%;	
