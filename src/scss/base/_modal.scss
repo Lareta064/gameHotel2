@@ -133,3 +133,18 @@
 		&:hover{color: $pink;}
 	}
 }
+.large-modal .page-modal__header-btns{
+	width: 24px;
+	height: 24px;
+	border-radius: 9px;
+	background-color: $light;
+	line-height: 24px;
+	text-align: center;
+	color: #788CAB;
+}
+.large-modal .large-modal-dialog {
+.page-modal__body{
+	background-color: #EEF5FF;
+	padding: 24px;
+}
+}

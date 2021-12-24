@@ -15,6 +15,30 @@
 		background-color: #fff;
 		border-radius: 24px 24px 0 0 ;
 	}
+	.page-modal__footer {
+		border-radius: 0 0 24px 24px;
+		padding: 12px 24px;
+		background-color: #fff;
+
+		.btn-group {
+			padding: 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 24px;
+
+			.button {
+				width: 100%;
+
+				text-align: center;
+				height: 40px;
+				line-height: 36px;
+			}
+
+			.button+.button {
+				margin-right: 24px;
+			}
+		}
+	}
 }
 .large-modal-content{
 	width: 100%;
@@ -33,27 +57,7 @@
 		justify-content: space-between;
 		
 	}
-	.page-modal__footer{
-		border-radius: 0 0 24px 24px;
-		padding: 12px 24px;
-		background-color: #fff;
-		.btn-group{
-			padding: 0;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			column-gap: 24px;
-			.button{
-				width: 100%;
-				
-				text-align: center;
-				height: 40px;
-				line-height: 36px;
-			}
-			.button + .button{
-				margin-right: 24px;
-			}
-		}
-	}
+	
 }
 
 .page-modal__body-sidebar{
@@ -155,7 +159,7 @@
 	.page-modal__body-frame {
 		padding: 15px;
 	}
-	.single-task-modal .page-modal__footer,
+	.large-modal .page-modal__footer,
 	.large-modal .page-modal__header{
 		padding-left: 15px;
 		padding-right: 15px;
