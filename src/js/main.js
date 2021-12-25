@@ -669,15 +669,40 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	});
 
-	/* ========= MASK FOR INPUT PHONE =======*/
+	/* ========= MASK FOR INPUT PHONE =======*/	
+	var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+		var maskOpts = {
+			inputmask: {
+				definitions: {
+					'#': {
+						validator: "[0-9]",
+						cardinality: 1
+					}
+				},
+				//clearIncomplete: true,
+				showMaskOnHover: false,
+				autoUnmask: true
+			},
+			match: /[0-9]/,
+			replace: '#',
+			list: maskList,
+			listKey: "mask",
+			onMaskChange: function(maskObj, completed) {
+				if (completed) {
+					var hint = maskObj.name_ru;
+					if (maskObj.desc_ru && maskObj.desc_ru != "") {
+						hint += " (" + maskObj.desc_ru + ")";
+					}
+					// $("#descr").html(hint);
+				}
+				$(this).attr("placeholder", $(this).inputmask("getemptymask"));
+			}
+		};
+
 	
-	let phoneInputs = document.getElementsByClassName('phone');
-	for(let i = 0; i<phoneInputs.length; i++){
-		new IMask(phoneInputs[i], {
-			mask: '+0(000)000-00-00',
-			lazy: false
-		});
-	}
+	jQuery('.phone').each(function(i, item){
+		$(item).inputmasks(maskOpts);
+	})
 	/*================about game жалюзи на большой картинке =============*/
 	const imgBlind = document.querySelector('.blind-img-block');
 	if(imgBlind){
