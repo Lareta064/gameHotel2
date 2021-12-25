@@ -171,3 +171,41 @@
 			svg( width="16" height="16")
 				use( xlink:href="./img/svg-sprite.svg#tgIcon")
 			span Наш Telegram
+
+//================= change avatar =====================
+.large-modal
+	.large-modal-content
+		.large-modal-dialog.change-avatar
+			//=== header =========
+			.page-modal__header
+				h3.text-16 Аватар
+				.page-modal__header-btns
+					button.close-btn(data-close) &#10006;
+			
+			form(action="#!" ).page-modal__body
+				//============left frame ======
+				.page-modal__body-frame
+					.change-avatar-header
+						.change-avatar-box
+							input#file2.inputfile(type='file' data-multiple-caption='{count} файлов выбрано' multiple='')
+							label.form-label(for='file2') Выбрать файл
+							span
+						.change-avatar-box
+							button.button.button-cam
+								span
+								span Сделать фото
+					.change-avatar-layout
+						img(src="./img/change-avatar.jpg", alt="img")
+				//============right sidebar ======
+				.page-modal__body-sidebar
+					.change-avatar-big
+						img(src="./img/edit-avatar.jpg", width="144" alt="img")
+					.change-avatar-medium
+						img(src="./img/edit-avatar.jpg", width="44" alt="img")
+					.change-avatar-small
+						img(src="./img/edit-avatar.jpg", width="32" alt="img")
+
+			.page-modal__footer
+				.btn-group
+					a(href="#!").button.button-light Отменить
+					a(href="#!").button.button--color Сохранить
