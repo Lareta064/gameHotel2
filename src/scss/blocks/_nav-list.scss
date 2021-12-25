@@ -4,7 +4,7 @@
 	padding: 12px;
 	border-radius: 16px;
 	box-shadow: 0px 5px 16px rgba(216, 207, 244, 0.8);
-	p,a{
+	a{
 		display: block;
 		height: 40px;
 		line-height: 40px;
@@ -21,7 +21,7 @@
 		background-color: rgba(126, 228, 237, .5);
 		color: $basic;
 	}
-	p{
+	li.active a{
 	background-color: #7EE4ED;
 	font-family: $ms;
 	}

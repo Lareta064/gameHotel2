@@ -743,130 +743,143 @@ document.addEventListener("DOMContentLoaded", function (){
 		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 		Visible(imgBlind);
 	}
-});
 
-/*==================INPUT TYPE="FILE" ========*/
-( function ( document, window, index )
-{
-	var inputs = document.querySelectorAll( '.inputfile' );
-	Array.prototype.forEach.call( inputs, function( input )
+
+	/*==================INPUT TYPE="FILE" ========*/
+	( function ( document, window, index )
 	{
-		var label	 = input.nextElementSibling,
-			labelVal = label.innerHTML;
-
-		input.addEventListener( 'change', function( e )
+		var inputs = document.querySelectorAll( '.inputfile' );
+		Array.prototype.forEach.call( inputs, function( input )
 		{
-			var fileName = '';
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else
-				fileName = e.target.value.split( '\\' ).pop();
+			var label	 = input.nextElementSibling,
+				labelVal = label.innerHTML;
 
-			if( fileName ) {
+			input.addEventListener( 'change', function( e )
+			{
+				var fileName = '';
+				if( this.files && this.files.length > 1 )
+					fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+				else
+					fileName = e.target.value.split( '\\' ).pop();
 
-				if ( label.firstChild.nodeType === Node.ELEMENT_NODE ) {
-					label.querySelector( 'span' ).innerHTML = fileName;
-				} else {
-					label.nextElementSibling.innerHTML = fileName;
+				if( fileName ) {
+
+					if ( label.firstChild.nodeType === Node.ELEMENT_NODE ) {
+						label.querySelector( 'span' ).innerHTML = fileName;
+					} else {
+						label.nextElementSibling.innerHTML = fileName;
+					}
+
 				}
-
-			}
-			else
-				label.innerHTML = labelVal;
-		});
-
-		// Firefox bug fix
-		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
-	});
-}( document, window, 0 ));
-
-/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
- *  по клику на выпадашку менять класс current  у <li> */
-const customDrop = document.querySelectorAll('.custom-dropdown');
-if(customDrop){
-	for(let item of customDrop){
-		const customDropField = item.querySelector('.custom-dropdown__field');
-		const customDropIcon = item.querySelector('.custom-dropdown__icon');
-		const customDropList = item.querySelector('.custom-dropdown__wrapper');
-		const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
-
-		customDropField.addEventListener('click', function(e){
-			console.log(e.target);
-			if(this.classList.contains('active')){
-				this.classList.remove('active');
-				customDropIcon.classList.remove('icon-rotate');
-				customDropList.classList.remove('active');
-			}else{
-				this.classList.add('active');
-				customDropIcon.classList.add('icon-rotate');
-				customDropList.classList.add('active');
-			}			
-		});
-		for(let item of customDropListItem){
-			item.addEventListener('click',()=>{
-				for(let i = 0; i < customDropListItem.length; i++){
-				customDropListItem[i].classList.remove('current');
-			}
-			item.classList.add('current');
+				else
+					label.innerHTML = labelVal;
 			});
+
+			// Firefox bug fix
+			input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+			input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+		});
+	}( document, window, 0 ));
+
+	/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
+	 *  по клику на выпадашку менять класс current  у <li> */
+	const customDrop = document.querySelectorAll('.custom-dropdown');
+	if(customDrop){
+		for(let item of customDrop){
+			const customDropField = item.querySelector('.custom-dropdown__field');
+			const customDropIcon = item.querySelector('.custom-dropdown__icon');
+			const customDropList = item.querySelector('.custom-dropdown__wrapper');
+			const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
+
+			customDropField.addEventListener('click', function(e){
+				console.log(e.target);
+				if(this.classList.contains('active')){
+					this.classList.remove('active');
+					customDropIcon.classList.remove('icon-rotate');
+					customDropList.classList.remove('active');
+				}else{
+					this.classList.add('active');
+					customDropIcon.classList.add('icon-rotate');
+					customDropList.classList.add('active');
+				}			
+			});
+			for(let item of customDropListItem){
+				item.addEventListener('click',()=>{
+					for(let i = 0; i < customDropListItem.length; i++){
+					customDropListItem[i].classList.remove('current');
+				}
+				item.classList.add('current');
+				});
+			}
+			
 		}
-		
 	}
-}
-/*============закрыть large modal  при клике по фону ===========*/
-const largeModal = document.querySelectorAll('.large-modal');
-for(let item of largeModal){
-	item.addEventListener('click', (e)=>{
-		if(e.target.classList.contains('visible')){
-			item.classList.remove('visible')
-		}
-	})
-}
+	/*============закрыть large modal  при клике по фону ===========*/
+	const largeModal = document.querySelectorAll('.large-modal');
+	for(let item of largeModal){
+		item.addEventListener('click', (e)=>{
+			if(e.target.classList.contains('visible')){
+				item.classList.remove('visible')
+			}
+		})
+	}
 
-/*============video clip play ===========*/
-const videoContent = document.querySelector('#gameVideo');
-if (videoContent) {
-	const videoBtn = videoContent.querySelector('.video-play-btn');
-	const videoClip = document.querySelector('#gameVideoClip');
-	
-	videoContent.addEventListener('click', function (e) {
+	/*============video clip play ===========*/
+	const videoContent = document.querySelector('#gameVideo');
+	if (videoContent) {
+		const videoBtn = videoContent.querySelector('.video-play-btn');
+		const videoClip = document.querySelector('#gameVideoClip');
 		
-		if (videoClip.paused) {
-			videoClip.play();
-			videoBtn.style.opacity = "0";
-			this.classList.add("active");
-		} else {
-			videoClip.pause();
-			videoBtn.style.opacity = "1";
-			this.classList.remove("active");
-		} 
-	});  
-}
-/* ========== анимация чисел ========*/
-var decimal_places = 2;
-var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
-function animateNum(numItem){
-	$(numItem).animateNumber( {
-      number: $(numItem).text() * decimal_factor,
-      numberStep: function(now, tween) {		 
-        var floored_number = Math.floor(now) / decimal_factor,
-            target = $(tween.elem);
+		videoContent.addEventListener('click', function (e) {
+			
+			if (videoClip.paused) {
+				videoClip.play();
+				videoBtn.style.opacity = "0";
+				this.classList.add("active");
+			} else {
+				videoClip.pause();
+				videoBtn.style.opacity = "1";
+				this.classList.remove("active");
+			} 
+		});  
+	}
+	/* ========== анимация чисел ========*/
+	var decimal_places = 2;
+	var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+	function animateNum(numItem){
+		$(numItem).animateNumber( {
+		number: $(numItem).text() * decimal_factor,
+		numberStep: function(now, tween) {		 
+			var floored_number = Math.floor(now) / decimal_factor,
+				target = $(tween.elem);
 
-        if (decimal_places > 0) {
-          // force decimal places even if they are 0
-          floored_number = floored_number.toFixed(decimal_places);
+			if (decimal_places > 0) {
+			// force decimal places even if they are 0
+			floored_number = floored_number.toFixed(decimal_places);
 
-          // replace '.' separator with ','
-          floored_number = floored_number.toString().replace('.', ',');
-        }
-        target.text( floored_number);
-      }
-    },
-    2000
-  );
-}
-$('.animateNum').each(function(i, item){
-	animateNum($(item))
+			// replace '.' separator with ','
+			floored_number = floored_number.toString().replace('.', ',');
+			}
+			target.text( floored_number);
+		}
+		},
+		2000
+	);
+	}
+	$('.animateNum').each(function(i, item){
+		animateNum($(item))
+	});
+	/*========= pageNav стр about-game========*/
+	if($('.page-nav')){
+		$('.page-nav').each(function(i, item){
+				$(item).onePageNav({
+				currentClass: 'active',
+				changeHash: false,
+				scrollSpeed: 750,
+				scrollThreshold: 0.5,
+				filter: '',
+				easing: 'swing',
+			});
+		});
+	}
 });
- 
