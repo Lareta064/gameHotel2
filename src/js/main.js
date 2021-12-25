@@ -784,19 +784,27 @@ if(customDrop){
 				customDropListItem[i].classList.remove('current');
 			}
 			item.classList.add('current');
-			})
+			});
 		}
 		
 	}
 }
-//============video clip play ===========
+/*============закрыть large modal  при клике по фону ===========*/
+const largeModal = document.querySelectorAll('.large-modal');
+for(let item of largeModal){
+	item.addEventListener('click', (e)=>{
+		if(e.target.classList.contains('visible')){
+			item.classList.remove('visible')
+		}
+	})
+}
+
+/*============video clip play ===========*/
 const videoContent = document.querySelector('#gameVideo');
 if (videoContent) {
 	const videoBtn = videoContent.querySelector('.video-play-btn');
 	const videoClip = document.querySelector('#gameVideoClip');
-	document.addEventListener('click',function(e){
-		console.log(e.target);
-	})
+	
 	videoContent.addEventListener('click', function (e) {
 		
 		if (videoClip.paused) {
@@ -810,3 +818,30 @@ if (videoContent) {
 		} 
 	});  
 }
+/* ========== анимация чисел ========*/
+var decimal_places = 2;
+var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+function animateNum(numItem){
+	$(numItem).animateNumber( {
+      number: $(numItem).text() * decimal_factor,
+      numberStep: function(now, tween) {		 
+        var floored_number = Math.floor(now) / decimal_factor,
+            target = $(tween.elem);
+
+        if (decimal_places > 0) {
+          // force decimal places even if they are 0
+          floored_number = floored_number.toFixed(decimal_places);
+
+          // replace '.' separator with ','
+          floored_number = floored_number.toString().replace('.', ',');
+        }
+        target.text( floored_number);
+      }
+    },
+    2000
+  );
+}
+$('.animateNum').each(function(i, item){
+	animateNum($(item))
+});
+ 

@@ -6,7 +6,10 @@
 	background-repeat: no-repeat;
 	padding-top: 26px;
 	padding-bottom: 26px;
-	.text-block{color: #fff;}
+	.text-block{
+		color: #fff;
+		.animateNum{min-width: 44px;}
+	}
 	
 	.cabinet-header__drop{
 		li>p{
