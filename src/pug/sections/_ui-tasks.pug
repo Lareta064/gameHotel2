@@ -1,0 +1,158 @@
+section.tasks
+	.container
+		.flex-header
+			h2.text-24 Задачи на сегодня
+			.flex-header-col
+				a(href="#").button.button-light.button--flex
+					svg(width="20" height="20" )
+						use(xlink:href="./img/svg-sprite.svg#supportIcon")
+					span Требуется помощь в замене
+				//==========slider btn ========
+				.slider-btn-wrapper
+					.task-board-prev.slider-btn-prev
+					.task-board-next.slider-btn-next
+	.task-board-wrapper
+		//=======ДОСКА ЗАДАЧ-СВАЙПЕР ======
+		.task-board.swiper
+			.swiper-wrapper
+				//=====слайд КОЛОНКА В ОЧЕРЕДИ
+				.swiper-slide
+					.task-board-column.task-board-column--queueing
+						//=====заголовок
+						.task-board-column__title
+							.badge.badge--white 3
+							h4 В очереди
+						
+						//====карточки ====
+						.task-board-list
+							//=======одна карточка =======
+							.task-card
+								.task-card__head
+									.task-card-badge Начать до #[span 14:00]
+									.task-card-options(data-btn="task_A")
+								.task-card__body
+									.task-card-title 10 побед в Arena (PvP)
+									.task-card-timeCounter Задача на #[span 1 ч 20 мин]
+									.task-card-deskrip
+										p Возможное описание задачи что надо зайти в игру и пробить PVP или иные пояснения...
+								.task-card__footer
+									.task-card__footer-col
+											.task-card__logo
+												img(src="./img/games/ember-logo.png", width="80" alt="img")
+									.task-card__footer-col
+										.task-card__footer-spans
+											span от 
+											span $8
+										a(href="#!").task-card-state
+											span Go
+											svg(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#arrRight")
+						
+							//=======одна карточка =======
+							.task-card
+								.task-card__head
+									.task-card-badge Начать до 14:00
+									.task-card-options
+								.task-card__body
+									.task-card-title 10 побед в Arena (PvP)
+									.task-card-timeCounter Задача на #[span 1 ч 20 мин]
+									.task-card-deskrip
+										p Возможное описание задачи что надо зайти в игру и пробить PVP или иные пояснения...
+								.task-card__footer
+									.task-card__footer-col
+											.task-card__logo
+												img(src="./img/games/thetan-logo.png", width="80" alt="img")
+									.task-card__footer-col
+										.task-card__footer-spans
+											span от 
+											span $8
+										a(href="#!").task-card-state
+											span Go
+											svg(width="20" height="20")
+												use(xlink:href="./img/svg-sprite.svg#arrRight")
+				//=====слайд КОЛОНКА В ПРОЦЕССЕ
+				.swiper-slide
+					.task-board-column.task-board-column--process
+						//=====заголовок =======
+						.task-board-column__title
+							.badge.badge--white 1
+							h4 В процессе
+						//===== карточки ============
+						.task-board-list
+							//=======task card =======
+							.task-card
+								.task-card__head
+									.task-card-badge Осталось #[span 40 мин 32 сек]
+									.task-card-options
+								.task-card__body
+									.task-card-title 10 побед в Arena (PvP)
+									.task-card-timeCounter Задача на #[span 1 ч 20 мин]
+									.task-card-deskrip
+										p Возможное описание задачи что надо зайти в игру и пробить PVP или иные пояснения...
+								.task-card__footer
+									.task-card__footer-col
+											.task-card__logo
+												img(src="./img/games/kaby-logo.png", width="80" alt="img")
+									.task-card__footer-col
+										.task-card__footer-spans
+											span от
+											span $8
+										a(href="#!").task-card-state
+											svg(width="16" height="12")
+												use(xlink:href="./img/svg-sprite.svg#checkIcon")
+											span Done
+				//=====слайд КОЛОНКА ВЫПОЛНЕНО
+				.swiper-slide
+					.task-board-column.task-board-column--done
+						//=====заголовок =======
+						.task-board-column__title
+							.badge.badge--white 1
+							h4 Выполнено
+						//=====карточки =======
+						.task-board-list
+							//=======task card =======
+							.task-card
+								.task-card__head
+									.task-card-badge Выполнено за #[span  30 минут]
+									.task-card-options
+								.task-card__body
+									.task-card-title 10 побед в Arena (PvP)
+									.task-card-timeCounter Задача на #[span 1 ч 20 мин]
+									.task-card-deskrip
+										p Возможное описание задачи что надо зайти в игру и пробить PVP или иные пояснения...
+								.task-card__footer
+									.task-card__footer-col
+											.task-card__logo
+												img(src="./img/games/axie-logo.png", width="80" alt="img")
+									.task-card__footer-col
+										.task-card__footer-spans
+											span +
+											span $12
+				//=====слайд КОЛОНКА НЕ ВЫПОЛНЕНО
+				.swiper-slide
+					.task-board-column.task-board-column--notcompleted
+						//=====заголовок =======
+						.task-board-column__title
+							.badge.badge--white 1
+							h4 Не выполнено
+						//=====карточки =======
+						.task-board-list
+							//=======task card =======
+							.task-card
+								.task-card__head
+									.task-card-badge Выполнено за #[span  30 минут]
+									.task-card-options
+								.task-card__body
+									.task-card-title 10 побед в Arena (PvP)
+									.task-card-timeCounter Задача на #[span 1 ч 20 мин]
+									.task-card-deskrip
+										p Возможное описание задачи что надо зайти в игру и пробить PVP или иные пояснения...
+								.task-card__footer
+									.task-card__footer-col
+											.task-card__logo
+												img(src="./img/games/fara-logo.png", width="80" alt="img")
+									.task-card__footer-col
+										.task-card__footer-spans
+											span Штраф -
+											span $8
+				

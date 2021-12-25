@@ -109,13 +109,13 @@
 		position: absolute;
 	}
 	.investor-banner__man{
-		left: 46%;
+		left: 50%;
 		bottom: -35px;
 		transform:translateX(-50%);
 	}
 	.investor-banner__laptop{
-		top: 48px;
-		right: 60px;
+		top: 75px;
+		right: 85px;
 	}
 	.investor-banner__money{
 		right: -18px;
@@ -125,6 +125,18 @@
 		left: -33px;
 		top: 43%;
 	}
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 75%;
+		background-image: url('../img/investor/grid.svg');
+		background-position:center;
+		background-size:auto;
+		background-repeat: no-repeat;	
+	}
 	@media(max-width:1023px){display: none;}
 	
 }
@@ -132,6 +144,10 @@
 .investor-banner__benefits{
 	position: relative;
 	z-index: 5;
+	.d-flex{
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
+	}
 	@media(max-width:1023px){
 		padding-left: 15px;
 		padding-right: 15px;

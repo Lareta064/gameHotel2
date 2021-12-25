@@ -1,0 +1,51 @@
+.acor-container{
+	.acor-container-block{
+		border-radius: 16px;
+		background-color: #fff;
+		input{
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			&:checked + label + .acor-body{
+				height: auto;
+			}
+			&:checked + label> .acor-arrow{
+				 transform:scaleY(1);
+
+			}
+		}
+		label{
+			display: flex;
+			padding: 12px 24px;
+			cursor:pointer;
+			
+
+		}
+		.acor-arrow{
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: $light;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5575 5.5575L5 2.1225L8.4425 5.5575L9.5 4.5L5 0L0.5 4.5L1.5575 5.5575Z' fill='%237256FF'/%3e%3c/svg%3e");
+			@include pos;
+			margin-right: 12px;
+			transition: .7s;
+			transform:scaleY(-1);
+
+		}
+		.acor-body{
+			
+			height: 0;
+			overflow: hidden;
+
+		}
+		.acor-body-content{
+			padding: 24px;
+			border-top: 1px solid #D8E1EF;
+		}
+	}
+} 
+.acor-container-block+.acor-container-block{
+	margin-top: 28px;
+}

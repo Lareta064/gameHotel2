@@ -1,14 +1,15 @@
 @import "base/_var";
 @import "base/_base";
 @import "base/_typography";
+@import "base/_svg-bg";
 @import "sections/_aside-menu";
 @import "base/_buttons";
 @import "base/_animation";
 @import "base/_cards";
 @import "base/modal";
 @import "base/wrapper-class";
-
- @import "blocks/swiper-styles";
+@import "base/fix-mobile-menu";
+@import "blocks/swiper-styles";
  
 //blocks
  @import "blocks/custom-select";
@@ -20,6 +21,7 @@
  @import "blocks/badge";
  @import "blocks/asidebar";
  @import "blocks/comment-block";
+ @import "blocks/accordion";
 
  //sections
  @import "sections/investor-banner";
@@ -34,8 +36,20 @@
  @import "sections/vertical-slider";
  @import "sections/how-bay-mobile";
  @import "sections/partners";
+ @import "sections/header-slider";
  @import "sections/faq";
- @import "sections/footer";
+ @import "sections/game-categories";
+ @import "sections/best-games";
  
+
+ @import "sections/footer";
+ @import "pages/success-reg";
  @import "pages/investor-page";
  @import "pages/about-game";
+ @import "pages/farm-page";
+
+
+ @import "blocks/task-card";
+ @import "blocks/cabinet-header";
+ @import "sections/tasks-single";
+ @import "pages/tasks";

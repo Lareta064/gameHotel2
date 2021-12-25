@@ -1,8 +1,27 @@
 .our-team{
 	background: #EEF5FF;
+	overflow: hidden;
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left:0;
+		right: 0;
+		left: 0;
+		bottom:0;
+		background: url(../img/team-bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.container{
+		position: relative;
+		z-index: 2;
+	}
 	
-	
-}
+	}
+
 .our-experts,
 .our-team{
 	@media(max-width:1023px) {
@@ -11,36 +30,56 @@
 			width:calc(50% + 50vw);
 			padding-right: 0;
 		}
-		.double-card__bottom p {
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 3;
-			overflow: hidden;
-			height: 72px;
-		}
 	}
 	@media(max-width:767px) {
 		padding-bottom: 27px;
+	}
+	.swiper-slide{
+		height: auto;
+		min-height: 100%;
 	}
 }
 .our-experts__cards.card-grid-duo {
 	@media(max-width:1023px) {
 		display: flex;
-		// .double-card{width: 370px!important;}
+		
 	}
 }
-.our-team .double-card__top {
-	@media(max-width:1023px) {
-		flex-direction: column-reverse;
-		align-items: center;
-		text-align: center;
 
-		h4 {
-			font-size: 14px;
+.our-experts__cards{
+	
+	
+}
+
+.swiper-our-experts .swiper-slide{
+		min-height: 100%;
+		height: auto;
+		.double-card{
+			height: 100%;
 		}
+	}
 
-		p {
-			font-size: 13px;
+.our-experts,
+.our-team{
+	.persone-card{
+		.card-social {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			align-self: flex-start;
+
+			@media(max-width:1023px){
+				justify-content: center;
+				align-self: center;
+				margin-top: 4px;
+			}
+		}
+		.card-social a{
+			width: 24px;
+			height: 24px;
+			transition: .3s;
+			&+a{margin-left: 16px;}
+			&:hover{opacity: .5;}
 		}
 	}
 }

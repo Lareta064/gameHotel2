@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	include ../sections/_aside-menu.pug
+	include ../sections/_header.pug
+	main.success-registartion
+		include ../sections/_success-reg.pug
+		
+	include ../sections/_footer.pug
+		
+	
+	
+block variables
+	-var title = "success-registartion";

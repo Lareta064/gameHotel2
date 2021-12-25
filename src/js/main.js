@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function (){
+	/*bottom fix-menu mob version*/
+	const fixMobMenu = document.querySelector('.fix-mobile-menu');
+	if(fixMobMenu){
+		const openFixMenu = fixMobMenu.querySelector('#open-fixMenu');
+		const closeFixMenu = fixMobMenu.querySelector('#close-fixMenu');
+		const listFixMenu = fixMobMenu.querySelector('.fix-menu-list');
+		openFixMenu.addEventListener('click', function(){
+			this.classList.remove('active');
+			 closeFixMenu.classList.add('active');
+			 listFixMenu.classList.add('active');
+		});
+		closeFixMenu.addEventListener('click', function(){
+			this.classList.remove('active');
+			openFixMenu.classList.add('active');
+			 listFixMenu.classList.remove('active');
+		});
+
+
+	}
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
@@ -75,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	//===============perspective-effect ==============
 	$(function(){
-			const card = $('.possibl-card');
+			const card = $('.persone-card');
 			
 			card.on('mousemove', function (e) {
 				
@@ -110,12 +129,14 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	// ========= КАСТОМНЫЙ СЕЛЕКТ =============
-	const customSelect = document.querySelector('.custom-select');
+	const customSelect = document.querySelectorAll('.custom-select');
 	if(customSelect){	
-		customSelect.addEventListener('click', function(e){
-			const thisList = customSelect.querySelector('.select-list');
-			const thisInput = customSelect.querySelector('input');
-			const thisListItem = customSelect.querySelectorAll('li');
+		
+	for(let item of customSelect){
+		item.addEventListener('click', function(e){
+			const thisList = item.querySelector('.select-list');
+			const thisInput = item.querySelector('input');
+			const thisListItem = item.querySelectorAll('li');
 
 			if(e.target.tagName == 'INPUT'){
 
@@ -141,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
-
+}
 	// ========vertical-scroll=============
 	function vertSlider(textBlockClassName, imageBlockClassName) {
 
@@ -199,21 +220,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		swips.addSwiper(".swiper-investor-cta", "", {
 			loop: true,
-			slidesPerView: 1.4,        
+			slidesPerView: 1.2,
 			spaceBetween: 24,
 			speed:800,
 			pagination: {
 				el: ".swiper-pagination-cta",
 				clickable: true,
-			},
-			breakpoints: {
-				
-				575: {
-					slidesPerView: 2,
-					spaceBetween: 24,
-				}
 			}
 		});
+		
 		swips.addSwiper(".game-news-cards", "min-width:1024px", {
 			loop: true,
 			slidesPerView: 1.2, 
@@ -230,6 +245,35 @@ document.addEventListener("DOMContentLoaded", function (){
 				},
 				768: {
 					slidesPerView: 2.5,
+					spaceBetween: 24,
+				},
+			}
+		});
+		//===news slider one game page =====
+		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
+			loop: true,
+			slidesPerView: 1.2, 
+			spaceBetween: 24,
+			speed:800,
+			pagination: {
+				el: ".swiper-pagination-news",
+				clickable: true,
+			},
+			breakpoints: {
+				574: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				768: {
+					slidesPerView: 1.7,
+					spaceBetween: 24,
+				},
+				1024: {
+					slidesPerView: 2.3,
+					spaceBetween: 24,
+				},
+				1200: {
+					slidesPerView: 2.8,
 					spaceBetween: 24,
 				},
 			}
@@ -264,9 +308,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				el: ".swiper-pagination-info",
 				clickable: true,
 			},
-			autoplay: {
-				delay: 3000,
-				},
+			
 			breakpoints: {
 				574: {
 					slidesPerView: 1.5,
@@ -279,31 +321,29 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".swiper-team", "min-width:1024px", {
-			slidesPerView: 'auto', 
-			spaceBetween: 24,
+			slidesPerView: 1.2, 
+			spaceBetween: 16,
 			loop: true,
 			speed:1500,
-			autoplay: {
-				delay: 3000,
-				},
+			
 			pagination: {
 				el: ".swiper-pagination-team",
 				clickable: true,
 			},
 			breakpoints: {
 				574: {
-					slidesPerView: 1.5,
+					slidesPerView: 1.8,
 					spaceBetween: 24,
 				},
 				768: {
-					slidesPerView: 2.5,
+					slidesPerView: 2.2,
 					spaceBetween: 24,
 				}
 				
 			}
 		});
 		swips.addSwiper(".swiper-our-experts", "min-width:1024px", {
-			slidesPerView: .8, 
+			slidesPerView: 1.1, 
 			spaceBetween: 24,
 			loop: true,
 			speed:800,
@@ -313,15 +353,15 @@ document.addEventListener("DOMContentLoaded", function (){
 			},
 			breakpoints: {
 				
-				768: {
-					slidesPerView: 1.5,
+				575: {
+					slidesPerView: 1.6,
 					spaceBetween: 24,
 				}
 				
 			}
 		});
 		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
-			slidesPerView: 1.2,
+			slidesPerView: 1.3,
 			spaceBetween: 24,
 			loop: true,
 			speed:800,
@@ -396,12 +436,106 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
+		//====farm-page-header====
+		swips.addSwiper(".farm-info-list.swiper", "min-width:768px", {
+			slidesPerView: 1.2,
+			spaceBetween: 48,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".farm-info-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 48,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 48,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 48,
+				}
+
+			}
+		});
+		swips.addSwiper(".profit-cards-wrapper", "min-width:1280px", {
+			slidesPerView: 1.1,
+			spaceBetween: 24,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".profit-cards-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				424: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2.2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2.7,
+					spaceBetween: 32,
+				},
+				991:{
+					slidesPerView: 3.5,
+					spaceBetween: 32,
+				},
+				1200:{
+					slidesPerView: 3.8,
+					spaceBetween: 32,
+				}
+
+			}
+		});
+
+		swips.addSwiper(".task-board", "min-width:1600px",  {
 		
+		slidesPerView: 1.1,
+		 slidesPerColumn: 1,
+		spaceBetween: 0,
+		
+		speed:800,
+		navigation: {
+			nextEl: ".task-board-next",
+			prevEl: ".task-board-prev",
+			},
+			// loop: true,
+			breakpoints: {
+				
+				424: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768: {
+						slidesPerView: 2.5,
+						spaceBetween: 32,
+					},
+				1024: {
+						slidesPerView: 2.8,
+						spaceBetween: 24,
+					},
+				1200: {
+						slidesPerView: 3.2,
+						spaceBetween: 0,
+					}
+				}
+		})
+
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/
 	let locCradsSwiper = new Swiper(".location-cards-swiper", {
-       slidesPerView: 1.1,
+       slidesPerView: 1.2,
         navigation: {
           nextEl: ".locSwiper-button-next",
           prevEl: ".locSwiper-button-prev",
@@ -458,6 +592,36 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 		}
       });
+	  
+	  let bannersSlider = new Swiper(".header-slider-swiper", {
+		
+       slidesPerView: 1,
+	   spaceBetween: 72,
+	   centeredMode: true,
+	   speed:800,
+	   navigation: {
+          nextEl: ".header-slider-next",
+          prevEl: ".header-slider-prev",
+        },
+		// loop: true,
+		breakpoints: {
+			
+			768: {
+					slidesPerView: 1.1,
+					spaceBetween: 32,
+				},
+			1200: {
+					slidesPerView: 1.3,
+					spaceBetween: 48,
+				},
+			1440: {
+					slidesPerView: 1.4,
+					spaceBetween: 48,
+				}
+			}
+      });
+
+	
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
 	const overlayBg = document.querySelector('#overlay');
@@ -505,15 +669,40 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	});
 
-	/* ========= MASK FOR INPUT PHONE =======*/
+	/* ========= MASK FOR INPUT PHONE =======*/	
+	var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+		var maskOpts = {
+			inputmask: {
+				definitions: {
+					'#': {
+						validator: "[0-9]",
+						cardinality: 1
+					}
+				},
+				//clearIncomplete: true,
+				showMaskOnHover: false,
+				autoUnmask: true
+			},
+			match: /[0-9]/,
+			replace: '#',
+			list: maskList,
+			listKey: "mask",
+			onMaskChange: function(maskObj, completed) {
+				if (completed) {
+					var hint = maskObj.name_ru;
+					if (maskObj.desc_ru && maskObj.desc_ru != "") {
+						hint += " (" + maskObj.desc_ru + ")";
+					}
+					// $("#descr").html(hint);
+				}
+				$(this).attr("placeholder", $(this).inputmask("getemptymask"));
+			}
+		};
+
 	
-	let phoneInputs = document.getElementsByClassName('phone');
-	for(let i = 0; i<phoneInputs.length; i++){
-		new IMask(phoneInputs[i], {
-			mask: '+7(000)000-00-00',
-			lazy: false
-		});
-	}
+	jQuery('.phone').each(function(i, item){
+		$(item).inputmasks(maskOpts);
+	})
 	/*================about game жалюзи на большой картинке =============*/
 	const imgBlind = document.querySelector('.blind-img-block');
 	if(imgBlind){
@@ -555,3 +744,129 @@ document.addEventListener("DOMContentLoaded", function (){
 		Visible(imgBlind);
 	}
 });
+
+/*==================INPUT TYPE="FILE" ========*/
+( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName ) {
+
+				if ( label.firstChild.nodeType === Node.ELEMENT_NODE ) {
+					label.querySelector( 'span' ).innerHTML = fileName;
+				} else {
+					label.nextElementSibling.innerHTML = fileName;
+				}
+
+			}
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
+
+/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
+ *  по клику на выпадашку менять класс current  у <li> */
+const customDrop = document.querySelectorAll('.custom-dropdown');
+if(customDrop){
+	for(let item of customDrop){
+		const customDropField = item.querySelector('.custom-dropdown__field');
+		const customDropIcon = item.querySelector('.custom-dropdown__icon');
+		const customDropList = item.querySelector('.custom-dropdown__wrapper');
+		const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
+
+		customDropField.addEventListener('click', function(e){
+			console.log(e.target);
+			if(this.classList.contains('active')){
+				this.classList.remove('active');
+				customDropIcon.classList.remove('icon-rotate');
+				customDropList.classList.remove('active');
+			}else{
+				this.classList.add('active');
+				customDropIcon.classList.add('icon-rotate');
+				customDropList.classList.add('active');
+			}			
+		});
+		for(let item of customDropListItem){
+			item.addEventListener('click',()=>{
+				for(let i = 0; i < customDropListItem.length; i++){
+				customDropListItem[i].classList.remove('current');
+			}
+			item.classList.add('current');
+			});
+		}
+		
+	}
+}
+/*============закрыть large modal  при клике по фону ===========*/
+const largeModal = document.querySelectorAll('.large-modal');
+for(let item of largeModal){
+	item.addEventListener('click', (e)=>{
+		if(e.target.classList.contains('visible')){
+			item.classList.remove('visible')
+		}
+	})
+}
+
+/*============video clip play ===========*/
+const videoContent = document.querySelector('#gameVideo');
+if (videoContent) {
+	const videoBtn = videoContent.querySelector('.video-play-btn');
+	const videoClip = document.querySelector('#gameVideoClip');
+	
+	videoContent.addEventListener('click', function (e) {
+		
+		if (videoClip.paused) {
+			videoClip.play();
+			videoBtn.style.opacity = "0";
+			this.classList.add("active");
+		} else {
+			videoClip.pause();
+			videoBtn.style.opacity = "1";
+			this.classList.remove("active");
+		} 
+	});  
+}
+/* ========== анимация чисел ========*/
+var decimal_places = 2;
+var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+function animateNum(numItem){
+	$(numItem).animateNumber( {
+      number: $(numItem).text() * decimal_factor,
+      numberStep: function(now, tween) {		 
+        var floored_number = Math.floor(now) / decimal_factor,
+            target = $(tween.elem);
+
+        if (decimal_places > 0) {
+          // force decimal places even if they are 0
+          floored_number = floored_number.toFixed(decimal_places);
+
+          // replace '.' separator with ','
+          floored_number = floored_number.toString().replace('.', ',');
+        }
+        target.text( floored_number);
+      }
+    },
+    2000
+  );
+}
+$('.animateNum').each(function(i, item){
+	animateNum($(item))
+});
+ 

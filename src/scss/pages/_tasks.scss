@@ -1,0 +1,39 @@
+/*========TASKS PAGE ==========*/
+@media(min-width:768px){
+	.tasks-page{
+		min-height: calc(100vh - 140px);
+	}
+}
+.tasks{
+	padding-top: 32px;
+	.flex-header-col{
+		display: flex;
+		align-items: center;
+		
+	}
+	.slider-btn-wrapper{margin-left: 52px;}
+}
+@media(max-width:1023px) {
+	.tasks {
+		.slider-btn-wrapper {
+			margin-left: 32px;
+		}
+	}
+}
+@media(max-width:767px){
+	.tasks{
+		.flex-header-col, .flex-header {
+			flex-direction: column;
+		}
+		.flex-header-col{
+			margin-top: 32px;
+			width: 100%;
+			align-items: flex-end;
+			.slider-btn-wrapper{
+				margin-top: 32px;
+				margin-left: auto;
+				
+			}
+		}
+	}
+}

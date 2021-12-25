@@ -1,4 +1,5 @@
 .button-medium,
+.filter-btn,
 .button-link,
 .button{
 	padding: 0;
@@ -35,7 +36,20 @@
 	height: 36px;
 	line-height: 34px;
 }
-
+.button.h-40 {
+height: 40px;
+line-height: 38px;
+border-radius: 9px;
+}
+.filter-btn{
+	border-color:#C8D2E1;
+	color:#0A0522;
+	&.active{
+		color: #7256FF;
+		background-color: #EEF5FF;
+		
+	}
+}
 .button-light{
 background: #EEF5FF;
 svg{fill: $pr;}
@@ -158,4 +172,12 @@ svg#arrRight{
 	background-color: $light;
 	svg{fill: $pr;}
 	color: $pr;
+}
+.button-light.disable{
+	color: rgba(59, 78, 106, .5);
+}
+.button--grey{
+background: #788CAB;
+color: #fff;
+text-align: center;	
 }

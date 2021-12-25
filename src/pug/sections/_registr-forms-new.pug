@@ -1,0 +1,476 @@
+//================= АВТОРИЗАЦИЯ=====================
+.modal-block(data-modal="logIn")
+	.page-modal.login-modal
+		.page-modal-content
+			.page-modal-left
+				.page-modal__header
+					h3.text-16 Авторизация
+					button.close-btn(data-close) &#10006;
+				.page-modal__body
+					.page-modal__body-title.text-15
+						p Выберите способ входа в аккаунт
+					.custom-select.custom-select--full
+						.select-icon
+							svg(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.select-field
+							input(type="text" value="Выберите" readonly)
+						.select-list
+							ul
+								li.current(data-role="Телефон")
+									span Телефон
+									svg
+										use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+
+
+								li(data-role="Telegram")
+									span Telegram
+									svg
+										use(xlink:href="./img/svg-sprite.svg#tgIcon")
+
+								li(data-role="Metamask")
+									span Metamask
+									svg
+										use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+
+								li(data-role="Binance")
+									span Binance
+									svg
+										use(xlink:href="./img/svg-sprite.svg#binanceIc")
+
+								li(data-role="Google")
+									span Google
+									svg
+										use(xlink:href="./img/svg-sprite.svg#googleIcon")
+
+								li(data-role="E–mail")
+									span E–mail
+									svg
+										use(xlink:href="./img/svg-sprite.svg#emailIcon")
+
+					
+				.page-modal__footer
+					.text-agree.text-center
+						a(href="#!").text-link.text-13 Условия использования
+			.reg-sidebar
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					span Телефон
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#tgIcon")
+					span Telegram
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+					span Metamask
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#binanceIc")
+					span Binance
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#googleIcon")
+					span Google
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#emailIcon")
+					span E–mail
+				
+				.reg-sidebar__btn-mobile
+					span
+						svg(width="16" height="4")
+							use(xlink:href="./img/svg-sprite.svg#dottIcon")
+					span Еще
+					.reg-sidebar__drop
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#googleIcon")
+							span Google
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							span E–mail
+
+//================= PHONE АВТОРИЗАЦИЯ ШАГ 1/2=====================
+.modal-block.visible
+	.page-modal.login-modal
+		.page-modal-content
+			.page-modal-left
+				.page-modal__header
+					h3.text-16 Авторизация
+					button.close-btn(data-close) &#10006;
+				.page-modal__body
+					.reg-form-badge.badge.badge--light 1/2
+					.page-modal__body-title.text-15
+						p Мы отправим код для входа на телефон
+					.reg-form-step.reg-form-step--1
+						.form-field
+							span.form-field-icon
+								svg.phone-svg(width="20" height="20")
+									use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+							input(type="text" class="phone" id="phone" minlength="11" name=""   placeholder="+_(___)___-__-__" maxlength="32")
+							
+						p.text-link.text-center У меня нет мобильного телефона
+						.register-step-btn
+							button.button.button--color.button-icon( type="button" )
+								span Продолжить
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
+
+					
+				.page-modal__footer
+					.text-agree.text-center
+						p.text-13 Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c #[a(href="#!").text-link политикой конфиденциальности].
+			.reg-sidebar
+				button.current
+					svg
+						use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					span Телефон
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#tgIcon")
+					span Telegram
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+					span Metamask
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#binanceIc")
+					span Binance
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#googleIcon")
+					span Google
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#emailIcon")
+					span E–mail
+				
+				.reg-sidebar__btn-mobile
+					span
+						svg(width="16" height="4")
+							use(xlink:href="./img/svg-sprite.svg#dottIcon")
+					span Еще
+					.reg-sidebar__drop
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#googleIcon")
+							span Google
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							span E–mail
+
+
+//================= PHONE АВТОРИЗАЦИЯ ШАГ 2/2 =====================
+.modal-block
+	.page-modal.login-modal
+		.page-modal-content
+			.page-modal-left
+				.page-modal__header
+					h3.text-16 Авторизация
+					button.close-btn(data-close) &#10006;
+				.page-modal__body
+					.reg-form-badge.badge.badge--light 2/2
+					.reg-form-step.text-center
+						.register-step-title
+							p.text-15 Введите код из сообщения
+						.form-field.codeValue-group
+							.form-field
+								input(type="text" maxlength="6" name="" )
+								.dashed-bg
+									span
+									span
+									span
+									span
+									span
+									span
+						
+						
+						.register-step-btn
+							button.button.button--color.button-icon
+								span Продолжить
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
+							
+							p.text-link Изменить номер телефона
+						.step2-text
+							
+							p.text-14 Мы отправили SMS код для проверки на ваш телефон #[span + 7 *** *** 34 44.]
+							p  #[button(type="button") Отправить повторно] через #[span 60] секунд
+		
+				.page-modal__footer
+					.text-agree.text-center
+						a(href="#!").text-link.text-13 Условия использования
+					
+			.reg-sidebar
+				button.current
+					svg
+						use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					span Телефон
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#tgIcon")
+					span Telegram
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+					span Metamask
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#binanceIc")
+					span Binance
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#googleIcon")
+					span Google
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#emailIcon")
+					span E–mail
+				
+				.reg-sidebar__btn-mobile
+					span
+						svg(width="16" height="4")
+							use(xlink:href="./img/svg-sprite.svg#dottIcon")
+					span Еще
+					.reg-sidebar__drop
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#googleIcon")
+							span Google
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							span E–mail
+//================= EMAIL АВТОРИЗАЦИЯ ШАГ 1/2=====================
+.modal-block
+	.page-modal.login-modal
+		.page-modal-content
+			.page-modal-left
+				.page-modal__header
+					h3.text-16 Авторизация
+					button.close-btn(data-close) &#10006;
+				.page-modal__body
+					.reg-form-badge.badge.badge--light 1/2
+					.page-modal__body-title.text-15
+						p Мы отправим код для входа на E–mail
+					.reg-form-step.reg-form-step--1
+						.form-field
+							span.form-field-icon
+								svg.email-svg(width="20" height="20")
+									use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							input(type="text" class="email"  name="" placeholder="Введите e–mail")
+							
+						p.text-link.text-center У меня нет мобильного телефона
+						.register-step-btn
+							button.button.button--color.button-icon( type="button" )
+								span Продолжить
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
+
+					
+				.page-modal__footer
+					.text-agree.text-center
+						p.text-13 Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c #[a(href="#!").text-link политикой конфиденциальности].
+			.reg-sidebar
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					span Телефон
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#tgIcon")
+					span Telegram
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+					span Metamask
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#binanceIc")
+					span Binance
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#googleIcon")
+					span Google
+				button.current.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#emailIcon")
+					span E–mail
+				
+				.reg-sidebar__btn-mobile
+					span
+						svg(width="16" height="4")
+							use(xlink:href="./img/svg-sprite.svg#dottIcon")
+					span Еще
+					.reg-sidebar__drop
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#googleIcon")
+							span Google
+						button.current
+							svg
+								use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							span E–mail
+
+//================= EMAIL АВТОРИЗАЦИЯ ШАГ 2/2 =====================
+.modal-block
+	.page-modal.login-modal
+		.page-modal-content
+			.page-modal-left
+				.page-modal__header
+					h3.text-16 Авторизация
+					button.close-btn(data-close) &#10006;
+				.page-modal__body
+					.reg-form-badge.badge.badge--light 2/2
+					.reg-form-step.text-center
+						.register-step-title
+							p.text-15 Введите код из сообщения
+						
+						.form-field.codeValue-group
+							.form-field
+								input(type="text" maxlength="6" name="" )
+								.dashed-bg
+									span
+									span
+									span
+									span
+									span
+									span
+						
+						.register-step-btn
+							button.button.button--color.button-icon
+								span Продолжить
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
+							p.text-link Изменить E–mail
+						.step2-text
+							
+							p.text-14 Мы отправили письмо с кодом для входа на ваш E–mail #[span this....@gmail.com.]
+							p  #[button(type="button") Отправить повторно] через #[span 60] секунд
+							
+								  
+		
+				.page-modal__footer
+					.text-agree.text-center
+						a(href="#!").text-link.text-13 Условия использования
+					
+			.reg-sidebar
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					span Телефон
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#tgIcon")
+					span Telegram
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+					span Metamask
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#binanceIc")
+					span Binance
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#googleIcon")
+					span Google
+				button.current.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#emailIcon")
+					span E–mail
+				
+				.reg-sidebar__btn-mobile
+					span
+						svg(width="16" height="4")
+							use(xlink:href="./img/svg-sprite.svg#dottIcon")
+					span Еще
+					.reg-sidebar__drop
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#googleIcon")
+							span Google
+						button.current
+							svg
+								use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							span E–mail
+
+//================= telegram АВТОРИЗАЦИЯ  =====================
+.modal-block
+	.page-modal.login-modal.login-modal--tg
+		.page-modal-content
+			.page-modal-left
+				.page-modal__header
+					h3.text-16 Авторизация
+					button.close-btn(data-close) &#10006;
+				.page-modal__body
+					.reg-form-step
+						.reg-form-step__item
+							.register-step-title.text-15
+								.badge.badge--light 1 
+								span Отсканируйте код
+								
+							.register-step-qr
+								img(src="./img/qr.png", width="176" alt="qr")
+							p или
+							button.button.button-light.button--flex
+								svg( width="16" height="16")
+									use( xlink:href="./img/svg-sprite.svg#tgIcon")
+								span Запустить бота
+						.reg-form-step__item
+							.register-step-title
+								.badge.badge--light 2
+								span Нажмите «Старт» в боте GameHotel
+						.reg-form-step__item
+							.register-step-title
+								.badge.badge--light 3
+								span Следуйте подсказкам бота
+								
+						.text-agree.text-center
+							a(href="#!").text-link.text-13 Условия использования
+				
+			.reg-sidebar
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#phoneSvg")
+					span Телефон
+				button.current
+					svg
+						use(xlink:href="./img/svg-sprite.svg#tgIcon")
+					span Telegram
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#metamaskIcon")
+					span Metamask
+				button
+					svg
+						use(xlink:href="./img/svg-sprite.svg#binanceIc")
+					span Binance
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#googleIcon")
+					span Google
+				button.reg-sidebar__btn-desktop
+					svg
+						use(xlink:href="./img/svg-sprite.svg#emailIcon")
+					span E–mail
+				
+				.reg-sidebar__btn-mobile
+					span
+						svg(width="16" height="4")
+							use(xlink:href="./img/svg-sprite.svg#dottIcon")
+					span Еще
+					.reg-sidebar__drop
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#googleIcon")
+							span Google
+						button
+							svg
+								use(xlink:href="./img/svg-sprite.svg#emailIcon")
+							span E–mail

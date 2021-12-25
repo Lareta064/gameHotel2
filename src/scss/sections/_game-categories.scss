@@ -1,0 +1,68 @@
+/*============game categories===*/
+.game-categories{
+	
+	background: url(../img/category-bg.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	.categories-type__title p,
+	.categories-type__title h4{
+		color: #fff;
+		font-size: 24px;
+		line-height: 1.5;		
+		font-weight: 400;
+		margin-bottom: 56px;
+	}
+	.simple-card+.simple-card{margin-top: 24px;}
+}
+.game-categories-type--favor,
+.game-categories-type--new{
+	.categories-type__title{
+		position: relative;
+		padding-left: 35px;
+		&:before{
+			content: '';
+			width: 25px;
+			height: 25px;
+			background: url(../img/icon-rocket.png);
+			background-size: auto;
+			background-position: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.game-categories-type--favor .categories-type__title:before {
+	background: url(../img/icon-faire.png);
+	content: '';
+	width: 25px;
+	height: 25px;
+	
+	background-size: auto;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.game-categories .game-categories-list{
+	display: flex;
+	justify-content: space-between;
+}
+.game-categories-type--anonce .categories-type__title h4,
+.game-categories-type--anonce .categories-type__title p{
+	 background: linear-gradient(45deg, #E14FAD 0%, #F9D423 100%);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 color: #E14FAD;
+	 display: table;
+}
+.game-categories .game-categories__img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translateX(37%);
+
+}

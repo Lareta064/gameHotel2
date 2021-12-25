@@ -4,7 +4,12 @@
   	padding-bottom: 96px;
 
   	@media(max-width:767px) {
-  		padding-top: 32px;
-  		padding-bottom: 67px;
+  		padding-top: 60px;
+  		padding-bottom: 60px;
   	}
+  }
+  .investor-page section.investor-banner{
+	  @media(max-width:1024px){
+		  padding-top: 0;
+	  }
   }

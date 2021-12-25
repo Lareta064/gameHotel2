@@ -42,25 +42,57 @@
 	}
 }
 
-.header-text{
-	display: flex;
-	align-items: center;
-	*+*{
-		margin-left: 32px;
-	}
-	@media(max-width:767px){
-		display: block;
-		*+* {
-			margin-left:0;
-			margin-top: 8px;
-		}
-	}
-}
+/*контейнер на стр about game*/
 .column-container{
 	padding-left: 24px;
 	padding-right: 24px;
 	@media(max-width:767px){
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+}
+/*группа из двух элементов*/
+.text-group {
+	display: flex;
+	align-items: center;
+
+	&>*+* {
+		margin-left: 16px;
+	}
+}
+/***СВАЙП-СЕТКА ДЛЯ КАРТОЧЕК**/
+.grid-column-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 32px;
+	row-gap: 32px;
+
+}
+/****заголовок на баннерах ***/
+
+.main-header__content{
+	position: relative;
+	z-index: 3;
+	display: flex;
+	height: 100%;
+	width: 70%;
+	max-width:416px;
+	flex-direction: column;
+	.title-1{
+		margin-bottom: 32px;
+		img{margin-right: 20px;}
+	}
+	.title-1, p{color: #ffffff;}
+	p{
+		font-size: 17px;
+		line-height: 1.53;
+	}
+	.btn-group{
+		margin-top: auto;
+		padding-left: 0;
+		.button +.button{margin-left: 24px;}
+	}
+	@media(max-width:1023px){
+		p {font-size: 15px;}
 	}
 }

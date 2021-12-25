@@ -23,3 +23,53 @@ mixin breadcrumb(...items)
 			each item in items
 				li
 					a(href="#!") #{item}
+
+mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge, cardWidth)
+	a.game-card-large(href="#!")&attributes(attributes)
+		if badge
+			.badge.badge--white !{badge}
+		.game-card-large__img
+			if cardWidth
+				img(src="./img/games/"+imgSrc+".jpg", width=""+cardWidth  alt="img")
+			else
+				img(src="./img/games/"+imgSrc+".jpg",  alt="img")
+		.game-card__info
+			.game-card__body
+				.game-card__title
+					span.badge.badge--green !{rang}
+					h4.text-15 !{title}
+				p.text-14 !{text}
+			.game-card__footer
+				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
+				span.button.button-light.button--flex
+					span Изучить
+					svg(width="16" height="16")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
+
+mixin game-card-category(imgSrc, title)
+	a(href="#!").simple-card
+		.simple-card__img
+			img(src="./img/games/"+ imgSrc +"-thumb.jpg", width="96" alt="alt")
+		.simple-card__info
+			h4.text-15 !{title}
+			p.text-13  Пошаговая, карточная
+		.simple-card__arrow
+
+mixin game-card-medium(rang, title, text,imgSrc, logoSrc, badge)
+	a(href="#!").game-card-large.game-card-large
+		if badge
+			.badge.badge--white !{badge}
+		.game-card-large__img(style="background: #F3EAFF url(./img/games/"+imgSrc+".jpg)")
+		.game-card__info
+			.game-card__body
+				.game-card__title
+					span.badge.badge--green !{rang}
+					h4.text-15 !{title}
+				p.text-14 !{text}
+			.game-card__footer
+				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
+				span.button.button-light.button--flex
+					span Изучить
+					svg(width="16" height="16")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
+		

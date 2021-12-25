@@ -1,11 +1,12 @@
 
 /* our-offer*/
-.our-offer{
+.investor-page .our-offer{
 	position: relative;
 	background-color: #EEF5FF;
 	padding-top: 133px;
 	padding-bottom: 133px;
 	overflow: hidden;
+	height: 530px;
 	&__text{
 		width: 80%;
 		max-width:585px;
@@ -17,6 +18,7 @@
 		margin-top: 56px;
 	}
 	@media(max-width:1023px){
+		height: 350px;
 		padding-top: 67px;
 		padding-bottom: 67px;
 		&__text{width: 55%;
@@ -25,6 +27,7 @@
 	}
 	@media(max-width:767px) {
 		padding-bottom: 0;
+		height: 386px;
 		&__text {
 			width: 100%;
 			text-align: center;
@@ -35,43 +38,68 @@
 		}
 		
 	}
-	.our-offer__text-desk{
-		display: block;
-		@media(max-width:767px) {
-			display: none;
-		}
-	}
-	 .our-offer__text-mob{
-		display: none;
-		@media(max-width:767px) {
-			display: block;
-		}
-	 }
 }
 .our-offer .our-offer__bg{
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
+	top: 50%;
+	width: 80%;
+	right: -50%;
 	z-index: 2;
+	transform: translateY(-50%);
 	@media(max-width:767px) {
-		top:auto;
-		right: -50%;
+		display: none;
 	}
 }
 .our-offer-content{
-	
+	position: relative;
+	z-index: 3;
 	.our-offer__img{
 		position: absolute;
-		bottom: 0;
-		left: 50%;
-		z-index: 3;
+		top:-44%;
+		right:0;
+		width: 680px;
+		z-index: 2;
+		@media(max-width:1799px) {
+			right:80px;		
+		}
+		@media(max-width:1279px) {
+			
+			right: 0;
+			
+		}
+		@media(max-width:1023px) {
+			top:-15%;
+			right:0;
+			width: 420px;
+		}
 		@media(max-width:767px){
+			display: none;
+		}
+	}
+	
+}
+.our-offer .our-offer__img-mob {
+	display: none;
+		@media(max-width:767px){
+		position: relative;
+		z-index: 1;
+		margin-top: -85px;
+		display: flex;
+		justify-content: center;
+		img{
+			width: 200%;
+			max-width:unset;
+			left: -120px;
 			position: relative;
-			left:auto;
-			bottom: auto;
-			margin-top: 44px;
-			height: 150px;
+			max-width:725px;
+			
 		}
 	}
 }
+@media(min-width:1024px){
+	.our-offer .our-offer__text.text-32 p span{
+		font-family: 'Montserrat',	sans-serif;
+		font-weight: 700;
+	}
+}
+/* //our-offer*/

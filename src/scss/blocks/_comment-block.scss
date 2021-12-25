@@ -2,19 +2,27 @@
 	display: flex;
 	align-items: center;
 }
+.comments-block .flex-header{
+	margin-bottom: 24px;
+	@media(max-width:767px){
+		flex-direction: column;
+		align-items: flex-start;
+		&>*+*{margin-left: auto; margin-top: 16px;}
+	}
+}
 .comments-block__avatar{
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
-	background-color: #7EE4ED;
-	// text-align: center;
-	// overflow: hidden;
-	flex-shrink:0;
-	// line-height: 44px;
+	background-color: #7EE4ED;	
+	flex-shrink:0;	
 	margin-right: 16px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto;
+	@media(max-width:767px){
+		display: none;
+	}
 }
 .comment-form{
 	width: 100%;
@@ -58,6 +66,7 @@
 	li>ul{
 		padding-top: 16px;
 		padding-left: 60px;
+		@media(max-width:767px){padding-left: 40px;}
 	}
 	
 	li .comments-block-tree__item {
@@ -80,8 +89,9 @@
 	}
 	.replay-text{
 		position: relative;
-		margin-left: 12px;
-		padding-left: 20px;
+		margin-left: 16px;
+		padding-left: 8px;
+		
 		&:before{
 			content: '';
 			width: 18px;
@@ -109,7 +119,14 @@
 			color: #3B4E6A;
 			margin-left: 16px;
 			font-family: $mr;
-		}		
+		}
+		@media(max-width:599px)	{
+			span {margin-left: 0px;}
+			flex-direction: column;
+			align-items: flex-start;
+			*+*{margin-left: 0;}
+			.replay-text{padding-left: 24px;}
+		}
 	}
 	.comments-block__details-text{
 		background-color: #EEF5FF;
@@ -122,6 +139,7 @@
 		font-size: 13px;
 		line-height: 20px;
 		color: #7256FF;
+		cursor:pointer;
 	}
 	li>ul{
 		.comments-block__avatar{
@@ -162,5 +180,16 @@
 		.increm-btn {
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 9.6C0 6.23969 0 4.55953 0.653961 3.27606C1.2292 2.14708 2.14708 1.2292 3.27606 0.653961C4.55953 0 6.23969 0 9.6 0H10.4C13.7603 0 15.4405 0 16.7239 0.653961C17.8529 1.2292 18.7708 2.14708 19.346 3.27606C20 4.55953 20 6.23969 20 9.6V10.4C20 13.7603 20 15.4405 19.346 16.7239C18.7708 17.8529 17.8529 18.7708 16.7239 19.346C15.4405 20 13.7603 20 10.4 20H9.6C6.23969 20 4.55953 20 3.27606 19.346C2.14708 18.7708 1.2292 17.8529 0.653961 16.7239C0 15.4405 0 13.7603 0 10.4V9.6Z' fill='white'/%3e%3cpath d='M15.25 10.75H10.75V15.25H9.25V10.75H4.75V9.25H9.25V4.75H10.75V9.25H15.25V10.75Z' fill='%23788CAB'/%3e%3c/svg%3e ");
 		}
+	}
+}
+.filter-btn-block{
+	.filter-btn{border-radius: 0;}
+	.filter-btn+.filter-btn{border-left:0;}
+	.filter-btn:first-child{
+		border-radius: 9px 0 0 9px;
+	}
+	.filter-btn:last-child{
+		border-radius: 0 9px 9px 0;
+		border-left:0px;
 	}
 }
