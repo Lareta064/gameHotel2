@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding-top: 64px;
+	padding-top: 20px;
 	padding-bottom: 64px;
 	@media(max-width:1023px) {
 		padding-bottom: 80px;
@@ -154,7 +154,7 @@
 .result-info-content .d-flex{
 	justify-content: space-between;
 	align-items: flex-end;
-	
+	.text-grey{font-family: $os;}
 }
 
 .about-game-parametrs ul{
@@ -172,7 +172,7 @@
 	.badge +.badge{margin-left: 12px;}
 }
 .about-game-parametrs {
-	span + p{margin-top: 6px;}
+	span + p{margin-top: 6px; font-family: $os;}
 }
 
 .text-block .button {
@@ -204,7 +204,21 @@
 	}
 	.card-light{
 		width: 250px;
-		p{ -webkit-line-clamp: 4;}
+		p{ 
+			-webkit-line-clamp: 4;
+			font-size: 14px;
+			font-family: $os;
+			line-height: 20px;
+			color: #0A0522;
+		}
+		h4{
+			height: auto;
+			font-size: 14px;
+			line-height: 20px;
+		}
+		.card-light__text{
+			padding-top: 16px;
+		}
 	  
 	}
 	

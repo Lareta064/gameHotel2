@@ -59,7 +59,7 @@ header.header{
 			font-size: 13px;
 			line-height: 20px;			
 			color: #0A0522;
-			font-family: arial;
+			// font-family: arial;
 			white-space: nowrap;
 
 		}
@@ -263,8 +263,14 @@ header.header .header-menu ul li{margin-left: 16px;}
 
 /***********HEADER SEARCH****************/
 .header-search {
-	width: 50%;
+	width: 415px;
+	min-width: 250px;
+	max-width:415px;
 	padding-left: 32px;
+	@media(max-width:1439px){
+		width: 50%;
+		padding-left: 24px;
+	}
 	@media(max-width:1279px){
 		padding-left: 16px;
 	}
@@ -272,7 +278,7 @@ header.header .header-menu ul li{margin-left: 16px;}
 
 .header-search-form {
 	position: relative;
-	min-width: 250px;
+	
 	flex-grow: 2;
 
 	.form-field {
@@ -285,6 +291,9 @@ header.header .header-menu ul li{margin-left: 16px;}
 		height: 40px;
 		padding-left: 42px;
 		padding-right: 12px;
+		border: none;
+		color: #3B4E6A;
+		font-size: 13px;
 	}
 
 	.search-form-btn {
