@@ -307,8 +307,39 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	
+	overflow: hidden;
+	img{
+		position: absolute;
+		left: 50%;
+		top: 18px;
+		transform: translateX(-50%);
+
+	}
+	img.img-back{
+		top: 38px;
+		transform: translateX(-54%);
+	}
 }
+.picture-card--fish{
+	background-color: #ABDFE5;
+	img{top:10px}
+}
+.picture-card--animals {
+	background-color: #EECFAE;
+}
+.picture-card--birds {
+	background-color: #B0C7EC;
+}
+.picture-card--bugs {
+	background-color: #EFB9B6;
+}
+.picture-card--reptile {
+	background-color: #EBCAF6;
+}
+.picture-card--plants {
+	background-color: #B9ECC4;
+}
+
 .picture-card .badge {
 	top: 14px;
 	left: 16px;
@@ -319,6 +350,9 @@
 .picture-card.badge-center .badge {
 	top: 50%;
 	left: 50%;
+	height: 28px;
+	line-height: 28px;
+	font-family: $ms;
 	transform:translate(-50%, -50%);
 }
 .game-card-large{
