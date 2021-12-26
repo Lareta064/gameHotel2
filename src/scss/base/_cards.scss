@@ -309,23 +309,22 @@
 	background-repeat: no-repeat;
 	overflow: hidden;
 	display: block;
+	transition: .3s;
 	img{
 		position: absolute;
 		left: 50%;
 		top: 18px;
-		transform: translateX(-45%);
+		transform: translate(-45%, 150%);
 		transition: .5s;
 
 	}
 	img.img-back{
-		top: 38px;
-		transform: translateX(-54%);
+		top: 50px;
+		transform: translateX(-54%, 150%);
 	}
 	&:hover{
-		img:last-child{
-			transform: translateX(-5%) ;
-			
-		}
+		opacity: .8;
+		.badge{opacity: 1;}
 		
 	}
 }
