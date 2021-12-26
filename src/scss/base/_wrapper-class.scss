@@ -100,3 +100,17 @@
 	padding-top: 88px;
 	margin-top: -40px;
 }
+.br-desktop {
+	display: block;
+
+	@media(max-width:767px) {
+		display: none;
+	}
+}
+.br-mobile {
+	display: none;
+
+	@media(max-width:767px) {
+		display: block;
+	}
+}

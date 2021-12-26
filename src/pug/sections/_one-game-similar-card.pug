@@ -2,10 +2,10 @@
 article.games-similare.slider-1023
 	.column-container
 		.flex-header
-			h3.text-24 Пошаговые игры
+			h3.text-24 Карточные игры
 			a(href="#!").button-medium.button-light Смотреть все
 		//=======слайдер======
-		.games-cards-large.swiper.swiper-cardStep
+		.games-cards-large.swiper
 			.card-grid-trio.swiper-wrapper.flex-1023
 				//=====один слайд =====
 				.swiper-slide
@@ -16,13 +16,4 @@ article.games-similare.slider-1023
 				//=====один слайд =====
 				.swiper-slide
 					+game-card-large('8.2', 'Kaby Arena', 'Пошаговая, карточная', 'kaby','kaby-logo',330)
-				//=====один слайд =====
-				.swiper-slide
-					+game-card-large('9.1', 'Fara Land', 'Пошаговая, карточная', 'fara','fara-logo',330)
-				//=====один слайд =====
-				.swiper-slide
-					+game-card-large('7.5', 'Monsta Infinite', 'Пошаговая, карточная', 'monsta', 'monsta-logo',330)
-				//=====один слайд =====
-				.swiper-slide
-					+game-card-large('8.9', 'My Defi Pet', 'Пошаговая, карточная', 'mydefi','mydefi-logo',330)
-			.cardStep-pagination.swiper-pagination.hide-1024
+			.cards-large-pagination.swiper-pagination.hide-1024

@@ -159,4 +159,13 @@
 		}
 	}
 }
+.slider-1023 {
+	@media(max-width:1023px) {
+		overflow: hidden;
+
+		.swiper {
+			width: calc(50% + 50vw);
+		}
+	}
+}
 /***********************************/

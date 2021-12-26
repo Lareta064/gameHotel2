@@ -252,8 +252,8 @@ document.addEventListener("DOMContentLoaded", function (){
 		//===news slider one game page =====
 		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
 			loop: true,
-			slidesPerView: 1.2, 
-			spaceBetween: 24,
+			slidesPerView: 1, 
+			spaceBetween: 16,
 			speed:800,
 			pagination: {
 				el: ".swiper-pagination-news",
@@ -529,7 +529,41 @@ document.addEventListener("DOMContentLoaded", function (){
 						spaceBetween: 0,
 					}
 				}
-		})
+		});
+
+		swips.addSwiper(".popular-games-block", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".popular-cards-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+
+
+		
 
 	swips.init();
 	})();
