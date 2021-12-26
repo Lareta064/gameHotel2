@@ -308,16 +308,24 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	display: block;
+	transition: .3s;
 	img{
 		position: absolute;
 		left: 50%;
 		top: 18px;
-		transform: translateX(-50%);
+		transform: translate(-45%, 150%);
+		transition: .5s;
 
 	}
 	img.img-back{
-		top: 38px;
-		transform: translateX(-54%);
+		top: 50px;
+		transform: translateX(-54%, 150%);
+	}
+	&:hover{
+		opacity: .8;
+		.badge{opacity: 1;}
+		
 	}
 }
 .picture-card--fish{
@@ -363,6 +371,7 @@
 	overflow: hidden;
 	padding-bottom: 12px;
 	transition: .3s;
+	max-width:330px;
 	.badge{
 		position: absolute;
 		top: 14px;
@@ -371,15 +380,16 @@
 		font-size: 13px;		
 	}
 	
-	&--medium .game-card-large__img, &__img {
-		height: 216px;
+	 .game-card-large__img {
+		height: 244px;
 		overflow:hidden;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		img{transition: .5s;}
 	}
 	&--medium .game-card-large__img{
-		height: 244px;
+		height: 216px;
 	}
 }
 .game-card__info{
@@ -419,12 +429,14 @@
 	}
 }
 .game-card-large:hover{
-	// box-shadow: 0 0 15px rgba(0,0,0, .08);
-	filter: drop-shadow(0px 5px 16px rgba(216, 207, 244, 0.8));
+	box-shadow: 0 0 15px rgba(0,0,0, .08);
+	// filter: drop-shadow(0px 5px 16px rgba(216, 207, 244, 0.8));
 	background-color: #fff;
 	.game-card__footer .button {
 		opacity: .7;
-		
+	}
+	.game-card-large__img img{
+		transform: scale(1.05);
 	}
 }
 .simple-card{

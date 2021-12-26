@@ -404,3 +404,62 @@ article .flex-header {
 .about-game-video__content.active:after {
 	transform: translateY(100%);
 }
+@media(max-width:1023px) {
+.about-game-main .game-types .swiper-block{padding-bottom: 10px;}
+}
+@media(max-width:767px){
+	.fake-offset .game-news ,
+	.about-game-main .page-content-wrapper .page-content-left__block {
+		padding-bottom: 0;
+	}
+	.about-game-main .page-content-wrapper .page-content-left__block {
+		padding-top: 0;
+	}
+	.about-game-main #games-similare{
+		padding-top: 68px;
+	}
+	
+}
+
+#gameCardsCategory.active{
+	.picture-card{
+		img:last-child{
+			animation-name: visibleBottom;
+			animation-duration: .5s;
+			animation-delay: 1s;
+			animation-fill-mode:  forwards;
+			animation-timing-function: ease-in-out;
+		}
+		img.img-back{
+			animation-name: visibleBottom2;
+			animation-duration: .5s;
+			animation-delay: .5s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in-out;
+		}
+	}
+}
+@keyframes visibleBottom{
+	0%{
+		transform: translate(-45%, 150%);
+	}
+	50%{
+		transform: translate(-45%, -10%);
+	}
+	100%{
+		transform: translate(-45%, 0);
+	}
+}
+@keyframes visibleBottom2 {
+	0% {
+		transform: translate(-54%, 150%);
+	}
+
+	50% {
+		transform: translate(-54%, -10%);
+	}
+
+	100% {
+		transform: translate(-54%, 0);
+	}
+}

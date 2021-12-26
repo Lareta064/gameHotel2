@@ -13,12 +13,15 @@ block content
 						.page-content-left__block
 							include ../sections/_about-game-header
 							include ../sections/_about-game-description
-						.page-content-left__block
-							include ../sections/_about-game-news
-						.page-content-left__block
-							include ../sections/_about-game-similar
-						.page-content-left__block
-							include ../blocks/_comments-block
+						.fake-offset#news
+							.page-content-left__block
+								include ../sections/_about-game-news
+						.fake-offset#games-similare
+							.page-content-left__block
+								include ../sections/_about-game-similar
+						.fake-offset#comments
+							.page-content-left__block
+								include ../blocks/_comments-block
 					.page-content-right
 						include ../sections/_about-game-aside
 	include ../sections/_footer.pug

@@ -24,7 +24,7 @@ mixin breadcrumb(...items)
 				li
 					a(href="#!") #{item}
 
-mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge, cardWidth)
+mixin game-card-large(rang, title, text, imgSrc, logoSrc, badge, cardWidth)
 	a.game-card-large(href="#!")&attributes(attributes)
 		if badge
 			.badge.badge--white !{badge}
@@ -42,7 +42,7 @@ mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge, cardWidth)
 			.game-card__footer
 				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
 				span.button.button-light.button--flex
-					span Изучить
+					span Подробнее
 					svg(width="16" height="16")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
 
