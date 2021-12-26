@@ -372,6 +372,7 @@
 	overflow: hidden;
 	padding-bottom: 12px;
 	transition: .3s;
+	max-width:330px;
 	.badge{
 		position: absolute;
 		top: 14px;
@@ -380,15 +381,15 @@
 		font-size: 13px;		
 	}
 	
-	&--medium .game-card-large__img, &__img {
-		height: 216px;
+	 .game-card-large__img {
+		height: 244px;
 		overflow:hidden;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	&--medium .game-card-large__img{
-		height: 244px;
+		height: 216px;
 	}
 }
 .game-card__info{
