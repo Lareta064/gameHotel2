@@ -407,8 +407,8 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		swips.addSwiper(".games-cards-large", "min-width:1024px", {
-			slidesPerView: 1.2,
-			spaceBetween: 24,
+			slidesPerView: 1.1,
+			spaceBetween: 20,
 			loop: true,
 			speed:800,
 			pagination: {
@@ -536,6 +536,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	 /*  карточки location на стр about game*/
 	let locCradsSwiper = new Swiper(".location-cards-swiper", {
        slidesPerView: 1.2,
+	   spaceBetween: 24,
         navigation: {
           nextEl: ".locSwiper-button-next",
           prevEl: ".locSwiper-button-prev",
@@ -843,7 +844,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			} 
 		});  
 	}
-	/* ========== анимация чисел ========*/
+	/* ========== анимация чисел стр tasks========*/
 	var decimal_places = 2;
 	var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
 	function animateNum(numItem){

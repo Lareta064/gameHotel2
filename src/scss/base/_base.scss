@@ -156,6 +156,7 @@
 			padding-left: 12px;
 		}
 	}
+	@media(max-width:767px){display: none;}
 }
 .container--special .page-breadcrumb{
 	@media(max-width:767px){

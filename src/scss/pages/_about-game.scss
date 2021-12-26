@@ -404,3 +404,20 @@ article .flex-header {
 .about-game-video__content.active:after {
 	transform: translateY(100%);
 }
+@media(max-width:1023px) {
+.about-game-main .game-types .swiper-block{padding-bottom: 10px;}
+}
+@media(max-width:767px){
+	.fake-offset .game-news ,
+	.about-game-main .page-content-wrapper .page-content-left__block {
+		padding-bottom: 0;
+	}
+	.about-game-main .page-content-wrapper .page-content-left__block {
+		padding-top: 0;
+	}
+	.about-game-main #games-similare{
+		padding-top: 68px;
+	}
+	
+}
+
