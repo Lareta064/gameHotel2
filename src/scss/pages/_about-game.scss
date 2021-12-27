@@ -105,6 +105,7 @@
 .result-info-content .gradient-box__inner {
 	padding-left: 40px;
 	padding-right: 40px;
+	
 	@media(max-width:767px){
 		padding-left: 20px;
 		padding-right: 20px;
@@ -155,9 +156,19 @@
 .result-info-content .d-flex{
 	justify-content: space-between;
 	align-items: flex-end;
+	overflow:hidden;
 	.text-grey{font-family: $os;}
 }
-
+.result-info__right{
+	position: absolute;
+	right: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	@media(max-width:767px){
+		width: 100px;
+		right: 15px;
+	}
+}
 .about-game-parametrs ul{
 	display: grid;
 	grid-template-columns:repeat(3, 1fr) ;
