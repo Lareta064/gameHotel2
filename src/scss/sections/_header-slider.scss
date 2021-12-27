@@ -27,6 +27,14 @@
 	@media(max-width:1279px){
 		padding-left: 0;
 	}
+		@media(max-width:767px) {
+			padding-top: 16px;
+			.header-slider__bottom {
+				margin-top: 24px;
+				.game-news-cards--1365{width: calc(50% + 50vw);}
+				
+			}
+		}
 }
 
 .header-slider-swiper {
@@ -64,6 +72,9 @@
 		}
 		@media(max-width:1023px){
 			height: 330px;
+		}
+		@media(max-width:767px) {
+			height: 200px;
 		}
 	}
 }

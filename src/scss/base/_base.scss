@@ -111,6 +111,42 @@
 	  -moz-appearance: none;
   -webkit-appearance: none;
   }
+  .backTop{
+	  display: inline-block;
+	  border-radius: 24px;
+	  color: #fff;
+	  background-color: #0A0522;
+	  height: 32px;
+	  line-height: 32px;
+	  position: relative;
+	  padding-left: 12px;
+	  padding-right: 40px;
+	  font-size: 14px;
+	  font-family: $ms;
+	  position: fixed;
+	  z-index: 20;
+	  bottom: 30px;
+	  right: 80px;
+	  transition: .3s;
+	  display: none;
+	  &:before{
+		content: '';
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.333252 7.00016L1.50825 8.17516L6.16658 3.52516V13.6668H7.83325V3.52516L12.4833 8.1835L13.6666 7.00016L6.99992 0.333496L0.333252 7.00016Z' fill='white'/%3e%3c/svg%3e ");
+		@include pos;
+	  }
+	  &:hover{
+		  opacity: .5;
+	  }
+	  @media(max-width:1199px){
+		  display: none!important;
+	  }
+  }
 .page-breadcrumb{
 	margin-bottom: 24px;
 	ul{
