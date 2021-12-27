@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			openFixMenu.classList.add('active');
 			 listFixMenu.classList.remove('active');
 		});
-
-
 	}
+	/*========кнопка ВВерх====== */
+	$("#backTop").hide();
+	$(function(){$(window).scroll(function(){200<$(this).scrollTop()?$("#backTop").fadeIn():$("#backTop").fadeOut()}),$("#backTop").click(function(){return $("body,html").animate({scrollTop:0},600),!1})});
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
@@ -687,6 +688,37 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
+		/*====game categories */
+		swips.addSwiper(".game-categories-swiper", "min-width:1024px", {
+			slidesPerView: 1,
+			spaceBetween: 16,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".gameCategories-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.6,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.1,
+					spaceBetween: 16,
+				}
+
+			}
+		});
 
 	swips.init();
 	})();
@@ -753,9 +785,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	  let bannersSlider = new Swiper(".header-slider-swiper", {
 		
-       slidesPerView: 1,
-	   spaceBetween: 72,
+       slidesPerView: 1.1,
+	   spaceBetween: 24,
 	   centeredMode: true,
+	   loop: true,
 	   speed:800,
 	   navigation: {
           nextEl: ".header-slider-next",
@@ -767,6 +800,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			768: {
 					slidesPerView: 1.1,
 					spaceBetween: 32,
+					loop: false,
 				},
 			1200: {
 					slidesPerView: 1.3,
@@ -774,7 +808,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				},
 			1440: {
 					slidesPerView: 1.4,
-					spaceBetween: 48,
+					spaceBetween: 72,
 				}
 			}
       });

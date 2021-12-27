@@ -27,6 +27,14 @@
 	@media(max-width:1279px){
 		padding-left: 0;
 	}
+		@media(max-width:767px) {
+			padding-top: 16px;
+			.header-slider__bottom {
+				margin-top: 24px;
+				.game-news-cards--1365{width: calc(50% + 50vw);}
+				
+			}
+		}
 }
 
 .header-slider-swiper {
@@ -65,6 +73,9 @@
 		@media(max-width:1023px){
 			height: 330px;
 		}
+		@media(max-width:767px) {
+			height: 200px;
+		}
 	}
 }
 .header-slider .header-slider__bottom {
@@ -72,6 +83,11 @@
 	h4,
 	p {
 		transition: .3s;
+	}
+	.card-light--pic .card-light__text{padding-right: 0;}
+	.card-light .card-light__text p {
+		-webkit-line-clamp: 2;
+		
 	}
 	.card-light:hover{
 		background-color: rgba(255,255,255, .2);
