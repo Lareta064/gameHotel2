@@ -334,11 +334,29 @@ article .flex-header {
 }
 .page-content-wrapper--games {
 	position: relative;
-	background: url(../img/lightblueBg.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	
+	.page-content-wrapper__img{
+		position: absolute;
+		right: 0;
+		top: 160px;
+		@media(max-width: 1919px){
+			width: 480px;
+		}
+		@media(max-width: 1199px) {
+			display: none;
+		}
+	}
+	.page-content-right{
+		padding-top: 48px;
+
+	}
+	.page-content-columns{
+		position: relative;
+		z-index: 3;
+		.page-content-right{
+			top: 15px;
+			
+		}
+	}
 }
 /*======start whis us====*/
 .cta{
@@ -350,6 +368,9 @@ article .flex-header {
 .cta .cta-cards  {
 	display: flex;
 	justify-content: space-between;
+	@media(max-width:767px){
+		flex-direction: column;
+	}
 
 }
 .about-game-video__content {
@@ -404,21 +425,28 @@ article .flex-header {
 .about-game-video__content.active:after {
 	transform: translateY(100%);
 }
+
 @media(max-width:1023px) {
 .about-game-main .game-types .swiper-block{padding-bottom: 10px;}
+.all-games-page .container--special{
+	padding-left: 0;
+	padding-right: 0;
+}
+.all-games-page .page-content-wrapper .page-content-left__block {border-radius: 0;}
 }
 @media(max-width:767px){
 	.fake-offset .game-news ,
-	.about-game-main .page-content-wrapper .page-content-left__block {
+	.single-game-page .page-content-wrapper .page-content-left__block {
 		padding-bottom: 0;
 	}
-	.about-game-main .page-content-wrapper .page-content-left__block {
+	.single-game-page .page-content-wrapper .page-content-left__block {
 		padding-top: 0;
 	}
-	.about-game-main #games-similare{
+	.single-game-page #games-similare {
 		padding-top: 68px;
 	}
-	
+	.all-games-page .cta .container{padding-left: 12px;
+	padding-right: 12px;}
 }
 
 #gameCardsCategory.active{

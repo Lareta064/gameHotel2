@@ -5,14 +5,30 @@ block content
 	include ../sections/_aside-menu.pug
 	include ../sections/_header_2.pug
 	//========= тег main =========
-	main.about-game-main
+	main.about-game-main.all-games-page
 		include ../sections/_header-slider
 		.page-content-wrapper.page-content-wrapper--games
+			.page-content-wrapper__img
+				img(src="./img/all-gamesBg.png", width="700" alt="img")
 			.container.container--special
 				.page-content-columns
 					.page-content-left
-						.page-content-left__block
-							include ../sections/_one-game-similar
+						//======один блок с карточками ====
+						.fake-offset#step-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar
+						//======один блок с карточками ====
+						.fake-offset#card-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar-card
+						//======один блок с карточками ====
+						.fake-offset#role-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar-role
+						//======один блок с карточками ====
+						.fake-offset#action-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar-action
 					.page-content-right
 						include ../sections/_one-game-aside
 		include ../sections/_one-game-category

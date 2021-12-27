@@ -45,6 +45,12 @@
 			 -webkit-box-orient: vertical;
 			 -webkit-line-clamp: 3;
 			 overflow: hidden;
+			
+		}
+		&>p{
+ 			@media(max-width:1023px){
+				 height: 54px;
+			 }
 		}
 	}
 }
@@ -109,10 +115,17 @@
 		height: 104px;
 		flex-shrink: 0;
 		img{border-radius: 10px;}
+		@media(max-width:767px){
+			width: 90px;
+			height: 90px;
+		}
 	}
 	.card-light__text{
 		padding-top: 0;		
 		padding-right: 24px;
+		@media(max-width:767px) {
+			padding-right: 0;
+		}
 		h4{
 			font-size: 15px;
 			line-height: 24px;
@@ -545,5 +558,9 @@
 
 		&:hover &-arrow {
 			opacity: .7;
+		}
+		@media(max-width:767px) {
+			width: 100%;
+			& +.action-card{margin-top: 32px;}
 		}
 }

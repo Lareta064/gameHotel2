@@ -1,6 +1,6 @@
 //==========game categories ========
 section.game-categories.p-80
-	.game-categories__img
+	.game-categories__img(data-aos="fade-up"    data-aos-duration="500")
 		img(src="./img/gamepad-bg.png", width="390" alt="img" )
 	.container
 		.game-categories-list
@@ -30,4 +30,4 @@ section.game-categories.p-80
 					.categories-type__cards
 						+game-card-category('snake', 'Crypto Snake')
 						+game-card-category('defi', 'My Defi Pet')
-						+game-card-category('thetan', 'Thetan Arena')
+						+game-card-category('thetan', 'Thetan Arena', 'MOBA')

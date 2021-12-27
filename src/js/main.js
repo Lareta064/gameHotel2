@@ -252,8 +252,8 @@ document.addEventListener("DOMContentLoaded", function (){
 		//===news slider one game page =====
 		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
 			loop: true,
-			slidesPerView: 1.2, 
-			spaceBetween: 24,
+			slidesPerView: 1, 
+			spaceBetween: 16,
 			speed:800,
 			pagination: {
 				el: ".swiper-pagination-news",
@@ -360,6 +360,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}
 		});
+		 /*  карточки Героев на стр одной игры*/
 		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
 			slidesPerView: 1.3,
 			spaceBetween: 24,
@@ -382,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		 /*  карточки игровые карты на стр about game*/
+		 /*  карточки игровые карты на стр одной игры*/
 		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
 			slidesPerView: 1.2,
 			grid: {
@@ -406,7 +407,8 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		swips.addSwiper(".games-cards-large", "min-width:1024px", {
+		/*====стр Одной игры раздел Похожие */
+		swips.addSwiper(".similareCards-swiper", "min-width:1024px", {
 			slidesPerView: 1.1,
 			spaceBetween: 20,
 			loop: true,
@@ -529,7 +531,162 @@ document.addEventListener("DOMContentLoaded", function (){
 						spaceBetween: 0,
 					}
 				}
-		})
+		});
+		/* стр Игры - Популярные в декабре*/
+		swips.addSwiper(".popular-games-block", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".populareGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Пошаговые*/
+		swips.addSwiper(".swiper-cardStep", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".cardStep-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Карточные*/
+		swips.addSwiper(".swiper-cardGames", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".cardGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Ролевые*/
+		swips.addSwiper(".swiper-roleGames", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".roleGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Action*/
+		swips.addSwiper(".swiper-actionGames", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".actionGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
 
 	swips.init();
 	})();

@@ -1,16 +1,23 @@
 //====best games====
-section.popular-games.p-80
+section.popular-games.p-80.slider-1023
 	.container
-		h2.section-title.section-title--special  #[span Выбор игроков] декабрь 2021
-		.popular-games-block
-			+game-card-large('8.9', 'Crypto Snake', 'Пошаговая, карточная', 'snake','snake-logo', 'Ранний доступ', '376')(data-aos="zoom-in-down" data-aos-delay="200" data-aos-duration="500")
-			+game-card-large('8.9', 'Ember Sword', 'Пошаговая, карточная', 'ember','ember-logo', 'Ранний доступ', '376')(data-aos="zoom-in-down" data-aos-delay="100" data-aos-duration="500")
-			+game-card-large('8.9', 'FaraLand', 'Пошаговая, карточная', 'fara','fara-logo', 'Ранний доступ', '376')(data-aos="zoom-in-down" data-aos-delay="200" data-aos-duration="500")
-
+		h2.section-title.section-title--special  #[span Выбор игроков] #[br.br-mobile] декабрь 2021
+		.popular-games-block.swiper
+			.swiper-wrapper.flex-1023
+				.swiper-slide
+					+game-card-large('8.9', 'Crypto Snake', 'Пошаговая, карточная', 'snake-large','snake-logo', 'Ранний доступ', '376')
+				
+				.swiper-slide
+					+game-card-large('8.9', 'Ember Sword', 'Пошаговая, карточная', 'ember-large','ember-logo', 'Ранний доступ', '376')
+				
+				.swiper-slide
+					+game-card-large('8.9', 'FaraLand', 'Пошаговая, карточная', 'fara-large','fara-logo', 'Ранний доступ', '376')
+			
+			.populareGames-pagination.swiper-pagination
 //======== start with us ==========
 section.cta.p-80
 	.container
-		h2.section-title.section-title--special #[span Начните свой путь] c&nbsp;Game Hotel
+		h2.section-title.section-title--special #[span Начните свой путь] #[br.br-mobile] c&nbsp;Game Hotel
 		.cta-cards
 			//====== one card =======
 			a(href="#!").action-card
