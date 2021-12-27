@@ -84,6 +84,11 @@
 	p {
 		transition: .3s;
 	}
+	.card-light--pic .card-light__text{padding-right: 0;}
+	.card-light .card-light__text p {
+		-webkit-line-clamp: 2;
+		
+	}
 	.card-light:hover{
 		background-color: rgba(255,255,255, .2);
 		h4, p{color: #fff;}
