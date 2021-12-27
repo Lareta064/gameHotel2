@@ -360,6 +360,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}
 		});
+		 /*  карточки Героев на стр одной игры*/
 		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
 			slidesPerView: 1.3,
 			spaceBetween: 24,
@@ -382,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		 /*  карточки игровые карты на стр about game*/
+		 /*  карточки игровые карты на стр одной игры*/
 		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
 			slidesPerView: 1.2,
 			grid: {
@@ -406,7 +407,8 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		swips.addSwiper(".games-cards-large", "min-width:1024px", {
+		/*====стр Одной игры раздел Похожие */
+		swips.addSwiper(".similareCards-swiper", "min-width:1024px", {
 			slidesPerView: 1.1,
 			spaceBetween: 20,
 			loop: true,

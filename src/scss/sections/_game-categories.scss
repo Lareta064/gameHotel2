@@ -61,8 +61,10 @@
 }
 .game-categories .game-categories__img {
 	position: absolute;
-	bottom: 0;
+	bottom: 0px;
 	right: 0;
-	transform: translateX(37%);
-
+	@media(max-width:1919px){
+		right: -150px;
+		bottom: -30px;
+	}
 }
