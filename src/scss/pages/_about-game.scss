@@ -334,11 +334,29 @@ article .flex-header {
 }
 .page-content-wrapper--games {
 	position: relative;
-	background: url(../img/lightblueBg.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	
+	.page-content-wrapper__img{
+		position: absolute;
+		right: 0;
+		top: 160px;
+		@media(max-width: 1919px){
+			width: 480px;
+		}
+		@media(max-width: 1199px) {
+			display: none;
+		}
+	}
+	.page-content-right{
+		padding-top: 48px;
+
+	}
+	.page-content-columns{
+		position: relative;
+		z-index: 3;
+		.page-content-right{
+			top: 15px;
+			
+		}
+	}
 }
 /*======start whis us====*/
 .cta{
@@ -407,6 +425,7 @@ article .flex-header {
 .about-game-video__content.active:after {
 	transform: translateY(100%);
 }
+
 @media(max-width:1023px) {
 .about-game-main .game-types .swiper-block{padding-bottom: 10px;}
 .all-games-page .container--special{
