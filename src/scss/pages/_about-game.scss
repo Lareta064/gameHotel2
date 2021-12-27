@@ -409,6 +409,11 @@ article .flex-header {
 }
 @media(max-width:1023px) {
 .about-game-main .game-types .swiper-block{padding-bottom: 10px;}
+.all-games-page .container--special{
+	padding-left: 0;
+	padding-right: 0;
+}
+.all-games-page .page-content-wrapper .page-content-left__block {border-radius: 0;}
 }
 @media(max-width:767px){
 	.fake-offset .game-news ,
@@ -424,11 +429,7 @@ article .flex-header {
 	.all-games-page .cta .container{padding-left: 12px;
 	padding-right: 12px;}
 }
-.all-games-page .page-content-wrapper .page-content-left__block {
-	@media(max-width:767px){border-radius: 0;}
-		
-	
-}
+
 #gameCardsCategory.active{
 	.picture-card{
 		img:last-child{
