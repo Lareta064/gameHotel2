@@ -1038,23 +1038,26 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	/*============video clip play ===========*/
-	const videoContent = document.querySelector('#gameVideo');
+	const videoContent = document.querySelectorAll('.gameVideo');
 	if (videoContent) {
-		const videoBtn = videoContent.querySelector('.video-play-btn');
-		const videoClip = document.querySelector('#gameVideoClip');
-		
-		videoContent.addEventListener('click', function (e) {
+		for(let item of videoContent){
+
+			const videoBtn = item.querySelector('.video-play-btn');
+			const videoClip = item.querySelector('.gameVideoClip');
 			
-			if (videoClip.paused) {
-				videoClip.play();
-				videoBtn.style.opacity = "0";
-				this.classList.add("active");
-			} else {
-				videoClip.pause();
-				videoBtn.style.opacity = "1";
-				this.classList.remove("active");
-			} 
-		});  
+			item.addEventListener('click', function (e) {
+				
+				if (videoClip.paused) {
+					videoClip.play();
+					videoBtn.style.opacity = "0";
+					this.classList.add("active");
+				} else {
+					videoClip.pause();
+					videoBtn.style.opacity = "1";
+					this.classList.remove("active");
+				} 
+			}); 
+		} 
 	}
 	/* ========== анимация чисел стр tasks========*/
 	var decimal_places = 2;
