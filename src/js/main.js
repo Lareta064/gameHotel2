@@ -501,7 +501,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
-		swips.addSwiper(".task-board", "min-width:1600px",  {
+		swips.addSwiper(".task-board", "min-width:1920px",  {
 		
 		slidesPerView: 1.1,
 		 slidesPerColumn: 1,
@@ -515,20 +515,41 @@ document.addEventListener("DOMContentLoaded", function (){
 			// loop: true,
 			breakpoints: {
 				
-				424: {
-						slidesPerView: 1.8,
+				575: {
+						slidesPerView: 1.3,
 						spaceBetween: 24,
 					},
+				650: {
+						slidesPerView: 1.5,
+						spaceBetween: 24,
+					},
+
 				768: {
-						slidesPerView: 2.5,
+						slidesPerView: 1.9,
 						spaceBetween: 32,
 					},
+				850: {
+						slidesPerView: 2.1,
+						spaceBetween: 24,
+					},
 				1024: {
-						slidesPerView: 2.8,
+						slidesPerView: 2.5,
 						spaceBetween: 24,
 					},
 				1200: {
+						slidesPerView: 2.8,
+						spaceBetween: 0,
+					},
+				1364: {
 						slidesPerView: 3.2,
+						spaceBetween: 0,
+					},
+				1440: {
+						slidesPerView: 3.3,
+						spaceBetween: 0,
+					},
+				1600: {
+						slidesPerView: 3.8,
 						spaceBetween: 0,
 					}
 				}
@@ -1017,23 +1038,26 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	/*============video clip play ===========*/
-	const videoContent = document.querySelector('#gameVideo');
+	const videoContent = document.querySelectorAll('.gameVideo');
 	if (videoContent) {
-		const videoBtn = videoContent.querySelector('.video-play-btn');
-		const videoClip = document.querySelector('#gameVideoClip');
-		
-		videoContent.addEventListener('click', function (e) {
+		for(let item of videoContent){
+
+			const videoBtn = item.querySelector('.video-play-btn');
+			const videoClip = item.querySelector('.gameVideoClip');
 			
-			if (videoClip.paused) {
-				videoClip.play();
-				videoBtn.style.opacity = "0";
-				this.classList.add("active");
-			} else {
-				videoClip.pause();
-				videoBtn.style.opacity = "1";
-				this.classList.remove("active");
-			} 
-		});  
+			item.addEventListener('click', function (e) {
+				
+				if (videoClip.paused) {
+					videoClip.play();
+					videoBtn.style.opacity = "0";
+					this.classList.add("active");
+				} else {
+					videoClip.pause();
+					videoBtn.style.opacity = "1";
+					this.classList.remove("active");
+				} 
+			}); 
+		} 
 	}
 	/* ========== анимация чисел стр tasks========*/
 	var decimal_places = 2;
