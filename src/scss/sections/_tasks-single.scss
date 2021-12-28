@@ -93,31 +93,7 @@
 		padding-top: 24px;
 		&-item{
 			p+p{margin-top: 8px;}
-			.badge{
-				display: inline-flex;
-				align-items: center;
-				height: 24px;
-				border-radius: 16px;
-				background-color: $light;
-				white-space:nowrap;
-				color: $pr;
-				
-				.account-input{
-					border: none;
-					background-color: transparent;
-					margin-left: 10px;
-					font-size: 15px;
-					font-family: $os;
-					color: $pr;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					width:fit-content;
-					display: inline-block;
-					
-				}
-
-			}
+			
 			.text-15{
 				font-family: $os;
 			}
@@ -144,7 +120,34 @@
 		opacity: .5;
 	}
 }
+.account-badge {
+	display: inline-flex;
+	align-items: center;
+	height: 24px;
+	border-radius: 16px;
+	background-color: $light;
+	white-space: nowrap;
+	color: $pr;
+	padding-left: 8px;
+	padding-right: 8px;
+	line-height: 24px;
 
+	.account-input {
+		border: none;
+		background-color: transparent;
+		margin-left: 10px;
+		font-size: 15px;
+		font-family: $os;
+		color: $pr;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: fit-content;
+		display: inline-block;
+
+	}
+
+}
 .page-modal__body-frame{
 	width: 75.5%;
 	padding: 24px;
