@@ -512,7 +512,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			nextEl: ".task-board-next",
 			prevEl: ".task-board-prev",
 			},
-			// loop: true,
+			loop: true,
 			breakpoints: {
 				
 				575: {
@@ -548,8 +548,13 @@ document.addEventListener("DOMContentLoaded", function (){
 						slidesPerView: 3.3,
 						spaceBetween: 0,
 					},
-				1600: {
-						slidesPerView: 3.8,
+				1500: {
+						slidesPerView: 3.5,
+						spaceBetween: 0,
+					}
+					,
+				1700: {
+						slidesPerView: 4.1,
 						spaceBetween: 0,
 					}
 				}
