@@ -1,5 +1,51 @@
 .container
 	.wr(style="margin-bottom:40px;")
+		.table.replacement-accounts
+			table
+				//====заголовочная строка =====
+				tr
+					th.id-col
+						.form-checkbox
+							label
+								input(type="checkbox" name="")
+								span.fake-checkbox
+								span ID
+					th.games-col
+						p Игра
+					th.result-col
+						p Награда
+					th.ntf-col.icon-cell
+						span.sort-icon
+						span NTF
+					th.range-col.icon-cell
+						span.sort-icon
+						span Рейтинг
+					th.replacement-date.icon-cell
+						span.sort-icon
+						span Дата замены
+					th.btn-col
+						
+				//====строка с контентом =====
+				tr
+					td.id-col
+						.form-checkbox
+							label
+								input(type="checkbox" name="")
+								span.fake-checkbox
+								span ID
+					td.games-col
+						img(src="./img/games/axie-logo.png", width="80" alt="img")
+					td.result-col.text-bold
+						p $ 1,5 за 1 SLP / 30% за AXS
+					td.ntf-coldd
+						p.account-badge 2 ед.
+					td.range-cold
+						p 1 место
+					td.replacement-dated
+						p 7 января
+					td.btn-col
+						.button.button--color Подменить
+	.wr(style="margin-bottom:40px;")
 		.account-badge
 			span.copy-icon
 			span.account-input  AxieHotel281
