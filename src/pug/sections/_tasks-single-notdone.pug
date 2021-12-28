@@ -1,7 +1,7 @@
-//=========В ОЧЕРЕДИ - одна задача модальное большое окно =======
-.large-modal( data-modal="task_A" style="dispaly: block")
+//=========НЕ ЗАВЕРШЕННЫЕ - одна задача модальное большое окно =======
+.large-modal( data-modal="task_D" style="dispaly: block")
 	.large-modal-content
-		.single-task-modal.single-task-modal--queueing
+		.single-task-modal.single-task-modal--notcompleted
 			//=== header =========
 			.page-modal__header
 				h3.text-16 10 побед на Арене (PvP)
@@ -50,8 +50,8 @@
 				.page-modal__body-frame
 					.acor-container
 						.acor-container-block
-							input#acor1(type='checkbox' name='acor' checked='checked')
-							label(for='acor1')
+							input#acor41(type='checkbox' name='acor' checked='checked')
+							label(for='acor41')
 								span.acor-arrow
 								h4 Задача в очереди
 							.acor-body
@@ -65,8 +65,8 @@
 										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet tellus eu nibh finibus dictum. Integer aliquam rhoncus pulvinar. Phasellus a neque vel mauris lobortis eleifend a a tellus. Integer nulla lectus, laoreet sed consectetur cursus, placerat faucibus orci. Vestibulum a velit lobortis, cursus neque ut, malesuada ex.
 						
 						.acor-container-block
-							input#acor2(type='checkbox' name='acor' checked='checked')
-							label(for='acor2')
+							input#acor42(type='checkbox' name='acor' checked='checked')
+							label(for='acor42')
 								span.acor-arrow
 								h4 Как выполнить задание?
 							.acor-body
@@ -81,7 +81,3 @@
 			.page-modal__footer
 				.btn-group
 					a(href="#!").button.button-light Назад
-					a(href="#!").button.button--color.button--flex
-						span Go
-						svg(width="16" height="16")
-							use(xlink:href="./img/svg-sprite.svg#arrRight")
