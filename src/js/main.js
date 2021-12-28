@@ -785,8 +785,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	  
 	  let bannersSlider = new Swiper(".header-slider-swiper", {
 		
-       slidesPerView: 1.1,
-	   spaceBetween: 24,
+       slidesPerView: 1,
+	   spaceBetween: 16,
 	   centeredMode: true,
 	   loop: true,
 	   speed:800,
