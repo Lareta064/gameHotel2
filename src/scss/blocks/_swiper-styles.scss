@@ -149,13 +149,12 @@
 }
 .header-slider-nav {
 	.swiper-button-next{
-		right: -20px;
-		@media(max-width:1699px) {
-			right: 80px;
-		}
-
+		right: 80px;
 		@media(max-width:1199px) {
 			right: 30px;
+		}
+		@media(max-width:767px) {
+			right: 10px;
 		}
 	}
 }

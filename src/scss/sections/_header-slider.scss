@@ -21,26 +21,36 @@
 		position: relative;
 		z-index: 2;
 		width:calc(50% + 50vw);
+		@media(max-width:767px){
+			width: 100%;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
 		
 	
 	}
 	@media(max-width:1279px){
 		padding-left: 0;
 	}
-		@media(max-width:767px) {
-			padding-top: 16px;
-			.header-slider__bottom {
-				margin-top: 24px;
-				.game-news-cards--1365{width: calc(50% + 50vw);}
-				
-			}
+	@media(max-width:767px) {
+		padding-top: 16px;
+		.header-slider__bottom {
+			margin-top: 24px;
+			.game-news-cards--1365{width: calc(50% + 50vw);}
+			
 		}
+		.swiper-button-next:after,
+		.swiper-button-prev:after{font-size: 24px;}
+	}
 }
 
 .header-slider-swiper {
 	overflow: hidden;
 	width:calc(50% + 50vw);
 	.swiper-wrapper{padding-bottom: 0;}
+	@media(max-width:767px) {
+		width: 100%;
+	}
 	
 	.swiper-slide .game-banner{
 		height: 444px;
@@ -53,6 +63,9 @@
 		overflow:hidden;
 		@media(max-width:1023px) {
 			padding: 32px;
+		}
+		@media(max-width:767px) {
+			padding: 16px;
 		}
 		&:after{
 			content: '';
