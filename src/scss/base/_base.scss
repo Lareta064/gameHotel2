@@ -55,7 +55,9 @@
   a:hover {
 	text-decoration: none;
   }
-  
+  a {
+  	color: $basic;
+  }
   ul {
 	margin: 0;
 	padding: 0;
@@ -152,6 +154,7 @@
 	ul{
 		display: flex;
 		align-items: center;
+		flex-wrap:wrap;
 		li{
 			a{
 				color: #0A0522;

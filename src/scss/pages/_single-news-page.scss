@@ -26,3 +26,22 @@
 	}
 	figcaption{margin-top: 12px;}
 }
+.news-item{
+	transition: .3s;
+	.text-13{
+		color: #3B4E6A;
+		margin-top: 8px;
+		display: block;
+	}
+	&:hover{opacity: .7;}
+}
+.news-item+.news-item{margin-top: 26px;}
+.single-news-page .sidebar{
+	border-radius: 24px;
+	background-color: #fff;
+	padding: 24px;
+	.sidebar-title.text-14{
+		font-family: $ms;
+	}
+	.news-list{margin-top: 26px;}
+}
