@@ -1,9 +1,16 @@
 /*-=======ТАБЫ=====*/
+.tabs-wrapper{
+	border: 1px solid #D8E1EF;
+	border-radius: 16px;
+	overflow: hidden;
+}
 .tabs-wrapper .tabs-header {
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px solid #D8E1EF;
+	padding-right: 24px;
 }
 
 .tabs-wrapper .tab-options {
@@ -32,16 +39,29 @@
 		color: $pr;
 		cursor: pointer;
 		background-color: $light;
-
+		p{position: relative;
+			&:after{
+				content:'';
+				position: absolute;
+				left: 0;
+				width: 0;
+				bottom: 2px;
+				height: 2px;
+				background-color: transparent;
+				transition: .3s;
+			}
+		}
 		&.active {
 			background-color: #fff;
 			color: #E857D1;
 
 			p {
-				border-bottom: 2px solid #E857D1;
+				&:after{
+					width: 100%;
+					background-color: #E857D1;
+				}
 				text-shadow: 0.25px 0.1px 0px #E857D1, -0.25px -0.1px 0px #E857D1;
-				;
-
+				
 			}
 		}
 	}

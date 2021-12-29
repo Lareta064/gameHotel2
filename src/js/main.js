@@ -1163,4 +1163,22 @@ document.addEventListener("DOMContentLoaded", function (){
 			$(".tab_item").hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass("active");
 	}
+
+	/* таблица Аккаунты выделить все чекбоксы*/
+	const pageTable = document.querySelectorAll('.tabs-wrapper');
+	if(pageTable.length > 0){
+		
+		for(let item of pageTable){
+			const checkAllCheckbox = item.querySelector('.check-all');
+      		const formInputCheckbox = item.querySelectorAll('td input[type="checkbox"]');
+			
+      		checkAllCheckbox.addEventListener('click', function(){ 			
+			const checkboxStatus = this.querySelector('input[type="checkbox"]').checked;
+			for(let item of formInputCheckbox){
+				if(item.checked !== checkboxStatus) item.checked = checkboxStatus;
+			}
+		});
+		}
+	}
+      
 });
