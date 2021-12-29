@@ -67,14 +67,12 @@
 	}
 }
 
-.tabs-wrapper .tab_item {
+.tabs-wrapper .tab-item {
 	display: none;
+	&:first-child{display: block;}
 
 }
 
-.tabs-wrapper .tab_item:first-child {
-	display: block;
-}
 
 .tabs-wrapper .tab-options {
 	.custom-dropdown .custom-dropdown__field{

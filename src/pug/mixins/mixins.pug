@@ -75,4 +75,111 @@ mixin game-card-medium(rang, title, text,imgSrc, logoSrc, badge)
 					span Изучить
 					svg(width="16" height="16")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
+
+mixin account-th-1
+	thead
+		tr
+			th.id-col
+				.form-checkbox.check-all
+					label
+						input(type="checkbox" name="")
+						span.fake-checkbox
+						span ID
+			th.logo-col
+				p Логотип
+			th.game-col.icon-cell
+				span.sort-icon
+				span Название
+			
+			th.login-col.icon-cell
+				p Логин
+			th.passw-col.icon-cell
+				p Пароль
+			th.range-col.icon-cell
+				span.sort-icon
+				span Рейтинг
+			
+			th.ntf-col
+				span NTF
+			
+			th.balance-col.icon-cell
+				span.sort-icon
+				span Баланс
+			
+			th.btn-col
+mixin account-tb-1(id, img, title)
+	//=========строка с контентом =====
+	tr
+		td.id-col
+			.form-checkbox
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span #{id}
+		td.logo-col
+			img(src="./img/games/"+ img+"-logo.png", width="80" alt="img")
+		td.game-col
+			p !{title}
+		td.login-col
+			.account-badge
+				span.copy-icon
+				span.account-input  AxieHotel281
+		td.passw-col
+			.account-badge
+				span.copy-icon
+				input(type="password" value="password111111" size="8").account-input
+		td.range-col
+			p 1 200 MMR
 		
+		td.ntf-col
+			p.account-badge 2 ед.
+		
+		td.balance-date.icon-cell
+			p 8 232 SLP
+		td.btn-col
+			.button-refresh
+
+mixin account-th-3
+	//====заголовочная строка =====
+	tr
+		th.id-col
+			.form-checkbox.check-all
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span ID
+		th.games-col
+			p Игра
+		th.result-col
+			p Награда
+		th.ntf-col.icon-cell
+			span.sort-icon
+			span NTF
+		th.range-col.icon-cell
+			span.sort-icon
+			span Рейтинг
+		th.replacement-date.icon-cell
+			span.sort-icon
+			span Дата замены
+		th.btn-col
+mixin account-tb-3(id, img)
+	//====строка с контентом =====
+	tr
+		td.id-col
+			.form-checkbox
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span #{01}
+		td.games-col
+			img(src="./img/games/"+img+"-logo.png", width="80" alt="img")
+		td.result-col.text-bold
+			p $ 1,5 за 1 SLP / 30% за AXS
+		td.ntf-coldd
+			p.account-badge 2 ед.
+		td.range-cold
+			p 1 место
+		td.replacement-dated
+			p 7 января
+		td.btn-col
+			.button.button--color Подменить

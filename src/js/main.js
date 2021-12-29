@@ -1156,13 +1156,15 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	/*=======ТАБЫ========== */
-	const tabsBlock = $(".tabs-wrapper .tab");
-	if($(".tabs-wrapper .tab")){
-		$(".tabs-wrapper  .tab").click(function() {
-			$(".tabs-wrapper  .tab").removeClass("active").eq($(this).index()).addClass("active");
-			$(".tab_item").hide().eq($(this).index()).fadeIn()
-		}).eq(0).addClass("active");
-	}
+	
+	$('.tabs-wrapper').each(function() {
+		let ths = $(this);
+		ths.find('.tab-item').not(':first').hide();
+		ths.find('.tab').click(function() {
+			ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+			ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass('active');
+	});
 
 	/* таблица Аккаунты выделить все чекбоксы*/
 	const pageTable = document.querySelectorAll('.tabs-wrapper');
