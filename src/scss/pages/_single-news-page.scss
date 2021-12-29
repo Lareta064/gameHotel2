@@ -1,0 +1,28 @@
+.article{
+	padding-left: 32px;
+	padding-right: 32px;
+	.article-header.d-flex{
+		justify-content: space-between;
+	}
+	.main-title{max-width:565px;}
+	.article-icons-group{
+		align-items: center;
+		margin-top: 32px;
+		.icon-group +.icon-group{margin-left: 58px;}
+	}
+	.article-text{
+		padding-top: 24px;
+		font-size: 17px;
+		line-height: 1.53;
+		font-family: $os;
+		p+p{margin-top: 24px;}
+	}
+	figure{
+		p{margin-top: 32px;}
+		img{
+			border-radius: 24px;
+		}
+		margin-bottom: 32px;
+	}
+	figcaption{margin-top: 12px;}
+}
