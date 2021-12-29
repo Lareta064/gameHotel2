@@ -1,0 +1,67 @@
+/*-=======ТАБЫ=====*/
+.tabs-wrapper .tabs-header {
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tabs-wrapper .tab-options {
+	display: flex;
+	align-items: center;
+
+	&>*+* {
+		margin-left: 16px;
+	}
+}
+
+.tabs-wrapper .tabs {
+
+	display: flex;
+
+	.tab p {
+		pointer-events: none;
+	}
+
+	.tab {
+		padding-left: 24px;
+		padding-right: 24px;
+		height: 56px;
+		line-height: 56px;
+		font-size: 14px;
+		color: $pr;
+		cursor: pointer;
+		background-color: $light;
+
+		&.active {
+			background-color: #fff;
+			color: #E857D1;
+
+			p {
+				border-bottom: 2px solid #E857D1;
+				text-shadow: 0.25px 0.1px 0px #E857D1, -0.25px -0.1px 0px #E857D1;
+				;
+
+			}
+		}
+	}
+}
+
+.tabs-wrapper .tab_item {
+	display: none;
+
+}
+
+.tabs-wrapper .tab_item:first-child {
+	display: block;
+}
+
+.tabs-wrapper .tab-options {
+	.custom-dropdown .custom-dropdown__field{
+		min-width: 32px;
+		padding: 0;
+	}
+	.custom-dropdown .custom-dropdown__icon{
+		right: 0;
+	}
+}

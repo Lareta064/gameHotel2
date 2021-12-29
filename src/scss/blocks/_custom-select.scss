@@ -76,6 +76,7 @@
 		}
 	}
 }
+.custom-select.custom-select--light,
 .custom-select.custom-select--full {
 	.select-icon{
 		width: 20px;
@@ -215,7 +216,7 @@
 				span{margin-left: 12px;}
 			}
 		}
-		.custom-dropdown__list-item:hover,
+		
 		.custom-dropdown__list-item.current {
 			background-color: #D4E5FF;
 			color: #0A0522;

@@ -81,6 +81,8 @@
 		fill: #788CAB;
 	}
 }
+.custom-select.custom-select--light,
+.custom-select.custom-select--full,
 .login-modal .custom-select--full {
 	width: 100%;
 	max-width: 328px;
@@ -222,6 +224,7 @@
 		background-color: #D8E1EF;
 	}
 }
+.custom-select.custom-select--light .select-icon,
 .custom-select.custom-select--full  .select-icon{
 	background-image: none;
 }

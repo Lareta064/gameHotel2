@@ -152,8 +152,10 @@
 /* switch item*/
 .switch-item{
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	height: 20px;
+	white-space: nowrap;
 	input{
 		width: 0.01px;
 		height: 0.01px;
@@ -165,16 +167,17 @@
 	input + span{
 		width: 36px;
 		height: 20px;
-		background: #fff;
-		border: 1px solid #3B4E6A;
+		background: #EEF5FF;
+		border: 1px solid #9BADCA;
 		border-radius: 32px;
+		margin-right: 10px;
 
 	}
 	span+span{
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		background-color: #3B4E6A;
+		background-color: #788CAB;
 		position: absolute;
 		top:50%;
 		transform: translateY(-50%);

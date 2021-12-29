@@ -850,6 +850,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const formCloseBtn = document.querySelectorAll('[data-close]');
 
 	// ===== Показать модальное окно регистрации  ======
+
 	for(let item of formOpenButton){
 		item.addEventListener('click', function(e){
 			
@@ -1003,23 +1004,32 @@ document.addEventListener("DOMContentLoaded", function (){
 	 *  по клику на выпадашку менять класс current  у <li> */
 	const customDrop = document.querySelectorAll('.custom-dropdown');
 	if(customDrop){
-		for(let item of customDrop){
-			const customDropField = item.querySelector('.custom-dropdown__field');
-			const customDropIcon = item.querySelector('.custom-dropdown__icon');
-			const customDropList = item.querySelector('.custom-dropdown__wrapper');
-			const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
+		for(let i = 0; i < customDrop.length; i++){
+			const customDropField = customDrop[i].querySelector('.custom-dropdown__field');
+			const customDropIcon = customDrop[i].querySelector('.custom-dropdown__icon');
+			const customDropList = customDrop[i].querySelector('.custom-dropdown__wrapper');
+			const customDropListItem = customDrop[i].querySelectorAll('.custom-dropdown__list-item');
 
 			customDropField.addEventListener('click', function(e){
-				console.log(e.target);
-				if(this.classList.contains('active')){
-					this.classList.remove('active');
-					customDropIcon.classList.remove('icon-rotate');
-					customDropList.classList.remove('active');
-				}else{
-					this.classList.add('active');
-					customDropIcon.classList.add('icon-rotate');
-					customDropList.classList.add('active');
-				}			
+				for(let j = 0; j < customDrop.length; j++){
+					if(j!==i){
+						customDrop[j].querySelector('.custom-dropdown__field').classList.remove('active');
+						customDrop[j].querySelector('.custom-dropdown__icon').classList.remove('active');
+						customDrop[j].querySelector('.custom-dropdown__wrapper').classList.remove('active');
+					}
+					else{
+						if(this.classList.contains('active')){
+							this.classList.remove('active');
+							customDropIcon.classList.remove('icon-rotate');
+							customDropList.classList.remove('active');
+						}else{
+							this.classList.add('active');
+							customDropIcon.classList.add('icon-rotate');
+							customDropList.classList.add('active');
+						}	
+					}
+				}
+						
 			});
 			for(let item of customDropListItem){
 				item.addEventListener('click',()=>{
@@ -1104,7 +1114,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 
-	/*========универсализация, когда блок в хоне видимости========*/
+	/*========универсализация, когда блок в зоне видимости========*/
 	const gameCardsCategory = document.querySelector('#gameCardsCategory');
 	if(gameCardsCategory){
 		
@@ -1145,4 +1155,12 @@ document.addEventListener("DOMContentLoaded", function (){
 		Visible(gameCardsCategory);
 	}
 
+	/*=======ТАБЫ========== */
+	const tabsBlock = $(".tabs-wrapper .tab");
+	if($(".tabs-wrapper .tab")){
+		$(".tabs-wrapper  .tab").click(function() {
+			$(".tabs-wrapper  .tab").removeClass("active").eq($(this).index()).addClass("active");
+			$(".tab_item").hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass("active");
+	}
 });

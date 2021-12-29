@@ -39,3 +39,44 @@
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.5 15H7.5V13.3333H2.5V15ZM2.5 5V6.66667H17.5V5H2.5ZM2.5 10.8333H12.5V9.16667H2.5V10.8333Z' fill='%23788CAB'/%3e%3c/svg%3e");
 	@include pos;
 }
+.custom-select.custom-select--light {
+	.select-field input {
+		background-color: #FFFFFF;
+		border: 1px solid #D8E1EF;
+		border-radius: 9px;
+	}
+}
+.custom-select.custom-select--abs{
+	.select-list{
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+		max-height: 0;
+		transition: max-height 0.3s ease-out;
+		overflow: hidden;
+		transform: translateY(100%);
+		width: 100%;
+		background-color: #fff;
+		z-index: 10;
+		padding-top: 8px;
+		border-top: 0;
+		border-radius: 0 0 4px 4px;
+		ul{
+			border: 1px solid #D8E1EF;
+			border-radius: 9px;
+		}
+		li.current{
+			background-color: $light;
+		}
+	}
+}
+.select-list.select-list--flex li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&>*+*{margin-left: 12px;}
+	span, img{pointer-events: none;}
+}
+.flex-header .flex-header-col.d-flex{
+	&>*+*{margin-left: 40px;}
+}
