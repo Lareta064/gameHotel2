@@ -11,6 +11,8 @@
 	align-items: center;
 	border-bottom: 1px solid #D8E1EF;
 	padding-right: 24px;
+	border-radius: 16px 16px 0 0;
+	overflow:hidden;
 }
 
 .tabs-wrapper .tab-options {
@@ -69,8 +71,28 @@
 
 .tabs-wrapper .tab-item {
 	display: none;
-	&:first-child{display: block;}
+	max-height: 300px;
+	overflow:hidden;
+	overflow-y:auto;	
+	scrollbar-width: thin;
+	scrollbar-color: #D8E1EF,	#9BADCA;
+	background-color: #fff;
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 20px;
+	}
 
+	&::-webkit-scrollbar-thumb {
+		background-color: #9BADCA;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #D8E1EF;
+	}
+	&:first-child {
+		display: block;
+	}
+	table tr:last-child td{border-bottom: 0px;}
 }
 
 
@@ -92,6 +114,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-radius: 0 0 16px 16px;
+	border-top: 1px solid #D8E1EF;
 	.tabs-footer__left{
 		display: flex;
 		align-items: center;
