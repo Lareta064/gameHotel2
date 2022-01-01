@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay.light-overlay
+	include ../sections/_aside-menu.pug
+	include ../sections/_header.pug
+	include ../sections/_ui-header-personal
+	main.accounts-page
+		
+		include ../sections/_ui-accounts
+	
+	
+block variables
+	-var title = "Game Hotel | Accounts";

@@ -1,0 +1,120 @@
+section.accounts
+	.accounts__header
+		.container
+			.flex-header
+				h2.text-24 Аккаунты
+				.flex-header-col.d-flex
+					.switch-inner
+						label.switch-item
+							input(type="checkbox")
+							span
+							span
+							| Только доступные мне
+					.custom-select.custom-select--light.custom-select--abs
+						.select-icon
+							svg(width="10" height="6")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.select-field
+							input(type="text" value="Все игры" readonly)
+						.select-list.select-list--flex
+							ul
+								li.current(data-role="Ru") Все игры
+								li(data-role="Axie Infinity")
+									span Axie Infinity
+									img(src="./img/games/axie-logo.png", width="60" alt="img")
+									
+								li(data-role="Crypto Snake")
+									span Crypto Snake
+									img(src="./img/games/axie-logo.png", width="60" alt="img")
+									
+								li(data-role="Ember Sword")
+									span Ember Sword
+									img(src="./img/games/axie-logo.png", width="60" alt="img")
+									
+								li(data-role="FaraLand")
+									span FaraLand
+									img(src="./img/games/axie-logo.png", width="60" alt="img")
+	
+	//=========tabs==============
+	.accounts__tabs
+		.container
+			.tabs-wrapper
+				.tabs-header
+					.tabs
+						.tab
+							p Мои аккаунты
+						.tab
+							p Предложения на рынке
+						.tab
+							p Аккаунты на замену
+					.tab-options
+						//======выпадашка filter-list ====
+						.filter-list-wrapper.custom-dropdown
+							.custom-dropdown__icon
+								span.filer-list
+							.custom-dropdown__field
+							//====выпадающий список =====
+							.custom-dropdown__wrapper
+								.custom-dropdown__list
+									//====элемент списка =====
+									.custom-dropdown__list-item
+										p На карту
+									//====элемент списка =====
+									.custom-dropdown__list-item.current
+										p В токене Ghot
+									//====элемент списка =====
+									.custom-dropdown__list-item
+										p На Metamask
+						
+						//======выпадашка три точки ====
+						.options-block.custom-dropdown
+							.custom-dropdown__icon
+								span.dotted-icon
+							.custom-dropdown__field
+							//====выпадающий список =====
+							.custom-dropdown__wrapper
+								.custom-dropdown__list
+									//====элемент списка =====
+									.custom-dropdown__list-item
+										p На карту
+									//====элемент списка =====
+									.custom-dropdown__list-item.current
+										p В токене Ghot
+									//====элемент списка =====
+									.custom-dropdown__list-item
+										p На Metamask
+				//===== основной контент ======
+				.tabs-content
+					//=======вкладка Аккаунты=======
+					.tab-item
+						.table.my-accounts
+							table
+								//==== заголовочная строка =====
+								thead
+								+account-th-1
+								tbody
+									+account-tb-1('01', 'axie', 'Plant vs Undead')
+									+account-tb-1('02', 'axie', 'Plant vs Undead')
+									+account-tb-1('03', 'axie', 'Plant vs Undead')
+									
+					//======= вкладка Предложения на рынке =======
+					.tab-item
+						.table.offer-accounts
+							table
+								//==== заголовочная строка =====
+								thead
+								+account-th-1
+								tbody
+									+account-tb-1('01', 'axie', 'Plant vs Undead')
+									+account-tb-1('02', 'axie', 'Plant vs Undead')
+									+account-tb-1('03', 'axie', 'Plant vs Undead')
+					//======= вкладка Аккаунты на замену =======
+					.tab-item
+						.table.replacement-accounts
+							table
+								thead
+									+account-th-3
+								tbody
+									+account-tb-3('01', 'axie')
+									+account-tb-3('01', 'axie')
+									+account-tb-3('01', 'axie')
