@@ -1,0 +1,17 @@
+.accounts{
+	.accounts__header{
+		padding-top: 24px;
+		padding-bottom: 24px;
+		background-color: #fff;
+	}
+	.accounts__tabs{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: #EEF5FF;
+		@media(min-width:768px) {
+			min-height: calc(100vh - 330px);
+			padding-bottom: 40px;
+			
+		}
+	}
+}

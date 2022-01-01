@@ -39,6 +39,7 @@ section.accounts
 	.accounts__tabs
 		.container
 			.tabs-wrapper
+				//===переключатели табов ======
 				.tabs-header
 					.tabs
 						.tab
@@ -47,6 +48,8 @@ section.accounts
 							p Предложения на рынке
 						.tab
 							p Аккаунты на замену
+					
+					//===правая часть с иконками-выпадашками ======
 					.tab-options
 						//======выпадашка filter-list ====
 						.filter-list-wrapper.custom-dropdown
@@ -83,7 +86,7 @@ section.accounts
 									//====элемент списка =====
 									.custom-dropdown__list-item
 										p На Metamask
-				//===== основной контент ======
+				//===== основной контент-таблица ======
 				.tabs-content
 					//=======вкладка Аккаунты=======
 					.tab-item
@@ -118,3 +121,25 @@ section.accounts
 									+account-tb-3('01', 'axie')
 									+account-tb-3('01', 'axie')
 									+account-tb-3('01', 'axie')
+				
+				//===== футер табов с пагинацией ======
+				.tabs-footer
+					.tabs-footer__left
+						.tabs-footer__col
+							p Элементов #[span 50]
+						.tabs-footer__col
+							.filter-group
+								p Отображать на странице	
+								.custom-select.custom-select--light.custom-select--abs
+									.select-icon
+										svg(width="10" height="6")
+											use(xlink:href="./img/svg-sprite.svg#iconArr")
+									.select-field
+										input(type="text" value="10" size="3" readonly)
+									.select-list.select-list--flex
+										ul
+											li.current(data-role="10") 10
+											li(data-role="20") 20
+											li(data-role="30") 30
+										
+					.tabs-footer__right 222
