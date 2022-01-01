@@ -23,64 +23,142 @@ section.comments-block
 				//====== один комментарий ====
 				li
 					.comments-block-tree__item
+						//===avatar===
 						.comments-block__avatar(style="background-image: url(./img/comment1.jpg")
-							
-
+						
+						//=====верхняя строка с именем автора =======
 						.comments-block__details
-							.comments-block__details-info
+							//=====левая часть строки =======
+							.comments-block__details-info.d-flex
 								.comment-info-group
 									p Rayna Aminoff
-									span  Сегодня в 13:32
-								.comment-info-count
-									span.decrem-btn
-									input(type="text" readonly value="20")
-									span.increm-btn
-
+									.badge.badge--black Профи
+									.icon-group
+										span.icon-star
+										span 1334
+								
+							//=====текст комментария =======
 							.comments-block__details-text
 								p В течении двадцатого века было предложено множество теорий всего, но ни одна из них не смогла пройти экспериментальную проверку.
-							.replay-btn Ответить
-			
+							
+							//=====текст комментария нижняя строка с лайками=======
+							.comments-block__details-options.d-flex
+								//=====левая часть  =======
+								.comments-block__details-col
+									.comment-rate.d-flex
+										//====лайки есть скрипт увеличить/уменьшить по клику
+										.comment-rate__like(data-clicked="false")
+											span.icon-like
+											span.rating-value 20
+										
+										//====dislike есть скрипт увеличить/уменьшить по клику
+										.comment-rate__dislike(data-clicked="false")
+											span.icon-dislike
+											span.rating-value 20
+								
+								
 				//====== один комментарий ====
 				li
 					.comments-block-tree__item
 						.comments-block__avatar(style="background-image: url(./img/comment2.jpg")
-							
-
 						.comments-block__details
-							.comments-block__details-info
+							.comments-block__details-info.d-flex
 								.comment-info-group
 									p Alena Curtis
-									span  Сегодня в 13:45
-								.comment-info-count
-									span.decrem-btn
-									input(type="text" readonly value="20")
-									span.increm-btn
-
+									.badge.badge--moder Модератор
+									.icon-group
+										span.icon-star
+										span 1334
+								
 							.comments-block__details-text
 								p Основная проблема построния научной теории всего состоит в том, что квантовая механика и общая теория относительности имеют разные области применения.
-							.replay-btn Ответить	
-					
+							
+							//=====текст комментария нижняя строка с лайками=======
+							.comments-block__details-options.d-flex
+								//=====левая часть  =======
+								.comments-block__details-col
+									.comment-rate.d-flex
+										//====лайки есть скрипт увеличить/уменьшить по клику
+										.comment-rate__like(data-clicked="false")
+											span.icon-like
+											span.rating-value 20
+										
+										//====dislike есть скрипт увеличить/уменьшить по клику
+										.comment-rate__dislike(data-clicked="false")
+											span.icon-dislike
+											span.rating-value 20
 					//====== ответ на комментарий ====
 					ul
 						//====== один ответ на комментарий ====
 						li
 							.comments-block-tree__item
 								.comments-block__avatar(style="background-image: url(./img/comment3.jpg")
-									//- img(src="./img/ava.png", width="44" alt="img")
-
+								
 								.comments-block__details
-									.comments-block__details-info
+									.comments-block__details-info.d-flex
 										.comment-info-group
 											p Cooper Kenter
-											span  Сегодня в 15:12
-											.replay-text
-												span Alena Curtis
-										.comment-info-count
-											span.decrem-btn
-											input(type="text" readonly value="20")
-											span.increm-btn
-
+											.badge.badge--white Новичок
+											.icon-group
+												span.icon-star
+												span 250
+										//=====правая часть с датой =======
+										.comment-info-group
+											span  Сегодня в 13:45
 
 									.comments-block__details-text
 										p Теория струн сочетает в себе идеи квантовой механики и теории относительности, поэтому на ее основе, возможно, будет построена будущая теория квантовой гравитации.
-									.replay-btn Ответить
+									
+									//=====текст комментария нижняя строка с лайками=======
+									.comments-block__details-options.d-flex
+										//=====левая часть  =======
+										.comments-block__details-col
+											.comment-rate.d-flex
+												//====лайки есть скрипт увеличить/уменьшить по клику
+												.comment-rate__like(data-clicked="false")
+													span.icon-like
+													span.rating-value 20
+												
+												//====dislike есть скрипт увеличить/уменьшить по клику
+												.comment-rate__dislike(data-clicked="false")
+													span.icon-dislike
+													span.rating-value 20
+										//=====правая часть  =======
+										.comments-block__details-col.d-flex
+											.replay-btn Ответить
+											.quote-btn Цитировать
+
+						//====== один ответ  с цитатой  ====
+						li
+							.comments-block-tree__item
+								.comments-block__avatar(style="background-image: url(./img/comment4.jpg")
+
+								.comments-block__details
+									.comments-block__details-info.d-flex
+										.comment-info-group
+											p Ruben Septimus
+											.badge.badge--yellow Местный
+											.icon-group
+												span.icon-star
+												span 550
+										
+									
+									.comments-block__details-text
+										.comments-block__quote
+											span Author name
+											p  В течении двадцатого века было предложено множество...
+										p Теория струн сочетает в себе идеи квантовой механики и теории относительности, поэтому на ее основе, возможно, будет построена будущая теория квантовой гравитации.
+									//=====текст комментария нижняя строка с лайками=======
+									.comments-block__details-options.d-flex
+										//=====левая часть  =======
+										.comments-block__details-col
+											.comment-rate.d-flex
+												//====лайки есть скрипт увеличить/уменьшить по клику
+												.comment-rate__like(data-clicked="false")
+													span.icon-like
+													span.rating-value 20
+												
+												//====dislike есть скрипт увеличить/уменьшить по клику
+												.comment-rate__dislike(data-clicked="false")
+													span.icon-dislike
+													span.rating-value 20

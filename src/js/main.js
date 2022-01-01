@@ -1141,7 +1141,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				// Если элемент полностью видно, то запускаем следующий код
 				setTimeout(function(){
 					target.classList.add('active');
-				}, 500)
+				}, 200)
 				
 			}
 		};
@@ -1182,5 +1182,38 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		}
 	}
-      
+
+	/*=====изменить Лайки и дизлайки блок комментариев */
+	 const setRatingComment = document.querySelectorAll('.comment-rate');
+	 for(let item of setRatingComment){
+      const likeBtnItems= item.querySelectorAll("[data-clicked]");
+		
+		likeBtnItems[0].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText + 1;
+				 			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText - 1;
+				
+			}
+			else{
+				return;
+			}
+		});
+
+		likeBtnItems[1].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText + 1;
+			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText - 1;
+			}
+			else{return}
+		});
+	}
+
 });
