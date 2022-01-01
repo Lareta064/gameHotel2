@@ -1215,5 +1215,19 @@ document.addEventListener("DOMContentLoaded", function (){
 			else{return}
 		});
 	}
-
+	/*=========переключать класс active  в группе кнопок фильтрации=========== */
+	const buttonsGroup = document.querySelectorAll('[data-buttons]');
+	for(let item of buttonsGroup){
+		const btnItem = item.querySelectorAll('[data-btn');
+		for(let i = 0; i < btnItem.length; i++){
+			btnItem[i].addEventListener('click', function(){
+				for(let j = 0; j < btnItem.length; j++){
+					btnItem[j].classList.remove('active');
+					if(j == i){
+						btnItem[j].classList.add('active');
+					}
+				}
+			})
+		}
+	}
 });

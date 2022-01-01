@@ -6,9 +6,11 @@ section.comments-block
 				h3.text-24 Комментрии
 				span.badge.badge--black 3
 			
-			.comments-block-filters.filter-btn-block
-				.filter-btn по популярности
-				.filter-btn.active по новизне
+			.comments-block-filters.filter-btn-block(data-buttons)
+				.filter-btn(data-btn)
+					p По популярности
+				.filter-btn.active(data-btn)
+					p По новизне
 
 		.comments-block-form
 			.comments-block__avatar(style="background-image: url(./img/default-avatar.jpg")
