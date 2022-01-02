@@ -1167,7 +1167,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	/* таблица Аккаунты выделить все чекбоксы*/
-	const pageTable = document.querySelectorAll('.tabs-wrapper');
+	const pageTable = document.querySelectorAll('.tab-item');
 	if(pageTable.length > 0){
 		
 		for(let item of pageTable){

@@ -1,7 +1,7 @@
 .table{
 	table{
 		width: 100%;
-		background-color: #fff;
+		border-collapse: collapse;
 		
 	}
 	.table-body{
@@ -13,16 +13,26 @@
 		line-height: 20px;
 		text-align: left;
 		white-space: nowrap;
+		background-color: #fff;
 	}
 	th, td{
-		padding-top: 19px;
-		padding-bottom: 19px;
+		padding-top: 8px;
+		padding-bottom: 8px;
 		padding-left: 20px;
 		padding-right: 20px;
-		
+		height: 56px;
+		background-color: #fff;
 		border-bottom: 1px solid #D8E1EF;
 		font-family: $mr;
 		font-weight: 400;
+	}
+	tr.disable-item td,
+	tr.disable-item th {
+		opacity: .6;
+	}
+	tr.disable-item *{
+		cursor:default;
+		pointer-events: none;
 	}
 	.icon-cell {
 		*{vertical-align: middle;}
@@ -95,5 +105,29 @@
 	@include pos;
 	&:hover{
 		opacity: .5;
+	}
+}
+.league-col{
+	.badge {
+		font-size: 13px;
+		color: #0A0522;
+	}
+}
+.badge--std{
+	background-color: #FCF1D5;
+}
+.badge--cmf {
+	background-color: #F3EAFF;
+}
+.badge--lux {
+	background-color: #E7FBFF;
+}
+.btn-col .button{
+	font-size: 13px;
+	font-family: $mr;
+}
+.table.offer-accounts{
+	.result-col{
+		width: 170px;
 	}
 }

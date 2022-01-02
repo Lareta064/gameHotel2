@@ -1,0 +1,55 @@
+.pagination,
+.pagination-block{
+	display: flex;
+	align-items: center;
+}
+.pagination-item{
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+	text-align: center;
+	line-height: 32px;
+	display:inline-block;
+	color: $pr;
+	font-size: 13px;
+	&:hover{opacity: .7;}
+	&.active {
+		color: #0A0522;
+		font-family: $ms;
+	}
+}
+.pagination-item--first{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.3417 8.825L6.51667 5L10.3417 1.175L9.16667 0L4.16667 5L9.16667 10L10.3417 8.825ZM0 0H1.66667V10H0V0Z' fill='%23788CAB'/%3e%3c/svg%3e ");
+	margin-right: 16px;
+}
+.pagination-item--last {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.6582 6.175L8.4832 10L4.6582 13.825L5.8332 15L10.8332 10L5.8332 5L4.6582 6.175ZM13.3332 5H14.9999V15H13.3332V5Z' fill='%23788CAB'/%3e%3c/svg%3e ");
+	margin-left: 16px;
+}
+.pagination-item--prev{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.84199 8.81667L3.02533 5L6.84199 1.175L5.66699 0L0.666992 5L5.66699 10L6.84199 8.81667Z' fill='%23788CAB'/%3e%3c/svg%3e");
+}
+.pagination-item--next {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.442505 8.435L3.8775 5L0.442505 1.5575L1.5 0.5L6 5L1.5 9.5L0.442505 8.435Z' fill='%23788CAB'/%3e%3c/svg%3e");
+}
+.pagination-item--prev,
+.pagination-item--last,
+.pagination-item--next,
+.pagination-item--first {
+@include pos;
+}
+.pagination-current{
+	min-width: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 32px;
+	background: #EEF5FF;
+	border: 1px solid #D8E1EF;
+	box-sizing: border-box;
+	border-radius: 9px;
+	line-height: 30px;
+	font-size: 13px;
+	color: #3B4E6A;
+	text-align: center;
+	margin-left: 24px;
+}

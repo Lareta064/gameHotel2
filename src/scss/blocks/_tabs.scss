@@ -4,6 +4,7 @@
 	border-radius: 16px;
 	
 }
+
 .tabs-wrapper .tabs-header {
 	background-color: #fff;
 	display: flex;
@@ -12,7 +13,7 @@
 	border-bottom: 1px solid #D8E1EF;
 	padding-right: 24px;
 	border-radius: 16px 16px 0 0;
-	overflow:hidden;
+	
 }
 
 .tabs-wrapper .tab-options {
@@ -41,6 +42,17 @@
 		color: $pr;
 		cursor: pointer;
 		background-color: $light;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&>*+*{margin-left: 7px;}
+		.badge{
+			background-color: $pr;
+			color: #fff;
+			font-size: 13px;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
 		p{position: relative;
 			&:after{
 				content:'';
@@ -52,11 +64,14 @@
 				background-color: transparent;
 				transition: .3s;
 			}
+			
 		}
 		&.active {
 			background-color: #fff;
 			color: #E857D1;
-
+			.badge {
+				background-color: #E857D1;
+			}
 			p {
 				&:after{
 					width: 100%;
@@ -68,15 +83,12 @@
 		}
 	}
 }
-
-.tabs-wrapper .tab-item {
-	display: none;
-	max-height: 300px;
+.table{
+max-height: 325px;
 	overflow:hidden;
 	overflow-y:auto;	
 	scrollbar-width: thin;
 	scrollbar-color: #D8E1EF,	#9BADCA;
-	background-color: #fff;
 	&::-webkit-scrollbar {
 		width: 8px;
 		height: 20px;
@@ -89,12 +101,18 @@
 	&::-webkit-scrollbar-track {
 		background-color: #D8E1EF;
 	}
+
 	&:first-child {
 		display: block;
 	}
+}
+.tabs-wrapper .tab-item {
+	display: none;
+	
+	border-radius: 0 0 16px 16px;
 	table tr:last-child td{border-bottom: 0px;}
 }
-
+.tabs-wrapper .tab-item:first-child{display: block;}
 
 .tabs-wrapper .tab-options {
 	.custom-dropdown .custom-dropdown__field{
@@ -142,10 +160,7 @@
 .filter-group{
 	display: flex;
 	align-items: center;
-	p{
-		
-		
-	}
+	
 	&>*+* {
 		margin-left: 16px;
 	}

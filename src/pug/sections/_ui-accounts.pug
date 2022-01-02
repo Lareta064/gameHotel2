@@ -48,6 +48,7 @@ section.accounts
 							p Предложения на рынке
 						.tab
 							p Аккаунты на замену
+							span.badge 3
 					
 					//===правая часть с иконками-выпадашками ======
 					.tab-options
@@ -61,13 +62,13 @@ section.accounts
 								.custom-dropdown__list
 									//====элемент списка =====
 									.custom-dropdown__list-item
-										p На карту
+										p Какой-то текст
 									//====элемент списка =====
 									.custom-dropdown__list-item.current
-										p В токене Ghot
+										p Какой-то текст
 									//====элемент списка =====
 									.custom-dropdown__list-item
-										p На Metamask
+										p Какой-то текст
 						
 						//======выпадашка три точки ====
 						.options-block.custom-dropdown
@@ -79,13 +80,13 @@ section.accounts
 								.custom-dropdown__list
 									//====элемент списка =====
 									.custom-dropdown__list-item
-										p На карту
+										p Какой-то текст
 									//====элемент списка =====
 									.custom-dropdown__list-item.current
-										p В токене Ghot
+										p Какой-то текст
 									//====элемент списка =====
 									.custom-dropdown__list-item
-										p На Metamask
+										p Какой-то текст
 				//===== основной контент-таблица ======
 				.tabs-content
 					//=======вкладка Аккаунты=======
@@ -96,23 +97,27 @@ section.accounts
 								thead
 								+account-th-1
 								tbody
-									+account-tb-1('01', 'axie', 'Plant vs Undead')
-									+account-tb-1('02', 'axie', 'Plant vs Undead')
-									//- +account-tb-1('03', 'axie', 'Plant vs Undead')
-									//- +account-tb-1('04', 'axie', 'Plant vs Undead')
-									//- +account-tb-1('05', 'axie', 'Plant vs Undead')
-									
+									+account-tb-1('01', 'axie', 'Axie Infinity', 'AxieHotel')
+									+account-tb-1('02', 'plant', 'Plant vs Undead', 'PlantHotel')
+									+account-tb-1('03', 'fara', 'Fara Land', 'FaraHotel')
+									+account-tb-1('04', 'jojo', 'Jojo.Fun', 'JojoHotel')
+									+account-tb-1('05', 'ember', 'Ember Sword', 'EmberHotel')
+									+account-tb-1('06', 'monsta', 'Monsta Infinite', 'MonstaHotel')
+						include ../blocks/_accounts-table-footer.pug			
+					
 					//======= вкладка Предложения на рынке =======
 					.tab-item
 						.table.offer-accounts
 							table
 								//==== заголовочная строка =====
 								thead
-								+account-th-1
+								+account-th-2
 								tbody
-									+account-tb-1('01', 'axie', 'Plant vs Undead')
-									+account-tb-1('02', 'axie', 'Plant vs Undead')
-									+account-tb-1('03', 'axie', 'Plant vs Undead')
+									+account-tb-2('01', 'axie','Game Hotel', '$ 1,5 за 1 SLP/ 30% за AXS', 'Стандарт', 1255, 'std')
+									+account-tb-2('02', 'jojo','El Urbik', '40 % от добычи', 'Комфорт', 1, 'cmf')
+									+account-tb-2('03', 'jojo','Game Hotel', '40 % от добычи', 'Комфорт', 1, 'cmf', 'true')
+									+account-tb-2('04', 'mechmaster','CryptoM', '20 % от добычи', 'Люкс', 1, 'lux', 'true')
+						
 					//======= вкладка Аккаунты на замену =======
 					.tab-item
 						.table.replacement-accounts
@@ -121,27 +126,5 @@ section.accounts
 									+account-th-3
 								tbody
 									+account-tb-3('01', 'axie')
-									+account-tb-3('01', 'axie')
-									+account-tb-3('01', 'axie')
-				
-				//===== футер табов с пагинацией ======
-				.tabs-footer
-					.tabs-footer__left
-						.tabs-footer__col
-							p Элементов #[span 50]
-						.tabs-footer__col
-							.filter-group
-								p Отображать на странице	
-								.custom-select.custom-select--light.custom-select--abs
-									.select-icon
-										svg(width="10" height="6")
-											use(xlink:href="./img/svg-sprite.svg#iconArr")
-									.select-field
-										input(type="text" value="10" size="3" readonly)
-									.select-list.select-list--flex
-										ul
-											li.current(data-role="10") 10
-											li(data-role="20") 20
-											li(data-role="30") 30
-										
-					.tabs-footer__right 222
+									+account-tb-3('02', 'axie')
+									+account-tb-3('03', 'axie')
