@@ -71,3 +71,9 @@
 .calendar-cell:nth-child(35) {
 	border-radius: 0 0 16px 0;
 }
+[data-tabcontent]{
+	display: none;
+}
+.active[data-tabcontent] {
+	display: block;
+}

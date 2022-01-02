@@ -66,9 +66,9 @@ section.calendar
 				//======правая часть шапки ====
 				.flex-header-col
 					.calendar__tabs-filter.filter-btn-block(data-buttons)
-						.filter-btn(data-btn)
+						.filter-btn.active(data-btn data-tab="mounth")
 							p Месяц
-						.filter-btn.active(data-btn)
+						.filter-btn(data-btn data-tab="singleDay")
 							p День
 					
 	
@@ -77,7 +77,7 @@ section.calendar
 		.container
 			.tabs-content
 				//=======вкладка Аккаунты=======
-				.tab-item
+				.tab-item.active( data-tabcontent="mounth")
 					.calendar-grid
 						+calcell(3, 'Пн', 'white', '+$32', 'last')
 						+calcell(4, 'Вт', 'red', 'Выходной', 'last')
@@ -115,5 +115,5 @@ section.calendar
 						+calcell(5)
 						+calcell(6)
 						
-				.tab-item
+				.tab-item(data-tabcontent="singleDay")
 					h1 hjhjhjjh 111

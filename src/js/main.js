@@ -1242,4 +1242,22 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
+	 /*======custom tabs (calendar page)======*/
+	const customTabBtns = document.querySelectorAll('[data-tab]');
+	if(customTabBtns.length >0){
+		customTabContent = document.querySelectorAll('[data-tabcontent]');
+		for(let item of  customTabBtns){
+			item.addEventListener('click', function(){
+				
+				for(let i = 0; i < customTabContent.length; i++){					
+					customTabContent[i].classList.remove('active');
+					if(item.dataset.tab == customTabContent[i].dataset.tabcontent){
+						customTabContent[i].classList.add('active');
+						
+					}
+				}
+			});
+		}
+	}
+
 });
