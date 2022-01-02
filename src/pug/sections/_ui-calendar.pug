@@ -1,3 +1,30 @@
+mixin calcell(date, day, badgeCl, badgeCont, addClass)
+	if addClass
+		div(class="calendar-cell  calendar-cell--"+ addClass)
+			.calendar-cell__header
+				span.calendar-date #{date}
+				if day
+					span.calendar-day #{day}
+			if badgeCont
+				if badgeCl
+					.calendar-cell__body
+						.badge(class=" badge--"+ badgeCl) #{badgeCont}
+				else
+					.calendar-cell__body
+						.badge.badge--light #{badgeCont}
+	else
+		div(class="calendar-cell")
+				.calendar-cell__header
+					span.calendar-date #{date}
+					if day
+						span.calendar-day #{day}
+				if badgeCont
+					if badgeCl
+						.calendar-cell__body
+							.badge(class=" badge--"+ badgeCl) #{badgeCont}
+					else
+						.calendar-cell__body
+							.badge.badge--light #{badgeCont}
 section.calendar
 	.calendar__header
 		.container
@@ -5,124 +32,88 @@ section.calendar
 				//======левая часть шапки ====
 				.calendar-header
 					//===== кнопка влево =====
-					.calendar-month-prev
+					.calendar-month-prev.slider-btn-prev
 					//=====слайдер месяцев =====
 					.calendar-month.swiper
 						.swiper-wrapper
 							.swiper-slide
-								h2.text-24 Январь 2022
+								h2.text-24 Январь #[span 2022]
 							.swiper-slide
-								h2.text-24 Февраль 2022
+								h2.text-24 Февраль #[span 2022]
 							.swiper-slide
-								h2.text-24 Март 2022
+								h2.text-24 Март #[span 2022]
 							.swiper-slide
-								h2.text-24 Апрель 2022
+								h2.text-24 Апрель #[span 2022]
 							.swiper-slide
-								h2.text-24 Май 2022
+								h2.text-24 Май #[span 2022]
 							.swiper-slide
-								h2.text-24 Июнь 2022
+								h2.text-24 Июнь #[span 2022]
+							.swiper-slide
+								h2.text-24 Июль #[span 2022]
+							.swiper-slide
+								h2.text-24 Август #[span 2022]
+							.swiper-slide
+								h2.text-24 Сентябрь #[span 2022]
+							.swiper-slide
+								h2.text-24 Октябрь #[span 2022]
+							.swiper-slide
+								h2.text-24 Ноябрь #[span 2022]
+							.swiper-slide
+								h2.text-24 Декабрь #[span 2022]
 					//===== кнопка вправо =====
-					.calendar-month-next
+					.calendar-month-next.slider-btn-next
 				
 				//======правая часть шапки ====
 				.flex-header-col
-					.filter-btn-block(data-buttons)
+					.calendar__tabs-filter.filter-btn-block(data-buttons)
 						.filter-btn(data-btn)
-							p По популярности
+							p Месяц
 						.filter-btn.active(data-btn)
-							p По новизне
+							p День
 					
 	
 	//=========tabs==============
-	.accounts__tabs
+	.calendar__tabs
 		.container
-			.tabs-wrapper
-				//===переключатели табов ======
-				.tabs-header
-					.tabs
-						.tab
-							p Мои аккаунты
-						.tab
-							p Предложения на рынке
-						.tab
-							p Аккаунты на замену
-							span.badge 3
-					
-					//===правая часть с иконками-выпадашками ======
-					.tab-options
-						//======выпадашка filter-list ====
-						.filter-list-wrapper.custom-dropdown
-							.custom-dropdown__icon
-								span.filer-list
-							.custom-dropdown__field
-							//====выпадающий список =====
-							.custom-dropdown__wrapper
-								.custom-dropdown__list
-									//====элемент списка =====
-									.custom-dropdown__list-item
-										p Какой-то текст
-									//====элемент списка =====
-									.custom-dropdown__list-item.current
-										p Какой-то текст
-									//====элемент списка =====
-									.custom-dropdown__list-item
-										p Какой-то текст
+			.tabs-content
+				//=======вкладка Аккаунты=======
+				.tab-item
+					.calendar-grid
+						+calcell(3, 'Пн', 'white', '+$32', 'last')
+						+calcell(4, 'Вт', 'red', 'Выходной', 'last')
+						+calcell(5, 'Ср', 'white', '+$32', 'last')
+						+calcell(6, 'Чт', 'red', 'Выходной', 'today')
+						+calcell(7, 'Пт', '', 'Занято 5 ч. 34 мин')
+						+calcell(8, 'Сб', '', 'Занято 5 ч. 34 мин')
+						+calcell(9, 'Вс', '', 'Занято 5 ч. 34 мин')
+						+calcell(10, '', '', 'Занято 5 ч. 34 мин')
+						+calcell(11, '', 'red', 'Выходной')
+						+calcell(12, '', '', 'Занято 5 ч. 34 мин')
+						+calcell(13, '', '', 'Занято 5 ч. 34 мин')
+						+calcell(14, '', '', 'Занято 5 ч. 34 мин')
+						+calcell(15, '', '', 'Занято 5 ч. 34 мин')
+						+calcell(16, '', 'red', 'Выходной')
+						+calcell(17, '', '', 'Занято 5 ч. 34 мин')
+						+calcell(18, '')
+						+calcell(19)
+						+calcell(20)
+						+calcell(21)
+						+calcell(22)
+						+calcell(23)
+						+calcell(24)
+						+calcell(25)
+						+calcell(26)
+						+calcell(27)
+						+calcell(28)
+						+calcell(29)
+						+calcell(30)
+						+calcell(31)
+						+calcell('1 фев')
+						+calcell(2)
+						+calcell(3)
+						+calcell(4)
+						+calcell(5)
+						+calcell(6)
 						
-						//======выпадашка три точки ====
-						.options-block.custom-dropdown
-							.custom-dropdown__icon
-								span.dotted-icon
-							.custom-dropdown__field
-							//====выпадающий список =====
-							.custom-dropdown__wrapper
-								.custom-dropdown__list
-									//====элемент списка =====
-									.custom-dropdown__list-item
-										p Какой-то текст
-									//====элемент списка =====
-									.custom-dropdown__list-item.current
-										p Какой-то текст
-									//====элемент списка =====
-									.custom-dropdown__list-item
-										p Какой-то текст
-				//===== основной контент-таблица ======
-				.tabs-content
-					//=======вкладка Аккаунты=======
-					.tab-item
-						.table.my-accounts
-							table
-								//==== заголовочная строка =====
-								thead
-								+account-th-1
-								tbody
-									+account-tb-1('01', 'axie', 'Axie Infinity', 'AxieHotel')
-									+account-tb-1('02', 'plant', 'Plant vs Undead', 'PlantHotel')
-									+account-tb-1('03', 'fara', 'Fara Land', 'FaraHotel')
-									+account-tb-1('04', 'jojo', 'Jojo.Fun', 'JojoHotel')
-									+account-tb-1('05', 'ember', 'Ember Sword', 'EmberHotel')
-									+account-tb-1('06', 'monsta', 'Monsta Infinite', 'MonstaHotel')
-						include ../blocks/_accounts-table-footer.pug			
-					
-					//======= вкладка Предложения на рынке =======
-					.tab-item
-						.table.offer-accounts
-							table
-								//==== заголовочная строка =====
-								thead
-								+account-th-2
-								tbody
-									+account-tb-2('01', 'axie','Game Hotel', '$ 1,5 за 1 SLP/ 30% за AXS', 'Стандарт', 1255, 'std')
-									+account-tb-2('02', 'jojo','El Urbik', '40 % от добычи', 'Комфорт', 1, 'cmf')
-									+account-tb-2('03', 'jojo','Game Hotel', '40 % от добычи', 'Комфорт', 1, 'cmf', 'true')
-									+account-tb-2('04', 'mechmaster','CryptoM', '20 % от добычи', 'Люкс', 1, 'lux', 'true')
-						
-					//======= вкладка Аккаунты на замену =======
-					.tab-item
-						.table.replacement-accounts
-							table
-								thead
-									+account-th-3
-								tbody
-									+account-tb-3('01', 'axie')
-									+account-tb-3('02', 'axie')
-									+account-tb-3('03', 'axie')
+				.tab-item
+					h1 hjhjhjjh 111

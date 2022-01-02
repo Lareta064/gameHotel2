@@ -1179,7 +1179,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	/* таблица Аккаунты выделить все чекбоксы*/
-	const pageTable = document.querySelectorAll('.tab-item');
+	const pageTable = document.querySelectorAll('.accounts-page .tab-item');
 	if(pageTable.length > 0){
 		
 		for(let item of pageTable){

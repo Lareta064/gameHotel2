@@ -1,4 +1,73 @@
+.calendar{
+	position: relative;
+}
+.calendar-grid{
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	border-radius: 24px;
+	
+	.calendar-cell{
+		height: 90px;
+		border: .3px solid rgba(216, 225, 239, .7);
+		padding: 16px;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.badge{
+			padding-left: 8px;
+			padding-right: 8px;
+			font-size: 13px;
+			white-space: nowrap;
+		}
+		
+		.badge.badge--white {
+			
+			color: #33A661;
+			font-family: $ms;
+			
+		}
+	}
+	.calendar-cell.calendar-cell--last{
+		background-color: transparent;
+	}
+	.calendar-cell.calendar-cell--today{
+		background-color: #FEF8E8;
+	}
+}
 .calendar-month{
 	width: 220px;
 	overflow: hidden;
+}
+.calendar-header{
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	.swiper-slide{
+		display: flex; 
+		justify-content: center;
+		h2{font-family: $ms;}
+		span{font-family: $mr; font-weight: 400;}
+	}
+}
+.calendar-cell__header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
+	color: #3B4E6A;
+}
+.calendar-cell:first-child{
+	border-radius: 16px 0 0 0;
+}
+.calendar-cell:nth-child(7) {
+	border-radius: 0 16px 0 0 ;
+}
+.calendar-cell:nth-child(29) {
+	border-radius: 0 0 0 16px;
+}
+.calendar-cell:nth-child(35) {
+	border-radius: 0 0 16px 0;
 }
