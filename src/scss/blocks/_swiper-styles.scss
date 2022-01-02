@@ -108,7 +108,8 @@
 		/*-видеть точки пагинации, иначе образеются*/
 	}
 }
-
+.swiper-btn-next,
+.swiper-btn-prev,
 .slider-btn-next,
 .slider-btn-prev {
 	background: #EEF5FF;
@@ -126,7 +127,11 @@
 		opacity: .7;
 	}
 }
-
+.swiper-btn-next,
+.swiper-btn-prev{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.84199 8.81667L3.02533 5L6.84199 1.175L5.66699 0L0.666992 5L5.66699 10L6.84199 8.81667Z' fill='%23788CAB'/%3e%3c/svg%3e");
+}
+.swiper-btn-next,
 .slider-btn-prev {
 	transform: rotate(180deg);
 	margin-right: 12px;
