@@ -74,10 +74,10 @@ section.calendar
 	
 	//=========tabs==============
 	.calendar__tabs
-		.container
-			.tabs-content
-				//=======вкладка Аккаунты=======
-				.tab-item.active( data-tabcontent="mounth")
+		.tabs-content
+			//=======вкладка Аккаунты=======
+			.tab-item.tab-item--mounth.active( data-tabcontent="mounth")
+				.container
 					.calendar-grid
 						+calcell(3, 'Пн', 'white', '+$32', 'last')
 						+calcell(4, 'Вт', 'red', 'Выходной', 'last')
@@ -114,6 +114,14 @@ section.calendar
 						+calcell(4)
 						+calcell(5)
 						+calcell(6)
-						
-				.tab-item(data-tabcontent="singleDay")
-					h1 hjhjhjjh 111
+					
+			.tab-item(data-tabcontent="singleDay")
+				//- include _calendar-day-tasks
+				
+				//======== вкладка Выходной =======
+				.calendar-day-weekend
+					.calendar-day-weekend__body
+						p День свободный
+					.calendar-day-weekend__footer
+						.container
+							include _table.pug

@@ -1,6 +1,23 @@
 .calendar{
 	position: relative;
 }
+.calendar__header{
+	border-bottom: 1px solid #D8E1EF;
+}
+.calendar__tabs {	
+	background-color: #EEF5FF;
+	
+	@media(min-width:768px) {
+		min-height: calc(100vh - 330px);
+		padding-bottom: 40px;
+
+	}
+}
+.calendar-day-tasks,
+.tab-item--mounth{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
 .calendar-grid{
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
@@ -45,6 +62,7 @@
 	background-color: #fff;
 	padding-top: 24px;
 	padding-bottom: 24px;
+	
 	.swiper-slide{
 		display: flex; 
 		justify-content: center;
@@ -76,4 +94,31 @@
 }
 .active[data-tabcontent] {
 	display: block;
+}
+/*===calendar-single-day=====*/
+.calendar-day-tasks{
+ .task-board-column	{
+	 width: 100%;
+ }
+ .task-board-list{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap:24px;
+	column-gap: 24px;;
+ }
+  .task-card{
+	  max-width: 376px;
+  }
+   .task-card +.task-card{margin-top: 0;}
+}
+.calendar-day-weekend__body{
+	min-height: 260px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calendar-day-weekend__footer{
+	padding-top: 64px;
+	padding-bottom: 64px;
 }
