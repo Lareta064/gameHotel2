@@ -2,7 +2,12 @@
 .tabs-wrapper{
 	border: 1px solid #D8E1EF;
 	border-radius: 16px;
-	overflow:hidden;/* для таблиц без футера не закруг углы внизу*/
+	tr:last-child td:first-child{
+		border-radius: 0 0 0 16px;
+	}
+	tr:last-child td:last-child {
+		border-radius: 0 0 16px 0;
+	}
 }
 
 .tabs-wrapper .tabs-header {

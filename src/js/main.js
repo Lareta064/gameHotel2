@@ -850,7 +850,17 @@ document.addEventListener("DOMContentLoaded", function (){
 		prevEl: ".calendar-month-next",
 	}
 	});
+	/*=====СЛАЙДЕР КАЛЕНДАРЬ МЕСЯЦЫ==== */
+	let calendarDays = new Swiper(".calendar-days", {
 	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	loop: true,
+	navigation: {
+		nextEl: ".calendar-month-prev",
+		prevEl: ".calendar-month-next",
+	}
+	});
 	
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/

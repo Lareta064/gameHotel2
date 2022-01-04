@@ -26,102 +26,134 @@ mixin calcell(date, day, badgeCl, badgeCont, addClass)
 						.calendar-cell__body
 							.badge.badge--light #{badgeCont}
 section.calendar
-	.calendar__header
-		.container
-			.flex-header
-				//======левая часть шапки ====
-				.calendar-header
-					//===== кнопка влево =====
-					.calendar-month-prev.swiper-btn-prev
-					//=====слайдер месяцев =====
-					.calendar-month.swiper
-						.swiper-wrapper
-							.swiper-slide
-								h2.text-24 Январь #[span 2022]
-							.swiper-slide
-								h2.text-24 Февраль #[span 2022]
-							.swiper-slide
-								h2.text-24 Март #[span 2022]
-							.swiper-slide
-								h2.text-24 Апрель #[span 2022]
-							.swiper-slide
-								h2.text-24 Май #[span 2022]
-							.swiper-slide
-								h2.text-24 Июнь #[span 2022]
-							.swiper-slide
-								h2.text-24 Июль #[span 2022]
-							.swiper-slide
-								h2.text-24 Август #[span 2022]
-							.swiper-slide
-								h2.text-24 Сентябрь #[span 2022]
-							.swiper-slide
-								h2.text-24 Октябрь #[span 2022]
-							.swiper-slide
-								h2.text-24 Ноябрь #[span 2022]
-							.swiper-slide
-								h2.text-24 Декабрь #[span 2022]
-					//===== кнопка вправо =====
-					.calendar-month-next.swiper-btn-next
-				
-				//======правая часть шапки ====
-				.flex-header-col
-					.calendar__tabs-filter.filter-btn-block(data-buttons)
-						.filter-btn.active(data-btn data-tab="mounth")
-							p Месяц
-						.filter-btn(data-btn data-tab="singleDay")
-							p День
-					
+	.container.calendar-toggle
+		//======переключатель  месяц/день ====
+		
+		.calendar__tabs-filter.filter-btn-block(data-buttons)
+			.filter-btn.active(data-btn data-tab="mounth")
+				p Месяц
+			.filter-btn(data-btn data-tab="singleDay")
+				p День
 	
-	//=========tabs==============
-	.calendar__tabs
+	//========= вкладка для кнопки Месяц==============
+	.calendar-tab.active( data-tabcontent="mounth")
 		.tabs-content
-			//=======вкладка Аккаунты=======
-			.tab-item.tab-item--mounth.active( data-tabcontent="mounth")
-				.container
-					.calendar-grid
-						+calcell(3, 'Пн', 'white', '+$32', 'last')
-						+calcell(4, 'Вт', 'red', 'Выходной', 'last')
-						+calcell(5, 'Ср', 'white', '+$32', 'last')
-						+calcell(6, 'Чт', 'red', 'Выходной', 'today')
-						+calcell(7, 'Пт', '', 'Занято 5 ч. 34 мин')
-						+calcell(8, 'Сб', '', 'Занято 5 ч. 34 мин')
-						+calcell(9, 'Вс', '', 'Занято 5 ч. 34 мин')
-						+calcell(10, '', '', 'Занято 5 ч. 34 мин')
-						+calcell(11, '', 'red', 'Выходной')
-						+calcell(12, '', '', 'Занято 5 ч. 34 мин')
-						+calcell(13, '', '', 'Занято 5 ч. 34 мин')
-						+calcell(14, '', '', 'Занято 5 ч. 34 мин')
-						+calcell(15, '', '', 'Занято 5 ч. 34 мин')
-						+calcell(16, '', 'red', 'Выходной')
-						+calcell(17, '', '', 'Занято 5 ч. 34 мин')
-						+calcell(18, '')
-						+calcell(19)
-						+calcell(20)
-						+calcell(21)
-						+calcell(22)
-						+calcell(23)
-						+calcell(24)
-						+calcell(25)
-						+calcell(26)
-						+calcell(27)
-						+calcell(28)
-						+calcell(29)
-						+calcell(30)
-						+calcell(31)
-						+calcell('1 фев')
-						+calcell(2)
-						+calcell(3)
-						+calcell(4)
-						+calcell(5)
-						+calcell(6)
-					
-			.tab-item(data-tabcontent="singleDay")
-				//- include _calendar-day-tasks
+			
+			.tab-item.tab-item--mounth
+				.calendar-tab-header
+					.container
+						.flex-header
+							//======левая часть шапки ====
+							.calendar-header
+								//===== кнопка влево =====
+								.calendar-month-prev.swiper-btn-prev
+								//=====слайдер месяцев =====
+								.calendar-month.swiper
+									.swiper-wrapper
+										.swiper-slide
+											h2.text-24 Январь #[span 2022]
+										.swiper-slide
+											h2.text-24 Февраль #[span 2022]
+										.swiper-slide
+											h2.text-24 Март #[span 2022]
+										.swiper-slide
+											h2.text-24 Апрель #[span 2022]
+										.swiper-slide
+											h2.text-24 Май #[span 2022]
+										.swiper-slide
+											h2.text-24 Июнь #[span 2022]
+										.swiper-slide
+											h2.text-24 Июль #[span 2022]
+										.swiper-slide
+											h2.text-24 Август #[span 2022]
+										.swiper-slide
+											h2.text-24 Сентябрь #[span 2022]
+										.swiper-slide
+											h2.text-24 Октябрь #[span 2022]
+										.swiper-slide
+											h2.text-24 Ноябрь #[span 2022]
+										.swiper-slide
+											h2.text-24 Декабрь #[span 2022]
+								//===== кнопка вправо =====
+								.calendar-month-next.swiper-btn-next
+				.calendar-tab-body
+					.container
+						.swiper-block.swiper-block--calendar
+							.calendar-grid
+								+calcell(3, 'Пн', 'white', '+$32', 'last')
+								+calcell(4, 'Вт', 'red', 'Выходной', 'last')
+								+calcell(5, 'Ср', 'white', '+$32', 'last')
+								+calcell(6, 'Чт', 'red', 'Выходной', 'today')
+								+calcell(7, 'Пт', '', 'Занято 5 ч. 34 мин')
+								+calcell(8, 'Сб', '', 'Занято 5 ч. 34 мин')
+								+calcell(9, 'Вс', '', 'Занято 5 ч. 34 мин')
+								+calcell(10, '', '', 'Занято 5 ч. 34 мин')
+								+calcell(11, '', 'red', 'Выходной')
+								+calcell(12, '', '', 'Занято 5 ч. 34 мин')
+								+calcell(13, '', '', 'Занято 5 ч. 34 мин')
+								+calcell(14, '', '', 'Занято 5 ч. 34 мин')
+								+calcell(15, '', '', 'Занято 5 ч. 34 мин')
+								+calcell(16, '', 'red', 'Выходной')
+								+calcell(17, '', '', 'Занято 5 ч. 34 мин')
+								+calcell(18, '')
+								+calcell(19)
+								+calcell(20)
+								+calcell(21)
+								+calcell(22)
+								+calcell(23)
+								+calcell(24)
+								+calcell(25)
+								+calcell(26)
+								+calcell(27)
+								+calcell(28)
+								+calcell(29)
+								+calcell(30)
+								+calcell(31)
+								+calcell('1 фев')
+								+calcell(2)
+								+calcell(3)
+								+calcell(4)
+								+calcell(5)
+								+calcell(6)
+	
+	//=========вкладка для кнопки День
+	.calendar-tab(data-tabcontent="singleDay")
+		.tabs-content
+			.tab-item
+				.calendar-tab-header
+					.container
+						.flex-header
+							//======левая часть шапки ====
+							.calendar-header
+								//===== кнопка влево =====
+								.calendar-month-prev.swiper-btn-prev
+								//=====слайдер месяцев =====
+								.calendar-days.swiper
+									.swiper-wrapper
+										.swiper-slide
+											h2.text-24 14 июня
+										.swiper-slide
+											h2.text-24 15 июня
+										.swiper-slide
+											h2.text-24 16 июня
+										.swiper-slide
+											h2.text-24 17 июня
+										.swiper-slide
+											h2.text-24 18 июня
+										
+								//===== кнопка вправо =====
+								.calendar-month-next.swiper-btn-next
 				
-				//======== вкладка Выходной =======
-				.calendar-day-weekend
-					.calendar-day-weekend__body
-						p День свободный
-					.calendar-day-weekend__footer
-						.container
-							include _table.pug
+				.calendar-tab-body
+					//======  макет work/calendar/day  ====
+					//- include _calendar-day-tasks
+					
+					//======== макет work/calendar/empty day =======
+					//- .calendar-day-weekend
+					//- 	.calendar-day-weekend__body
+					//- 		p День свободный
+					//- 	.calendar-day-weekend__footer
+					//- 		.container
+					//- 			include _table.pug
+					//======  макет work/calendar/last day  ====
+					include _calendar-day-last
