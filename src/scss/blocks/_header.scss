@@ -4,13 +4,14 @@ header.header{
 	position: sticky;
 	top:0;
 	z-index: 15;
+	border-bottom:1px solid #D8E1EF;
 	@media(max-width:1199px){
 		// position: fixed;
 		// // bottom: 0;
 		// left: 0;
 		// right: 0;
 		// top:0;
-		border-bottom:1px solid #D4DFF1;
+		
 		&:before{
 			content: '';
 			position: absolute;

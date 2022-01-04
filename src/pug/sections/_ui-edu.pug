@@ -1,0 +1,38 @@
+mixin edu-card
+	a(href="#!").edu-card
+		.edu-card__left
+			img(src="./img/education/axie.png", width="128" alt="alt")
+		.edu-card__right
+			.edu-card__title
+				.text-13
+					p Базовый курс
+				.text-16.text-bold
+					h4 Axie Infinity
+			.edu-card__body
+				.edu-card__body-img
+					img(src="./img/sertificate/gold.svg", width="30" alt="alt")
+				.edu-card__body-text
+					.text-13
+						p Certificate
+						.tooltip-box
+							span.info-icon i
+							.tooltip-box-content
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					.text-bold.text-14
+						p Gold
+			.edu-card__footer
+				.button.h-40 Пройти курс
+
+article.edu-cards
+	.edu-card-yellow
+		+edu-card
+	.edu-card-olive
+		+edu-card
+	.edu-card-lightgreen
+		+edu-card
+	.edu-card-lightblue
+		+edu-card
+	.edu-card-grey
+		+edu-card
+	.edu-card-pink
+		+edu-card

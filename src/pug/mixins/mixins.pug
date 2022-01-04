@@ -41,8 +41,7 @@ mixin game-card-large(rang, title, text, imgSrc, logoSrc, badge, cardWidth)
 				p.text-14 !{text}
 			.game-card__footer
 				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
-				span.button.button-light.button--flex
-					span Подробнее
+				span.game-card__arrow
 					svg(width="16" height="16")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
 
@@ -240,3 +239,75 @@ mixin account-tb-3(id, img)
 			p 7 января
 		td.btn-col
 			.button.button--color Подменить
+
+//=============header =======
+mixin header(menuItems)
+	header.header.header--desk
+		.header-content.d-flex
+			.header-left
+				.mobile-logo
+					a(href="#!")
+						svg(width="42" height="24")
+							use(xlink:href="./img/svg-sprite.svg#footer-logo")
+				.custom-select.custom-select--lang
+					.select-icon
+					.select-field
+						input(type="text" value="Ru" readonly)
+					.select-list
+						ul
+							li.current(data-role="Ru") Ru
+							li(data-role="En") En
+							
+			.header-center
+				.header-menu
+					ul
+						each item in menuItems
+							li
+								a(href=""+ item.link) #{item.text}
+							if item.addCl
+								li.active
+									a(href=""+ item.link) #{item.text}
+
+			//====LOGIN=====
+			.header-right
+				.profile-panel
+					.profile-icon
+						.icon-notify
+							p.label
+								span 2
+					.profile-persone
+						.profile-persone__img
+							img(src="./img/ava.png", width="38" alt="ava")
+						.profile-persone__arrow#profile-arrow
+							svg(width="10" height="6")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.profile-persone__row
+							p 0x...263a
+
+	//===========MOBILE HEADER========
+	header.header.header--mob
+		.header-content.d-flex
+			.header-left
+				.mobile-logo
+					a(href="#!")
+						svg(width="42" height="24")
+							use(xlink:href="./img/svg-sprite.svg#footer-logo")
+			
+			
+			
+			//====LOGIN=====
+			.header-right
+				.profile-panel
+					.profile-icon
+						.icon-notify
+							p.label
+								span 2
+					.profile-persone
+						.profile-persone__img
+							img(src="./img/ava.png", width="38" alt="ava")
+						.profile-persone__arrow#profile-arrow
+							svg(width="10" height="6")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.profile-persone__row
+							p 0x...263a
+
