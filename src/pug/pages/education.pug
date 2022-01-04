@@ -14,12 +14,15 @@ block content
 				.page-content-columns
 					.page-content-left
 						//======один блок с карточками ====
-						.fake-offset
+						.fake-offset#step-genres
+							.page-content-left__block
+								include ../sections/_ui-edu
+						.fake-offset#card-genres
 							.page-content-left__block
 								include ../sections/_ui-edu
 						
 					.page-content-right
-						include ../sections/_one-game-aside
+						include ../sections/_aside-education
 	//=======FOOTER========
 	include ../sections/_footer.pug
 	

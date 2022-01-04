@@ -9,7 +9,7 @@
 	justify-content: space-between;
 	padding: 20px 24px 24px;
 	border-radius: 16px;
-	
+	&:hover .button{opacity: .7;}
 	
 	.edu-card__left{
 		display: flex;
@@ -53,6 +53,17 @@
 		text-align: center;
 	}
 }
+.edu-cards-wrapper{
+	padding-left: 24px;
+	padding-right: 24px;
+	column-gap: 32px;
+	row-gap: 32px;
+}
+// .edu-card-yellow,
+// .edu-card-olive,
+// .edu-card-lightgreen,
+// .edu-card-lightblue,
+// .edu-card-grey, .edu-card-pink{width: auto}
 .edu-card-yellow .edu-card{
 	background-color: #FAECBC;}
 .edu-card-olive .edu-card {
@@ -71,4 +82,30 @@
 }
 .edu-card-pink .edu-card {
 	background-color: #FCEAE0;
+}
+.sidebar-content {
+	.aside-search{
+	border-bottom: 1px solid #D8E1EF;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 16px 16px 0 0;
+	}
+	.nav-list{
+		border-radius: 0 0 16px 16px;
+	}
+}
+.aside-search {
+	background-color: #fff;
+	.form-field{
+		margin-bottom: 0;
+		 input{height: 40px;}
+	}
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+.edu-page .page-content-columns .page-content-right {
+	top: 12px;
+}
+.edu-page .sidebar{
+	padding-top: 48px;
 }

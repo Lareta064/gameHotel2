@@ -880,13 +880,15 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	// ===== Закрыть модалку  по клику на фон-затемнение ======
-	overlayBg.addEventListener('click', function(){
-		for(let item of formsArray){
-			item.classList.remove('visible');
-			this.classList.remove('active');
-			bodyEl.classList.remove('noscroll');
-		}
-	});
+	if(overlayBg){
+		overlayBg.addEventListener('click', function(){
+			for(let item of formsArray){
+				item.classList.remove('visible');
+				this.classList.remove('active');
+				bodyEl.classList.remove('noscroll');
+			}
+		});
+	}
 
 	/* ========= MASK FOR INPUT PHONE =======*/	
 	var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
