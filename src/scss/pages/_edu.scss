@@ -16,6 +16,7 @@
 		align-items: center;
 		justify-content: center;
 		width: 152px;
+		@media(max-width:1199px){width: 40%;}
 	}
 	.edu-card__title{
 		.text-13 {
@@ -24,6 +25,9 @@
 	}
 	.edu-card__right{
 		width: 176px;margin-left: auto;
+		@media(max-width:1199px) {
+			width: 55%;
+		}
 	}
 	.edu-card__body{
 		display: flex;
@@ -108,4 +112,26 @@
 }
 .edu-page .sidebar{
 	padding-top: 48px;
+}
+.edu-page{
+	.page-content-wrapper .page-content-columns{
+		display: flex;
+		@media(max-width:1023px){
+			display: block;
+		}
+	}
+	.page-content-left{
+		width: 74%;
+		@media(max-width:1023px) {
+			width: 100%;}
+	}
+	.page-content-columns .page-content-right{
+		display: block;
+		@media(max-width:1279px) {
+			width: 24%;
+		}
+		@media(max-width:1023px) {
+			display: none;
+		}
+	}
 }

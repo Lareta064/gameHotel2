@@ -3,13 +3,14 @@ extends ../layouts/layout.pug
 block content
 	- var menuItems = ([{link: 'education.html', text: 'Курсы', addCl:'active'}, {link: '#', text: 'Мои сертификаты'}, {link: '#', text: 'Рейтинг'}]);
 	
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
 	include ../sections/_aside-menu.pug
 	+header(menuItems)
 	
 	main.edu-page
 		include ../sections/_header-slider-short
+		//=======end banner slider ========
 		.page-content-wrapper
-			
 			.container.container--special
 				.page-content-columns
 					.page-content-left
