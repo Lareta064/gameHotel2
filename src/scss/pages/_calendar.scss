@@ -88,7 +88,9 @@
 	display: flex;
 	align-items: center;
 	background-color: #fff;
-	
+	.swiper-wrapper{
+		padding-bottom: 0;
+	}
 	
 	.swiper-slide{
 		display: flex; 

@@ -1,0 +1,25 @@
+.container
+	h2 Course menu acordeon
+	.course-menu-accor
+		.acor-container
+			.acor-container-block
+				input#acor-menu1(type='checkbox' name='acor' checked='checked')
+				label(for='acor-menu1')
+					span.acor-arrow
+					.acor-header
+						h4 Модуль А
+						p Операторы. Переменные. Типы данных
+				.acor-body
+					.course-menu__theme.active
+						.course-menu__theme-title
+							p Тема 1
+							p Операторы. Переменные. Типы данных
+						.course-menu__theme-list
+							//=============================================================
+								в зависимсоти от модификатора (&--webinar, &--task, &--test, &--video) , который добавляется к основному классу .theme-list__item, через css  меняется иконка в шапке элемента. 	Наличие дополнительного  класса active ,  отличает активную карточку от других 
+								===============================================================
+							.theme-list__item.theme-list__item--webinar.active
+								.theme-list__header
+									p Вебинар
+									span через 10 мин
+									.mark-circle
