@@ -126,6 +126,13 @@
 	padding-top: 48px;
 }
 .edu-page{
+	.sidebar-content{
+		border-radius: 16px;
+		box-shadow: 0px 5px 16px rgba(216, 207, 244, .8);
+		.nav-list{
+			box-shadow: none;
+		}
+	}
 	.page-content-wrapper .page-content-columns{
 		display: flex;
 		@media(max-width:1023px){
