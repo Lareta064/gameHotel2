@@ -1,0 +1,49 @@
+mixin edu-card(title, logo, med, medImg)
+	a(href="#!").edu-card
+		.edu-card__left
+			img(src="./img/education/"+ logo +".png", width="128" alt="alt")
+		.edu-card__right
+			.edu-card__title
+				.text-13
+					p Базовый курс
+				.text-16.text-bold
+					h4 #{title}
+			.edu-card__body
+				.edu-card__body-img
+					img(src="./img/sertificate/"+ medImg +".svg", width="30" alt="alt")
+				.edu-card__body-text
+					.text-13
+						p Certificate
+						.tooltip-box
+							span.info-icon i
+							.tooltip-box-content
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					.text-bold.text-14
+						p #{med}
+			.edu-card__footer
+				.button.h-40 Пройти курс
+
+article.edu-cards
+	//====== для аналогичных слайдеров прописать класс, изменяя цифру(.edu-cards-sw2, .edu-cards-sw3 , так же для пагинации)   и инициализировать аналогично, как для  .edu-cards-sw1 в main.js ============
+	.edu-cards-sw1.swiper
+		.grid-column-2.edu-cards-wrapper.swiper-wrapper
+			.swiper-slide
+				.edu-card-yellow
+					+edu-card('Axie Infinity', 'axie', 'Gold', 'gold')
+			.swiper-slide
+				.edu-card-olive
+					+edu-card('Crypto Snake', 'snake', 'Bronze', 'bronze')
+			.swiper-slide
+				.edu-card-lightgreen
+					+edu-card('Monsta Infinite', 'monsta', 'Bronze', 'bronze')
+			.swiper-slide
+				.edu-card-grey
+					+edu-card('Fara Land', 'fara', 'Silver', 'silver')
+			.swiper-slide
+				.edu-card-pink
+					+edu-card('Kaby Arena', 'kaby', 'Silver', 'silver')
+			.swiper-slide
+				.edu-card-lightblue
+					+edu-card('Thetan Arena', 'thetan', 'Gold', 'gold')
+		//====пагинация слайдера=====
+		.edu-sw1-pagination.swiper-pagination.hide-1024

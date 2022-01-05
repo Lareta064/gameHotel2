@@ -746,6 +746,39 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
+		/*======стр education карточки */		
+		swips.addSwiper(".edu-cards-sw1", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".edu-sw1-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		
+
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/
@@ -902,13 +935,15 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	// ===== Закрыть модалку  по клику на фон-затемнение ======
-	overlayBg.addEventListener('click', function(){
-		for(let item of formsArray){
-			item.classList.remove('visible');
-			this.classList.remove('active');
-			bodyEl.classList.remove('noscroll');
-		}
-	});
+	if(overlayBg){
+		overlayBg.addEventListener('click', function(){
+			for(let item of formsArray){
+				item.classList.remove('visible');
+				this.classList.remove('active');
+				bodyEl.classList.remove('noscroll');
+			}
+		});
+	}
 
 	/* ========= MASK FOR INPUT PHONE =======*/	
 	var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
