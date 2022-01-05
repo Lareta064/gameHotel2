@@ -2,7 +2,12 @@
 .tabs-wrapper{
 	border: 1px solid #D8E1EF;
 	border-radius: 16px;
-	
+	tr:last-child td:first-child{
+		border-radius: 0 0 0 16px;
+	}
+	tr:last-child td:last-child {
+		border-radius: 0 0 16px 0;
+	}
 }
 
 .tabs-wrapper .tabs-header {
@@ -11,6 +16,7 @@
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #D8E1EF;
+	border-top: 1px solid #D8E1EF;
 	padding-right: 24px;
 	border-radius: 16px 16px 0 0;
 	
@@ -26,7 +32,8 @@
 }
 
 .tabs-wrapper .tabs {
-
+	border-radius: 16px 0 0 0;
+	overflow: hidden;
 	display: flex;
 
 	.tab p {

@@ -808,70 +808,92 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 		}
       });
-	  /*  карточки новостей на стр about game*/
-	  let gameNewsSwiper = new Swiper(".gn-cards-full", {
-		//   observer: true,
-        //     observeParents: true,
-       slidesPerView: 1,
-	   spaceBetween: 16,
-        navigation: {
-          nextEl: ".game-news-next",
-          prevEl: ".game-news-prev",
-        },
-		speed:800,
+	/*  карточки новостей на стр about game*/
+	let gameNewsSwiper = new Swiper(".gn-cards-full", {
+	//   observer: true,
+	//     observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 16,
+	navigation: {
+		nextEl: ".game-news-next",
+		prevEl: ".game-news-prev",
+	},
+	speed:800,
 
-		loop: true,
-		breakpoints: {
-			575: {
-				slidesPerView: 1.5,
+	loop: true,
+	breakpoints: {
+		575: {
+			slidesPerView: 1.5,
+			spaceBetween: 24,
+		},
+		768: {
+				slidesPerView: 1.8,
 				spaceBetween: 24,
-			},
-			768: {
-					slidesPerView: 1.8,
-					spaceBetween: 24,
-				}
-				,
-			1024: {
-					slidesPerView: 2,
-					spaceBetween: 32,
-				},
-			1200: {
-					slidesPerView: 2.2,
-					spaceBetween: 24,
-				}
-		}
-      });
-	  
-	  let bannersSlider = new Swiper(".header-slider-swiper", {
-		
-       slidesPerView: 1,
-	   spaceBetween: 16,
-	   centeredMode: true,
-	   loop: true,
-	   speed:800,
-	   navigation: {
-          nextEl: ".header-slider-next",
-          prevEl: ".header-slider-prev",
-        },
-		// loop: true,
-		breakpoints: {
-			
-			768: {
-					slidesPerView: 1.1,
-					spaceBetween: 32,
-					loop: false,
-				},
-			1200: {
-					slidesPerView: 1.3,
-					spaceBetween: 48,
-				},
-			1440: {
-					slidesPerView: 1.4,
-					spaceBetween: 72,
-				}
 			}
-      });
+			,
+		1024: {
+				slidesPerView: 2,
+				spaceBetween: 32,
+			},
+		1200: {
+				slidesPerView: 2.2,
+				spaceBetween: 24,
+			}
+	}
+	});
+	  
+	let bannersSlider = new Swiper(".header-slider-swiper", {
+	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	centeredMode: true,
+	loop: true,
+	speed:800,
+	navigation: {
+		nextEl: ".header-slider-next",
+		prevEl: ".header-slider-prev",
+	},
+	// loop: true,
+	breakpoints: {
+		
+		768: {
+				slidesPerView: 1.1,
+				spaceBetween: 32,
+				loop: false,
+			},
+		1200: {
+				slidesPerView: 1.3,
+				spaceBetween: 48,
+			},
+		1440: {
+				slidesPerView: 1.4,
+				spaceBetween: 72,
+			}
+		}
+	});
 
+	/*=====СЛАЙДЕР КАЛЕНДАРЬ МЕСЯЦЫ==== */
+	let calendarMonth = new Swiper(".calendar-month", {
+	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	loop: true,
+	navigation: {
+		nextEl: ".calendar-month-prev",
+		prevEl: ".calendar-month-next",
+	}
+	});
+	/*=====СЛАЙДЕР КАЛЕНДАРЬ МЕСЯЦЫ==== */
+	let calendarDays = new Swiper(".calendar-days", {
+	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	loop: true,
+	navigation: {
+		nextEl: ".calendar-month-prev",
+		prevEl: ".calendar-month-next",
+	}
+	});
 	
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
@@ -1202,7 +1224,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	/* таблица Аккаунты выделить все чекбоксы*/
-	const pageTable = document.querySelectorAll('.tab-item');
+	const pageTable = document.querySelectorAll('.accounts-page .tab-item');
 	if(pageTable.length > 0){
 		
 		for(let item of pageTable){
@@ -1265,4 +1287,22 @@ document.addEventListener("DOMContentLoaded", function (){
 			})
 		}
 	}
+	 /*======custom tabs (calendar page)======*/
+	const customTabBtns = document.querySelectorAll('[data-tab]');
+	if(customTabBtns.length >0){
+		customTabContent = document.querySelectorAll('[data-tabcontent]');
+		for(let item of  customTabBtns){
+			item.addEventListener('click', function(){
+				
+				for(let i = 0; i < customTabContent.length; i++){					
+					customTabContent[i].classList.remove('active');
+					if(item.dataset.tab == customTabContent[i].dataset.tabcontent){
+						customTabContent[i].classList.add('active');
+						
+					}
+				}
+			});
+		}
+	}
+
 });
