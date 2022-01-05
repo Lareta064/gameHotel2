@@ -1,0 +1,31 @@
+extends ../layouts/layout.pug
+
+block content
+	- var menuItems = ([{link: 'education.html', text: 'Курсы', addCl:'active'}, {link: '#', text: 'Мои сертификаты'}, {link: '#', text: 'Рейтинг'}]);
+	
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+	
+	main.edu-page
+		include ../sections/_header-slider-short
+		.page-content-wrapper
+			
+			.container.container--special
+				.page-content-columns
+					.page-content-left
+						//======один блок с карточками ====
+						.fake-offset#step-genres
+							.page-content-left__block
+								include ../sections/_ui-edu
+						.fake-offset#card-genres
+							.page-content-left__block
+								include ../sections/_ui-edu
+						
+					.page-content-right
+						include ../sections/_aside-education
+	//=======FOOTER========
+	include ../sections/_footer.pug
+	
+	
+block variables
+	-var title = "Game Hotel | Курсы";
