@@ -746,6 +746,39 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
+		/*======стр education карточки */		
+		swips.addSwiper(".edu-cards-sw1", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".edu-sw1-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		
+
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/

@@ -62,12 +62,24 @@
 	padding-right: 24px;
 	column-gap: 32px;
 	row-gap: 32px;
+	@media(max-width:1023px){
+		display: flex;
+		column-gap: unset;
+		row-gap: unset;
+	}
 }
-// .edu-card-yellow,
-// .edu-card-olive,
-// .edu-card-lightgreen,
-// .edu-card-lightblue,
-// .edu-card-grey, .edu-card-pink{width: auto}
+.edu-cards {
+	.swiper-wrapper{
+		width: auto;
+	}
+	@media(max-width:1023px) {
+		padding-left: 24px;
+		.swiper-wrapper {
+			
+			width: 100%;
+		}
+	}
+}
 .edu-card-yellow .edu-card{
 	background-color: #FAECBC;}
 .edu-card-olive .edu-card {
