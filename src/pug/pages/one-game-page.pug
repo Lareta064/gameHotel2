@@ -1,9 +1,12 @@
 extends ../layouts/layout.pug
 
 block content
+	- var menuItems = ([{link: '#', text: 'Игры', addCl:'active'}, {link: '#', text: 'Обзоры'}, {link: 'education.html', text: 'Обучение'}, {link: '#', text: 'Новости GameFi'}]);
+	
 	#overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
 	include ../sections/_aside-menu.pug
-	include ../sections/_header_2.pug
+	+header(menuItems)
 	//========= тег main =========
 	main.about-game-main.all-games-page
 		include ../sections/_header-slider

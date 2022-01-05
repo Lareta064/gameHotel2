@@ -2,6 +2,7 @@ extends ../layouts/layout.pug
 
 block content
 	#overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
 	include ../sections/_aside-menu.pug
 	include ../sections/_header_3.pug
 	main.about-game-main.single-game-page

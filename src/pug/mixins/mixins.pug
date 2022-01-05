@@ -262,11 +262,13 @@ mixin header(menuItems)
 				.header-menu
 					ul
 						each item in menuItems
-							li
-								a(href=""+ item.link) #{item.text}
 							if item.addCl
 								li.active
 									a(href=""+ item.link) #{item.text}
+							else
+								li
+									a(href=""+ item.link) #{item.text}
+							
 
 			//====LOGIN=====
 			.header-right
@@ -311,3 +313,13 @@ mixin header(menuItems)
 						.profile-persone__row
 							p 0x...263a
 
+mixin fix-bottom-menu(...items)
+	//=====MOBILE FIX BOTTOM MENU ========
+	.fix-mobile-menu&attributes(attributes)
+		#open-fixMenu.fix-menu-toggle.active Меню раздела
+		#close-fixMenu.fix-menu-toggle
+		.fix-menu-list
+			ul
+				each item in items
+					li
+						a(href="#!") #{item}

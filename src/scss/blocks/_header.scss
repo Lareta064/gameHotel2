@@ -298,14 +298,11 @@ header.header .header-menu ul li{margin-left: 16px;}
 	}
 }
 .header-search-form {
-	
-	
+	position: relative;
 	flex-grow: 2;
 
 	.form-field {
 		margin-bottom: 0;
-		
-		
 	}
 
 	.form-field input {
