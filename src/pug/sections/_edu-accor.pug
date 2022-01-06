@@ -1,0 +1,269 @@
+//======== menu accordeon ============
+.course-menu-accor
+	.acor-container
+		//=========== MODULE A ==============
+		.acor-container-block
+			input#acor-menu1(type='checkbox' name='acor' checked='checked')
+			label(for='acor-menu1')
+				span.acor-arrow
+				.acor-header
+					.text-15.text-bold
+						h4 Модуль А
+					.text-14
+						p Операторы. Переменные. Типы данных
+			.acor-body
+				//======== theme 1 ======
+				.course-menu__theme.active
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 1
+						.text-14
+							p Операторы. Переменные. Типы данных
+					.course-menu__theme-list
+						//=============================================================
+							в зависимости от модификатора ( &--task, &--test, &--video) , который добавляется к основному классу .theme-list__item, через css  меняется иконка в шапке элемента. если нет никакого модификатора, то по умолчанию иконка - вебинара.  	Наличие дополнительного  класса active ,  отличает активную карточку от других 
+							===============================================================
+						//======== theme-list__item.active ======
+						.theme-list__item.active
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Вебинар
+								.badge.badge--light через 10 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--task
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Задание
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--video
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Видео урок
+								.badge.badge--light 20 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--test
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Тест
+								.badge.badge--light 20 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+				
+				//======== end theme 1 ======
+				
+				//======== theme 2 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 2
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 2 ======
+
+				//======== theme 3 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 3
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 3 ======
+
+				//======== theme 4 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 4
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 4 ======
+
+		//=========== MODULE B ==============
+		.acor-container-block
+			input#acor-menu2(type='checkbox' name='acor')
+			label(for='acor-menu2')
+				span.acor-arrow
+				.acor-header
+					.text-15.text-bold
+						h4 Модуль B
+					.text-14
+						p Операторы. Переменные. Типы данных
+			.acor-body
+				//======== theme 1 ======
+				.course-menu__theme.active
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 1
+						.text-14
+							p Операторы. Переменные. Типы данных
+					.course-menu__theme-list
+						//======== theme-list__item.active ======
+						.theme-list__item.active
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Вебинар
+								.badge.badge--light через 10 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--task
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Задание
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--video
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Видео урок
+								.badge.badge--light 20 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--test
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Тест
+								.badge.badge--light 20 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+				
+				//======== end theme 1 ======
+				
+				//======== theme 2 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 2
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 2 ======
+
+				//======== theme 3 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 3
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 3 ======
+
+		//=========== MODULE C ==============
+		.acor-container-block
+			input#acor-menu3(type='checkbox' name='acor')
+			label(for='acor-menu3')
+				span.acor-arrow
+				.acor-header
+					.text-15.text-bold
+						h4 Модуль C
+					.text-14
+						p Операторы. Переменные. Типы данных
+			.acor-body
+				//======== theme 1 ======
+				.course-menu__theme.active
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 1
+						.text-14
+							p Операторы. Переменные. Типы данных
+					.course-menu__theme-list
+						//======== theme-list__item.active ======
+						.theme-list__item.active
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Вебинар
+								.badge.badge--light через 10 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--task
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Задание
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--video
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Видео урок
+								.badge.badge--light 20 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+						//======== theme-list__item ======
+						.theme-list__item.theme-list__item--test
+							.theme-list__header
+								.theme-list__header__icon
+								.text-13
+									p Тест
+								.badge.badge--light 20 мин
+								.mark-circle
+							.theme-list__deskrip
+								.text-13
+									p Поиск, собеседование, выбор сотрудника.
+				
+				//======== end theme 1 ======
+				
+				//======== theme 2 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 2
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 2 ======
+
+				//======== theme 3 ======
+				.course-menu__theme
+					.course-menu__theme-title
+						.text-14.text-bold
+							p Тема 3
+						.text-14
+							p Операторы. Переменные. Типы данных
+				//======== end theme 3 ======
