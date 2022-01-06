@@ -118,12 +118,12 @@ opacity: .7;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	span+span,
+	span+svg,
 	svg + span{
 		margin-left: 12px;
 	}
-	span+svg {
-		margin-left: 12px;
-	}
+	
 }
 .btn-group{
 	position: relative;

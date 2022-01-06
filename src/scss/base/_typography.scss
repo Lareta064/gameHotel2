@@ -56,7 +56,10 @@
 }
 
 .text-15,
-.text-16 {
+.text-16,
+.text-16 h2,
+.text-16 h3,
+.text-16 h4 {
 	font-family: $ms;
 	font-size: 16px;
 	line-height: 1.5;
@@ -70,7 +73,10 @@
 .text-15 {
 	font-size: 15px;
 }
-.text-18{
+.text-18,
+.text-18 h2,
+.text-18 h3,
+.text-18 h4{
 	font-size: 18px;
 	line-height: 1.33;
 	color: #3B4E6A;
@@ -86,7 +92,8 @@
 .text-24 p,
 .text-24 span,
 .text-24 h2,
-.text-24 h3 {
+.text-24 h3,
+.text-24 h4 {
 	color: #0A0522;
 	font-size: 24px;
 	line-height: 1.5;

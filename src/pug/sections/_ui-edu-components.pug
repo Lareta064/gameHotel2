@@ -1,34 +1,81 @@
-.container
-	.edu-header
+.course-page
+	.course-page__content
+		//=====sidebar======
+		.course-menu
+			//======= header Course menu sidebar =============
+			.course-menu-header
+				.course-menu-header__left
+					a(href="#!").arrow-back
+					.course-menu-game.text-16
+						p Axie Infinity
+				.course-menu-header__right
+					.badge.badge--light Базовый курс
+			.course-menu-body
+				.course-menu-top
+					.course-menu-left
+						img(src="../img/games/axie-logo.png", width="100" alt="alt")
+					.course-menu-right
+						.point-block
+							.text-18.text-bold
+								p 223
+							.text-14
+								p Баллов эксперта
+				//======= progress bar =============
+				.course-menu-progress
+					.progress-block
+						.progress-block-text
+							p Идет обучение
+						.progress-block-line
+							.progress-block-bar
+								span 50%
 
-.container
-	h2 Course menu sidebar
-	.course-menu
-		//======= header Course menu sidebar =============
-		.course-menu-header
-			.course-menu-header__left
-				a(href="#!").arrow-back
-				.course-menu-game.text-16
-					p Axie Infinity
-			.course-menu-header__right
-				.badge.badge--light Базовый курс
-		.course-menu-body
-			.course-menu-top
-				.course-menu-left
-					img(src="../img/games/axie-logo.png", width="100" alt="alt")
-				.course-menu-right
-					.point-block
-						.text-18.text-bold
-							p 223
-						.text-14
-							p Баллов эксперта
-			//======= progress bar =============
-			.course-menu-progress
-				.progress-block
-					.progress-block-text
-						p Идет обучение
-					.progress-block-line
-						.progress-block-bar
-							span 50%
+				include _edu-accor
+		//==== main-frame=======
+		.course-frame
+			//==== header course-frame =======
+			.header
+				.flex-content
+					.header-title.text-16.text-bold
+						p Вебинар
+					.header-col.d-flex
+						.header-col__box
+							a(href="#!").button.button-light.button--flex
+								span.support-icon
+								span Помощь
+						
+						.header-right
+							.profile-panel
+								.profile-icon
+									.icon-notify
+										p.label
+											span 2
+								.profile-persone
+									.profile-persone__img
+										img(src="./img/ava.png", width="38" alt="ava")
+									.profile-persone__arrow#profile-arrow
+										svg(width="10" height="6")
+											use(xlink:href="./img/svg-sprite.svg#iconArr")
+									.profile-persone__row
+										p 0x...263a
 
-			include _edu-accor
+			//==== body course-frame =======
+			.course-frame-body
+				.course-frame-player(style="background-image:url(./img/aboutGame/video-poster.jpg)")
+					
+					//====блок-затемнение  ========
+					.course-frame-player__overlay
+						.text-block
+							.icon-clock
+							.text-14.text-bold
+								p Через 10 минут
+			
+			//==== footer course-frame =======
+			.course-frame-footer
+				.flex-content
+					.course-frame-left
+						.comment-rate__like
+							span.icon-like
+						.comment-rate__dislike
+							span.icon-dislike
+					.course-frame-right 365
+
