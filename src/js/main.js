@@ -1272,6 +1272,38 @@ document.addEventListener("DOMContentLoaded", function (){
 			else{return}
 		});
 	}
+	/*=====изменить цвет Лайки и дизлайки , когда только серые иконки, оценить урок */
+	const setRating = document.querySelectorAll('.light-rate');
+	 for(let item of setRating){
+      const likeBtnItems= item.querySelectorAll("[data-clicked]");
+		
+		likeBtnItems[0].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				
+				 			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				
+				
+			}
+			else{
+				return;
+			}
+		});
+
+		likeBtnItems[1].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				
+			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				
+			}
+			else{return}
+		});
+	}
 	/*=========переключать класс active  в группе кнопок фильтрации=========== */
 	const buttonsGroup = document.querySelectorAll('[data-buttons]');
 	for(let item of buttonsGroup){

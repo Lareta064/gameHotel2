@@ -73,9 +73,21 @@
 			.course-frame-footer
 				.flex-content
 					.course-frame-left
-						.comment-rate__like
-							span.icon-like
-						.comment-rate__dislike
-							span.icon-dislike
-					.course-frame-right 365
-
+						//=============   оценить урок: есть скрипт, который меняет цвет иконки , одновременно нельзя поставить и лайк и дизлайк. Цвет иконки меняется при переключении у дива с атрибутом  data-clicked с false на  true  ============================
+						.course-rate
+							.text-14
+								p Вам понравилось?
+							.light-rate
+								.light-rate__like(data-clicked="false")
+									span.icon-like
+								.light-rate__dislike(data-clicked="false")
+									span.icon-dislike
+					.course-frame-header__right
+						.text-group
+							a(href="#!").text-14 Enter
+							.text-14
+								p или
+							a(href="#!").button.button--color.button--flex
+								span Продолжить
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
