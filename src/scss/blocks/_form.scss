@@ -9,6 +9,7 @@
 		border: 1px solid #D4DFF1;
 		border-radius: 12px;
 		padding-left: 44px;
+		font-family: inherit;
 	}
 	.form-field-icon{
 		position: absolute;
@@ -193,5 +194,33 @@
 	}
 	input:checked+span+span {
 		background-color: #fff;
+	}
+}
+.form-field--textarea{
+	.send-btn{
+		transform: translateY(0);
+		top: 12px;
+	}
+}
+.form-field textarea{
+	border: 1px solid #D8E1EF;
+	background-color: #EEF5FF;
+	padding: 12px;
+	border-radius: 12px;
+	resize:none;
+	width: 100%;
+	display: inline-block;
+	min-height: 104px;
+	padding-right: 40px;
+	outline: none;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: $mr;
+	&::placeholder{
+		font-size: 14px;
+		line-height: 20px;
+	}
+	&:focus{
+		outline: none;
 	}
 }

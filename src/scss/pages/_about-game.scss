@@ -408,37 +408,35 @@ article .flex-header {
 		transition: .3s;
 
 	}
+}
+.video-play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 18px solid $pink;
+	background-color: #fff;
+	cursor: pointer;
 
-	.video-play-btn {
+	// pointer-events: none;
+	&:after {
+		content: '';
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left: 55%;
 		transform: translate(-50%, -50%);
-		z-index: 2;
-		width: 56px;
-		height: 56px;
-		border-radius: 50%;
-		border: 18px solid $pink;
-		background-color: #fff;
-		cursor: pointer;
-
-		// pointer-events: none;
-		&:after {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 55%;
-			transform: translate(-50%, -50%);
-			width: 0;
-			height: 0;
-			border: 8px solid $pink;
-			border-top: 5px solid transparent;
-			border-bottom: 5px solid transparent;
-			border-right: 0;
-		}
+		width: 0;
+		height: 0;
+		border: 8px solid $pink;
+		border-top: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		border-right: 0;
 	}
 }
-
 .about-game-video__content.active:after {
 	transform: translateY(100%);
 }

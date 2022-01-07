@@ -271,11 +271,14 @@
 		padding-right: 0;
 	}
 }
+.flex-wrapper,
 .center-wrapper{
 	display: flex;
 	justify-content: center;
 }
-
+.flex-wrapper{
+	justify-content: flex-start;
+}
 .mt-64{
 	margin-top: 64px;
 	@media(max-width:767px){margin-top: 44px;}

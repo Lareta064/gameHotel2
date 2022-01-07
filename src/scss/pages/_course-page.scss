@@ -102,6 +102,7 @@
 		margin-bottom: 8px;
 	}
 }
+
 .course-frame{
 	flex-grow: 2;
 	position: relative;
@@ -152,12 +153,20 @@
 		padding-left: 24px;
 		padding-right: 24px;
 	}
+	.course-frame-text__title{
+		margin-bottom: 24px;
+		p span{
+			color:#33A661;
+			font-family: $ms;
+		}
+	}
 	.course-frame-text__block{
 		background: #FFFFFF;
 		border-radius: 24px;		
 		max-width:792px;
 		margin-left: auto;
 		margin-right: auto;
+		&+.course-frame-text__block{margin-top: 32px;}
 	}
 	.course-frame-text__header{
 		padding: 16px 24px;
@@ -181,6 +190,7 @@
 			animation-duration: 3s;
 		}
 		
+
 	}
 	.course-frame-player__overlay{
 		position: absolute;
@@ -208,6 +218,18 @@
 		background-color: #fff;
 		z-index: 2;
 	}
+	.course-frame-header__right{
+		margin-left: auto;
+		
+	}
+}
+.video-play-btn, .waiting-block{
+	display: none;
+}
+.video-play-btn.visible,
+.waiting-block.visible {
+	display: block;
+	
 }
 @keyframes rotate{
 	0%{
