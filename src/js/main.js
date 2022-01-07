@@ -929,7 +929,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	for(let item of formCloseBtn){
 		item.addEventListener('click', function(){
 			item.closest('[data-modal]').classList.remove('visible');
-			overlayBg.classList.remove('active');
+			if(overlayBg){
+				overlayBg.classList.remove('active');
+			}
+			
 			bodyEl.classList.remove('noscroll');
 		});
 	}
@@ -1284,8 +1287,6 @@ document.addEventListener("DOMContentLoaded", function (){
 				 			}
 			else if(this.dataset.clicked == 'true' && likeBtnItems[1].dataset.clicked == 'false') {
 				this.dataset.clicked = 'false'
-				
-				
 			}
 			else{
 				return;
@@ -1336,5 +1337,77 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
+	/*============radio and checkbox parent label whis background */
+	const inputGroupItems = document.querySelectorAll('.form-fields-group');
+	if(inputGroupItems.length > 0){
+		for(let item of inputGroupItems){
 
+			const labelElements = item.querySelectorAll('label');
+			for(let i = 0; i < labelElements.length; i++){
+				let labelInputType = labelElements[i].querySelector('input').getAttribute('type');
+				if(labelInputType == 'radio'){
+					labelElements[i].addEventListener('click', function(){
+
+						for(let j = 0; j < labelElements.length; j++ ){
+							labelElements[j].classList.remove('active');
+							if(j == i){
+								if(labelElements[j].querySelector('input').checked){
+									labelElements[j].classList.add('active');
+								}
+								else{
+									labelElements[j].classList.remove('active');
+								}
+							}
+						}
+
+					});
+				}
+				if(labelInputType == 'checkbox'){
+					labelElements[i].addEventListener('click', function(){
+						if(labelElements[i].querySelector('input').checked){
+							labelElements[i].classList.add('active');
+						}
+						else{
+							labelElements[i].classList.remove('active');
+						}
+					});
+				}
+			}
+		}
+	}
+
+	/* ========= карточки-картинки  тестов =========*/
+	const testCards = document.querySelectorAll('[data-testcards]');
+	if(testCards.length > 0){
+		for(let item of testCards){
+			const testCardModal =  item.querySelectorAll('[data-modal]');
+			const testCardBtn =  item.querySelectorAll('.test-card-label');
+			const testCardClose =  item.querySelectorAll('[data-close]');
+			for(let i = 0; i < testCardBtn.length; i++){
+				testCardBtn[i].addEventListener('click', function(){
+					for(let k = 0; k < testCardBtn.length; k++){
+						testCardBtn[k].classList.remove('active');
+						if(k == i){
+							testCardBtn[k].classList.add('active');
+						}
+					}
+					for(let j = 0; j < testCardModal.length; j++){
+						testCardModal[j].classList.remove('visible');
+						if(j == i){
+							testCardModal[i].classList.add('visible');
+						}
+					}
+				});
+			}
+			/* remove pink bg for test-card label*/
+			for(let n = 0; n < testCardClose.length; n++){
+				testCardClose[n].addEventListener('click', function(){
+					for(let k = 0; k < testCardBtn.length; k++){
+						testCardBtn[k].classList.remove('active');						
+					}
+				});
+			}
+			
+		}
+	}
 });

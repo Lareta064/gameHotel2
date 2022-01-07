@@ -150,6 +150,23 @@
 
 	}
 }
+.form-fields-group {
+	.form-checkbox+.form-checkbox, .form-radio+.form-radio {
+		margin-top: 4px;
+	}
+	label{
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 12px;
+		padding-right: 12px;
+		border-radius: 9px;
+		width: 100%;
+	}
+	label.active{
+		background-color: #D4E5FF;
+	}
+}
+
 /* switch item*/
 .switch-item{
 	position: relative;

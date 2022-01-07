@@ -122,12 +122,23 @@
 		background-color: #fff;
 		
 	}
+	.header-title{
+		display: flex;
+		align-items: center;
+		&>*+*{margin-left: 12px;}
+		.badge{
+			height: 24px;
+			line-height: 24px;
+			font-size: 13px;
+		}
+	}
 	.header-col>*+*{margin-left: 32px;}
 	.course-frame-body{
 		
 		padding-bottom: 32px;
 		background-color: #EEF5FF;
 		max-height: calc(100vh - 120px);
+		min-height: calc(100vh - 120px);
 		overflow: hidden;
 		overflow-y: auto;
 		scrollbar-width: thin;
@@ -152,6 +163,8 @@
 		padding-top: 32px;
 		padding-left: 24px;
 		padding-right: 24px;
+		margin: auto;
+		width: 100%;
 	}
 	.course-frame-text__title{
 		margin-bottom: 24px;
@@ -164,6 +177,7 @@
 		background: #FFFFFF;
 		border-radius: 24px;		
 		max-width:792px;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		&+.course-frame-text__block{margin-top: 32px;}
@@ -178,6 +192,7 @@
 		border-radius: 0 0 24px 24px ;
 
 	}
+	
 	.course-frame-player{
 		position: relative;
 		height: 600px;
@@ -217,6 +232,8 @@
 		width: 100%;
 		background-color: #fff;
 		z-index: 2;
+		border-top: 1px solid #DCDEE0;
+		border-left: 1px solid #DCDEE0;
 	}
 	.course-frame-header__right{
 		margin-left: auto;
@@ -285,4 +302,101 @@
 		font-family: $os;
 		font-weight: 400;
 	}
+}
+/* поставить контент в body  по центру, когда только один вопрос теста*/
+.course-frame-body{
+	display: flex;
+	flex-direction: column;
+	&>*{
+		flex-shrink:0;
+	}
+}
+.course-frame-body .course-frame-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}/*==================*/
+.course-frame-img{
+	position: relative;
+	
+}
+.test-cards-group{
+	display: flex;
+	.test-cards-item+.test-cards-item{
+		margin-left: -12px;
+	}
+}
+.test-cards-wrapper{
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	bottom: 18px;
+	right: 0;
+	justify-content: space-between;
+	display: flex;
+	padding-left: 11.5%;
+	padding-right: 10%;
+
+	.test-cards-item{
+		position: relative;
+		width: 6.5vw;
+		.test-cards-modal {
+			position: absolute;
+			padding: 20px 16px;
+			background-color: #fff;
+			border-radius: 12px;
+			
+			top: -20px;
+			left: 50%;
+			transform: translate(-50%, -100%);
+			.close-btn{
+				position: absolute;
+				top: 8px;
+				right: 8px;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.25 1.8075L10.1925 0.75L6 4.9425L1.8075 0.75L0.75 1.8075L4.9425 6L0.75 10.1925L1.8075 11.25L6 7.0575L10.1925 11.25L11.25 10.1925L7.0575 6L11.25 1.8075Z' fill='%23788CAB'/%3e%3c/svg%3e");
+				@include pos;
+				width: 20px;
+				height: 20px;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 28px;
+				height: 28px;
+				border-radius: 5px;
+				background-color: #fff;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+			}
+		}
+		
+	}
+	.test-cards-img{
+		position: relative;
+		
+		.test-card-label {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 3;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			line-height: 36px;
+			text-align: center;
+			font-size: 18px;
+			color: #fff;
+			background-color: $pr;
+			font-family: $ms;
+			cursor:pointer;
+			&.active{
+				background-color: #E857D1;
+			}
+		}
+		
+	}
+	.test-cards-modal__img{width: 12vw;}
 }

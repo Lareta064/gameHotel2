@@ -74,8 +74,10 @@
 	.theme-list__item.active {
 		.theme-list__header .text-13{font-family: $ms;}
 		.mark-circle{
-			background-color: #3B4E6A;
-			border-color: #3B4E6A;
+			// background-color: #3B4E6A;
+			// border-color: #3B4E6A;
+			background-color: $pr;
+			border-color: $pr;
 		}
 	}
 	.course-menu__theme.active{

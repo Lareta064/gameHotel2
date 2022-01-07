@@ -1,0 +1,151 @@
+extends ../layouts/layout-light.pug
+
+block content
+	//======= страница- Вопрос теста ===========
+	.course-page
+		.course-page__content
+			//=====sidebar======
+			.course-menu
+				//======= header Course menu sidebar =============
+				.course-menu-header
+					.course-menu-header__left
+						a(href="#!").arrow-back
+						.course-menu-game.text-16
+							p Axie Infinity
+					.course-menu-header__right
+						.badge.badge--light Базовый курс
+				.course-menu-body
+					.course-menu-top
+						.course-menu-left
+							img(src="../img/games/axie-logo.png", width="100" alt="alt")
+						.course-menu-right
+							.point-block
+								.text-18.text-bold
+									p 223
+								.text-14
+									p Баллов эксперта
+					//======= progress bar =============
+					.course-menu-progress
+						.progress-block
+							.progress-block-text
+								p Идет обучение
+							.progress-block-line
+								.progress-block-bar
+									span 50%
+
+					include ../sections/_edu-accor
+			//==== main-frame=======
+			.course-frame
+				//==== header course-frame =======
+				.header
+					.flex-content
+						.header-title.text-16.text-bold
+							.badge.badge--light 2/24
+							p Ответьте на вопрос
+						.header-col.d-flex
+							.header-col__box
+								a(href="#!").button.button-light.button--flex
+									span.support-icon
+									span Помощь
+							
+							.header-right
+								.profile-panel
+									.profile-icon
+										.icon-notify
+											p.label
+												span 2
+									.profile-persone
+										.profile-persone__img
+											img(src="./img/ava.png", width="38" alt="ava")
+										.profile-persone__arrow#profile-arrow
+											svg(width="10" height="6")
+												use(xlink:href="./img/svg-sprite.svg#iconArr")
+										.profile-persone__row
+											p 0x...263a
+
+				//==== body course-frame =======
+				.course-frame-body
+					.course-frame-img
+						img(src="./img/education/test-image.jpg", alt="alt")
+						//=====есть скрипт для этого блока ==========
+						.test-cards-wrapper(data-testcards)
+							.test-cards-group
+								.test-cards-item
+									.test-cards-img
+										img(src="./img/education/test-card.png", width="120" alt="alt")
+										.test-card-label 1
+									.test-cards-modal(data-modal)
+										button.close-btn(data-close)
+										.test-cards-modal__img
+											img(src="./img/education/test-card.png", width="224" , alt="alt")
+								.test-cards-item
+									.test-cards-img
+										img(src="./img/education/test-card.png", width="120" alt="alt")
+										.test-card-label 2
+									.test-cards-modal(data-modal)
+										button.close-btn(data-close)
+										.test-cards-modal__img
+											img(src="./img/education/test-card.png", width="224" , alt="alt")
+								.test-cards-item
+									.test-cards-img
+										img(src="./img/education/test-card.png", width="120" alt="alt")
+										.test-card-label 3
+									.test-cards-modal(data-modal)
+										button.close-btn(data-close)
+										.test-cards-modal__img
+											img(src="./img/education/test-card.png", width="224" , alt="alt")
+							
+					//=========== блок с вариантами ответов ==========
+					.course-frame-text
+						.course-frame-text__block
+							.course-frame-text__header
+								.text-16
+									p Какие карты лучше всего выбросить в этом случае?
+							.course-frame-text__body
+								.text-14.course-frame-text__title
+									p #[span +1 балл эксперта] за правильный ответ
+								
+								form.test-form(action="" method="method")
+									.form-fields-group
+										.form-radio
+											label
+												input(type="radio" name="test")
+												span.fake-radio
+												span 1 и 2
+										.form-radio
+											label
+												input(type="radio" name="test")
+												span.fake-radio
+												span 2 и 3
+										.form-radio
+											label
+												input(type="radio" name="test")
+												span.fake-radio
+												span Лучше пропустить ход
+										.form-radio
+											label
+												input(type="radio" name="test")
+												span.fake-radio
+												span Любую карту
+				
+				
+				//==== footer#2  без выставления оценки лак/дизлайк =======
+				.course-frame-footer
+					.flex-content
+						.course-frame-header__right
+							.text-group
+								a(href="#!").button.button-light Пропустить
+								a(href="#!").button.button--color.button--flex
+									span Продолжить
+									svg(width="16" height="16")
+										use(xlink:href="./img/svg-sprite.svg#arrRight")
+		
+	
+	
+block variables
+	-var title = "Course | Test";
+
+
+
+
+
