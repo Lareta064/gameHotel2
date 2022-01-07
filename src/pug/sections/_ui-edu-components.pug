@@ -60,6 +60,8 @@
 
 			//==== body course-frame =======
 			.course-frame-body
+
+				//=======video frame =======
 				.course-frame-player(style="background-image:url(./img/aboutGame/video-poster.jpg)")
 					
 					//====блок-затемнение  ========
@@ -68,6 +70,34 @@
 							.icon-clock
 							.text-14.text-bold
 								p Через 10 минут
+				
+				//======= контент под видео =======
+				.course-frame-text
+					.course-frame-text__block
+						.course-frame-text__header
+							.text-16
+								h3 Изучения азов игровой механики Axie Infinity
+						.course-frame-text__body
+							//=======форма для заметки ===========
+							form.note-form(action="" method="method")
+								.form-field
+									input(type="text" required placeholder="Введите вашу заметку")
+									button(type="submit").form-btn.send-btn
+							//========= блок с заметками ===============
+							.notes-block 
+								//======  одна заметка ===============
+								.notes-block-item
+									.text-14
+										p 00:23
+									.text-15
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet tellus eu nibh finibus dictum. Integer aliquam rhoncus pulvinar. Phasellus a neque vel mauris lobortis eleifend a a tellus.
+
+								//======  одна заметка ===============
+								.notes-block-item
+									.text-14
+										p 5:22
+									.text-15
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet tellus eu nibh finibus dictum. Integer aliquam rhoncus pulvinar. Phasellus a neque vel mauris lobortis eleifend a a tellus.
 			
 			//==== footer course-frame =======
 			.course-frame-footer

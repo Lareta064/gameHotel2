@@ -24,6 +24,7 @@
 		display: none;
 	}
 }
+.note-form,
 .comment-form{
 	width: 100%;
 	.form-field-icon{
@@ -43,6 +44,9 @@
 	.form-field input{
 		padding-left: 44px;
 	}
+}
+.note-form .form-field input {
+	padding-left: 12px;
 }
 .send-btn{
 	width: 18px;
