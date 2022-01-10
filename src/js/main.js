@@ -1376,7 +1376,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
 
-	/* ========= карточки-картинки  тестов =========*/
+	/* ========= карточки-картинки  выбор ответ на тест =========*/
 	const testCards = document.querySelectorAll('[data-testcards]');
 	if(testCards.length > 0){
 		for(let item of testCards){

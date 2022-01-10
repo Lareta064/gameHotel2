@@ -1,0 +1,36 @@
+
+//========Поздравляем ======
+main.congrat-page
+	.congat-modal
+		.congat-modal__title
+			.text-28
+				h1 Поздравляем!
+			.text-15
+				p Вы прошли базовый курс по #[strong Axie Infinity]
+		.congrat-block
+			.congrat-result
+				.congrat-result__img
+					img(src="./img/sertificate/stars.png", width="190" alt="alt")
+				.congrat-result__text
+					.text-13
+						p Баллы экспертности
+					.text-24
+						p 2 546
+
+		.congrat-reward
+			.congrat-reward__col
+				img(src="./img/sertificate/labelgh.svg", alt="alt")
+			.congrat-reward__col
+				.text-13
+					p Ваша награда
+				.text-24
+					p #[strong LUX] Certificat
+			.congrat-reward__col
+				img(src="./img/sertificate/lux.svg", alt="alt")
+		.button-group
+			a(href="#!").button.button-light К сертификатам
+			
+			a(href="#!").button.button--flex.button--color
+				svg.nft-icon
+					use(xlink:href="./img/svg-sprite.svg#nftIcon")
+				span Выпустить NFT

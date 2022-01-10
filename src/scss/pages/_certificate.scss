@@ -1,0 +1,141 @@
+.certificate-card{
+	padding: 25px;
+	width: 262px;
+	border-radius: 16px;
+	background: linear-gradient(218.5deg, #F5CC61 1.09%, #F9EED0 100%);
+	text-align: center;
+	.button{
+		height: 40px;
+		line-height: 38px;
+		font-size: 13px;
+		&--white{color:$pr; }
+		
+		svg.nft-icon {
+			fill: $pr;
+			width: 20px;
+			height: 20px;
+			
+		}
+	}
+	.button--green {
+		svg.nft-icon {
+			fill: white;}
+	}
+	.certificate-card__header{
+		margin-bottom: 27px;
+		
+	}
+	.certificate-card__body{
+		img {
+			height: 72px;
+			max-width: unset;
+			width: auto;
+		}
+		margin-bottom: 25px;
+		.text-16{
+			margin-top: 20px;
+			font-family: $mr;
+			span{
+				font-family: $ms;
+			}
+		}
+	}
+}
+.certificate-card--lux{
+	background: linear-gradient(218.5deg, #F5CC61 1.09%, #F9EED0 100%);
+}
+.certificate-card--comfort {
+	background: linear-gradient(38.56deg, #E7F5F7 0%, #C0DAE3 100.98%);
+}
+.certificate-card--standart {
+	background: linear-gradient(36.81deg, #FADFC0 0.79%, #FFA875 99.06%);
+}
+/*.congrat-result*/
+.congrat-page{
+	height: calc(100vh - 56px);
+	display: flex;
+	background-color: #F3EAFF;
+}
+.congat-modal{
+	text-align: center;
+	width: 100%;
+	max-width: 504px;
+	margin: auto;
+	padding: 40px;
+	border-radius: 24px;
+	background-color: #fff;
+	
+	
+}
+.button--color svg.nft-icon {
+	fill: #fff;
+	width: 20px;
+	height: 20px;
+}
+.congat-modal__title{
+	margin-bottom: 32px;
+	.text-28{
+		margin-left: auto;
+		margin-right: auto;
+		font-family: $ms;
+		 background: linear-gradient(45deg, #EE667D 0%, #C26BEB 100%);
+		 -webkit-background-clip: text;
+		 -webkit-text-fill-color: transparent;
+		 color: #EE667D;
+		 display: table;
+	}
+	.text-15{
+		font-family: $mr;
+		margin-top: 6px;
+	}
+}
+.congrat-block{
+	padding-top: 45px;
+	padding-bottom: 24px;
+}
+.congrat-result{
+	padding-top: 40px;
+	padding-bottom: 20px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	background: #EEF5FF;
+	border-radius: 16px;
+	.congrat-result__img{
+		position: absolute;
+		left: 50%;
+		top: -10px;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+	.congrat-result__text{
+		.text-24{margin-top: 4px;}
+	}
+}
+.congrat-reward__col{
+	.text-24 {
+
+		p {
+			font-family: $mr;
+		}
+	}
+}
+.congrat-reward{
+	border-radius: 16px;
+	padding: 24px 32px;
+	background: linear-gradient(218.5deg, #F5CC61 1.09%, #F9EED0 100%);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+.button-group{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.button{
+		width: 50%;
+		&+.button{margin-left: 24px;}
+		
+	}
+}

@@ -1,0 +1,14 @@
+extends ../layouts/layout-light.pug
+
+block content
+	- var menuItems = ([{link: 'education.html', text: 'Курсы', addCl:'active'}, {link: '#', text: 'Мои сертификаты'}, {link: '#', text: 'Рейтинг'}]);
+	#overlay.light-overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+	include ../sections/_ui-congat.pug
+	
+	
+	
+block variables
+	-var title = "Поздравляем!";
