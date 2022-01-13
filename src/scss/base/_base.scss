@@ -296,6 +296,14 @@
 .p-80{
 	padding-top: 80px;
 	padding-bottom: 96px;
+		@media(max-width:1023px) {
+			padding-top: 48px;
+			padding-bottom: 48px;
+		}
+	@media(max-width:767px){
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
 }
 .pt-40{padding-top: 40px;}
 .w-100{

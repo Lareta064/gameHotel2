@@ -276,3 +276,53 @@
 		background: rgba(51, 166, 97, 0.5);
 	}
 }
+/* info-board white*/
+.invest-rounds-board{
+	.information-board{
+		background: #fff;
+	}
+	.information-board:before{
+		display: none;
+	}
+	.information-board__img-group .board-chart-group .chart-group-text,
+	.information-board .information-board-head p,
+	.label-text .label-text__top p{
+		color:#0A0522;
+	}
+	.label-text.label-text--star .label-text__top:before,
+	.label-text .label-text__bottom p{
+		color: #3B4E6A;
+	}
+	.information-board .information-board-head span{
+		padding: 3px 12px 3px;
+		color: #fff;
+		background-color: #0A0522;
+	}
+	.information-board .information-board-head .binance-item span{padding-right: 40px;}
+	.label-text.label-text--dashed span{
+		background: #EEF5FF;
+		border: 1px dashed #3B4E6A;
+		color: #0A0522;
+	}
+	.swiper-pagination-info .swiper-pagination-bullet{
+		background-color: rgba(59, 78, 106, 0.3);
+	}
+	.swiper-pagination-info .swiper-pagination-bullet-active {
+		background: #7256FF;
+	}
+	@media (max-width: 1023px){
+		.information-board .information-board__img-mobile p{
+			color: #0A0522;
+		}
+		.information-board__img-mobile{
+			background-image: url('../img/gridGrey.svg');
+			background-position: center;
+			background-size: auto;
+			background-repeat: no-repeat;
+			width: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		
+	} 
+}
