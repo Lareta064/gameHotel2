@@ -1,0 +1,164 @@
+/*===== page invest-rounds ========*/
+.investrounds-top{
+	padding-top: 40px;
+	padding-bottom: 80px;
+	background: #EEF5FF;
+	.title-1{
+		margin-bottom: 40px;
+	}
+}
+.investrounds-content{
+	display: flex;
+	justify-content: space-between;
+	.investrounds-left{
+		width: 68.8%;
+		max-width: 832px;
+	}
+	.investrounds-right{
+		width: 25.5%;
+		max-width: 308px;
+	}
+}
+.investrounds-card{
+	background: #FFFFFF;
+	border-radius: 16px;
+	padding: 32px 40px;
+	.investrounds-card__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 22px;
+		.badge{
+			height: 24px;
+			line-height: 24px;
+			font-size: 13px;
+		}
+	}
+	.investrounds-card__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.info-item p{
+		color:#3B4E6A;
+		font-family: $mr;
+	}
+}
+.investrounds-card.active{
+	.info-item p {
+		color: #0A0522;
+		font-family: $ms;
+		}
+
+		p+p,
+		p+span {
+			font-family: $mr;
+			
+		}
+}
+.investrounds-card.active{
+	.investrounds-card__title{
+		p{
+		font-family: $ms;
+		position: relative;
+		padding-left: 32px;	
+		}
+		
+		p:before{
+			content: "";
+			position: absolute;
+			background: rgb(51, 166, 97);
+			display: block;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 8px;
+			height: 8px;
+			
+			border:6px solid rgba(255, 255, 255, 0.6);
+			border-radius: 50%;
+			animation-name: pulseBg;
+			animation-duration: 2s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			
+			
+		}
+	}
+	.investrounds-card__button .button{
+		background-color: $pr;
+		color: #fff;
+	}
+}
+.investrounds-card__button{
+	width: 204px;
+}
+.investrounds-card__button + .investrounds-card__col {
+	margin-left: 14%;
+}
+.investrounds-card__button .button {
+	width: 204px;
+	text-align: center;
+	background-color: #EEF5FF;
+	color:rgba(59, 78, 106, .5);
+}
+.info-item{
+	p{
+		font-size: 24px;
+		line-height: 26px;
+		color: #0A0522;
+		font-family: $ms;
+		white-space: nowrap;
+	}
+	p+p,
+	p+span{
+		font-size: 14px;
+		line-height: 20px;
+		font-family: $mr;
+		margin-top: 4px;
+		white-space: nowrap;
+	}
+}
+.investrounds-info{
+	display: flex;
+	
+	
+	.info-item+.info-item{
+		margin-left: 80px;
+	}
+}
+.investrounds-card+.investrounds-card{margin-top: 32px;}
+
+/*.balance-card*/
+.balance-card{
+	background-color: #fff;
+	border-radius: 16px;
+	max-width: 308px;
+	text-align: center;
+	padding: 32px 22px;
+}
+.balance-card-body {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+.balance-card__value{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 4px;
+	img{margin-left: 10px;}
+	p{
+		text-transform: uppercase;
+	}
+}
+@keyframes pulseBg{
+	0%{
+		background: rgba(51, 166, 97, 0.5);
+	}
+	50%{
+		background: rgb(51, 166, 97);
+	}
+	100% {
+		background: rgba(51, 166, 97, 0.5);
+	}
+}

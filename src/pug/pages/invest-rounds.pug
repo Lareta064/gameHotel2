@@ -1,0 +1,18 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	include ../sections/_mobile-fix-bottom-menu.pug
+	include ../sections/_aside-menu.pug
+	include ../sections/_header.pug
+	main.invest-rounds
+		include ../sections/_invest-rounds-top.pug
+		include ../sections/_information-tablo.pug
+		
+		
+	include ../sections/_footer.pug
+		
+	
+	
+block variables
+	-var title = "Invest Rounds";
