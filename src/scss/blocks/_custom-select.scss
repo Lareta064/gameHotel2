@@ -31,11 +31,14 @@
 			width: 60px;
 			height: 24px;
 			color: $text;
-			font-size: 13px;
+			font-size: 16px;
 			background-color: transparent;
 			font-family: $os;
 			cursor: pointer;
 			display: block;
+			@media(min-width:768px){
+				font-size: 13px;
+			}
 		}
 	}
 

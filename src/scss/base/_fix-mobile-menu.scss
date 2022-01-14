@@ -1,7 +1,8 @@
 .fix-mobile-menu{
 	width:calc(50% + 50vw - 20px);
 	position: fixed;
-	z-index: 20;
+	// z-index: 20;
+	z-index: 7;
 	left: 20px;
 	bottom: 82px;
 	display: flex;

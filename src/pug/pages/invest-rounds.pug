@@ -10,9 +10,24 @@ block content
 		.invest-rounds-board.p-80
 			include ../sections/_information-tablo-white.pug
 		
-		
+		include ../sections/_invest-rounds-banner
 	include ../sections/_footer.pug
-		
+	//================= АВТОРИЗАЦИЯ ШАГ 1/2=====================
+	.page-modal.mm-modal(data-modal="mm-wallet")
+		.page-modal__header
+			h3.text-16 Подключите свой Metamask
+			button.close-btn(data-close)
+		.page-modal__body
+			.page-modal__img
+				svg(width="112" height="112")
+					use(xlink:href="./img/svg-sprite.svg#metam2Icon")
+			a(href="#!").button.button--color.button--flex
+				span Купить $Hotel Button
+				svg(width="16" height="16")
+					use(xlink:href="./img/svg-sprite.svg#arrRight")
+			
+		.page-modal__footer
+			p.text-13 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
 	
 	
 block variables

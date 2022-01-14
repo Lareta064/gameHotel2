@@ -6,11 +6,6 @@ header.header{
 	z-index: 15;
 	border-bottom:1px solid #D8E1EF;
 	@media(max-width:1199px){
-		// position: fixed;
-		// // bottom: 0;
-		// left: 0;
-		// right: 0;
-		// top:0;
 		
 		&:before{
 			content: '';
@@ -213,17 +208,17 @@ header.header .header-menu ul li{margin-left: 16px;}
 		
 	}
 
-	.header-content {
-		overflow: hidden;
-		overflow-x:auto;
-		width: 100%;
-		scrollbar-width: none;
-		}
+	// .header-content {
+	// 	overflow: hidden;
+	// 	overflow-x:auto;
+	// 	width: 100%;
+	// 	scrollbar-width: none;
+	// 	}
 
-		.header-content::-webkit-scrollbar {
-			width: 0;
-			height: 0;
-		}
+	// 	.header-content::-webkit-scrollbar {
+	// 		width: 0;
+	// 		height: 0;
+	// 	}
 	.header-center{padding-right: 44px;}
 }
 .header .mobile-logo .custom-select--lang {

@@ -149,6 +149,7 @@
 	.investrounds-card__button .button{
 		background-color: $pr;
 		color: #fff;
+		cursor:pointer;
 	}
 	
 }
@@ -192,6 +193,10 @@
 	text-align: center;
 	background-color: #EEF5FF;
 	color:rgba(59, 78, 106, .5);
+	cursor:default;
+	&:hover{
+		opacity: 1;
+	}
 }
 .info-item{
 	p{
@@ -278,6 +283,7 @@
 }
 /* info-board white*/
 .invest-rounds-board{
+	background: #fff;
 	.information-board{
 		background: #fff;
 	}
@@ -294,11 +300,11 @@
 		color: #3B4E6A;
 	}
 	.information-board .information-board-head span{
-		padding: 3px 12px 3px;
+		
 		color: #fff;
 		background-color: #0A0522;
 	}
-	.information-board .information-board-head .binance-item span{padding-right: 40px;}
+	
 	.label-text.label-text--dashed span{
 		background: #EEF5FF;
 		border: 1px dashed #3B4E6A;
@@ -310,19 +316,283 @@
 	.swiper-pagination-info .swiper-pagination-bullet-active {
 		background: #7256FF;
 	}
+	@media(max-width:1919px) {
+		.information-board__img-grid {
+			right: 6%;
+		}
+	}
+	@media(max-width:1364px){
+		.information-board__img-grid{right: 0;}
+	}
 	@media (max-width: 1023px){
+		.label-text .show-more{color: $pr;}
 		.information-board .information-board__img-mobile p{
 			color: #0A0522;
 		}
 		.information-board__img-mobile{
 			background-image: url('../img/gridGrey.svg');
 			background-position: center;
-			background-size: auto;
+			background-size: cover;
 			background-repeat: no-repeat;
 			width: 100%;
 			padding-left: 20px;
 			padding-right: 20px;
+			text-align: center;
+			img{max-width:288px;}
 		}
 		
 	} 
+	.label-text-modal{
+		background: #fff;
+	}
+	
+}
+.invest-rounds{
+	
+	.investor-banner-content .investor-banner__header{
+		height: 308px;
+	}
+	.investor-banner-content .investor-banner__title{
+		width: 100%;
+		max-width:700px;
+	}
+	.investor-banner-content .investor-banner__title > p{
+		font-size: 32px;
+	}
+	.investor-banner__text{margin-top: 32px;}
+	.investor-banner:after{display: none;}
+	.investor-banner{
+		box-shadow:none;
+		background: #EEF5FF;
+		padding-top: 80px;
+
+	}
+	.investor-banner__text{
+		max-width:460px;
+	}
+	.investor-banner__img{
+		width: 36%;
+	}
+	.investor-banner__img .investor-banner__laptop{top: 40px;}
+	.investor-banner__img .investor-banner__chart{top: 30%;}
+	.investor-banner__img .investor-banner__money{
+		right: 69px;
+		bottom: 23%;
+	}
+	.text-column-row{
+		justify-content: space-between;
+		
+	}
+	.investor-banner__benefits .text-column-row .text-column+.text-column{
+		margin-left: 0;
+	}
+	.investor-banner__img{z-index: 4;}
+	@media(max-width:1023px){
+		.investor-banner{
+				padding-top: 48px;
+		}
+		 .investor-banner-content .investor-banner__header{
+		background-image: none;
+		background: linear-gradient(260.62deg, #739AF4 3.16%, #D67EFF 47.55%, #7256FF 90.1%);
+		 
+	 }
+	 .investor-banner__img{
+		 display: block;
+		 width: 50%;
+		}
+	
+	}
+	.investor-banner-content .investor-banner__title{
+		width: 72%;
+	}
+	.investor-banner-content .investor-banner__title>p {
+		font-size: 24px;
+	}
+	@media(max-width:767px) {
+		.investor-banner {
+			padding-top: 44px;
+		}
+		.investor-banner__img {display: none;}
+		.investor-banner .investor-banner__text p,.investor-banner-content .investor-banner__title {
+			width: 100%;
+			max-width:100%;
+		}
+			.investor-banner-content .investor-banner__title>p {
+				font-size: 22px;
+			}
+		.investor-banner-content .investor-banner__header{height: auto;}
+		.investor-banner .investor-banner__text p{
+			font-size: 16px;
+		}
+	}
+	
+}
+#infoBoard-modal{
+	@media(min-width:1024px){display: none;}
+}
+/* mm-modal*/
+.mm-modal{
+	.close-btn{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.25 1.8075L10.1925 0.75L6 4.9425L1.8075 0.75L0.75 1.8075L4.9425 6L0.75 10.1925L1.8075 11.25L6 7.0575L10.1925 11.25L11.25 10.1925L7.0575 6L11.25 1.8075Z' fill='%23788CAB'/%3e%3c/svg%3e");
+		@include pos;
+	}
+	max-width: 480px;
+	width: 100%;
+	.page-modal__header{
+		margin-bottom: 40px;
+	}
+	.page-modal__img{
+		margin-bottom: 32px;
+		background: #fff;
+	}
+	.page-modal__body{
+		margin-bottom: 32px;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.button{
+		max-width:270px;
+		text-align: center;
+		height: 48px;
+		line-height: 48px;
+	}
+	.page-modal__footer{
+		text-align: center;
+		p{
+			max-width:250px;
+			margin-left: auto;
+			margin-right: auto;
+			font-family: $os;
+		}
+	}
+}
+.farm-header-form{
+	max-width:508px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 24px;
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	form{
+		width: 100%;
+		max-width:376px;
+		@media(max-width:767px) {
+			width: 90%;
+		}
+	}
+	.form-field{
+		margin-bottom: 24px;
+	}
+	.form-field-top.d-flex{
+		justify-content: space-between;
+		margin-bottom: 12px;
+	}
+	.form-field-bottom{
+		position: relative;
+		input{
+			padding-left: 12px;
+			padding-right: 60px;
+		}
+		.input-icon{
+			position: absolute;
+			right: 16px;
+			top: 50%;
+			transform: translateY(-50%);
+			span, p{text-transform: uppercase; font-weight: bold;}
+			
+			&>*+*{margin-left: 12px;}
+		}
+	}
+	.invest-form__header{
+		&>*{font-family: $ms;}
+		
+		text-align: center;
+	}
+	.invest-form__body{
+		padding-top: 24px;
+		.button{
+			width: 100%;
+			text-align: center;
+			height: 48px;
+			line-height: 48px;
+		}
+		.subbutton{
+			text-align: center;
+			margin-top: 24px;
+			font-size: 16px;
+			font-family: Arial;
+		}
+	}
+	
+}
+.farm-page--single{
+	.farm-header{
+		@media(min-width: 768px){
+			min-height: calc(100vh - 140px);
+		}
+	}
+	.farm-title{
+		display: flex;
+		justify-content: space-between;
+		h1{font-family: $ms;}
+		.badge{white-space: nowrap;}
+		@media(max-width:1199px){
+			flex-direction: column-reverse;
+			margin-bottom: 32px;
+			.badge {
+			margin-left: auto;
+			margin-bottom: 16px;
+			
+			}
+			h1{
+				font-size: 24px;
+			}
+		}
+	}
+	.farm-header .farm-header-column{
+		max-width:520px;
+	}
+	.investrounds-info{
+		flex-wrap:wrap;
+		.info-item:first-child{
+			width: 100%;
+			margin-bottom: 50px;
+			@media(max-width:767px) {
+				margin-bottom: 32px;
+			}
+		}
+		.info-item:nth-child(2) {
+			margin-left: 0;
+		}
+	}
+	.farm-header .farm-header-left{
+		padding-top: 44px;
+		padding-bottom: 47px;
+		.farm-header-column{
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		 .farm-info{
+			background-position: top;
+		}
+		.farm-header-text{
+			margin-top: auto;
+			@media(max-width:767px){margin-top: 48px;}
+		}
+	}
+	
+	@media(max-width:767px){
+		padding-bottom: 48px;
+		.farm-header .farm-header-content{border-radius: 0;}
+		.farm-header .farm-header-right__title p{
+			font-size: 24px;
+		}
+		.farm-header .farm-header-left{padding-top: 24px;}
+	}
 }
