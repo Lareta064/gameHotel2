@@ -423,7 +423,6 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -605,7 +604,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -615,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function (){
 						spaceBetween: 24,
 					},
 				768:{
-					slidesPerView: 2,
+					slidesPerView: 2.2,
 					spaceBetween: 16,
 				},
 				800:{
@@ -636,7 +638,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -646,7 +651,7 @@ document.addEventListener("DOMContentLoaded", function (){
 						spaceBetween: 24,
 					},
 				768:{
-					slidesPerView: 2,
+					slidesPerView: 2.2,
 					spaceBetween: 16,
 				},
 				800:{
@@ -667,7 +672,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -677,7 +685,7 @@ document.addEventListener("DOMContentLoaded", function (){
 						spaceBetween: 24,
 					},
 				768:{
-					slidesPerView: 2,
+					slidesPerView: 2.2,
 					spaceBetween: 16,
 				},
 				800:{
@@ -698,7 +706,10 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -708,7 +719,7 @@ document.addEventListener("DOMContentLoaded", function (){
 						spaceBetween: 24,
 					},
 				768:{
-					slidesPerView: 2,
+					slidesPerView: 2.2,
 					spaceBetween: 16,
 				},
 				800:{

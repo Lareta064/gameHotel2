@@ -16,9 +16,11 @@
 	}
 	.page-content-left{
 		width: 74%;
+		.game-card-large .game-card-large__img{
+			@media(min-width:1024px)and(max-width:1199px){height: 192px;}
+		}
 		
-		
-		@media(max-width:1279px) {
+		@media(max-width:1023px) {
 			width: 100%;
 			margin-left: auto;
 			margin-right: auto;
@@ -71,7 +73,7 @@
 		transform: translateY(0);
 	}
 }
-@media(max-width:1279px) {
+@media(max-width:1023px) {
 	.page-content-wrapper .page-content-columns {
 		flex-direction: column-reverse;
 	}
@@ -374,7 +376,10 @@ article .flex-header {
 	}
 	.page-content-right{
 		padding-top: 48px;
-		@media(max-width: 1279px) {
+			@media(max-width: 1279px) {
+				padding-top: 20px;
+			}
+		@media(max-width: 1023px) {
 			padding-top: 0;
 		}
 	}
@@ -384,7 +389,7 @@ article .flex-header {
 		.page-content-right{
 			top: 15px;
 			@media(max-width:1279px){
-				top: 0;
+				top: 40px;
 				z-index: 10;
 			}
 			
@@ -456,7 +461,7 @@ article .flex-header {
 .about-game-video__content.active:after {
 	transform: translateY(100%);
 }
-.all-games-page{
+.about-game-main {
 	.page-content-right{
 		.catalogy-menu {
 			display: none;
@@ -464,7 +469,7 @@ article .flex-header {
 		.nav-list{
 			display: block;
 		}
-		@media(max-width:1279px){
+		@media(max-width:1023px){
 			display: block;
 			.catalogy-menu{
 				padding-top: 12px;
@@ -516,7 +521,7 @@ article .flex-header {
 	}
 }
 .page-content-wrapper .page-content-right.sticky-block{
-	@media(max-width:1279px) {
+	@media(max-width:1023px) {
 
 		top: 54px;
 		.sidebar-content{background-color: #fff; padding-bottom: 12px;}
