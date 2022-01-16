@@ -253,14 +253,18 @@ document.addEventListener("DOMContentLoaded", function (){
 		//===news slider one game page =====
 		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
 			loop: true,
-			slidesPerView: 1, 
-			spaceBetween: 16,
+			slidesPerView: 1.3, 
+			spaceBetween: 0,
 			speed:800,
 			pagination: {
 				el: ".swiper-pagination-news",
 				clickable: true,
 			},
 			breakpoints: {
+				424: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
 				574: {
 					slidesPerView: 1.5,
 					spaceBetween: 24,
@@ -1071,6 +1075,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			const customDropListItem = customDrop[i].querySelectorAll('.custom-dropdown__list-item');
 
 			customDropField.addEventListener('click', function(e){
+				
 				for(let j = 0; j < customDrop.length; j++){
 					if(j!==i){
 						customDrop[j].querySelector('.custom-dropdown__field').classList.remove('active');
@@ -1097,11 +1102,22 @@ document.addEventListener("DOMContentLoaded", function (){
 					customDropListItem[i].classList.remove('current');
 				}
 				item.classList.add('current');
+				if(item.closest('.dropdown-menu')){
+					const menuDrop = item.closest('.custom-dropdown__wrapper');
+					const menuIcon = item.closest('.dropdown-menu').querySelector('.custom-dropdown__icon');
+					const menuField = item.closest('.dropdown-menu').querySelector('.custom-dropdown__field');
+					menuDrop.classList.remove('active');
+					menuField.classList.remove('active');
+					menuIcon.classList.remove('icon-rotate');
+				}
 				});
 			}
 			
 		}
 	}
+
+	//=========закрыть custom drop  по клику на ссылку =====
+	
 	/*============закрыть large modal  при клике по фону ===========*/
 	const largeModal = document.querySelectorAll('.large-modal');
 	for(let item of largeModal){

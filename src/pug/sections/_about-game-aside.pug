@@ -1,23 +1,80 @@
+//- .sidebar
+//- 	a(href="#!").button.button--color Получить аккаунт
+//- 	button.button.button--label.button--white
+//- 		span Научиться играть
+//- 		span Free
+//- 	.nav-list
+//- 		ul.page-nav
+//- 			li.active
+//- 				a(href="#game-descrip") Описание игры			
+//- 			li 
+//- 				a(href="#game-rules") Как играть
+//- 			li 
+//- 				a(href="#heros") Классы персонажей
+//- 			li 
+//- 				a(href="#location") Локации игры
+//- 			li 
+//- 				a(href="#gameplay") Геймплей
+//- 			li 
+//- 				a(href="#news") Новости
+//- 			li 
+//- 				a(href="#games-similare") Похожие игры
+//- 			li 
+//- 				a(href="#comments") Комментарии
 .sidebar
-	a(href="#!").button.button--color Получить аккаунт
-	button.button.button--label.button--white
-		span Научиться играть
-		span Free
-	.nav-list
-		ul.page-nav
-			li.active
-				a(href="#game-descrip") Описание игры			
-			li 
-				a(href="#game-rules") Как играть
-			li 
-				a(href="#heros") Классы персонажей
-			li 
-				a(href="#location") Локации игры
-			li 
-				a(href="#gameplay") Геймплей
-			li 
-				a(href="#news") Новости
-			li 
-				a(href="#games-similare") Похожие игры
-			li 
-				a(href="#comments") Комментарии
+	.sidebar-content
+		//=====search form ======
+		.aside-buttons
+			a(href="#!").button.button--color Получить аккаунт
+			a(href="#!").button.button--label.button--white
+				span Научиться играть
+				span Free
+				
+		//==== выпадающий список категорий для мобилок   =====
+		.catalogy-menu
+			.custom-dropdown.dropdown-menu
+				.custom-dropdown__icon
+					svg(width="16" height="16")
+						use(xlink:href="./img/svg-sprite.svg#iconArr")
+				.custom-dropdown__field
+					p Перейти к ...
+				
+				.custom-dropdown__wrapper
+					ul
+						li.custom-dropdown__list-item
+							a(href="#game-descrip") Описание игры
+						li.custom-dropdown__list-item
+							a(href="#game-rules") Как играть
+						li.custom-dropdown__list-item
+							a(href="#heros") Классы персонажей
+						li.custom-dropdown__list-item
+							a(href="#location") Локации игры
+						li.custom-dropdown__list-item
+							a(href="#gameplay") Геймплей
+						li.custom-dropdown__list-item
+							a(href="#news") Новости
+						li.custom-dropdown__list-item
+							a(href="#games-similare") Похожие игры
+						li.custom-dropdown__list-item
+							a(href="#comments") Комментарии
+		
+		//======= список категорий на десктоп версиях =======
+		.nav-list
+			ul.page-nav
+				li.active
+					a(href="#game-descrip") Описание игры
+				
+				li 
+					a(href="#game-rules") Как играть
+				li 
+					a(href="#heros") Классы персонажей
+				li 
+					a(href="#location") Локации игры
+				li 
+					a(href="#gameplay") Геймплей
+				li 
+					a(href="#news") Новости
+				li 
+					a(href="#games-similare") Похожие игры
+				li 
+					a(href="#comments") Комментарии

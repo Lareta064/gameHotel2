@@ -10,7 +10,7 @@ block content
 	+header(menuItems)
 
 	//========= тег main =========
-	main.about-game-main.all-games-page
+	main.all-games-page.about-game-main
 		include ../sections/_header-slider
 		.page-content-wrapper.page-content-wrapper--games
 			.page-content-wrapper__img(data-aos="fade-up"    data-aos-duration="1500")
@@ -34,7 +34,7 @@ block content
 						.fake-offset#action-genres
 							.page-content-left__block
 								include ../sections/_one-game-similar-action
-					.page-content-right
+					.page-content-right.sticky-block
 						include ../sections/_one-game-aside
 		include ../sections/_one-game-category
 		include ../sections/_best-games

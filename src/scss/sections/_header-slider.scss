@@ -33,10 +33,22 @@
 		padding-left: 0;
 	}
 	@media(max-width:767px) {
-		padding-top: 16px;
+		padding-top: 24px;
+		padding-bottom: 24px;
 		.header-slider__bottom {
 			margin-top: 24px;
-			.game-news-cards--1365{width: calc(50% + 50vw);}
+			.game-news-cards--1365{
+				width: calc(50% + 50vw);
+				.card-light--pic.card-light {
+					padding: 12px;
+				}
+
+				.card-light--pic .card-light__img {
+					width: 64px;
+					height: 64px;
+					margin-right: 12px;
+				}
+			}
 			
 		}
 		.swiper-button-next:after,
@@ -50,6 +62,7 @@
 	.swiper-wrapper{padding-bottom: 0;}
 	@media(max-width:767px) {
 		width: 100%;
+		
 	}
 	
 	.swiper-slide .game-banner{
@@ -65,7 +78,7 @@
 			padding: 32px;
 		}
 		@media(max-width:767px) {
-			padding: 16px;
+			padding: 32px 16px;
 		}
 		&:after{
 			content: '';
@@ -86,13 +99,16 @@
 		@media(max-width:1023px){
 			height: 330px;
 		}
-		@media(max-width:767px) {
-			height: 200px;
-		}
+		// @media(max-width:767px) {
+		// 	height: 200px;
+		// }
 	}
 }
 .header-slider .header-slider__bottom {
 	margin-top: 56px;
+	@media(max-width:767px){
+		margin-top: 40px;
+	}
 	h4,
 	p {
 		transition: .3s;
@@ -117,10 +133,18 @@
 		}
 	}
 	.game-news-cards--1365 .card-grid-trio {
-		.card-light__details{padding-top: 12px;}
+		.card-light__details{
+			padding-top: 12px;
+			@media(max-width:767px){
+				padding-top: 4px;
+				font-size: 12px;
+			}
+		}
 		.card-light h4{
 			height: auto;
 			padding-bottom: 8px;
+			@media(max-width:767px){padding-bottom: 4px;}
+			&+p{font-size: 13px;}
 		}
 		@media(max-width:1364px){
 			display: flex;
@@ -128,6 +152,11 @@
 			
 			.swiper-slide{
 				min-height: 100%;
+			}
+		}
+		@media(max-width:424px) {
+			.swiper-slide{
+				padding-right: 20px;
 			}
 		}
 	}

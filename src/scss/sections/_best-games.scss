@@ -5,6 +5,7 @@
 	background-size: cover;
 	height: 700px;
 	background-repeat: no-repeat;
+	@media(max-width: 1023px) {height: 550px;}
 	.section-title {
 		color: #fff;
 	}
