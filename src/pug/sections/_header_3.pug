@@ -70,7 +70,21 @@ header.header.header--mob
 							li.current(data-role="Ru") Ru
 							li(data-role="En") En
 				//========mobile header search form toggle=====
-				.search-form-toggle.search-form-btn
+				.search-form-toggle.search-form-btn#mob-sf-toggle
+				
+				//===== поиск - модальное окно на моб версии ===========
+				.mobile-search-page#mob-sf-page
+					.page-modal__header
+						button.arrow-back#mob-sf-close
+						h3.text-16 Авторизация
+					.mobile-search-content
+						.sf-block
+							form.header-search-form(action="" method="method")
+								.form-field
+									input(type="text" placeholder="Введите название игры")
+								button(type="submit").form-btn.search-form-btn
+
+
 		//====LOGOUT=====
 		//.header-right
 			.login-block

@@ -311,7 +311,7 @@
 .picture-card {
 	position: relative;
 	border-radius: 16px;
-	width: 256px;
+	max-width: 256px;
 	height: 168px;
 	background-size: cover;
 	background-position: center;

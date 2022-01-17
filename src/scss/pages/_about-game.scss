@@ -33,7 +33,6 @@
 		overflow:hidden;
 		padding-top: 24px;
 		padding-bottom: 24px;
-		// padding: 24px 32px;
 		border-radius: 24px;
 		@media(max-width:1023px) {
 			border-radius: 16px;
@@ -244,7 +243,7 @@
 			line-height: 20px;
 			color: #0A0522;
 		}
-		h4{
+		.h4{
 			height: auto;
 			font-size: 14px;
 			line-height: 20px;
@@ -547,9 +546,7 @@ article .flex-header {
 	.single-game-page .page-content-wrapper .page-content-left__block {
 		padding-top: 0;
 	}
-	.single-game-page #games-similare {
-		padding-top: 68px;
-	}
+	
 	.all-games-page .cta .container{padding-left: 12px;
 	padding-right: 12px;}
 }

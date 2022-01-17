@@ -146,7 +146,16 @@
 		  opacity: .5;
 	  }
 	  @media(max-width:1199px){
-		  display: none!important;
+		  right: 16px;
+		  bottom: 125px;
+		  font-size: 12px;
+		  height: 24px;
+		  line-height: 24px;
+		  &:before{
+			width: 16px;
+			height: 16px;
+		  }
+		  
 	  }
   }
 .page-breadcrumb{

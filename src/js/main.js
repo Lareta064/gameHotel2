@@ -1437,4 +1437,30 @@ document.addEventListener("DOMContentLoaded", function (){
 			
 		}
 	}
+
+/*====== МОБИЛЬНОЕ ОКНО ПОИСКА =======*/
+const toggleMobSF = document.getElementById('mob-sf-toggle');
+if(toggleMobSF){
+	const mobileSFpage = document.getElementById('mob-sf-page');
+	const closeSFpage = document.getElementById('mob-sf-close');
+	
+	/*показать окно мобильного поиска игры*/
+	toggleMobSF.addEventListener('click', ()=>{
+		mobileSFpage.classList.add('active');
+		bodyEl.classList.add('noscroll');
+	});
+	
+	/*закрыть окно мобильного поиска игры*/
+	closeSFpage.addEventListener('click', ()=>{
+
+		mobileSFpage.classList.remove('active');
+		bodyEl.classList.remove('noscroll');
+
+	});
+
+}
+
+
+
+
 });
