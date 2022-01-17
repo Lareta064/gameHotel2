@@ -1,7 +1,44 @@
-.sidebar>* +*{
+.aside-buttons>* +*{
 	margin-top: 16px;
+}
+.aside-buttons{
+	margin-bottom: 24px;
+	@media(max-width:1023px){
+		display: flex;
+		&>*+* {
+			margin-top: 0;
+			margin-left: 12px;
+		}
+	}
+	.button{
+		@media(max-width:1023px) {
+			span > span{display: none;}
+			&.button--label{
+				background-color: $light;
+				color: $pr;
+				span+span {
+					background-color: #fff;
+					color: $pr;
+				}
+			}
+		}
+		@media(max-width:575px) {
+			font-size: 13px;
+			max-width: 160px;
+			text-align: center;
+		}
+	}
+	@media(max-width:1023px) {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
 }
 .sidebar .button{
 	text-align: center;
 	width: 100%;
+}
+.single-game-page .sidebar-content .nav-list {
+	@media(min-width:1024px){
+		border-radius: 16px;
+	}
 }

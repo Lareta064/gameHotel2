@@ -59,6 +59,18 @@ header.header.header--mob
 				a(href="#!")
 					svg(width="42" height="24")
 						use(xlink:href="./img/svg-sprite.svg#footer-logo")
+				
+				//======= выбор языка для моб версии ==========
+				.custom-select.custom-select--lang
+					.select-icon
+					.select-field
+						input(type="text" value="Ru" readonly)
+					.select-list
+						ul
+							li.current(data-role="Ru") Ru
+							li(data-role="En") En
+				//========mobile header search form toggle=====
+				.search-form-toggle.search-form-btn
 		//====LOGOUT=====
 		//.header-right
 			.login-block
@@ -69,8 +81,8 @@ header.header.header--mob
 		
 		//====LOGIN=====
 		.header-right
-			//========profile panel =====
 			.profile-panel
+				//========profile panel =====			
 				.profile-icon
 					.icon-notify
 						p.label

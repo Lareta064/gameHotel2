@@ -10,9 +10,23 @@ block content
 		.page-content-wrapper
 			.container.container--special
 				+breadcrumb('Главная','Игры', 'Axie Infinity')
+				
+				//===== заголовок страницы для мобильной версии ======
+				.about-game-header-mobile
+					header.about-game-header
+						.flex-header
+							.text-group
+								span.badge.badge--green 8.9
+								h1.main-title Axie Infinity
+						
+							.about-game__logo
+								img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
+				
+				//===== контент с колонками ======
 				.page-content-columns
 					.page-content-left
 						.page-content-left__block
+							//===== заголовок страницы для десктоп версии ======
 							include ../sections/_about-game-header
 							include ../sections/_about-game-description
 						.fake-offset#news
