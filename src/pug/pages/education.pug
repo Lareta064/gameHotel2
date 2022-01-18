@@ -7,10 +7,10 @@ block content
 	include ../sections/_aside-menu.pug
 	+header(menuItems)
 	
-	main.edu-page
+	main.edu-page.about-game-main
 		include ../sections/_header-slider-short
 		//=======end banner slider ========
-		.page-content-wrapper
+		.page-content-wrapper.page-content-wrapper--games
 			.container.container--special
 				.page-content-columns
 					.page-content-left
@@ -19,13 +19,14 @@ block content
 							.page-content-left__block
 								include ../sections/_ui-edu
 						
-						//- закомментировано из-за слайдера, повторние класса ломает ресайз слайдера
-						//- .fake-offset#card-genres
-						//- 	.page-content-left__block
-						//- 		include ../sections/_ui-edu   
+						//======ЭТОГО БЛОКА НЕТ НА МАКЕТЕ ДОБАВИЛА ДЛЯ ПРИМЕРА =============
+						.fake-offset#card-genres
+							.page-content-left__block
+								include ../sections/_ui-edu2
 						
-					.page-content-right
-						include ../sections/_aside-education
+					.page-content-right.sticky-block
+						include ../sections/_one-game-aside
+						//- include ../sections/_aside-education
 	//=======FOOTER========
 	include ../sections/_footer.pug
 	

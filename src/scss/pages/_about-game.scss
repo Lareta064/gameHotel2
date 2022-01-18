@@ -235,7 +235,7 @@
 		}
 	}
 	.card-light{
-		width: 250px;
+		max-width: 250px;
 		p{ 
 			-webkit-line-clamp: 4;
 			font-size: 14px;
@@ -396,6 +396,11 @@ article .flex-header {
 			}
 			
 		}
+	}
+}
+.edu-page,.all-games-page{
+	@media(min-width:1024px) and(max-width:1199px){
+		.page-content-wrapper--games .page-content-right{padding-top: 48px;}
 	}
 }
 /*======start whis us====*/

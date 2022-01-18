@@ -50,6 +50,14 @@ html(lang="ru")
 		
 		//======pageNav =====
 		script(src="./libs/nav.js")
+
+		//=========плавныйй скролл для сафари и ios ======
+		script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js")
+		script.
+			let scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 300
+			});
+		
 		//====== aos animation =======
 		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 		script.

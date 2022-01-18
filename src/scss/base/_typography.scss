@@ -59,7 +59,8 @@
 .text-16,
 .text-16 h2,
 .text-16 h3,
-.text-16 h4 {
+.text-16 h4,
+.text-16 p {
 	font-family: $ms;
 	font-size: 16px;
 	line-height: 1.5;
@@ -74,6 +75,7 @@
 	font-size: 15px;
 }
 .text-18,
+.text-18 p,
 .text-18 h2,
 .text-18 h3,
 .text-18 h4{

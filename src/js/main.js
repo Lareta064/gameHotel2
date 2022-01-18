@@ -390,17 +390,20 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		 /*  карточки игровые карты на стр одной игры*/
 		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
-			slidesPerView: 1.2,
-			grid: {
-				rows: 2,
-			},
-			spaceBetween: 24,
+			slidesPerView: 1.3,
+			// grid: {
+			// 	rows: 2,
+			// },
+			spaceBetween: 16,
 			pagination: {
 			el: ".game-cards-swiper-pagination",
 			clickable: true,
 			},
 			breakpoints: {
-
+				424: {
+					slidesPerView: 1.5,
+					spaceBetween: 16,
+				},
 				575: {
 					slidesPerView: 2,
 					spaceBetween: 24,
@@ -761,7 +764,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
-		/*======стр education карточки */		
+		/*======стр education карточки жанр 1 */		
 		swips.addSwiper(".edu-cards-sw1", "min-width:1024px", {
 			slidesPerView: 1.1,
 			spaceBetween: 20,
@@ -787,6 +790,69 @@ document.addEventListener("DOMContentLoaded", function (){
 				},
 				800:{
 					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/*======стр education карточки жанр 2 */		
+		swips.addSwiper(".edu-cards-sw2", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".edu-sw2-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+
+		/* стр одной новости - боковая панель с  последними новостями */
+		swips.addSwiper(".news-list-swiper", "min-width:1024px", {
+			slidesPerView: 1.2,
+			spaceBetween: 16,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".news-list-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				475: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.6,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.1,
 					spaceBetween: 16,
 				}
 
@@ -837,6 +903,10 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	loop: true,
 	breakpoints: {
+		424: {
+			slidesPerView: 1.3,
+			spaceBetween: 24,
+		},
 		575: {
 			slidesPerView: 1.5,
 			spaceBetween: 24,
@@ -1449,7 +1519,7 @@ if(toggleMobSF){
 		mobileSFpage.classList.add('active');
 		bodyEl.classList.add('noscroll');
 	});
-	
+
 	/*закрыть окно мобильного поиска игры*/
 	closeSFpage.addEventListener('click', ()=>{
 

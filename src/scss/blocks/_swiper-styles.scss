@@ -74,8 +74,7 @@
 	width: 100%;
 
 	@media(max-width:1023px) {
-		height: 420px;
-
+		
 		.swiper-slide {
 			height: calc((100% - 55px) / 2);
 		}

@@ -26,7 +26,7 @@
 			color: #fff;
 		}
 	}
-	h4{
+	h4, .h4{
 		font-family: $ms;
 		font-size: 15px;
 		line-height: 24px;
@@ -122,7 +122,7 @@
 		@media(max-width:767px) {
 			padding-right: 0;
 		}
-		h4{
+		h4, .h4{
 			font-size: 15px;
 			line-height: 24px;
 			font-family: $ms;
@@ -172,7 +172,7 @@
 	}
 	.persone-card__text{
 		flex-grow: 2;
-		h4{
+		h4, .h4{
 			font-size: 16px;
 			line-height: 1.5;
 			font-family: $ms;

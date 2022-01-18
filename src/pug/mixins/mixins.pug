@@ -37,7 +37,7 @@ mixin game-card-large(rang, title, text, imgSrc, logoSrc, badge, cardWidth)
 			.game-card__body
 				.game-card__title
 					span.badge.badge--green !{rang}
-					h4.text-15 !{title}
+					p.text-15 !{title}
 				p.text-14 !{text}
 			.game-card__footer
 				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
@@ -50,7 +50,7 @@ mixin game-card-category(imgSrc, title, type)
 		.simple-card__img
 			img(src="./img/games/"+ imgSrc +"-thumb.jpg", width="96" alt="alt")
 		.simple-card__info
-			h4.text-15 !{title}
+			p.text-15 !{title}
 			if type
 				p.text-13  #{type}
 			else	
@@ -66,7 +66,7 @@ mixin game-card-medium(rang, title, text,imgSrc, logoSrc, badge)
 			.game-card__body
 				.game-card__title
 					span.badge.badge--green !{rang}
-					h4.text-15 !{title}
+					p.text-15 !{title}
 				p.text-14 !{text}
 			.game-card__footer
 				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
