@@ -1,6 +1,6 @@
 .course-page
 	.course-page__content
-		//=====sidebar======
+		//===== выезжающий сайдбар======
 		.course-menu
 			//======= header Course menu sidebar =============
 			.course-menu-header
@@ -30,6 +30,17 @@
 								span 50%
 
 				include _edu-accor
+		
+		//==== left-panel=======
+		.course-frame-panel
+			.course-frame-panel__header
+				button.back-arrow--white
+					svg(width="24" height="24")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
+			.course-frame-panel__body
+				.course-frame-panel__btns
+					button.vert-lines
+					button.cross-btn.active
 		//==== main-frame=======
 		.course-frame
 			//==== header course-frame =======

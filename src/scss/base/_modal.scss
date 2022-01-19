@@ -150,20 +150,21 @@
 		&:hover{color: $pink;}
 	}
 }
-.large-modal .page-modal__header-btns{
-	.close-btn{
-	width: 24px;
-	height: 24px;
-	border-radius: 9px;
-	background-color: $light;
-	line-height: 24px;
-	text-align: center;
-	color: #788CAB;
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.25 1.8075L10.1925 0.75L6 4.9425L1.8075 0.75L0.75 1.8075L4.9425 6L0.75 10.1925L1.8075 11.25L6 7.0575L10.1925 11.25L11.25 10.1925L7.0575 6L11.25 1.8075Z' fill='%23788CAB'/%3e%3c/svg%3e");
-	@include pos;
+
+.large-modal .page-modal__header-btns .close-btn {
 	
-		cursor:pointer;
-	}
+		width: 24px;
+		height: 24px;
+		border-radius: 9px;
+		background-color: $light;
+		line-height: 24px;
+		text-align: center;
+		color: #788CAB;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.25 1.8075L10.1925 0.75L6 4.9425L1.8075 0.75L0.75 1.8075L4.9425 6L0.75 10.1925L1.8075 11.25L6 7.0575L10.1925 11.25L11.25 10.1925L7.0575 6L11.25 1.8075Z' fill='%23788CAB'/%3e%3c/svg%3e");
+		@include pos;
+
+		cursor: pointer;
+	
 }
 .large-modal .large-modal-dialog {
 .page-modal__body{
