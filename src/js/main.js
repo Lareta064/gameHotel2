@@ -1540,9 +1540,11 @@ if(toggleMobSF){
 			if(this.classList.contains('active')){
 				lessonSedebar.classList.remove('active');
 				this.classList.remove('active');
+				overlayBg.classList.remove('active');
 			}else{
 				lessonSedebar.classList.add('active');
 				this.classList.add('active');
+				overlayBg.classList.add('active');
 			}
 		});
 

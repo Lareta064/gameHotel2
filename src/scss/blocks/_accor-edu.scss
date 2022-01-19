@@ -10,6 +10,7 @@
 	}
 	.acor-container .acor-container-block .acor-arrow{
 		margin-right: 16px;
+		flex-shrink: 0;
 	}
 	.acor-header .text-14{
 		padding-top: 4px;
@@ -32,6 +33,13 @@
 			height: 16px;
 			line-height: 16px;
 			font-size: 12px;
+			white-space:nowrap
+		}
+		@media(max-width:424px){
+			&>*+* {
+				margin-left: 8px;
+			}
+			.badge{padding-left: 7px;padding-right: 7px;}
 		}
 	}
 	.theme-list__deskrip{
@@ -70,6 +78,10 @@
 	}
 	.theme-list__item{
 		padding: 16px;
+		@media(max-width:424px) {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
 	}
 	.theme-list__item.active {
 		.theme-list__header .text-13{font-family: $ms;}
