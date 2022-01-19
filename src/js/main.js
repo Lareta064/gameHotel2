@@ -1548,6 +1548,11 @@ if(toggleMobSF){
 			}
 		});
 
+		overlayBg.addEventListener('click', function(e){
+			lessonSedebar.classList.remove('active');
+			this.classList.remove('active');
+			lessonSedebarToggle.classList.remove('active');
+		});
 	}
 
 
