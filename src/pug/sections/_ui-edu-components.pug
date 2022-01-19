@@ -1,15 +1,9 @@
 .course-page
 	.course-page__content
 		//===== выезжающий сайдбар======
-		.course-menu
+		.course-menu#course-sidebar
 			//======= header Course menu sidebar =============
-			.course-menu-header
-				.course-menu-header__left
-					a(href="#!").arrow-back
-					.course-menu-game.text-16
-						p Axie Infinity
-				.course-menu-header__right
-					.badge.badge--light Базовый курс
+			
 			.course-menu-body
 				.course-menu-top
 					.course-menu-left
@@ -38,36 +32,37 @@
 					svg(width="24" height="24")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
 			.course-frame-panel__body
-				.course-frame-panel__btns
+				.course-frame-panel__btns#course-sidebar-toggle
 					button.vert-lines
-					button.cross-btn.active
+					button.cross-btn
 		//==== main-frame=======
 		.course-frame
 			//==== header course-frame =======
 			.header
-				.flex-content
-					.header-title.text-16.text-bold
-						p Вебинар
-					.header-col.d-flex
-						.header-col__box
-							a(href="#!").button.button-light.button--flex
-								span.support-icon
-								span Помощь
-						
-						.header-right
-							.profile-panel
-								.profile-icon
-									.icon-notify
-										p.label
-											span 2
-								.profile-persone
-									.profile-persone__img
-										img(src="./img/ava.png", width="38" alt="ava")
-									.profile-persone__arrow#profile-arrow
-										svg(width="10" height="6")
-											use(xlink:href="./img/svg-sprite.svg#iconArr")
-									.profile-persone__row
-										p 0x...263a
+				.container
+					.flex-content
+						.header-title.text-16.text-bold
+							p Вебинар
+						.header-col.d-flex
+							.header-col__box
+								a(href="#!").button.button-light.button--flex
+									span.support-icon
+									span Помощь
+							
+							.header-right
+								.profile-panel
+									.profile-icon
+										.icon-notify
+											p.label
+												span 2
+									.profile-persone
+										.profile-persone__img
+											img(src="./img/ava.png", width="38" alt="ava")
+										.profile-persone__arrow#profile-arrow
+											svg(width="10" height="6")
+												use(xlink:href="./img/svg-sprite.svg#iconArr")
+										.profile-persone__row
+											p 0x...263a
 
 			//==== body course-frame =======
 			.course-frame-body
@@ -118,23 +113,24 @@
 			
 			//==== footer #1 course-frame =======
 			.course-frame-footer
-				.flex-content
-					.course-frame-left
-						//=============   оценить урок: есть скрипт, который меняет цвет иконки , одновременно нельзя поставить и лайк и дизлайк. Цвет иконки меняется при переключении у дива с атрибутом  data-clicked с false на  true  ============================
-						.course-rate
-							.text-14
-								p Вам понравилось?
-							.light-rate
-								.light-rate__like(data-clicked="false")
-									span.icon-like
-								.light-rate__dislike(data-clicked="false")
-									span.icon-dislike
-					.course-frame-header__right
-						.text-group
-							a(href="#!").text-14 Enter
-							.text-14
-								p или
-							a(href="#!").button.button--color.button--flex
-								span Продолжить
-								svg(width="16" height="16")
-									use(xlink:href="./img/svg-sprite.svg#arrRight")
+				.container
+					.flex-content
+						.course-frame-left
+							//=============   оценить урок: есть скрипт, который меняет цвет иконки , одновременно нельзя поставить и лайк и дизлайк. Цвет иконки меняется при переключении у дива с атрибутом  data-clicked с false на  true  ============================
+							.course-rate
+								.text-14
+									p Вам понравилось?
+								.light-rate
+									.light-rate__like(data-clicked="false")
+										span.icon-like
+									.light-rate__dislike(data-clicked="false")
+										span.icon-dislike
+						.course-frame-header__right
+							.text-group
+								a(href="#!").text-14 Enter
+								.text-14
+									p или
+								a(href="#!").button.button--color.button--flex
+									span Продолжить
+									svg(width="16" height="16")
+										use(xlink:href="./img/svg-sprite.svg#arrRight")

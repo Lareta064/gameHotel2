@@ -1530,6 +1530,23 @@ if(toggleMobSF){
 
 }
 
+/*=======боковая панель на странице урока курса */
+	const lessonSedebar = document.getElementById('course-sidebar');
+	
+	if(lessonSedebar){
+		const lessonSedebarToggle = document.getElementById('course-sidebar-toggle');
+		lessonSedebarToggle.addEventListener('click', function(e){
+			
+			if(this.classList.contains('active')){
+				lessonSedebar.classList.remove('active');
+				this.classList.remove('active');
+			}else{
+				lessonSedebar.classList.add('active');
+				this.classList.add('active');
+			}
+		});
+
+	}
 
 
 
