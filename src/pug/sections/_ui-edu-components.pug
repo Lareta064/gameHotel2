@@ -42,6 +42,7 @@
 				.container
 					.flex-content
 						.header-title.text-16.text-bold
+							.icon-webinar
 							p Вебинар
 						.header-col.d-flex
 							.header-col__box
@@ -111,26 +112,11 @@
 
 					
 			
-			//==== footer #1 course-frame =======
+			//==== footer course-frame =======
 			.course-frame-footer
 				.container
-					.flex-content
-						.course-frame-left
-							//=============   оценить урок: есть скрипт, который меняет цвет иконки , одновременно нельзя поставить и лайк и дизлайк. Цвет иконки меняется при переключении у дива с атрибутом  data-clicked с false на  true  ============================
-							.course-rate
-								.text-14
-									p Вам понравилось?
-								.light-rate
-									.light-rate__like(data-clicked="false")
-										span.icon-like
-									.light-rate__dislike(data-clicked="false")
-										span.icon-dislike
-						.course-frame-header__right
-							.text-group
-								a(href="#!").text-14 Enter
-								.text-14
-									p или
-								a(href="#!").button.button--color.button--flex
-									span Продолжить
-									svg(width="16" height="16")
-										use(xlink:href="./img/svg-sprite.svg#arrRight")
+					.center-wrapper
+						a(href="#!").button.button--color.button--flex
+							span Далее
+							svg(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#arrRight")

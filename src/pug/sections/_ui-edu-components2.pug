@@ -1,15 +1,10 @@
+#overlay
 .course-page
 	.course-page__content
-		//=====sidebar======
-		.course-menu
+		//===== выезжающий сайдбар======
+		.course-menu#course-sidebar
 			//======= header Course menu sidebar =============
-			.course-menu-header
-				.course-menu-header__left
-					a(href="#!").arrow-back
-					.course-menu-game.text-16
-						p Axie Infinity
-				.course-menu-header__right
-					.badge.badge--light Базовый курс
+			
 			.course-menu-body
 				.course-menu-top
 					.course-menu-left
@@ -29,34 +24,47 @@
 							.progress-block-bar
 								span 50%
 
-				include _edu-accor
+				include ../sections/_edu-accor
+		
+		//==== left-panel=======
+		.course-frame-panel
+			.course-frame-panel__header
+				button.back-arrow--white
+					svg(width="24" height="24")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
+			.course-frame-panel__body
+				.course-frame-panel__btns#course-sidebar-toggle
+					button.vert-lines
+					button.cross-btn
 		//==== main-frame=======
 		.course-frame
 			//==== header course-frame =======
 			.header
-				.flex-content
-					.header-title.text-16.text-bold
-						p Вебинар
-					.header-col.d-flex
-						.header-col__box
-							a(href="#!").button.button-light.button--flex
-								span.support-icon
-								span Помощь
-						
-						.header-right
-							.profile-panel
-								.profile-icon
-									.icon-notify
-										p.label
-											span 2
-								.profile-persone
-									.profile-persone__img
-										img(src="./img/ava.png", width="38" alt="ava")
-									.profile-persone__arrow#profile-arrow
-										svg(width="10" height="6")
-											use(xlink:href="./img/svg-sprite.svg#iconArr")
-									.profile-persone__row
-										p 0x...263a
+				.container
+					.flex-content
+						.header-title.text-16.text-bold
+							.icon-videolesson
+							p Видео-урок
+						.header-col.d-flex
+							.header-col__box
+								a(href="#!").button.button-light.button--flex.button-support
+									span.support-icon
+									span Помощь
+							
+							.header-right
+								.profile-panel
+									.profile-icon
+										.icon-notify
+											p.label
+												span 2
+									.profile-persone
+										.profile-persone__img
+											img(src="./img/ava.png", width="38" alt="ava")
+										.profile-persone__arrow#profile-arrow
+											svg(width="10" height="6")
+												use(xlink:href="./img/svg-sprite.svg#iconArr")
+										.profile-persone__row
+											p 0x...263a
 
 			//==== body course-frame =======
 			.course-frame-body
@@ -67,9 +75,9 @@
 						//====блок-затемнение  ========
 						.course-frame-player__overlay
 							//===========кнопка Play временно скрыта через display: none. Если этому диву добавить класс visible - кнопка станет видна ==============
-							.video-play-btn
+							.video-play-btn.visible
 							//=========== блок с песочными часами - виден из-за класса visible Если этот класс удалить, то блок  скроется  ==============
-							.waiting-block.visible
+							.waiting-block
 								.icon-clock
 								.text-14.text-bold
 									p Через 10 минут
@@ -103,52 +111,13 @@
 									.text-15
 										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet tellus eu nibh finibus dictum. Integer aliquam rhoncus pulvinar. Phasellus a neque vel mauris lobortis eleifend a a tellus.
 
-					//===========блок под видео: Посмотрите видео и ответьте на вопрос ===============
-					.course-frame-text__block
-						.course-frame-text__header
-							.text-16
-								p Как вы видите решение проблемы из видео?
-						.course-frame-text__body
-							.text-14.course-frame-text__title
-								p #[span +1 балл эксперта] за правильный ответ
-							.flex-wrapper
-								.comments-block__avatar(style="background-image: url(./img/comment1.jpg")
-								//=======форма для заметки ===========
-								form.note-form(action="" method="method")
-									.form-field.form-field--textarea
-										textarea(type="text" required placeholder="Введите ответ")
-										button(type="submit").form-btn.send-btn
+					
 			
-			//==== footer #1 course-frame =======
+			//==== footer=======
 			.course-frame-footer
-				.flex-content
-					.course-frame-left
-						//=============   оценить урок: есть скрипт, который меняет цвет иконки , одновременно нельзя поставить и лайк и дизлайк. Цвет иконки меняется при переключении у дива с атрибутом  data-clicked с false на  true  ============================
-						.course-rate
-							.text-14
-								p Вам понравилось?
-							.light-rate
-								.light-rate__like(data-clicked="false")
-									span.icon-like
-								.light-rate__dislike(data-clicked="false")
-									span.icon-dislike
-					.course-frame-header__right
-						.text-group
-							a(href="#!").text-14 Enter
-							.text-14
-								p или
-							a(href="#!").button.button--color.button--flex
-								span Продолжить
-								svg(width="16" height="16")
-									use(xlink:href="./img/svg-sprite.svg#arrRight")
-
-			//==== footer#2  без выставления оценки лак/дизлайк =======
-			//- .course-frame-footer
-			//- 	.flex-content
-			//- 		.course-frame-header__right
-			//- 			.text-group
-			//- 				a(href="#!").button.button-light Пропустить
-			//- 				a(href="#!").button.button--color.button--flex
-			//- 					span Продолжить
-			//- 					svg(width="16" height="16")
-			//- 						use(xlink:href="./img/svg-sprite.svg#arrRight")
+				.container
+					.center-wrapper
+						a(href="#!").button.button--color.button--flex
+							span Далее
+							svg(width="16" height="16")
+								use(xlink:href="./img/svg-sprite.svg#arrRight")

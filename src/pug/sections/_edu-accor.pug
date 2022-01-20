@@ -20,13 +20,10 @@
 						.text-14
 							p Операторы. Переменные. Типы данных
 					.course-menu__theme-list
-						//=============================================================
-							в зависимости от модификатора ( &--task, &--test, &--video) , который добавляется к основному классу .theme-list__item, через css  меняется иконка в шапке элемента. если нет никакого модификатора, то по умолчанию иконка - вебинара.  	Наличие дополнительного  класса active ,  отличает активную карточку от других 
-							===============================================================
 						//======== theme-list__item.active ======
 						.theme-list__item.active
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-webinar
 								.text-13
 									p Вебинар
 								.badge.badge--light через 10 мин
@@ -36,9 +33,9 @@
 									p Поиск, собеседование, выбор сотрудника.
 						
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--task
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-task
 								.text-13
 									p Задание
 								.mark-circle
@@ -47,9 +44,9 @@
 									p Поиск, собеседование, выбор сотрудника.
 						
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--video
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-videolesson
 								.text-13
 									p Видео урок
 								.badge.badge--light 20 мин
@@ -58,9 +55,9 @@
 								.text-13
 									p Поиск, собеседование, выбор сотрудника.
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--test
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-test
 								.text-13
 									p Тест
 								.badge.badge--light 20 мин
@@ -120,7 +117,7 @@
 						//======== theme-list__item.active ======
 						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-webinar
 								.text-13
 									p Вебинар
 								.badge.badge--light через 10 мин
@@ -130,8 +127,9 @@
 									p Поиск, собеседование, выбор сотрудника.
 						
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--task
+						.theme-list__item
 							.theme-list__header
+								.icon-task
 								.theme-list__header__icon
 								.text-13
 									p Задание
@@ -141,9 +139,9 @@
 									p Поиск, собеседование, выбор сотрудника.
 						
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--video
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-videolesson
 								.text-13
 									p Видео урок
 								.badge.badge--light 20 мин
@@ -152,9 +150,9 @@
 								.text-13
 									p Поиск, собеседование, выбор сотрудника.
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--test
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-test
 								.text-13
 									p Тест
 								.badge.badge--light 20 мин
@@ -206,6 +204,7 @@
 						.theme-list__item
 							.theme-list__header
 								.theme-list__header__icon
+								.icon-webinar
 								.text-13
 									p Вебинар
 								.badge.badge--light через 10 мин
@@ -215,9 +214,9 @@
 									p Поиск, собеседование, выбор сотрудника.
 						
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--task
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-task
 								.text-13
 									p Задание
 								.mark-circle
@@ -226,9 +225,9 @@
 									p Поиск, собеседование, выбор сотрудника.
 						
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--video
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-videolesson
 								.text-13
 									p Видео урок
 								.badge.badge--light 20 мин
@@ -237,9 +236,9 @@
 								.text-13
 									p Поиск, собеседование, выбор сотрудника.
 						//======== theme-list__item ======
-						.theme-list__item.theme-list__item--test
+						.theme-list__item
 							.theme-list__header
-								.theme-list__header__icon
+								.icon-test
 								.text-13
 									p Тест
 								.badge.badge--light 20 мин
