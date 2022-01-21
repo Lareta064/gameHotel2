@@ -5,6 +5,8 @@
 	background-repeat: no-repeat;
 	height:450px;
 	color: #fff;
+	padding-top: 120px;
+	padding-bottom:120px;
 	.profile-header-left{
 		@media(max-width:767px){
 			flex-direction: column;
@@ -41,32 +43,45 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		.person-statistics{margin-top: 52px;
+		height: 100%;
+		.person-statistics{margin-top: auto;
 		@media(max-width:1023px) {
 			margin-top: 0;
-			margin-left: auto;
-			margin-right: 48px;
+			
+			
 		}
 		@media(max-width:767px) {
 			margin-right: 0;
 			margin-left: 0;
+			
 			
 		}
 		}
 		@media(max-width:1023px) {
 			flex-direction: row-reverse;
 			width: 100%;
-			justify-content: space-between;
+			justify-content: center;
+			.profile-header-label {
+				margin-left: 80px;
+			}
 		}
 		@media(max-width:767px) {
 			flex-direction: column;
 			align-items: center;
+			height:auto;
+			justify-content: space-between;
+			.profile-header-label {
+				margin-left: 0;
+			}
 		}
 	}
 	@media(max-width:1599px){
 		height: 320px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+
 	}
-	@media(max-width:1199px) {
+	@media(max-width:1023px) {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
@@ -99,9 +114,12 @@
 }
 .profile-header-title{
 	.bottom-block{
-		margin-top: 46px;
-		@media(max-width:1199px) {
+		margin-top: 80px;
+		@media(max-width:1599px) {
 			margin-top: 32px;
+		}
+		@media(max-width:1199px) {
+			margin-top: 46px;
 		}
 	}
 	.text-16 p {
@@ -119,7 +137,14 @@
 		font-size: 24px;
 	}
 	.top-block-group{
-		.top-block-col{display: flex; align-items: center;}
+		.top-block-col {
+			display: flex;
+			align-items: center;
+
+			&>*+* {
+				margin-left: 24px;
+			}
+		}
 		&>*+*{margin-left: 24px;}
 		@media(max-width:767px){
 			flex-wrap:wrap;
@@ -179,9 +204,12 @@
 		overflow: hidden;
 		margin-right: 12px;
 	}
-	.profile-label__title {
-		color: #0A0522;
+	.gh-title p {		
 		margin-right: 8px;
+		font-family: "Montserrat Semibold";
+		font-size: 16px;
+		line-height: 1.5;
+		color: #0A0522;
 	}
 	@media(max-width:767px){
 		padding: 4px 12px;
@@ -197,4 +225,17 @@
 	@include pos;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.5003 1.83333L5.50033 11.8333L0.916992 7.24999L2.09199 6.07499L5.50033 9.47499L14.3253 0.658325L15.5003 1.83333Z' fill='white'/%3e%3c/svg%3e");
 	background-size: 70%;
+}
+.gh-title{
+	display: flex;
+	align-items: center;
+}
+.profile-header-title{
+	.gh-title {
+		.icon-check{width: 20px;height:20px; margin-left: 18px;}
+	}
+}
+.button-chat{display: inline-flex; justify-content: center;align-items: center;}
+.profile-header-title .flex-wrapper{
+	.button + .button{margin-left: 24px;}
 }

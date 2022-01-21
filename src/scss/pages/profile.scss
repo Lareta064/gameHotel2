@@ -1,4 +1,6 @@
 .certificate-card--mini{
+	width: 100%;
+	max-width: 260px;
 	.certificate-card__header{
 		margin-bottom: 12px;
 	}
@@ -191,10 +193,13 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	&>*+*{margin-left: 12px;}
 }
 .content-block{
-	padding: 18px 24px;
+	padding: 20px 24px;
 	background-color: #fff;
 	border-radius: 24px;
 	&+.content-block{margin-top: 20px;}
+}
+.content-block--border {
+	border: 1px solid #D4E5FF;
 }
 .person-statistics{
 	display: flex;
@@ -221,4 +226,56 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 		margin-bottom: -2px;
 	}
 	
+}
+.profile-main{
+	
+	background-color: $light;
+	padding-top: 48px;
+	padding-bottom: 48px;
+	&-left{
+		width: 29%;
+	}
+	&-right {
+		width: 68%;
+		max-width: 792px;
+	}
+	.profile-sidebar{
+		.flex-header{
+			margin-bottom: 16px;
+			span {
+				font-family: $mr;
+				margin-left: 12px;
+				color: #3B4E6A;
+			}
+			.text-13 {
+				color: #3B4E6A;
+			}
+		}
+	}
+}
+.profile-main-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.course-card{
+	padding: 20px;
+	border-radius: 12px;
+	display: flex;
+	max-width:304px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $light;
+	.course-card-left .text-14{
+		margin-top: 4px;
+		.badge-sale{margin-left: 8px; font-family: $mr;}
+	}
+	& +.course-card{ margin-top: 20px;}
+}
+.profile-tabs{
+	.tabs-wrapper{
+		border: none;
+	} .tabs-wrapper .tabs-header {
+		border-top:none;
+	}
+	.tabs-content{padding-left: 16px; padding-right: 16px;}
 }

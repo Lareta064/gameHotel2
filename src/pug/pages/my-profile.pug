@@ -1,10 +1,20 @@
-extends ../layouts/layout-light.pug
+extends ../layouts/layout.pug
 
 block content
+	- var menuItems = ([{link: '#', text: 'Мой профиль', addCl:'active'}, {link: '#', text: 'Обучение'}, {link: '#', text: 'Финансы'}, {link: '#', text: 'Блог'}, {link: '#', text: 'Комментарии'} , {link: '#', text: 'Настройки'}]);
+	
 	#overlay
-	include ../sections/_profile-ui
-	
-	
+	+fix-bottom-menu('Мой профиль',  'Обучение', 'Финансы', 'Блог', 'Комментарии', 'Настройки')
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+	include ../sections/_aside-menu.pug
+	main.profile-page
+		include ../sections/_profile-header1.pug
+		include ../sections/_profile-content1.pug
+	//=======FOOTER========
+	include ../sections/_footer.pug
 	
 block variables
 	-var title = "My Profile";
+
+	
