@@ -496,6 +496,14 @@ article .flex-header {
 		}
 	}
 }
+.about-game-main{
+	.custom-dropdown.dropdown-menu{
+		.custom-dropdown__wrapper,.custom-dropdown__field {
+			
+			border: 1px solid #D4DFF1;
+		}
+	}
+}
 /*dropdown-menu*/
 .custom-dropdown.dropdown-menu {
 	background-color: #fff;
@@ -504,10 +512,10 @@ article .flex-header {
 	 .custom-dropdown__field{
 		height: 40px;
 		line-height: 38px;
-		border: 1px solid #D4DFF1;
+		// border: 1px solid #D4DFF1;
 	}
 	.custom-dropdown__wrapper{
-		border: 1px solid #D4DFF1;
+		// border: 1px solid #D4DFF1;
 		border-radius: 9px;
 		padding: 4px;
 		

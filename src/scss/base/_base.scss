@@ -282,10 +282,15 @@
 		padding-right: 0;
 	}
 }
+.flex-center,
 .flex-wrapper,
 .center-wrapper{
 	display: flex;
 	justify-content: center;
+}
+.flex-center{
+	align-items: center;
+	justify-content: flex-start;
 }
 .flex-wrapper{
 	justify-content: flex-start;

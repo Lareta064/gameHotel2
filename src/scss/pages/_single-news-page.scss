@@ -29,7 +29,10 @@
 	figcaption{margin-top: 12px;}
 }
 .article-text-badge{
-	margin-top: 24px;
+	// margin-top: 24px;
+	display: inline-flex;
+	align-items: center;
+	.badge + .badge{margin-left: 16px;}
 	.badge{
 		height: 26px;
 		line-height: 26px;
@@ -37,13 +40,15 @@
 		align-items: center;
 		padding-left: 8px;
 		padding-right: 8px;
-		.icon-chat{
+		.icon-share,.icon-chat {
 			transform: scale(.7);
 			margin-right: 9px;
 			
 		}
 	}
 }
+.article-text .article-text-badge {
+	margin-top: 24px;}
 .news-item{
 	transition: .3s;
 	.text-13{
