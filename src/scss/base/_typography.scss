@@ -32,6 +32,9 @@
 	font-size: 36px;
 	line-height: 1.22;
 	font-family: $ms;
+	@media(max-width:1199px){
+		font-size: 28px;
+	}
 }
 .section-title--special {
 	font-family: $mr;
