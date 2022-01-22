@@ -92,7 +92,15 @@
 }
 /*******profile-tabs*******/
 .profile-tabs{
-	.tabs-wrapper .tabs .tab{background-color: #fff;}
+	.comments-block__avatar{
+		background: linear-gradient(48.44deg, #FFE3F9 24.75%, #E2D8FF 74.59%);
+	}
+	padding-top: 24px;
+	.tabs-wrapper .tabs .tab{background-color: #fff;
+	 @media(max-width:767px) {
+	 	padding-left: 18px;
+		 padding-right: 18px;
+	 }}
 	.tabs-wrapper .tabs .tab p:after{height: 4px; bottom: 0;}
 	.tabs-content{
 		padding-top: 24px;
@@ -122,6 +130,7 @@
 	
 }
 .profile-post-ava{
+	background: linear-gradient(270deg, #7256FF 0%, #26B783 100%);
 	height: 44px;
 	width: 44px;
 	border: 1px solid #D8E1EF;
@@ -300,13 +309,34 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 .profile-tabs{
 	.tabs-wrapper{
 		border: none;
-	} .tabs-wrapper .tabs-header {
+	} 
+	.tabs-wrapper .tabs-header {
 		border-top:none;
-		@media(max-width:767px){
-			width:calc(100% + 12px);
+		
+	}
+	.tabs-content{
+		padding-left: 0; 
+		padding-right: 0;
+		position: relative;
+		&:before{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 24px;
+			background-color: #fff;
+			
 		}
 	}
-	.tabs-content{padding-left: 16px; padding-right: 16px;}
+	.tab-item{
+		.content-block:first-child{
+			border-radius: 0 0 16px 16px;
+			@media(max-width:767px) {
+				border-radius: 0 0 12px 12px;
+			}
+		}
+	}
 }
 .profile-main-left__mobile{
 	display: none;
@@ -443,14 +473,41 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 		@media(max-width:767px){border-radius: 12px}
 		
 	}
-	.button{
-		position: absolute;
-		display: inline-block;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 3;
-		color: $pr;
-		// opacity: 0;
+	
+}
+.post-link{
+.post-link__title {
+	text-align: center;
+	width: 95%;
+	max-width: 540px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	display: inline-block;
+	p, h2, h3, h4, h4 {
+		color: #fff;
+		font-size: 28px;
+		line-height: 1.4;
+		font-family: $ms;
+			@media(max-width:1279px) {
+				font-size: 24px;
+			}
+		@media(max-width:767px){
+			font-size: 19px;
+		}
 	}
+
+	.button {
+		display: inline-block;
+		color: $pr;
+		margin-top: 40px;
+		@media(max-width:767px) {
+			margin-top: 16px;
+			height: 36px;
+			line-height: 36px;
+		}
+	}
+}
 }
