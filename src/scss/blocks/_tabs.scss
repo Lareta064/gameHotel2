@@ -35,7 +35,11 @@
 	border-radius: 16px 0 0 0;
 	overflow: hidden;
 	display: flex;
-
+	overflow-x: auto;
+	scrollbar-width: none ;
+	&::-webkit-scrollbar{
+		display: none;
+	};
 	.tab p {
 		pointer-events: none;
 	}

@@ -3,7 +3,13 @@
 		.profile-main-wrapper
 			//==========ЛЕВАЯ КОЛОНКА ==========
 			.profile-main-left
-				.profile-sidebar
+				//====панелька для моб версии ========
+				.profile-main-left__mobile
+					.course-frame-panel__btns#toggle-panel
+						button.vert-lines
+						button.cross-btn
+				
+				.profile-sidebar#sidebar-panel
 					//======курсы ======
 					.content-block
 						.flex-header
@@ -26,7 +32,7 @@
 									.text-14.text-bold
 										p Axie Infinity #[span.badge.badge-sale 20%]
 								.course-card-logo
-									img(src="./img/games/axie-logo.png", width="80" alt="alt")
+									img(src="./img/games/jojo-logo.png", width="80" alt="alt")
 							
 							.course-card
 									.course-card-left
@@ -35,7 +41,7 @@
 										.text-14.text-bold
 											p Axie Infinity #[span.badge.badge-sale 20%]
 									.course-card-logo
-										img(src="./img/games/axie-logo.png", width="80" alt="alt")
+										img(src="./img/games/fara-logo.png", width="80" alt="alt")
 					
 					//======сертификаты ======
 					.content-block
@@ -265,12 +271,11 @@
 																		span.rating-value 20
 								
 								.tab-item
-									h1 tab2
+									h1 Контент для вкладки Статьи
 									
 								
 								.tab-item
-									h1 tab3
-
+									h1 Контент для вкладки Комментарии
 				
 				//==========блок под табами ===========
 				.content-block
