@@ -25,7 +25,9 @@
 .tabs-wrapper .tab-options {
 	display: flex;
 	align-items: center;
-
+	.custom-dropdown.dropdown-menu{
+		z-index: 2;/*иначе на десктопах выше выпадашки все игры*/
+	}
 	&>*+* {
 		margin-left: 16px;
 	}

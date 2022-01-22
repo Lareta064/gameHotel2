@@ -232,6 +232,30 @@
 												.form-field-icon
 												input(type="text" required placeholder="Комментарий...")
 												button(type="submit").form-btn.send-btn
+									
+									//================ comments filter===============
+									.simple-filter
+										span Сначала
+										.custom-select.custom-select--abs.custom-select--light
+											.select-icon
+												svg(width="10" height="6")
+													use(xlink:href="./img/svg-sprite.svg#iconArr")
+											.select-field
+												input(type="text" value="популярные" readonly)
+											.select-list.select-list--flex
+												ul
+													li.current(data-role="популярные") популярные
+													
+													li(data-role="новые")
+														span новые
+														
+													li(data-role="старые")
+														span старые
+														
+													li(data-role="другие")
+														span другие
+													
+									//================end filter ====================
 									.comments-block-tree
 										ul
 											//====== один комментарий ====
