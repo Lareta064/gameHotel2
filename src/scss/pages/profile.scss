@@ -134,7 +134,9 @@
 .profile-post__body{
 	padding-bottom: 24px;
 	padding-top: 24px;
-	img{border-radius: 24px;}
+	img{border-radius: 16px;
+		@media(max-width:767px){border-radius: 12px}
+	}
 	p{
 		font-size: 15px;
 		line-height: 24px;
@@ -414,4 +416,41 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 .simple-filter{
 	padding-top: 24px;
 }
+}
+.post-link{
+	width: fit-content;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 16px;
+	img{transition: .5s;}
+	&:hover{
+		img{
+			transform: scale(1.03);
+		}
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #0A0522;
+		opacity: 0.6;
+		border-radius: 16px;
+		z-index: 2;
+		@media(max-width:767px){border-radius: 12px}
+		
+	}
+	.button{
+		position: absolute;
+		display: inline-block;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		color: $pr;
+		// opacity: 0;
+	}
 }
