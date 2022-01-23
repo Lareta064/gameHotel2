@@ -10,72 +10,27 @@
 						button.cross-btn
 				
 				.profile-sidebar#sidebar-panel
-					//======курсы ======
+					//====== участие в играх ======
 					.content-block
 						.flex-header
 							.text-15
-								p Курсы #[span 1]
-						
-						.person-courses
-							.course-card
-								.course-card-left
-									.text-13
-										p Курс для Pro
-									.text-14.text-bold
-										p Axie Infinity #[span.badge.badge-sale 20%]
-								.course-card-logo
+								p Участие в играх#[span 9]
+							.text-13
+								a(href="#") Все игры
+						.particip-games
+							.mini-card
+								.mini-card-logo
 									img(src="./img/games/axie-logo.png", width="80" alt="alt")
-							.course-card
-								.course-card-left
-									.text-13
-										p Курс для Pro
-									.text-14.text-bold
-										p Axie Infinity #[span.badge.badge-sale 20%]
-								.course-card-logo
-									img(src="./img/games/jojo-logo.png", width="80" alt="alt")
-							
-							.course-card
-									.course-card-left
-										.text-13
-											p Курс для Pro
-										.text-14.text-bold
-											p Axie Infinity #[span.badge.badge-sale 20%]
-									.course-card-logo
-										img(src="./img/games/fara-logo.png", width="80" alt="alt")
+							.mini-card
+								.mini-card-logo
+									img(src="./img/games/fara-logo.png", width="80" alt="alt")
+							.mini-card
+								.mini-card-logo
+									img(src="./img/games/ember-logo.png", width="80" alt="alt")
+							.mini-card
+								.mini-card-logo
+									img(src="./img/games/monsta-logo.png", width="80" alt="alt")
 					
-					//======сертификаты ======
-					.content-block
-						.flex-header
-							.text-15
-								p Сертификаты #[span 3]
-							
-						.person-sertificates
-							//======карточка сертификата ========
-							.certificate-card.certificate-card--mini.certificate-card--lux
-								.certificate-card__header
-									img(src="./img/games/axie-logo.png", width="80" alt="alt")
-								.certificate-card__body
-									.certificate-card__title
-										img(src="./img/sertificate/lux.svg", height="72" alt="alt")
-										p LUX
-							
-							//======карточка сертификата ========
-							.certificate-card.certificate-card--mini.certificate-card--comfort
-								.certificate-card__header
-									img(src="./img/games/axie-logo.png", width="80" alt="alt")
-								.certificate-card__body
-									.certificate-card__title
-										img(src="./img/sertificate/comfort.svg", height="72" alt="alt")
-										p  Comfort
-									
-							//======карточка сертификата ========
-							.certificate-card.certificate-card--mini.certificate-card--standart
-								.certificate-card__header
-									img(src="./img/games/axie-logo.png", width="80" alt="alt")
-								.certificate-card__body
-									.certificate-card__title
-										img(src="./img/sertificate/standart.svg", height="72" alt="alt")
-										p  Standart
 					
 					//======Фоловеры =========
 					.content-block
@@ -111,22 +66,7 @@
 								img(src="./img/profile/av8.jpg", width="52" alt="alt")
 								span.text-13 Alfonso
 								.profile-main-right
-					//==========награды==========
-					.content-block
-						.flex-header
-							.text-15
-								p Награды #[span 5]
-						.rewards-block
-							.rewards-block__item
-								img(src="./img/profile/reward1.png", width="43" alt="alt")
-							.rewards-block__item
-								img(src="./img/profile/reward2.png", width="43" alt="alt")
-							.rewards-block__item
-								img(src="./img/profile/reward3.png", width="37" alt="alt")
-							.rewards-block__item
-								img(src="./img/profile/reward4.png", width="28" alt="alt")
-							.rewards-block__item
-								img(src="./img/profile/reward5.png", width="36" alt="alt")
+					
 
 			//==========ПРАВАЯ КОЛОНКА ==========
 			.profile-main-right
@@ -270,7 +210,7 @@
 														//=====левая часть строки =======
 														.comments-block__details-info.d-flex
 															.comment-info-group
-																p Rayna Aminoff
+																p Erin Dias
 																.badge.badge--white Новичок
 																.icon-group
 																	span.icon-star
@@ -294,61 +234,7 @@
 																	.comment-rate__dislike(data-clicked="false")
 																		span.icon-dislike
 																		span.rating-value 20
-								//========== отдельный блок  ===========
-								.content-block
-									.profile-post
-										//=====шапка поста =======
-										.profile-post__head
-											//======левая часть шапка поста ===========
-											.profile-post__head-left
-												.profile-post-ava
-													img(src="./img/profile/persone.jpg", width="44" alt="alt")
-												.profile-post-info
-													.text-bold.text-14
-														p Геральт из Ривии
-													.text-13
-														span вчера в 18:22
-
-											//====== правая часть шапка поста иконка -троеточие ===========
-											.profile-post__head-right
-												//======выпадашка три точки ====
-												.custom-dropdown.dropdown-menu
-													.custom-dropdown__icon
-														span.dotted-icon
-													.custom-dropdown__field
-													//====выпадающий список =====
-													.custom-dropdown__wrapper
-														.custom-dropdown__list
-															//====элемент списка =====
-															.custom-dropdown__list-item
-																p Какой-то текст
-															//====элемент списка =====
-															.custom-dropdown__list-item.current
-																p Какой-то текст
-															//====элемент списка =====
-															.custom-dropdown__list-item
-																p Какой-то текст
-										//=======текст поста ======
-										.profile-post__body
-											p Интересно, выпустит ли в итоге свой проект Питер Молинье или нет?
-											.text-details.d-flex
-												.article-text-badge.d-flex
-													.badge.badge--light
-														span.icon-chat
-														span 0
-													.badge.badge--light
-														span.icon-share
-														span 0
-										
-										//==============comments ==========
-										.comments-block-form
-											.comments-block__avatar
-												img(src="./img/profile/persone.jpg", alt="alt")
-											form.comment-form(action="" method="")
-												.form-field
-													.form-field-icon
-													input(type="text" required placeholder="Написать комментарий")
-													button(type="submit").form-btn.send-btn
+								
 							
 							//=====ТАБЫ ВКЛАДКА "СТАТЬИ" =======
 							.tab-item

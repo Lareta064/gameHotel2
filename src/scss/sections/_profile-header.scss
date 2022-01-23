@@ -3,10 +3,11 @@
 	background-size: cover;
 	background-position: center top;
 	background-repeat: no-repeat;
-	height:450px;
+	height:320px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	color: #fff;
-	padding-top: 120px;
-	padding-bottom:120px;
+	
 	.profile-header-left{
 		@media(max-width:767px){
 			flex-direction: column;
@@ -75,12 +76,7 @@
 			}
 		}
 	}
-	@media(max-width:1599px){
-		height: 320px;
-		padding-top: 80px;
-		padding-bottom: 80px;
-
-	}
+	
 	@media(max-width:1023px) {
 		padding-top: 40px;
 		padding-bottom: 40px;
@@ -110,6 +106,7 @@
 	}
 	@media(max-width:767px) {
 		margin-right: 0;
+		margin-bottom: 16px;
 	}
 }
 .profile-header-title{
