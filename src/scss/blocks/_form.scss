@@ -10,10 +10,13 @@
 		border-radius: 12px;
 		padding-left: 44px;
 		font-family: inherit;
-		font-size: 16px;
+		font-size: 14px;
 		color: #3B4E6A;
 		&::placeholder{
 			color: #3B4E6A;
+		}
+		@media(max-width:1199px){
+			font-size: 16px;
 		}
 	}
 	.form-field-icon{

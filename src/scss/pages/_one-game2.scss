@@ -1,0 +1,185 @@
+/*single game new page*/
+.inner-header{
+	height: 77px;
+	background-color: #0A0522;
+	padding-left: 24px;
+	padding-right: 24px;
+	
+	.inner-header-content{
+		max-width:1440px;
+	margin-left: auto;
+	margin-right: auto;
+		display: flex;
+		height: 77px;
+		align-items: center;
+	}
+	.back-arrow--white{
+		margin-right: 60px;
+	}
+	.innner-header-menu{
+		a{
+			font-size: 13px;
+			line-height: 20px;
+			color: #fff;
+			display: inline-block;
+			font-family: $ms;
+			&+a{
+				margin-left: 32px;
+			}
+		}
+	}
+	.inner-header-right{
+		margin-left: auto;
+		
+		&>*+*{margin-left: 16px;}
+	}
+}
+.about-game{
+	background-color: #0A0522;
+	.game-banner{
+		position: relative;
+		padding-top: 80px;
+		
+		display: flex;
+		height: 758px;
+		.title-1{
+			text-align: left;
+			font-size: 52px;
+			line-height: 1.21;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			margin-bottom: 48px;
+			img{
+				width: 140px;
+				height: 56px;
+				object-fit: contain;
+
+			}
+		}
+		.container{
+			position: relative;
+			z-index: 2;
+		}
+		.flex-wrapper{
+			justify-content: space-between;
+		}
+		.game-banner__content{
+			height: 444px;
+			.game-rate{
+				margin-top: auto;
+			}
+		}
+		.game-banner__right{
+			width: 50%;
+			max-width:520px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.play-button{
+				position: relative;
+				&:after{
+					width: 120px;
+					height: 120px;
+					content:'';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform:translate(-50%, -50%);
+					border:1px solid rgba(255, 255, 255, .3);
+					border-radius: 50%;
+					z-index: 0;
+					animation-name: opac;
+					animation-duration: 4s;
+					animation-iteration-count: infinite;
+				}
+			}
+		}
+		.game-rate{
+			display: flex;
+			align-items: center;
+			.game-rate-val{
+				width: 56px;
+				height: 56px;
+				line-height: 56px;
+				font-size: 18px;
+				font-family: $ms;
+				border-radius: 9px;
+				color: #fff;
+				background-color: $green;
+				text-align: center;
+				margin-right: 20px;
+			}
+			.game-rate-info{
+				color: #fff;
+				.text-17{
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+	.game-banner__content{
+		max-width:520px;
+		height: 444px;
+	}
+}
+
+.game-banner:before,
+.game-banner:after {
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(180deg, rgba(40, 36, 61, 0) 37.56%, #0A0522 100%);
+}
+.game-banner:before {
+	background: linear-gradient(98.04deg, #271B64 6.19%, rgba(10, 5, 34, 0) 71.75%);
+}
+.play-button{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: $pr;
+	border: 23px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor:pointer;
+	transition: .3s;
+	&:hover{
+		border-color:$pr;
+		background-color: #fff;
+		span{
+			border-left-color:$pr;
+		}
+	}
+	span{
+		width: 0;
+		height: 0;
+		display: block;
+		border:10px solid #fff;
+		border-top: 8px solid  transparent;
+		border-bottom: 8px solid  transparent;
+		border-right:0px;
+		position: relative;
+		left:2px;
+		transition: .3s;
+	}
+}
+@keyframes opac{
+	0%{
+		transform:translate(-50%, -50%) scale(1);
+		opacity:.3;
+	}
+	50%{
+		transform:translate(-50%, -50%) scale(1.4);
+		opacity:1;
+	}
+	100% {
+		transform:translate(-50%, -50%) scale(1.8);
+		opacity:.9;
+	}
+}
+/*//single game new page*/

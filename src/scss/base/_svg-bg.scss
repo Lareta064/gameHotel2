@@ -116,3 +116,35 @@
 .icon-dislike+input,
 .icon-dislike+span,
 .icon-star +span{margin-left: 4px;}
+
+svg.icon-pve,
+svg.icon-cart{
+	fill: #9BADCA;
+	width: 20px;
+	height: 20px;
+}
+svg.icon-resourse{
+	width: 24px;
+	height: 24px;
+	fill:#788CAB;
+}
+svg.icon-pvp{
+	fill:#9BADCA;
+	width: 22px;
+	height: 21px;
+}
+svg.icon-briding {
+	fill:#9BADCA;
+	width: 21px;
+	height: 21px;
+}
+svg.icon-gamepad {
+	fill:white;
+	width: 20px;
+	height: 12px;
+}
+svg.icon-edu {
+	fill:#7256FF;
+	width: 20px;
+	height: 16px;
+}

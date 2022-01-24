@@ -395,12 +395,19 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		img{transition: .5s;}
+		img{
+			transition: .5s;
+		}
 	}
 	&--medium .game-card-large__img{
 		height: 216px;
 	}
 	.game-card__arrow svg{fill:$pr;}
+}
+.game-card-large .game-card__footer img{
+	height: 32px;
+	object-fit: contain;
+	object-position: left;
 }
 .game-card__info{
 	.game-card__title {

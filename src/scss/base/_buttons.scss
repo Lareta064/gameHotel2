@@ -35,6 +35,7 @@
 .button-medium{
 	height: 36px;
 	line-height: 34px;
+	border-radius: 9px;
 }
 .button.h-40 {
 height: 40px;
@@ -149,7 +150,7 @@ opacity: .7;
 
 .button--white {
 	background-color: #fff;
-	color: #0A0522;
+	color: $pr;
 	border-color: #fff;
 
 	&:hover {

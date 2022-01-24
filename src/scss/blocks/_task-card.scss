@@ -48,6 +48,12 @@
 	border-radius: 16px;
 	padding: 14px 16px;
 }
+.task-card__logo img{
+	width: 82px;
+	height: 32px;
+	object-fit: contain;
+	object-position: left
+}
 	.task-card-timeCounter,
 	.task-card-deskrip,
 	.task-card-badge{

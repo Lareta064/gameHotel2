@@ -1,0 +1,54 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	header.inner-header
+		.inner-header-content
+			button.back-arrow--white
+				svg(width="24" height="24")
+					use(xlink:href="./img/svg-sprite.svg#arrRight")
+			//=========menu=========
+			.innner-header-menu
+				a(href="#!") Об Axie Infinity
+				a(href="#!") Персонажи
+				a(href="#!") Локации
+				a(href="#!") Геймплей
+				a(href="#!") Новости
+				a(href="#!") Похожие игры
+				a(href="#!") Комментарии
+		
+			.inner-header-right
+				//=======btn=======
+				a(href="#!").button--color.button.button--flex.button-medium
+					svg.icon-gamepad
+						use( xlink:href="./img/svg-sprite.svg#icon-gamepad")
+					span Получить аккаунт
+				//=======btn=======
+				a(href="#!").button--white.button.button--flex.button-medium
+					svg.icon-edu
+						use( xlink:href="./img/svg-sprite.svg#iconEdu")
+					span Научиться играть
+	
+	//=======header bahher ============
+	.about-game
+		.game-banner(style="background-image: url(./img/aboutGame/axie-banner.jpg)")
+			.container
+				.flex-wrapper
+					.game-banner__content
+						h1.title-1
+							img(src="./img/games/axie-banner-logo.png", width="99"  alt="logo")
+							| Axie Infinity
+						p Онлайн-игра на основе NFT, разработанная вьетнамской студией Sky Mavis, в которой используются криптовалюты на основе Ethereum
+						//====кнопки ======
+						.game-rate
+							.game-rate-val 8.9
+							.game-rate-info
+								.text-17 Рейтинг игры
+								.text-14 Основан на 240 оценках игроков
+
+					.game-banner__right
+						.play-button
+							span
+					
+block variables
+	-var title = "About Game";

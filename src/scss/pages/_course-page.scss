@@ -41,7 +41,13 @@
 	padding-left: 24px;
 	padding-right: 24px;
 	padding-top: 24px;
-
+	.course-menu-left img{
+		width: 120px;
+		height: 48px;
+		object-fit: contain;
+		object-position: left;
+		
+	}
 	.point-block {
 		text-align: right;
 	}
