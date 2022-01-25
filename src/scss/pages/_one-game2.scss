@@ -50,11 +50,22 @@
 			display: flex;
 			align-items: center;
 			margin-bottom: 48px;
+			
 			img{
 				width: 140px;
 				height: 56px;
 				object-fit: contain;
 
+			}
+			@media(max-width:1279px) {
+				font-size: 34px;
+				img{
+					width: 82px;
+				}
+			}
+			@media(max-width:11px){
+				font-size: 32px;
+				
 			}
 		}
 		.container{
@@ -66,6 +77,25 @@
 		}
 		.game-banner__content{
 			height: 444px;
+			@media(max-width:1279px) {
+				height: 360px;
+			}
+			
+			position: relative;
+			&:before{
+				content: '';
+				width: 104%;
+				height: 120%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: translateX(-10%);
+				background-image: url('../img/aboutGame/grid.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity:.74;
+			z-index:-1;
+			}
 			.game-rate{
 				margin-top: auto;
 			}
