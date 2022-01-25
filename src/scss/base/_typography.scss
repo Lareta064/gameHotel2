@@ -3,7 +3,8 @@
 .main-title h1,
 .main-title h2,
 .main-title h3,
-.main-title p {
+.main-title p ,
+.text-28, .text-28 p{
 	font-size: 28px;
 	line-height: 40px;
 	color: #0A0522;
@@ -156,10 +157,28 @@
 		opacity: .7;
 	}
 }
+
+
 .gradient-text >*{
 	 background: linear-gradient(45deg, #E14FAD 33%, #D67EFF 66%);
 	 -webkit-background-clip: text;
 	 -webkit-text-fill-color: transparent;
 	 color: #E14FAD;
+	 display: table;
+}
+
+.gradient-text--pink >* {
+background: linear-gradient(to right, #E14FAD 0%, #F9D423 100%);
+ -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 color: #E14FAD;
+	 display: table;
+}
+
+.gradient-text--blue >* {
+	background: linear-gradient(to right, #38B480  0%,  #5C9BFA 50%,  #7342FE  97.92%);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 color: #38B480;
 	 display: table;
 }
