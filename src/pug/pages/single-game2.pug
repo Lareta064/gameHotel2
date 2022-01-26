@@ -42,6 +42,8 @@ block content
 	
 	//=======header banner ============
 	.about-game.about-game--dark
+		.about-game-parts__img
+			img(src="./img/aboutGame/bg.jpg", width="2500"  alt="alt")
 		.game-banner(style="background-image: url(./img/aboutGame/axie-banner.jpg)")
 			.container
 				.flex-wrapper
@@ -60,7 +62,9 @@ block content
 					.game-banner__right
 						.play-button
 							span
+		
 		.section-wrapper
+			
 			//=======блок в рамке ============
 			.about-game-parametrs
 				.container.pr-1023
@@ -121,7 +125,7 @@ block content
 							img(src="./img/aboutGame/axie-pic.png", width="440" alt="alt")
 
 			//=======block========
-			.about-game-parts
+			.about-game-parts.about-game-gradBlue
 				.container
 					.section-row.section-row--white
 						//========== Как заработать ===========
@@ -410,7 +414,7 @@ block content
 										.badge.badge--white Деревня
 										
 			//=======block про сражения PVP PVE========
-			.about-game-parts
+			.about-game-parts.about-game-gradPink
 				.container
 					.section-row.section-row--white
 						//========== PvE ===========
@@ -452,6 +456,7 @@ block content
 			
 			//=======игровые карточки ========
 			.playing-cards.about-game-parts
+				
 				.container
 					.flex-header
 						.text-36 
