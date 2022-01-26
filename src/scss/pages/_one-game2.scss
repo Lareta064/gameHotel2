@@ -36,10 +36,11 @@
 }
 .about-game--dark {
 	background-color: #0A0522;
+	padding-bottom: 104px;
+	
 	.game-banner{
 		position: relative;
 		padding-top: 80px;
-		
 		display: flex;
 		height: 758px;
 		.title-1{
@@ -448,7 +449,91 @@
 	.text-paragrafe p,
 	.text-paragrafe img{margin-bottom: 8px; border-radius: 16px;}
 } 
+.playing-card{
+	position: relative;
+	z-index:5;
+	width: 170px;
+	img{transform:rotate(-8deg);}
+	
+	.badge{
+		position: absolute;
+		bottom: 28px;
+		left: 50%;
+		transform: translateX(-36%) rotate(-8deg);
+		height: 28px;
+		line-height: 28px;
+		font-family: $ms;
+		font-size: 13px;
+		z-index:2;
+	}
+}
+.playing-cards{
+	padding-top: 45px;
+	padding-bottom: 50px;
+	background-image: url('../img/aboutGame/cards-grid.svg');
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	
+	.text-36>*{color: #fff;}
+	.flex-header{
+		margin-bottom: 75px;
+		max-width:990px;
+		margin-left: auto;
+		margin-right: auto;
+		@media(max-width:1023px){
+			max-width:738px;
+		}
+	}
+}
+.playing-cards-wrapper:before,
+.playing-cards-wrapper:after {
+	content: '';
+	position: absolute;
+	top: 28%;
+	background: radial-gradient(50% 50% at 50% 50%, #7256FF 0%, rgba(35, 35, 35, 0) 100%);
+	opacity: 0.4;
+	width: 55%;
+	height: 170%;
+	left:0;
+	transform: translateY(-50%);
 
-/* background: linear-gradient(180deg, #0A0522 0%, #5766E8 52.08%, #0A0522 100%);
-opacity: 0.4;*/
+}
+.playing-cards-wrapper:before{
+	background: radial-gradient(50% 50% at 50% 50%, #E857D1 0%, rgba(35, 35, 35, 0) 100%);
+	left:auto;
+	right: 0;
+}
+.playing-cards-wrapper{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	
+	.playing-card+.playing-card{
+		margin-left: -15px;
+		@media(max-width:1023px){
+			margin-left: -60px;
+		}
+	}
+}
+.about-game-parts{
+	.game-similar-cards.section-row-block, .game-news.section-row-block {
+		display: block;
+	}
+	.game-news.section-row-block {
+		padding-bottom: 40px;
+		border-bottom:1px solid #D8E1EF;
+	}
+	.game-similar-cards.section-row-block{padding-top: 40px;}
+	.game-similar-cards .farm-projects-block {
+		column-gap:26px;
+	}
+}
+.about-game-comments{
+	padding-top: 64px;
+	padding-bottom: 64px;
+	background-color: #fff;
+}
+
 /*//single game new page*/

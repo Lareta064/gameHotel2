@@ -402,7 +402,7 @@
 	&--medium .game-card-large__img{
 		height: 216px;
 	}
-	.game-card__arrow svg{fill:$pr;}
+	.game-card__arrow svg{fill:$pr!important;}
 }
 .game-card-large .game-card__footer img{
 	height: 32px;

@@ -449,5 +449,115 @@ block content
 
 									p Это, если можно так сказать, краткая выжимка игрового процесса, в котором, на самом деле, крайне много особенностей, которые зависят от типа axie, его параметров, его умений и даже линии, на которой он стоит (в игре их 3, по 2 позиции на линии).
 
-block variables
+			
+			//=======игровые карточки ========
+			.playing-cards.about-game-parts
+				.container
+					.flex-header
+						.text-36 
+							p Игровые карты
+						a(href="#!").button.button--pink Перейти в каталог
+					
+					.playing-cards-wrapper
+						.playing-card
+							.badge.badge--white Рыба
+							img(src="./img/aboutGame/fish-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Зверь
+							img(src="./img/aboutGame/animals-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Птица
+							img(src="./img/aboutGame/birds-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Жук
+							img(src="./img/aboutGame/bugs-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Рептилия
+							img(src="./img/aboutGame/reptile-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Растение
+							img(src="./img/aboutGame/plants-card.png", width="207" alt="fish")
+
+			//=====block======
+			.about-game-parts
+				.container
+					.section-row.section-row--white
+						//======news=======
+						.game-news.section-row-block
+							.flex-header
+								.text-group
+									p.text-24 Новости
+									p.text-18 Статьи
+								//==========slider btn ========
+								a(href="#!").button.button-light Смотреть все
+							
+							.game-news-cards.swiper
+								.card-grid-trio.swiper-wrapper
+									//=======one card ======
+									a(href="#!").card-light.card-light--pic.swiper-slide
+										.card-light__img
+											img(src="./img/game-news1.jpg", width="104" height="104" alt="alt")
+										.card-light__text
+											h4 Киберспорт
+											p Победа Natus Vincere в заветном мейджоре и влия...
+											.card-light__details
+												p 14.10.2021
+												span
+									//=======one card ======
+									a(href="#!").card-light.card-light--pic.swiper-slide
+										.card-light__img
+											img(src="./img/game-news2.jpg", width="104" height="104" alt="alt")
+										.card-light__text
+											h4 Секреты лучших
+											p Обсуждаем с про игроком секреты тактики в Axie...
+											.card-light__details
+												p 14.10.2021
+												span
+									//=======one card ======
+									a(href="#!").card-light.card-light--pic.swiper-slide
+										.card-light__img
+											img(src="./img/game-news3.jpg", width="104" height="104" alt="alt")
+										.card-light__text
+											h4 JRPG и Game Fi
+											p Как Япония оказывает влияние на индустрию...
+											.card-light__details
+												p 14.10.2021
+												span
+								.swiper-pagination-news.swiper-pagination
+						.game-similar-cards.section-row-block
+							.flex-header
+								.text-group
+									p.text-24 Похожие игры
+									
+								//==========slider btn ========
+								a(href="#!").button.button-light Смотреть все
+							.farm-projects-block
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/axier.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/axie-logo.png", width="80" alt="img")
+							
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/snake.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/snake-logo.png", width="80" alt="img")
+							
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/ember.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/ember-logo.png", width="80" alt="img")
+						
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/fara.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/fara-logo.png", width="80" alt="img")
+
+		
+			
+	include ../blocks/_comments-block2
+					
 	-var title = "About Game";
