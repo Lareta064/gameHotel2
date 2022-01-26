@@ -4,6 +4,7 @@
 	background-color: #0A0522;
 	padding-left: 24px;
 	padding-right: 24px;
+	position: relative;
 	
 	.inner-header-content{
 		max-width:1440px;
@@ -44,6 +45,9 @@
 		padding-top: 80px;
 		display: flex;
 		height: 758px;
+		@media(max-width:1199px){
+			height: 500px;
+		}
 		.title-1{
 			text-align: left;
 			font-size: 52px;
@@ -386,11 +390,13 @@
 			padding-bottom: 64px;
 		}
 		@media(max-width:1279px) {
-			padding: 48px;
+			padding-left: 48px;
+			padding-right: 48px;
 			padding-top: 64px;
 		}
 		@media(max-width:1023px) {
-			padding: 24px;
+			padding-left: 24px;
+			padding-right: 24px;
 			
 		}
 	}
@@ -598,4 +604,20 @@
 		opacity: 0.4;
 	}
 }
+
+/***************/
+// .innner-header-menu__toggle {
+// 	display: none;}
+// @media(max-width:1279px){
+// 	.innner-header-menu__toggle{display: block;}
+// 	.innner-header-menu{display: none;}
+// }
+// @media(max-width:767px){
+// 	.inner-header-right{
+// 		position: absolute;
+// 		top: 64px;
+// 		left: 0;
+// 		right: 0;
+// 	}
+// }
 /*//single game new page*/
