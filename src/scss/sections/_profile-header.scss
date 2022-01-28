@@ -8,7 +8,7 @@
 	padding-bottom: 80px;
 	color: #fff;
 	
-	.profile-header-left{
+	.container{
 		@media(max-width:767px){
 			flex-direction: column;
 		}
@@ -103,13 +103,30 @@
 	}
 	@media(max-width:1023px) {
 		margin-right: 48px;
+		width: 80px;
+		height: 80px;
 	}
 	@media(max-width:767px) {
-		margin-right: 0;
+		margin-right: 24px;
 		margin-bottom: 16px;
 	}
 }
 .profile-header-title{
+	@media(max-width:767px) {
+		.text-36{		
+			font-size: 17px;
+			line-height: 28px;
+		}
+		.icon-group>*,
+		.icon-group span.star-symbol,
+		.top-block-group>*{
+			color:#0A0522;
+		}
+		.text-16{font-size: 14px;font-family: $mr;}
+	}
+	
+	
+
 	.bottom-block{
 		margin-top: 80px;
 		@media(max-width:1599px) {
@@ -143,19 +160,51 @@
 
 			&>*+* {
 				margin-left: 24px;
+				
 			}
 		}
-		&>*+*{margin-left: 24px;}
+		&>*+*{margin-left: 24px;
+		@media(max-width:767px) {
+			margin-left: 0px;
+		}
+		}
 		@media(max-width:767px){
 			flex-wrap:wrap;
 			.text-36{
 				width: 100%;
 				text-align: center;
+				@media(max-width:767px) {
+					text-align: left;
+				}
 			}
 			.top-block-col{margin-top: 12px;width: 100%; justify-content: center; &>*+*{margin-left: 32px;}}
 		}
 	}
 }
+
+.profile-header-title {
+	@media(max-width:767px) {
+		.top-block-group .top-block-col,
+		.flex-center{justify-content: start;}
+		.text-36 {
+			font-size: 17px;
+			line-height: 28px;
+			
+		}
+
+		.icon-group>*,
+		.icon-group span.star-symbol,
+		.top-block-group>* {
+			color: #0A0522;
+		}
+
+		.text-16 {
+			font-size: 14px;
+			font-family: $mr;
+		}
+	}
+}
+
 .icon-group span.star-symbol{
 	font-size: 20px;
 	color:#3B4E6A;
@@ -172,6 +221,10 @@
 		height: 6px;
 		border-radius: 12px;
 		background-color: #fff;
+		@media(max-width:767px) {
+			background-color: #D8E1EF;
+
+		}
 	}
 	.skills-progress-scale{
 		position: absolute;
@@ -238,4 +291,71 @@
 .button-chat{display: inline-flex; justify-content: center;align-items: center;}
 .profile-header-title .flex-wrapper{
 	.button + .button{margin-left: 24px;}
+}
+/********до 767px********/
+.profile-mobile-header,
+.mobile-page-top,
+.profile-banner-mobile {
+	display: none;
+}
+@media(max-width:767px){
+	.profile-mobile-header{
+		padding-top: 18px;
+		.skills-progress-text.text-14{font-size: 13px;}
+		.skills-progress{padding-top: 20px;}
+		.skills-progress .skills-progress-text{margin-top: 8px;}
+	}
+	.profile-header{
+		display: none;
+	}
+	.mobile-page-top {
+		display: flex;
+		background-color: #fff;
+	}
+.profile-banner-mobile{
+	display: block;
+	img{
+		height: 104px;
+		width: 100%;
+		object-fit: cover;
+		object-position: center top;
+	}
+	
+}
+
+	.mobile-page-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 48px;
+		padding-left: 24px;
+		padding-right: 24px;
+
+		.custom-dropdown .custom-dropdown__icon {
+			right: 0;
+			top: 6px;
+		}
+	}
+
+	.profile-mobile .mobile-page-top__left {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.back-arrow--dark {
+			margin-right: 12px;
+		}
+	}
+	.profile-mobile-header{
+		display: block;
+		background-color: #fff;
+	}
+}
+
+
+
+.back-arrow--dark svg {
+	fill: #788CAB;
+	transform: rotate(180deg);
+
 }
