@@ -192,16 +192,11 @@
 }
 .profile-header-title {
 	@media(max-width:767px) {
-		
-		
 		.text-36 {
 			font-size: 17px;
 			line-height: 28px;
 			
 		}
-
-		
-
 		.text-16 {
 			font-size: 14px;
 			font-family: $mr;
@@ -281,10 +276,7 @@
 		line-height: 1.5;
 		color: #0A0522;
 	}
-	// @media(max-width:767px){
-	// 	padding: 4px 12px;
-	// 	margin-bottom: 12px;
-	// }
+	
 }
 .icon-check{
 	background-color: #33A661;
@@ -332,16 +324,16 @@
 		display: flex;
 		background-color: #fff;
 	}
-.profile-banner-mobile{
-	display: block;
-	img{
-		height: 104px;
-		width: 100%;
-		object-fit: cover;
-		object-position: center top;
+	.profile-banner-mobile{
+		display: block;
+		img{
+			height: 220px;
+			width: 100%;
+			object-fit: cover;
+			object-position: center top;
+		}
+		
 	}
-	
-}
 
 	.mobile-page-top {
 		display: flex;
@@ -392,9 +384,32 @@
 			margin-left: 0;
 		}
 	}
+	.profile-banner-mobile {
+		display: block;
+
+		img {
+			height: 104px;
+			width: 100%;
+		}
+
+	}
 }
 .profile-header{
-	.icon-followers, .icon-reward, .icon-post{fill: #fff;}
+	.icon-followers,
+	.icon-reward,
+	.icon-post {
+		fill: #fff;
+		width: 20px;
+		height: 20px;
+
+		&+span {
+			color: #fff;
+		}
+	}
+	.statistics-item span,
+	.text-14 {
+		color: #fff;
+	}
 }
 .icon-followers,
 .icon-reward,

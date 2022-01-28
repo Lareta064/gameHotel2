@@ -684,6 +684,7 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	&>*+* {
 		margin-left: 16px;
 	}
+	.text-13{margin-top: 2px;}
 }
 .followers-block__item.flex-row{
 	
@@ -746,6 +747,9 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	.badge{
 		color: $pr;
 		font-family: $ms;
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 13px;
 	}
 	.skills-progress .skills-progress-line{
 		max-width:400px;
