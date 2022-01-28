@@ -165,6 +165,13 @@
 			p Мои подписчики #[span 56]
 		button.cross-btn(data-close)
 	.page-modal__body
+		.followers-modal-search
+			.sf-block
+				form.aside-search-form(action="" method="method")
+					.form-field
+						input(type="text" placeholder="Поиск")
+					button(type="submit").form-btn.search-form-btn
+		
 		.followers-block.grid-wrapper
 			//==== single row ============
 			.followers-block__item.flex-row
