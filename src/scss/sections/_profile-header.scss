@@ -168,35 +168,39 @@
 			margin-left: 0px;
 		}
 		}
-		@media(max-width:767px){
+		@media(max-width:1023px){
 			flex-wrap:wrap;
 			.text-36{
 				width: 100%;
-				text-align: center;
-				@media(max-width:767px) {
-					text-align: left;
-				}
+				text-align: left;
 			}
 			.top-block-col{margin-top: 12px;width: 100%; justify-content: center; &>*+*{margin-left: 32px;}}
 		}
 	}
 }
-
+.profile-header-title{
+	@media(max-width:1023px) {
+		.icon-group>*,
+		.icon-group span.star-symbol,
+		.top-block-group>* {
+			color: #0A0522;
+		}
+		.top-block-group .top-block-col,.flex-center {
+			justify-content: start;
+		}
+	}
+}
 .profile-header-title {
 	@media(max-width:767px) {
-		.top-block-group .top-block-col,
-		.flex-center{justify-content: start;}
+		
+		
 		.text-36 {
 			font-size: 17px;
 			line-height: 28px;
 			
 		}
 
-		.icon-group>*,
-		.icon-group span.star-symbol,
-		.top-block-group>* {
-			color: #0A0522;
-		}
+		
 
 		.text-16 {
 			font-size: 14px;
@@ -311,12 +315,15 @@
 .profile-banner-mobile {
 	display: none;
 }
-@media(max-width:767px){
+@media(max-width:1023px){
 	.profile-mobile-header{
-		padding-top: 18px;
+		overflow:hidden;
 		.skills-progress-text.text-14{font-size: 13px;}
 		.skills-progress{padding-top: 20px;}
 		.skills-progress .skills-progress-text{margin-top: 8px;}
+	}
+	.person-courses--mobile{
+		.flex-header{margin-bottom: 20px;}
 	}
 	.profile-header{
 		display: none;
@@ -365,14 +372,25 @@
 	}
 	.profile-header-buttons{
 		margin-top: 24px;
+		display: flex;
 		.button{
 			display: block;
 			width: 100%;
 			max-width:328px;
 			text-align: center;
-			&+.button{margin-top: 16px;}
+			&+.button{margin-top: 0; margin-left: 16px;}
 		}
 
+	}
+}
+@media(max-width:767px){
+	.profile-header-buttons {
+		flex-direction: column;
+		
+		.button+.button {
+			margin-top: 16px;
+			margin-left: 0;
+		}
 	}
 }
 .profile-header{

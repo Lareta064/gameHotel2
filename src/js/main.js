@@ -1556,22 +1556,22 @@ if(toggleMobSF){
 	}
 
 	/*=======боковая панель на странице урока profile */
-	const sidebarPanel = document.getElementById('sidebar-panel');
+	// const sidebarPanel = document.getElementById('sidebar-panel');
 	
-	if(sidebarPanel){
-		const sidebarPanelToggle = document.getElementById('toggle-panel');
-		sidebarPanelToggle.addEventListener('click', function(e){
+	// if(sidebarPanel){
+	// 	const sidebarPanelToggle = document.getElementById('toggle-panel');
+	// 	sidebarPanelToggle.addEventListener('click', function(e){
 			
-			if(this.classList.contains('active')){
-				sidebarPanel.classList.remove('active');
-				this.classList.remove('active');
+	// 		if(this.classList.contains('active')){
+	// 			sidebarPanel.classList.remove('active');
+	// 			this.classList.remove('active');
 				
-			}else{
-				sidebarPanel.classList.add('active');
-				this.classList.add('active');
-			}
-		});
+	// 		}else{
+	// 			sidebarPanel.classList.add('active');
+	// 			this.classList.add('active');
+	// 		}
+	// 	});
 		
-	}
+	// }
 
 });

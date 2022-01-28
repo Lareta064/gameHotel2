@@ -29,8 +29,8 @@
 .profile-banner-mobile
 	img(src="./img/profile/banner1-mob.jpg", height="104" alt="alt")
 .profile-mobile-header
-	.container
-		.profile-mobile-header__row
+	.profile-mobile-header__row
+		.container
 			.profile-header-left.flex-center
 				.profile-header-avatar
 					img(src="./img/profile/persone.jpg", width="144" alt="alt")
@@ -92,4 +92,37 @@
 					svg(width="14" height="14")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
 
-		.profile-mobile-header__row
+	.profile-mobile-header__row
+		.container
+			.person-courses--mobile
+				.flex-header
+					.text-15
+						p Курсы #[span 3]
+					a(href="#!").text-13 Смотреть
+				
+				.person-courses.swiper-block
+					.course-card
+						.course-card-left
+							.text-13
+								p Курс для Pro
+							.text-14.text-bold
+								p Axie Infinity #[span.badge.badge-sale 20%]
+						.course-card-logo
+							img(src="./img/games/axie-logo.png", width="104" alt="alt")
+					.course-card
+						.course-card-left
+							.text-13
+								p Курс для Pro
+							.text-14.text-bold
+								p Axie Infinity #[span.badge.badge-sale 20%]
+						.course-card-logo
+							img(src="./img/games/jojo-logo.png", width="104" alt="alt")
+					
+					.course-card
+							.course-card-left
+								.text-13
+									p Курс для Pro
+								.text-14.text-bold
+									p Axie Infinity #[span.badge.badge-sale 20%]
+							.course-card-logo
+								img(src="./img/games/ember-logo.png", width="104" alt="alt")

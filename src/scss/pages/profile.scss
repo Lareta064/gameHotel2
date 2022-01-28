@@ -235,11 +235,14 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	border-radius: 24px;
 	&+.content-block{margin-top: 20px;}
 	@media(max-width:767px){
-		border-radius: 12px
+		border-radius: 0;
 	}
 }
 .content-block--border {
 	border: 1px solid #D4E5FF;
+	@media(max-width:767px) {
+		border: 0;
+	}
 }
 .person-statistics{
 	display: flex;
@@ -252,7 +255,7 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 			margin-left: 32px;
 		}
 	}
-	@media(max-width:767px) {
+	@media(max-width:1023px) {
 		margin-top: 22px;
 	}
 }
@@ -361,6 +364,14 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	display: none;
 }
 @media(max-width:1023px){
+	.profile-main-right {
+		padding-top: 24px;
+	}
+	.profile-mobile-header__row{
+		border-bottom:1px solid #D8E1EF;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
 	.profile-main-wrapper{
 		display: block;
 	}
@@ -375,8 +386,7 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 			&.active{
 				display: block;
 				margin-top: 20px;
-				// display: flex;
-				// flex-wrap: wrap;
+				
 				.content-block{
 					max-width:350px;
 					width: 100%;
@@ -386,7 +396,6 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 		&-right {
 		width: 100%;
 		max-width: 792px;
-		margin-top: 24px;
 	}
 		&-left{
 			width: 100%;
@@ -409,9 +418,23 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 		border-bottom: 1px solid #D4E5FF;
 		
 	}
-	
+	.person-courses{
+		display: flex;
+		width: calc(50% + 50vw);
+		padding-right: 24px;
+		.course-card{
+			flex-shrink: 0;
+		}
+		.course-card+.course-card{
+			margin-left: 16px;
+			margin-top: 0;
+		}
+	}
 }
 @media(max-width:767px) {
+	.profile-main-right{
+		padding-top: 0;
+	}
 	.profile-main .container {
 		padding-left: 0;
 		padding-right: 0;
@@ -424,12 +447,13 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 			}
 		}
 	}
+	
 	.profile-main-left__mobile {
 		margin-left: 0;
 		margin-right: 0;}
 	.content-block {
-		padding-left: 12px;
-		padding-right: 12px;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 	.profile-post__body img{border-radius: 12px;}
 	
@@ -529,7 +553,11 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 				font-size: 24px;
 			}
 		@media(max-width:767px){
-			font-size: 19px;
+			font-size: 15px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			overflow: hidden;
 		}
 	}
 
