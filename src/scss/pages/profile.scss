@@ -248,6 +248,12 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 		@media(max-width:1199px){
 			margin-left: 52px;
 		}
+		@media(max-width:767px) {
+			margin-left: 32px;
+		}
+	}
+	@media(max-width:767px) {
+		margin-top: 22px;
 	}
 }
 .statistics-item{

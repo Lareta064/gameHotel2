@@ -249,6 +249,11 @@
 	border-radius:12px;
 	display:inline-flex;
 	align-items: center;
+	@media(max-width:767px) {
+		margin-left: 32px;
+		padding: 0px 0px;
+		margin-bottom: 0;
+	}
 	.profile-label__img{
 		width: 36px;
 		height: 36px;
@@ -256,6 +261,14 @@
 		border: 1px solid #D8E1EF;
 		overflow: hidden;
 		margin-right: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media(max-width:767px){
+			width: 44px;
+			height: 44px;
+			margin-right: 0;
+		}
 	}
 	.gh-title p {		
 		margin-right: 8px;
@@ -264,10 +277,10 @@
 		line-height: 1.5;
 		color: #0A0522;
 	}
-	@media(max-width:767px){
-		padding: 4px 12px;
-		margin-bottom: 12px;
-	}
+	// @media(max-width:767px){
+	// 	padding: 4px 12px;
+	// 	margin-bottom: 12px;
+	// }
 }
 .icon-check{
 	background-color: #33A661;
@@ -350,12 +363,42 @@
 		display: block;
 		background-color: #fff;
 	}
+	.profile-header-buttons{
+		margin-top: 24px;
+		.button{
+			display: block;
+			width: 100%;
+			max-width:328px;
+			text-align: center;
+			&+.button{margin-top: 16px;}
+		}
+
+	}
 }
-
-
-
+.profile-header{
+	.icon-followers, .icon-reward, .icon-post{fill: #fff;}
+}
+.icon-followers,
+.icon-reward,
+.icon-post {
+	fill:#9BADCA;
+	width: 20px;			
+	height: 20px;
+	&+span {
+		color: #0A0522;
+	}
+}
+.statistics-item span,
+.text-14 {
+	color: #0A0522;
+}
 .back-arrow--dark svg {
 	fill: #788CAB;
 	transform: rotate(180deg);
-
+}
+.text-link-wrapper{
+	padding-top: 20px;
+}
+.text-link.button--flex{
+	svg{fill:$pr;}
 }

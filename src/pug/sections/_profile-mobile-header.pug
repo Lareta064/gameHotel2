@@ -30,25 +30,66 @@
 	img(src="./img/profile/banner1-mob.jpg", height="104" alt="alt")
 .profile-mobile-header
 	.container
-		.profile-header-left.flex-center
-			.profile-header-avatar
-				img(src="./img/profile/persone.jpg", width="144" alt="alt")
-			.profile-header-title
-				.top-block
-					.top-block-group.flex-center
-						.text-36 Геральт из Ривии
-						.text-16 Ведьмак
-						.top-block-col
-							.icon-group
-								span.star-symbol &#9733;
-								span 1334
-							.badge.badge--profi Профи
+		.profile-mobile-header__row
+			.profile-header-left.flex-center
+				.profile-header-avatar
+					img(src="./img/profile/persone.jpg", width="144" alt="alt")
+				.profile-header-title
+					.top-block
+						.top-block-group.flex-center
+							.text-36 Геральт из Ривии
+							.text-16 Ведьмак
+							.top-block-col
+								.icon-group
+									span.star-symbol &#9733;
+									span 1334
+								.badge.badge--profi Профи
 					
-		//=======шкала опыта ======
 		
-		.skills-progress
-			.skills-progress-bar
-				.skills-progress-line
-				.skills-progress-scale
-			.skills-progress-text.text-14
-				p Еще 540 xp для получения уровня Легенда
+			//=======шкала опыта ======
+			.skills-progress
+				.skills-progress-bar
+					.skills-progress-line
+					.skills-progress-scale
+				.skills-progress-text.text-14
+					p Еще 540 xp для получения уровня Легенда
+			
+			//=========кнопки ===========
+			.profile-header-buttons
+				.button.button--color Новая запись
+				.button.button-light Настроить профиль
+		
+			//=========статистика профиля ===========
+			.person-statistics
+				.statistics-item
+					.top-block
+						svg.icon-followers
+							use( xlink:href="./img/svg-sprite.svg#iconFollover")
+						span 56
+					.text-14
+						span Фоловеров
+				.statistics-item
+					.top-block
+						svg.icon-reward
+							use( xlink:href="./img/svg-sprite.svg#iconReward")
+						span 5
+					.text-14
+						span Наград
+				.statistics-item
+					.top-block
+						svg.icon-post
+							use( xlink:href="./img/svg-sprite.svg#iconPost")
+						span 12
+					.text-14
+						span Статей
+				.profile-header-label
+					.profile-label__img
+						img(src="./img/profile/gh-logo.jpg", width="36" alt="alt")
+			
+			.text-link-wrapper
+				a(href="").text-link.button--flex
+					span Подробная информация
+					svg(width="14" height="14")
+						use(xlink:href="./img/svg-sprite.svg#arrRight")
+
+		.profile-mobile-header__row
