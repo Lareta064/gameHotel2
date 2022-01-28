@@ -38,7 +38,7 @@
 			.flex-header
 				.text-15
 					p Сертификаты #[span 3]
-				a(href="#!").text-13 Смотреть
+				a(href="#!" data-btn="personAllCert").text-13 Смотреть
 			.person-sertificates.swiper-block
 				//======карточка сертификата ========
 				.certificate-card.certificate-card--mini.certificate-card--lux
@@ -74,7 +74,7 @@
 				.text-15
 					p Фоловеры #[span 56]
 				.text-13
-					a(href="#") Все подписчики
+					a(href="#"  data-btn="personAllFollow") Все подписчики
 			
 			.followers-block.swiper-block
 				.followers-block__item
@@ -121,6 +121,50 @@
 				.rewards-block__item
 					img(src="./img/profile/reward5.png", width="36" alt="alt")
 
+//========модальное окно, открывается по клику на кнопку с data-btn="personAllCert"===========
+.page-modal.full-modal(data-modal="personAllCert")
+	.page-modal__header
+		.text-15
+			p Мои сертификаты #[span 3]
+		button.cross-btn(data-close)
+	.page-modal__body
+		.person-sertificates.grid-wrapper
+			//======карточка сертификата ========
+			.certificate-card.certificate-card--mini.certificate-card--lux
+				.certificate-card__header
+					img(src="./img/games/axie-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					.certificate-card__title
+						img(src="./img/sertificate/lux.svg", height="72" alt="alt")
+						p LUX
+			
+			//======карточка сертификата ========
+			.certificate-card.certificate-card--mini.certificate-card--comfort
+				.certificate-card__header
+					img(src="./img/games/monsters-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					.certificate-card__title
+						img(src="./img/sertificate/comfort.svg", height="72" alt="alt")
+						p  Comfort
+					
+			//======карточка сертификата ========
+			.certificate-card.certificate-card--mini.certificate-card--standart
+				.certificate-card__header
+					img(src="./img/games/fara-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					.certificate-card__title
+						img(src="./img/sertificate/standart.svg", height="72" alt="alt")
+						p  Standart
+
+//========модальное окно, открывается по клику на кнопку с data-btn="personAllFollow"===========
+.page-modal.full-modal(data-modal="personAllFollow")
+	.page-modal__header
+		.text-15
+			p Мои сертификаты #[span 3]
+		button.cross-btn(data-close)
+	.page-modal__body
+
+//=======================mob version==========
 .profile-mobile
 	//========плашка с заголовокм и со стрелкой ===============
 	.mobile-page-top

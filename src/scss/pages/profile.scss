@@ -644,4 +644,19 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	}
 	
 }
-
+.page-modal.full-modal{
+	width: 100%;
+	max-width:100%;
+	bottom: 64px;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0;
+	transform: translate(0, 0);
+}
+*.grid-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 144px);
+	column-gap:16px;
+	row-gap:16px;
+}
