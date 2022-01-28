@@ -656,7 +656,144 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 }
 *.grid-wrapper{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 144px);
+	grid-template-columns: repeat(auto-fit, 1fr);
 	column-gap:16px;
 	row-gap:16px;
+}
+.person-sertificates.grid-wrapper{
+	grid-template-columns: repeat(auto-fit, 144px);
+}
+.followers-block.grid-wrapper{
+	grid-template-columns: repeat(auto-fit, 330px);
+	column-gap:52px;
+}
+.flex-row {
+	img {
+		width: 44px;
+		height: 44px;
+	}
+
+	display: flex;
+	align-items: center;
+	text-align: left;
+
+	&>* {
+		flex-shrink: 0;
+	}
+
+	&>*+* {
+		margin-left: 16px;
+	}
+}
+.followers-block__item.flex-row{
+	
+	.followers-block-chat, .followers-block-drop{
+		width: 32px;
+		height: 32px;
+	}
+	.followers-block-col{
+		width: 173px;
+	}
+	.followers-block-col .text-13{
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		overflow: hidden;
+	}
+	.followers-block-chat{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.custom-dropdown .custom-dropdown__field{
+		min-width:unset;
+		padding: 0;
+		height: 32px;
+		width: 32px;
+		position: relative;
+	
+		
+	}
+	.custom-dropdown.dropdown-menu .custom-dropdown__icon{
+		top: 0;
+		right: 0;
+	}
+	.custom-dropdown .custom-dropdown__list{margin-top: -12px;}
+	.custom-dropdown .custom-dropdown__wrapper{right: 32px;}
+}
+.icon-achiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 9px;
+	background-color: #E857D1;
+	span{
+	width: 31px;
+	height: 31px;
+	background-image: url('../img/icons/achiev.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto;}
+}
+.icon-achiv.bg-grey{
+	background-color:#788CAB;
+}
+.person-rewards-row{
+	display: flex;
+	align-items: center;
+	.badge{
+		color: $pr;
+		font-family: $ms;
+	}
+	.skills-progress .skills-progress-line{
+		max-width:400px;
+		background-color: #fff;
+	}
+	.person-rewards-text{
+		max-width:270px;
+		width: 100%;
+		.flex-wrapper{
+			justify-content: space-between;
+		}
+	}
+}
+
+.person-state-value{
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+	.icon-group span{
+		font-size: 17px;
+		font-family: $ms;
+	}
+	span +span{margin-left: 5px;}
+	span.star-symbol{
+		font-size: 22px;
+	}
+	.badge{margin-left: 16px;}
+}
+.person-rewards{
+	margin-top: 32px;
+	.person-rewards-row+.person-rewards-row{margin-top: 32px;}
+}
+.person-rewards-progress{
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	.text-13{
+		margin-right: 27px;
+	}
+	.skills-progress{
+		width: 100%;
+		max-width:400px;
+	}
+}
+.person-rewards--notcompleted{
+	margin-top: 60px;
+	.badge{
+		font-family: $mr;
+		color:	#3B4E6A;
+	}
 }

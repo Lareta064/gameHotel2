@@ -109,6 +109,8 @@
 			.flex-header
 				.text-15
 					p Награды #[span 5]
+				.text-13
+					a(href="#!" data-btn="personAllRewards") Все награды
 			.rewards-block.swiper-block
 				.rewards-block__item
 					img(src="./img/profile/reward1.png", width="43" alt="alt")
@@ -160,10 +162,171 @@
 .page-modal.full-modal(data-modal="personAllFollow")
 	.page-modal__header
 		.text-15
-			p Мои сертификаты #[span 3]
+			p Мои подписчики #[span 56]
 		button.cross-btn(data-close)
 	.page-modal__body
+		.followers-block.grid-wrapper
+			//==== single row ============
+			.followers-block__item.flex-row
+				.followers-block__ava
+					img(src="./img/profile/av1.jpg", width="52" alt="alt")
+				.followers-block-col
+					.text-14.text-bold Cooper Gouse
+					.text-13.text-grey А у меня во дворе ходит...
+				.followers-block-chat
+					.icon-chat
+				.followers-block-drop
+					//======выпадашка три точки ====
+					.custom-dropdown.dropdown-menu
+						.custom-dropdown__icon
+							span.dotted-icon
+						.custom-dropdown__field
+						//====выпадающий список =====
+						.custom-dropdown__wrapper
+							.custom-dropdown__list
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item.current
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+			//==== single row ============
+			.followers-block__item.flex-row
+				.followers-block__ava
+					img(src="./img/profile/av2.jpg", width="52" alt="alt")
+				.followers-block-col
+					.text-14.text-bold Cooper Gouse
+					.text-13.text-grey А у меня во дворе ходит...
+				.followers-block-chat
+					.icon-chat
+				.followers-block-drop
+					//======выпадашка три точки ====
+					.custom-dropdown.dropdown-menu
+						.custom-dropdown__icon
+							span.dotted-icon
+						.custom-dropdown__field
+						//====выпадающий список =====
+						.custom-dropdown__wrapper
+							.custom-dropdown__list
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item.current
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
 
+			//==== single row ============
+			.followers-block__item.flex-row
+				.followers-block__ava
+					img(src="./img/profile/av3.jpg", width="52" alt="alt")
+				.followers-block-col
+					.text-14.text-bold Cooper Gouse
+					.text-13.text-grey А у меня во дворе ходит...
+				.followers-block-chat
+					.icon-chat
+				.followers-block-drop
+					//======выпадашка три точки ====
+					.custom-dropdown.dropdown-menu
+						.custom-dropdown__icon
+							span.dotted-icon
+						.custom-dropdown__field
+						//====выпадающий список =====
+						.custom-dropdown__wrapper
+							.custom-dropdown__list
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item.current
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+
+//======модальное окно, открывается по клику на кнопку с data-btn="personAllRewards"===========
+.page-modal.full-modal.visible(data-modal="personAllRewards")
+	.page-modal__header
+		.text-15
+			p Мои награды #[span 3]
+		button.cross-btn(data-close)
+	.page-modal__body
+		//=======шкала опыта ======
+		.person-state
+			.person-state-value
+				.icon-group
+					span.star-symbol &#9733;
+					span 1334xp
+				.badge.badge--profi Профи
+			.skills-progress
+				.skills-progress-bar
+					.skills-progress-line
+					.skills-progress-scale
+				.skills-progress-text.text-14
+					p Еще 540 xp для получения уровня #[strong Легенда]
+		.person-rewards
+			//===single item ====
+			.person-rewards-row.flex-row
+				.person-rewards-icon
+					.icon-achiv
+						span
+				.person-rewards-text
+					.flex-wrapper
+						.text-14.text-bold Погчамп комментатор
+						.badge.badge--light +100xp
+					.text-13 Написать 100 комментариев
+				
+					
+			//===single item ====
+			.person-rewards-row.flex-row
+				.person-rewards-icon
+					.icon-achiv
+						span
+				.person-rewards-text
+					.flex-wrapper
+						.text-14.text-bold Великий комбинатор
+						.badge.badge--light +100xp
+					
+					.text-13 Написать 100 комментариев
+			
+			
+			//===single item ====
+			.person-rewards-row.flex-row
+				.person-rewards-icon
+					.icon-achiv
+						span
+				.person-rewards-text
+					.flex-wrapper
+						.text-14.text-bold Крипто–энтузиаст
+						.badge.badge--light +100xp
+					.text-13 Написать 100 комментариев
+				
+					
+		
+		.person-rewards.person-rewards--notcompleted
+			.person-rewards-row.flex-row
+				.person-rewards-icon
+					.icon-achiv.bg-grey
+						span
+				.person-rewards-text
+					.flex-wrapper
+						.text-14.text-bold Игровой критик
+						.badge.badge--light +400xp
+					.text-13 Написать 10 статей в рубрике игры
+				
+					
+			.person-rewards-progress
+				.text-13.text-bold 6/10
+				.skills-progress
+					.skills-progress-bar
+						.skills-progress-line
+						.skills-progress-scale
+					
 //=======================mob version==========
 .profile-mobile
 	//========плашка с заголовокм и со стрелкой ===============
