@@ -1,3 +1,126 @@
+//=======модальное окно ПОДРОБНАЯ ИНФОРМАЦИЯ для мобильной версии =============
+.short-modal(data-modal="profile-info")
+	.short-modal-header
+		.text-15
+			p Информация
+		button.cross-btn(data-close)
+	//======followers=======
+	.short-modal-row
+		.person-statistics
+			.statistics-item
+				.top-block
+					svg.icon-followers
+						use( xlink:href="./img/svg-sprite.svg#iconFollover")
+					span 56
+				.text-14
+					span Фоловеров
+			.statistics-item
+				.top-block
+					svg.icon-reward
+						use( xlink:href="./img/svg-sprite.svg#iconReward")
+					span 5
+				.text-14
+					span Наград
+			.statistics-item
+				.top-block
+					svg.icon-post
+						use( xlink:href="./img/svg-sprite.svg#iconPost")
+					span 12
+				.text-14
+					span Статей
+			.profile-header-label
+				.profile-label__img
+					img(src="./img/profile/gh-logo.jpg", width="36" alt="alt")
+	
+	//======certificates=======
+	.short-modal-row
+		.person-sertif-wrapper
+			.flex-header
+				.text-15
+					p Сертификаты #[span 3]
+				a(href="#!").text-13 Смотреть
+			.person-sertificates.swiper-block
+				//======карточка сертификата ========
+				.certificate-card.certificate-card--mini.certificate-card--lux
+					.certificate-card__header
+						img(src="./img/games/axie-logo.png", width="104" alt="alt")
+					.certificate-card__body
+						.certificate-card__title
+							img(src="./img/sertificate/lux.svg", height="72" alt="alt")
+							p LUX
+				
+				//======карточка сертификата ========
+				.certificate-card.certificate-card--mini.certificate-card--comfort
+					.certificate-card__header
+						img(src="./img/games/monsters-logo.png", width="104" alt="alt")
+					.certificate-card__body
+						.certificate-card__title
+							img(src="./img/sertificate/comfort.svg", height="72" alt="alt")
+							p  Comfort
+						
+				//======карточка сертификата ========
+				.certificate-card.certificate-card--mini.certificate-card--standart
+					.certificate-card__header
+						img(src="./img/games/fara-logo.png", width="104" alt="alt")
+					.certificate-card__body
+						.certificate-card__title
+							img(src="./img/sertificate/standart.svg", height="72" alt="alt")
+							p  Standart
+
+	//======followers=======
+	.short-modal-row
+		.person-followers-wrapper
+			.flex-header
+				.text-15
+					p Фоловеры #[span 56]
+				.text-13
+					a(href="#") Все подписчики
+			
+			.followers-block.swiper-block
+				.followers-block__item
+					img(src="./img/profile/av1.jpg", width="52" alt="alt")
+					span.text-13 Jaylon
+				.followers-block__item
+					img(src="./img/profile/av2.jpg", width="52" alt="alt")
+					span.text-13 Ahmad
+				.followers-block__item
+					img(src="./img/profile/av3.jpg", width="52" alt="alt")
+					span.text-13 Jaylon
+				.followers-block__item
+					img(src="./img/profile/av4.jpg", width="52" alt="alt")
+					span.text-13 Ahmad
+				.followers-block__item
+					img(src="./img/profile/av5.jpg", width="52" alt="alt")
+					span.text-13 Aspen 
+				.followers-block__item
+					img(src="./img/profile/av6.jpg", width="52" alt="alt")
+					span.text-13 Lincoln
+				.followers-block__item
+					img(src="./img/profile/av7.jpg", width="52" alt="alt")
+					span.text-13 Omar 
+				.followers-block__item
+					img(src="./img/profile/av8.jpg", width="52" alt="alt")
+					span.text-13 Alfonso
+					.profile-main-right
+
+	//======followers=======
+	.short-modal-row
+		.person-.rewards-wrapper
+			.flex-header
+				.text-15
+					p Награды #[span 5]
+			.rewards-block.swiper-block
+				.rewards-block__item
+					img(src="./img/profile/reward1.png", width="43" alt="alt")
+				.rewards-block__item
+					img(src="./img/profile/reward2.png", width="43" alt="alt")
+				.rewards-block__item
+					img(src="./img/profile/reward3.png", width="37" alt="alt")
+				.rewards-block__item
+					img(src="./img/profile/reward4.png", width="28" alt="alt")
+				.rewards-block__item
+					img(src="./img/profile/reward5.png", width="36" alt="alt")
+
 .profile-mobile
 	//========плашка с заголовокм и со стрелкой ===============
 	.mobile-page-top
@@ -87,11 +210,12 @@
 						img(src="./img/profile/gh-logo.jpg", width="36" alt="alt")
 			
 			.text-link-wrapper
-				a(href="").text-link.button--flex
+				a(href="#!" data-btn="profile-info").text-link.button--flex
 					span Подробная информация
 					svg(width="14" height="14")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
 
+	//========моб карточки пройденных курсов =========
 	.profile-mobile-header__row
 		.container
 			.person-courses--mobile
