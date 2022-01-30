@@ -1,0 +1,105 @@
+.certificates-header
+	.container
+		.certificates-header__content
+			h1.section-title Сертификаты
+			
+			//=====subtitle-row ==========
+			.certificates-header__row
+				.text-14.text-grey
+					img(src="./img/sertificate/shields.png", width="57" alt="alt")
+					p Сертификаты дают доступ к закрытым сообществам на портале Game Hote и дополнительные возможности на сайтах партнёров, если выпустить их как NFT.
+				
+				//=====games filter==========
+				.certificates-header__filter
+					.custom-select.custom-select--light.custom-select--abs
+							.select-icon
+								svg(width="10" height="6")
+									use(xlink:href="./img/svg-sprite.svg#iconArr")
+							.select-field
+								input(type="text" value="Все игры" readonly)
+							.select-list.select-list--flex
+								ul
+									li.current(data-role="allGames") Все игры
+									li(data-role="Axie Infinity")
+										span Axie Infinity
+										img(src="./img/games/axie-logo.png", width="60" alt="img")
+										
+									li(data-role="Crypto Snake")
+										span Crypto Snake
+										img(src="./img/games/snake-logo.png", width="60" alt="img")
+										
+									li(data-role="Ember Sword")
+										span Ember Sword
+										img(src="./img/games/ember-logo.png", width="60" alt="img")
+										
+									li(data-role="FaraLand")
+										span FaraLand
+										img(src="./img/games/fara-logo.png", width="60" alt="img")
+
+//=======  список сертификатов ==========
+.certificates-body
+	.container
+		.certificates-list.flex-wrapper
+			//========одна карточка сертификата=========
+			.certificate-card.certificate-card--lux
+				.certificate-card__header
+					img(src="./img/games/axie-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					img(src="./img/sertificate/lux.svg", height="72" alt="alt")
+					.text-16
+						p #[span Lux] Certificate
+					.text-13
+						p Game Hotel
+				.certificate-card__footer
+					.button.button--white.button--flex
+						svg.nft-icon
+							use(xlink:href="./img/svg-sprite.svg#nftIcon")
+						span Выпустить NFT
+
+			//========одна карточка сертификата=========
+			.certificate-card.certificate-card--comfort
+				.certificate-card__header
+					img(src="./img/games/axie-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					img(src="./img/sertificate/comfort.svg", height="72" alt="alt")
+					.text-16
+						p #[span Comfort] Certificate
+					.text-13
+						p Game Hotel
+				.certificate-card__footer
+					.button.button--flex.button.button--green
+						svg.nft-icon
+							use(xlink:href="./img/svg-sprite.svg#nftIcon")
+						span Выпустить NFT
+
+			//========одна карточка сертификата=========
+			.certificate-card.certificate-card--standart
+				.certificate-card__header
+					img(src="./img/games/axie-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					img(src="./img/sertificate/standart.svg", height="72" alt="alt")
+					.text-16
+						p #[span Standart] Certificat
+					.text-13
+						p Game Hotel
+				.certificate-card__footer
+					.button.button--flex.button--white
+						svg.nft-icon
+							use(xlink:href="./img/svg-sprite.svg#nftIcon")
+						span Выпустить NFT
+
+			//========одна карточка сертификата=========
+			.certificate-card.certificate-card--lux
+				.certificate-card__header
+					img(src="./img/games/axie-logo.png", width="104" alt="alt")
+				.certificate-card__body
+					img(src="./img/sertificate/lux.svg", height="72" alt="alt")
+					.text-16
+						p #[span Lux] Certificate
+					.text-13
+						p Game Hotel
+				.certificate-card__footer
+					.button.button--white.button--flex
+						svg.nft-icon
+							use(xlink:href="./img/svg-sprite.svg#nftIcon")
+						span Выпустить NFT

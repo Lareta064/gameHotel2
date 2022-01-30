@@ -1,0 +1,17 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	- var menuItems = ([{link: 'education.html', text: 'Курсы'}, {link: 'certificates.html', text: 'Мои сертификаты', addCl:'active'}, {link: '#', text: 'Рейтинг'}]);
+	
+	+fix-bottom-menu('Курсы', 'Мои сертификаты', 'Рейтинг')
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+	main.certificates
+		include ../sections/_certificates
+	include ../sections/_footer.pug
+	
+	
+	
+block variables
+	-var title = "Сертификаты";
