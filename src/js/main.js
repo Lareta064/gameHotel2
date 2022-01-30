@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		item.addEventListener('click', function(e){
 			const thisList = item.querySelector('.select-list');
 			const thisInput = item.querySelector('input');
+			const thisIconArrow = item.querySelector('.select-icon');
 			const thisListItem = item.querySelectorAll('li');
 
 			if(e.target.tagName == 'INPUT'){
@@ -144,10 +145,12 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(thisList.classList.contains('visible')){
 					thisList.style.maxHeight = 0 + "px";
 					thisList.classList.remove('visible');
+					thisIconArrow.classList.remove('rotate');
 					
 				}else{
 					thisList.classList.add('visible');
 					thisList.style.maxHeight = thisList.scrollHeight + "px";
+					thisIconArrow.classList.add('rotate');
 				}				
 			}
 
@@ -160,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				e.target.classList.add('current');
 				thisList.style.maxHeight = 0 + "px";
 				thisList.classList.remove('visible');
+				thisIconArrow.classList.remove('rotate');
 			}
 		});
 	}

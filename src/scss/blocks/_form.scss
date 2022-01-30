@@ -251,3 +251,12 @@
 		outline: none;
 	}
 }
+.custom-select.custom-select--light .select-icon {
+	text-align: center;
+	svg{transition: .3s;}
+}
+.custom-select.custom-select--light .select-icon.rotate{
+	svg{
+		transform:rotate(180deg)
+	}
+}
