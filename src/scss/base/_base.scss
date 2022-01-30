@@ -44,6 +44,9 @@
   }
   .noscroll {
 	overflow: hidden;
+	touch-action: none;
+	-ms-touch-action: none;
+	height: 100vh;
   }
   header.header, main, footer{
 	@media(min-width:1200px){

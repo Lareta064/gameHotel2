@@ -653,6 +653,11 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height
 	right: 0;
 	border-radius: 0;
 	transform: translate(0, 0);
+	box-shadow: none;
+	.page-modal__header{
+		justify-content: flex-start;
+		button{margin-right: 12px;}
+	}
 }
 *.grid-wrapper{
 	display: grid;

@@ -126,9 +126,12 @@
 //========модальное окно, открывается по клику на кнопку с data-btn="personAllCert"===========
 .page-modal.full-modal(data-modal="personAllCert")
 	.page-modal__header
+		button.back-arrow--dark(data-close)
+			svg(width="24" height="24")
+				use(xlink:href="./img/svg-sprite.svg#arrRight")
 		.text-15
 			p Мои сертификаты #[span 3]
-		button.cross-btn(data-close)
+		
 	.page-modal__body
 		.person-sertificates.grid-wrapper
 			//======карточка сертификата ========
@@ -161,9 +164,12 @@
 //========модальное окно, открывается по клику на кнопку с data-btn="personAllFollow"===========
 .page-modal.full-modal(data-modal="personAllFollow")
 	.page-modal__header
+		button.back-arrow--dark(data-close)
+			svg(width="24" height="24")
+				use(xlink:href="./img/svg-sprite.svg#arrRight")
 		.text-15
 			p Мои подписчики #[span 56]
-		button.cross-btn(data-close)
+		
 	.page-modal__body
 		.followers-modal-search
 			.sf-block
@@ -259,9 +265,12 @@
 //======модальное окно, открывается по клику на кнопку с data-btn="personAllRewards"===========
 .page-modal.full-modal(data-modal="personAllRewards")
 	.page-modal__header
+		button.back-arrow--dark(data-close)
+			svg(width="24" height="24")
+				use(xlink:href="./img/svg-sprite.svg#arrRight")
 		.text-15
 			p Мои награды #[span 3]
-		button.cross-btn(data-close)
+		
 	.page-modal__body
 		//=======шкала опыта ======
 		.person-state

@@ -1017,10 +1017,28 @@ document.addEventListener("DOMContentLoaded", function (){
 			if(overlayBg){
 				overlayBg.classList.remove('active');
 			}
-			
 			bodyEl.classList.remove('noscroll');
+			for(let i=0; i<formsArray.length; i++){
+				if(formsArray[i].dataset.modal=='profile-info'){
+					if(formsArray[i].classList.contains('visible')){
+						formsArray[i].classList.remove('visible')
+					}
+				}
+			}
+			
 		});
+		/* на стр Профиля закрыть short-modal*/
+		
 	}
+	// =====Закрыть модалку по ресайзу экрана ======
+	window.addEventListener('resize', function(){
+		for(let i=0; i<formsArray.length; i++){
+			formsArray[i].classList.remove('visible');}
+			if(overlayBg){
+				overlayBg.classList.remove('active');
+			}
+			bodyEl.classList.remove('noscroll');
+	});
 
 	// ===== Закрыть модалку  по клику на фон-затемнение ======
 	if(overlayBg){
@@ -1555,23 +1573,5 @@ if(toggleMobSF){
 		});
 	}
 
-	/*=======боковая панель на странице урока profile */
-	// const sidebarPanel = document.getElementById('sidebar-panel');
-	
-	// if(sidebarPanel){
-	// 	const sidebarPanelToggle = document.getElementById('toggle-panel');
-	// 	sidebarPanelToggle.addEventListener('click', function(e){
-			
-	// 		if(this.classList.contains('active')){
-	// 			sidebarPanel.classList.remove('active');
-	// 			this.classList.remove('active');
-				
-	// 		}else{
-	// 			sidebarPanel.classList.add('active');
-	// 			this.classList.add('active');
-	// 		}
-	// 	});
-		
-	// }
 
 });

@@ -36,6 +36,8 @@
 	@media(max-width:767px) {
 		padding-left: 10px;
 		padding-right: 10px;
+		background-color: #fff;
+		border-top: 1px solid #D8E1EF;
 	}
 }
 
@@ -62,6 +64,9 @@
 			font-size: 20px;
 			line-height: 12px;
 			transition: .3s;
+			@media(max-width:767px) {
+				color: #3B4E6A;
+			}
 		}
 		span+span{
 			font-family: $ms;
@@ -72,16 +77,36 @@
 			@media(max-width:1199px){
 				padding-top: 0px;
 			}
+			@media(max-width:767px){
+				color: #3B4E6A;
+			}
 		}
 		svg{
 			width: 24px;
 			height: 24px;
+			fill: #fff;
+			@media(max-width:767px){
+				fill: #9BADCA;
+			}
+		}
+		.dotted-icon{
+			width: 24px;
+
+		}
+		.job2-svg{
+			width: 19px;
+			height: 19px;
 		}
 		align-items: center;
 	}
 	button span:first-child{
 		position: relative;
+		// 
+		display: inline-block;
+	}
+	.label span:first-child {
 		width: fit-content;
+		color: #0A0522;
 	}
 	button .label{
 		display: inline-block;		
@@ -103,7 +128,10 @@
 			font-size: 10px;
 			color: #0A0522;
 			line-height: 12px;
+			width:fit-content;
+			
 		}
+		@media(max-width:767px) {border:0;}
 	}
 	@media(max-width:1199px) {
 		margin-left: auto;

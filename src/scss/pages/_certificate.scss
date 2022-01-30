@@ -82,6 +82,10 @@
 	padding: 40px;
 	border-radius: 24px;
 	background-color: #fff;
+	@media(max-width:767px) {
+		padding: 24px;
+		padding-top: 20px;
+	}
 	
 	
 }
@@ -92,6 +96,9 @@
 }
 .congrat-modal__title{
 	margin-bottom: 32px;
+	@media(max-width:767px) {
+		margin-bottom: 16px;
+	}
 	.text-28{
 		margin-left: auto;
 		margin-right: auto;
@@ -125,6 +132,7 @@
 		top: -10px;
 		transform: translate(-50%, -50%);
 		z-index: 2;
+		width: 100%;
 		img:first-child{
 			transform: rotate(-15deg);
 			top:10px;
@@ -147,7 +155,9 @@
 
 		p {
 			font-family: $mr;
+			@media(max-width:767px){font-size: 20px;}
 		}
+		
 	}
 }
 .congrat-reward{
@@ -158,6 +168,9 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 40px;
+	@media(max-width:767px){
+		margin-bottom: 20px;
+	}
 }
 .button-group{
 	display: flex;
