@@ -241,6 +241,18 @@ mixin account-tb-3(id, img)
 			.button.button--color Подменить
 
 
+mixin claim-table(num, text1, text2, dt)
+	tr
+		td
+			p #{num}
+			
+		td.wallet-name
+			p #{text1}
+		td.wallet-val
+			p.badge.badge--light #{text2}
+		td.btn-col
+			.button.button--color(data-btn=""+ dt) claim
+
 mixin header(menuItems)
 	header.header.header--desk
 		.header-content.d-flex

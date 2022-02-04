@@ -1,0 +1,40 @@
+//=========table  Что бы открыть по клику модальное окно,  у кнопки claim  в таблице прописан атрибут data-btn="claim"  и такое же значение data-modal  у модального окна. Модальное окно видно за счет добавления класса visible  Если надо, что бы по клику на любую кнопку открывалось одно и то же окно, то надо прописать другой скрипт Сейчас работает логика: одна кнопка - открывает одно конкретное окно ==============
+.table.claim-table.claim-table2
+	table
+		//==== заголовочная строка =====
+		thead
+			tr
+				th
+					p #
+					
+				th.wallet-name
+					p wallet name
+				th.wallet-val
+					p value
+				th.btn-col
+		tbody
+			+claim-table(1, 'Liquidity for Uniswap', ' 1 750 000 DAOvs', 'claim')
+			+claim-table(2, 'Marketing 1', ' 1 750 000 DAOvs')
+			+claim-table(3, 'LIquidity', ' 112 334,942 DAOvs')
+			+claim-table(4, 'Ecosystem & Partnerships', '1 250 000 DAOvs')
+			+claim-table(5, 'Team & Partnerships', ' 1 988 636,375 DAOvs')
+			+claim-table(6, 'Reserve fund', '1 988 636,375 DAOvs')
+			+claim-table(7, 'Marketing 2', '73 200 DAOvs')
+			+claim-table(8, 'Foundation', ' 1 250 000 DAOvs')
+
+.page-modal.claim-modal(data-modal="claim")
+	.page-modal__header
+		h3.text-16 Claim Liquidity for uniswap
+		button.close-btn(data-close) &#10006;
+	.page-modal__body
+		form.claim-form
+			.form-field
+				label Amount
+				input(type="text"  name="" )
+			.form-field
+				label Address
+				input(type="text"  name="" )
+			.claim-form-btn
+				button.button.button--color( type="button" )
+					span Change
+				a(href="#!").text-link Cancel

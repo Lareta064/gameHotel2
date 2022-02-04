@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	include ../sections/_mobile-fix-bottom-menu.pug
+	include ../sections/_aside-menu.pug
+	include ../sections/_header.pug
+	main.claim-page
+		include ../sections/_ui-claim-2
+	include ../sections/_footer.pug
+	
+	
+block variables
+	-var title = "For Investor";
