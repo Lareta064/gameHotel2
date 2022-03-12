@@ -1,0 +1,142 @@
+.edu-page{
+	@media(min-width: 768px){
+		min-height: calc(100vh - 130px);
+	}
+}
+.edu-card{
+	max-width:400px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 24px 24px;
+	border-radius: 16px;
+	&:hover .button{opacity: .7;}
+	
+	.edu-card__left{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 152px;
+		img{
+			width: 128px;
+			height: 52px;
+			object-fit: contain;
+			object-position: center;
+		}
+		@media(max-width:1199px){width: 40%;}
+	}
+	.edu-card__title{
+		.text-13 {
+			color: #3B4E6A;
+		}
+	}
+	.edu-card__right{
+		width: 176px;margin-left: auto;
+		@media(max-width:1199px) {
+			width: 55%;
+		}
+	}
+	.edu-card__body{
+		display: flex;
+		align-items: center;
+		padding-top: 24px;
+	}
+	.edu-card__body-img{
+		flex-shrink:0;
+	}
+	.edu-card__body-text{
+		padding-left: 12px;
+	}
+	.edu-card__body-text .text-13{
+		position: relative;
+			color: #3B4E6A;
+		
+		
+	}
+	.edu-card__footer{
+		padding-top: 28px;
+	}
+	.button{
+		background-color: #fff;
+		color:$pr;
+		font-size: 13px;
+		width: 100%;
+		text-align: center;
+	}
+}
+.edu-cards-wrapper{
+	padding-left: 24px;
+	padding-right: 24px;
+	column-gap: 32px;
+	row-gap: 32px;
+	@media(max-width:1023px){
+		display: flex;
+		column-gap: unset;
+		row-gap: unset;
+	}
+}
+.edu-cards {
+	.swiper-wrapper{
+		width: auto;
+	}
+	@media(max-width:1023px) {
+		padding-left: 24px;
+		.swiper-wrapper {
+			
+			width: 100%;
+		}
+	}
+}
+.edu-card-yellow .edu-card{
+	background-color: #FAECBC;}
+.edu-card-olive .edu-card {
+	background-color: #E9ECB0;
+
+}
+
+.edu-card-lightgreen .edu-card {
+	background-color: #D6F3EC;
+}
+.edu-card-lightblue .edu-card {
+	background-color: #E2F2FC;
+}
+.edu-card-grey .edu-card {
+	background-color: #E8E8E5;
+}
+.edu-card-pink .edu-card {
+	background-color: #FCEAE0;
+}
+.sidebar-content {
+	.aside-search{
+	border-bottom: 1px solid #D8E1EF;
+	padding-left: 12px;
+	padding-right: 12px;
+	border-radius: 16px 16px 0 0;
+	}
+	.nav-list{
+		border-radius: 0 0 16px 16px;
+	}
+}
+.aside-search {
+	background-color: #fff;
+	.form-field{
+		margin-bottom: 0;
+		 input{height: 40px;}
+	}
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+
+.edu-page{
+	.page-content-wrapper{
+		@media(max-width:767px){
+			padding-bottom: 26px;
+		}
+	}
+	
+	.page-content-left{
+		width: 74%;
+		@media(max-width:1023px) {
+			width: 100%;}
+	}
+	
+}

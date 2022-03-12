@@ -1,0 +1,443 @@
+.profile-header{
+	position: relative;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	height:320px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	color: #fff;
+	
+	.container{
+		@media(max-width:767px){
+			flex-direction: column;
+		}
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom:0 ;
+		left: 0;
+		right: 0;
+		background: rgba(10, 5, 34, .7);
+		pointer-events: none;
+	}
+	.container{
+		position: relative;
+		z-index: 2;
+		height: 100%;
+	}
+	.profile-header-content{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media(max-width:1023px){
+			flex-direction: column;
+			max-width:720px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.profile-header-right{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		height: 100%;
+		.person-statistics{margin-top: auto;
+		@media(max-width:1023px) {
+			margin-top: 0;
+			
+			
+		}
+		@media(max-width:767px) {
+			margin-right: 0;
+			margin-left: 0;
+			
+			
+		}
+		}
+		@media(max-width:1023px) {
+			flex-direction: row-reverse;
+			width: 100%;
+			justify-content: center;
+			.profile-header-label {
+				margin-left: 80px;
+			}
+		}
+		@media(max-width:767px) {
+			flex-direction: column;
+			align-items: center;
+			height:auto;
+			justify-content: space-between;
+			.profile-header-label {
+				margin-left: 0;
+			}
+		}
+	}
+	
+	@media(max-width:1023px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	@media(max-width:767px) {
+		height: 480px;
+		padding-bottom: 20px;
+
+	}
+}
+
+.profile-header-avatar{
+	width: 144px;
+	height: 144px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 53px;
+	flex-shrink:0;
+	@media(max-width:1279px) {
+		width: 104px;
+		height: 104px;
+		margin-right: 24px;
+	}
+	@media(max-width:1023px) {
+		margin-right: 48px;
+		width: 80px;
+		height: 80px;
+	}
+	@media(max-width:767px) {
+		margin-right: 24px;
+		margin-bottom: 16px;
+	}
+}
+.profile-header-title{
+	@media(max-width:767px) {
+		.text-36{		
+			font-size: 17px;
+			line-height: 28px;
+		}
+		.icon-group>*,
+		.icon-group span.star-symbol,
+		.top-block-group>*{
+			color:#0A0522;
+		}
+		.text-16{font-size: 14px;font-family: $mr;}
+	}
+	
+	
+
+	.bottom-block{
+		margin-top: 80px;
+		@media(max-width:1599px) {
+			margin-top: 32px;
+		}
+		@media(max-width:1199px) {
+			margin-top: 46px;
+		}
+		@media(max-width:767px) {
+			margin-top: 20px;
+		}
+	}
+	.text-16 p {
+		color: #fff;
+		font-family: $mr;
+		@media(max-width:767px){text-align: center; margin-top: 12px;}
+	}
+	
+	.icon-group span.star-symbol, span {
+		color: #fff;
+		font-size: 16px;
+		font-family: $mr;
+	}
+	.icon-group span.star-symbol {
+		font-size: 24px;
+	}
+	.top-block-group{
+		.top-block-col {
+			display: flex;
+			align-items: center;
+
+			&>*+* {
+				margin-left: 24px;
+				
+			}
+		}
+		&>*+*{margin-left: 24px;
+		@media(max-width:767px) {
+			margin-left: 0px;
+		}
+		}
+		@media(max-width:1023px){
+			flex-wrap:wrap;
+			.text-36{
+				width: 100%;
+				text-align: left;
+			}
+			.top-block-col{margin-top: 12px;width: 100%; justify-content: center; &>*+*{margin-left: 32px;}}
+		}
+	}
+}
+.profile-header-title{
+	@media(max-width:1023px) {
+		.icon-group>*,
+		.icon-group span.star-symbol,
+		.top-block-group>* {
+			color: #0A0522;
+		}
+		.top-block-group .top-block-col,.flex-center {
+			justify-content: start;
+		}
+	}
+}
+.profile-header-title {
+	@media(max-width:767px) {
+		.text-36 {
+			font-size: 17px;
+			line-height: 28px;
+			
+		}
+		.text-16 {
+			font-size: 14px;
+			font-family: $mr;
+		}
+	}
+}
+
+.icon-group span.star-symbol{
+	font-size: 20px;
+	color:#3B4E6A;
+	line-height: 1;
+
+}
+.skills-progress{
+	.skills-progress-bar{
+		position: relative;
+		
+	}
+	.skills-progress-line{
+		width: 100%;
+		height: 6px;
+		border-radius: 12px;
+		background-color: #fff;
+		@media(max-width:1023px) {
+			background-color: #D8E1EF;
+			max-width:522px;
+
+		}
+	}
+	.skills-progress-scale{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: 12px;
+		width: 33%;
+		background-color: #fff;
+		background: radial-gradient(50% 50% at 50% 50%, #4071EE 0%, #0C0B28 100%);
+		opacity: 0.3;
+		z-index: 2;
+	}
+	.skills-progress-text{
+		margin-top: 16px;
+		p{font-family: $mr;}
+	}
+}
+.profile-header-label{
+	padding: 8px 12px;
+	background-color: #fff;
+	border-radius:12px;
+	display:inline-flex;
+	align-items: center;
+	@media(max-width:1023px) {
+		margin-left: 32px;
+		margin-right: 0;
+		padding: 0px 0px;
+		margin-bottom: 0;
+	}
+	.profile-label__img{
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		border: 1px solid #D8E1EF;
+		overflow: hidden;
+		margin-right: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media(max-width:1023px) {
+			width: 50px;
+			height: 50px;
+		}
+		@media(max-width:767px){
+			width: 44px;
+			height: 44px;
+			margin-right: 0;
+		}
+	}
+	.gh-title p {		
+		margin-right: 8px;
+		font-family: "Montserrat Semibold";
+		font-size: 16px;
+		line-height: 1.5;
+		color: #0A0522;
+	}
+	
+}
+.icon-check{
+	background-color: #33A661;
+	border-radius: 50%;
+	height: 17px;
+	width: 17px;
+	flex-shrink:0;
+	@include pos;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.5003 1.83333L5.50033 11.8333L0.916992 7.24999L2.09199 6.07499L5.50033 9.47499L14.3253 0.658325L15.5003 1.83333Z' fill='white'/%3e%3c/svg%3e");
+	background-size: 70%;
+}
+.gh-title{
+	display: flex;
+	align-items: center;
+}
+.profile-header-title{
+	.gh-title {
+		.icon-check{width: 20px;height:20px; margin-left: 18px;}
+	}
+}
+.button-chat{display: inline-flex; justify-content: center;align-items: center;}
+.profile-header-title .flex-wrapper{
+	.button + .button{margin-left: 24px;}
+}
+/********до 767px********/
+.profile-mobile-header,
+.mobile-page-top,
+.profile-banner-mobile {
+	display: none;
+}
+@media(max-width:1023px){
+	.profile-mobile-header{
+		overflow:hidden;
+		.skills-progress-text.text-14{font-size: 13px;}
+		.skills-progress{padding-top: 20px;}
+		.skills-progress .skills-progress-text{margin-top: 8px;}
+	}
+	.person-courses--mobile{
+		.flex-header{margin-bottom: 20px;}
+	}
+	.profile-header{
+		display: none;
+	}
+	.mobile-page-top {
+		display: flex;
+		background-color: #fff;
+	}
+	.profile-banner-mobile{
+		display: block;
+		img{
+			height: 220px;
+			width: 100%;
+			object-fit: cover;
+			object-position: center top;
+		}
+		
+	}
+
+	.mobile-page-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 48px;
+		padding-left: 24px;
+		padding-right: 24px;
+
+		.custom-dropdown .custom-dropdown__icon {
+			right: 0;
+			top: 6px;
+		}
+	}
+
+	.profile-mobile .mobile-page-top__left {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.back-arrow--dark {
+			margin-right: 12px;
+		}
+	}
+	.profile-mobile-header{
+		display: block;
+		background-color: #fff;
+	}
+	.profile-header-buttons{
+		margin-top: 24px;
+		display: flex;
+		.button{
+			display: block;
+			width: 100%;
+			max-width:328px;
+			text-align: center;
+			&+.button{margin-top: 0; margin-left: 16px;}
+		}
+
+	}
+}
+@media(max-width:767px){
+	.profile-header-buttons {
+		flex-direction: column;
+		
+		.button+.button {
+			margin-top: 16px;
+			margin-left: 0;
+		}
+	}
+	.profile-banner-mobile {
+		display: block;
+
+		img {
+			height: 104px;
+			width: 100%;
+		}
+
+	}
+}
+.profile-header{
+	.icon-followers,
+	.icon-reward,
+	.icon-post {
+		fill: #fff;
+		width: 20px;
+		height: 20px;
+
+		&+span {
+			color: #fff;
+		}
+	}
+	.statistics-item span,
+	.text-14 {
+		color: #fff;
+	}
+}
+.icon-followers,
+.icon-reward,
+.icon-post {
+	fill:#9BADCA;
+	width: 20px;			
+	height: 20px;
+	&+span {
+		color: #0A0522;
+	}
+}
+.statistics-item span,
+.text-14 {
+	color: #0A0522;
+}
+.back-arrow--dark svg {
+	fill: #788CAB;
+	transform: rotate(180deg);
+}
+.text-link-wrapper{
+	padding-top: 20px;
+}
+.text-link.button--flex{
+	svg{fill:$pr;}
+}

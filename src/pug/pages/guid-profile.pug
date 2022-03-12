@@ -1,0 +1,26 @@
+extends ../layouts/layout.pug
+
+block content
+	- var menuItems = ([{link: '#', text: 'Мой профиль', addCl:'active'}, {link: '#', text: 'Обучение'}, {link: '#', text: 'Финансы'}, {link: '#', text: 'Блог'}, {link: '#', text: 'Комментарии'} , {link: '#', text: 'Настройки'}]);
+	
+	#overlay
+	+fix-bottom-menu('Мой профиль',  'Обучение', 'Финансы', 'Блог', 'Комментарии', 'Настройки')
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+	include ../sections/_aside-menu.pug
+	main.profile-page
+		//======== БАННЕР №2 ================
+		include ../sections/_profile-header2.pug
+		
+		//======== БАННЕР №3 ================
+		include ../sections/_profile-header3.pug
+		
+		//========КОНТЕНТ ПОД БАННЕРОМ ================
+		include ../sections/_profile-content2.pug
+	//=======FOOTER========
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "My Profile";
+
+	

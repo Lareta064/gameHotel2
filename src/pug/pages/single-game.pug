@@ -1,0 +1,46 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
+
+	include ../sections/_aside-menu.pug
+	include ../sections/_header_3.pug
+	main.about-game-main.single-game-page
+		.page-content-wrapper
+			.container.container--special
+				+breadcrumb('Главная','Игры', 'Axie Infinity')
+				
+				//===== заголовок страницы для мобильной версии ======
+				.about-game-header-mobile
+					header.about-game-header
+						.flex-header
+							.text-group
+								span.badge.badge--green 8.9
+								h1.main-title Axie Infinity
+						
+							.about-game__logo
+								img(src="./img/aboutGame/game-logo.png", width="82" alt="alt")
+				
+				//===== контент с колонками ======
+				.page-content-columns
+					.page-content-left
+						.page-content-left__block
+							//===== заголовок страницы для десктоп версии ======
+							include ../sections/_about-game-header
+							include ../sections/_about-game-description
+						.fake-offset#news
+							.page-content-left__block
+								include ../sections/_about-game-news
+						.fake-offset#games-similare
+							.page-content-left__block
+								include ../sections/_about-game-similar
+						.fake-offset#comments
+							.page-content-left__block
+								include ../blocks/_comments-block
+					.page-content-right.sticky-block
+						include ../sections/_about-game-aside
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "About Game";

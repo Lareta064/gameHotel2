@@ -31,10 +31,11 @@
 	color: $pr;
 	background-color: $light;
 }
-
+.filter-btn,
 .button-medium{
 	height: 36px;
 	line-height: 34px;
+	border-radius: 9px;
 }
 .button.h-40 {
 height: 40px;
@@ -43,13 +44,45 @@ border-radius: 9px;
 }
 .filter-btn{
 	border-color:#C8D2E1;
-	color:#0A0522;
-	&.active{
-		color: #7256FF;
-		background-color: #EEF5FF;
+	background: #EEF5FF;
+	color: #7256FF;
+	font-family: $mr;
+	position: relative;
+	transition: .3s;
+	display: inline-block;
+	border: 1px solid #D8E1EF;
+	p{position: relative;
+	}
+	p:after {
+		content:'';
+		position: absolute;
+		left: 0;
+		width: 0;
+		bottom: 2px;
+		height: 2px;
+		background-color: transparent;
+		transition: .3s;
+	}
+	&.active {
+		background-color: #fff;
+		
+		p{
+			text-shadow: 0.5px 0.3px 0px #E857D1,
+		-0.5px -0.3px 0px #E857D1;
+		color: #E857D1;
+		}
+		
+		p:after {
+			width: 100%;
+			background-color: #E857D1;
+		}
+
+		
+
 		
 	}
 }
+
 .button-light{
 background: #EEF5FF;
 svg{fill: $pr;}
@@ -86,12 +119,12 @@ opacity: .7;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	span+span,
+	span+svg,
 	svg + span{
 		margin-left: 12px;
 	}
-	span+svg {
-		margin-left: 12px;
-	}
+	
 }
 .btn-group{
 	position: relative;
@@ -117,7 +150,7 @@ opacity: .7;
 
 .button--white {
 	background-color: #fff;
-	color: #0A0522;
+	color: $pr;
 	border-color: #fff;
 
 	&:hover {
@@ -181,3 +214,11 @@ background: #788CAB;
 color: #fff;
 text-align: center;	
 }
+.button--turqu {
+	background-color: #45E4E4;
+	color: #3B4E6A;
+}
+.button--green {
+	color: #fff;
+	background-color: #33A661;
+	}

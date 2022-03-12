@@ -1,0 +1,35 @@
+extends ../layouts/layout.pug
+
+block content
+	- var menuItems = ([{link: 'education.html', text: 'Курсы', addCl:'active'}, {link: '#', text: 'Мои сертификаты'}, {link: '#', text: 'Рейтинг'}]);
+	
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+	
+	main.edu-page.about-game-main
+		include ../sections/_header-slider-short
+		//=======end banner slider ========
+		.page-content-wrapper.page-content-wrapper--games
+			.container.container--special
+				.page-content-columns
+					.page-content-left
+						//======один блок с карточками ====
+						.fake-offset#step-genres
+							.page-content-left__block
+								include ../sections/_ui-edu
+						
+						//======ЭТОГО БЛОКА НЕТ НА МАКЕТЕ ДОБАВИЛА ДЛЯ ПРИМЕРА =============
+						.fake-offset#card-genres
+							.page-content-left__block
+								include ../sections/_ui-edu2
+						
+					.page-content-right.sticky-block
+						include ../sections/_one-game-aside
+						//- include ../sections/_aside-education
+	//=======FOOTER========
+	include ../sections/_footer.pug
+	
+	
+block variables
+	-var title = "Game Hotel | Курсы";

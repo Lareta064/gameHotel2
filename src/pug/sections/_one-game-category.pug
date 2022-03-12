@@ -1,33 +1,67 @@
 //==========game categories ========
 section.game-categories.p-80
-	.game-categories__img
+	.game-categories__img(data-aos="fade-up"    data-aos-duration="500")
 		img(src="./img/gamepad-bg.png", width="390" alt="img" )
 	.container
-		.game-categories-list
-			.game-categories-type--new
-				.game-categories-type
-					.categories-type__title
-						h4  Новые обновления
-					.categories-type__cards
-						+game-card-category('duck', 'Axie Infinity')
-						+game-card-category('fara', 'Fara Land')
-						+game-card-category('splint', 'Splinterlands')
-						+game-card-category('monsters', 'Monsters Clan')
-			.game-categories-type--favor
-				.game-categories-type
-					.categories-type__title
-						h4  Популярное
-					.categories-type__cards
-						+game-card-category('ember', 'Ember Sword')
-						+game-card-category('axie', 'Axie Infinity')
-						+game-card-category('jojo', 'Jojo.Fun')
-						+game-card-category('kaby', 'Kaby Arena')
+		//- .game-categories-list
+		//- 	.game-categories-type--new
+		//- 		.game-categories-type
+		//- 			.categories-type__title
+		//- 				h4  Новые обновления
+		//- 			.categories-type__cards
+		//- 				+game-card-category('duck', 'Axie Infinity')
+		//- 				+game-card-category('fara', 'Fara Land')
+		//- 				+game-card-category('splint', 'Splinterlands')
+		//- 				+game-card-category('monsters', 'Monsters Clan')
+		//- 	.game-categories-type--favor
+		//- 		.game-categories-type
+		//- 			.categories-type__title
+		//- 				h4  Популярное
+		//- 			.categories-type__cards
+		//- 				+game-card-category('ember', 'Ember Sword')
+		//- 				+game-card-category('axie', 'Axie Infinity')
+		//- 				+game-card-category('jojo', 'Jojo.Fun')
+		//- 				+game-card-category('kaby', 'Kaby Arena')
 			
-			.game-categories-type--anonce
-				.game-categories-type
-					.categories-type__title
-						h4  Скоро в Game Hotel
-					.categories-type__cards
-						+game-card-category('snake', 'Crypto Snake')
-						+game-card-category('defi', 'My Defi Pet')
-						+game-card-category('thetan', 'Thetan Arena')
+		//- 	.game-categories-type--anonce
+		//- 		.game-categories-type
+		//- 			.categories-type__title
+		//- 				h4  Скоро в Game Hotel
+		//- 			.categories-type__cards
+		//- 				+game-card-category('snake', 'Crypto Snake')
+		//- 				+game-card-category('defi', 'My Defi Pet')
+		//- 				+game-card-category('thetan', 'Thetan Arena', 'MOBA')
+		//====slider ======
+		.game-categories-list.swiper.game-categories-swiper.slider-1023
+			.swiper-wrapper
+				.swiper-slide
+					.game-categories-type--new
+						.game-categories-type
+							.categories-type__title
+								h4  Новые обновления
+							.categories-type__cards
+								+game-card-category('duck', 'Axie Infinity')
+								+game-card-category('fara', 'Fara Land')
+								+game-card-category('splint', 'Splinterlands')
+								+game-card-category('monsters', 'Monsters Clan')
+				.swiper-slide
+					.game-categories-type--favor
+						.game-categories-type
+							.categories-type__title
+								h4  Популярное
+							.categories-type__cards
+								+game-card-category('ember', 'Ember Sword')
+								+game-card-category('axie', 'Axie Infinity')
+								+game-card-category('jojo', 'Jojo.Fun')
+								+game-card-category('kaby', 'Kaby Arena')
+					
+				.swiper-slide
+					.game-categories-type--anonce
+						.game-categories-type
+							.categories-type__title
+								h4  Скоро в Game Hotel
+							.categories-type__cards
+								+game-card-category('snake', 'Crypto Snake')
+								+game-card-category('defi', 'My Defi Pet')
+								+game-card-category('thetan', 'Thetan Arena', 'MOBA')
+			.gameCategories-pagination.swiper-pagination

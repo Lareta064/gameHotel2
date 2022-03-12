@@ -5,13 +5,21 @@
 	background-size: cover;
 	height: 700px;
 	background-repeat: no-repeat;
+	@media(max-width: 1023px) {height: 550px;}
 	.section-title {
 		color: #fff;
 	}
-	.popular-games-block{
+	.popular-games-block .swiper-wrapper{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap:40px;
+		@media(max-width: 1199px) {
+			column-gap: 24px;
+		}
+		@media(max-width: 1023px){
+			column-gap:unset;
+			display: flex;
+		}
 	}
 	.game-card-large__img{height: 244px;}
 }

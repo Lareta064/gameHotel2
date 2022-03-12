@@ -1,0 +1,141 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
+	include ../sections/_aside-menu.pug
+	include ../sections/_header_3.pug
+	main.single-news-page
+		.page-content-wrapper
+			.container.container--special
+				+breadcrumb('Главная','Игры', 'Новости Gamefi', 'В Японии откроется первая старшая киберспортивная школа')
+				.page-content-columns
+					.page-content-left
+						.page-content-left__block
+							include ../sections/_single-news-page
+						
+						//==================================
+						.page-content-left__block
+							article.news-slider
+								.column-container
+									.flex-header
+										.text-group
+											p.text-24 Похожие новости
+										//==========slider btn ========
+										.slider-btn-wrapper
+											.game-news-prev.slider-btn-prev
+											.game-news-next.slider-btn-next
+											
+									//========новости==========
+									.game-news
+										.game-news-cards.gn-cards-full.swiper
+											.swiper-wrapper
+												//=======one card ======
+												a(href="#!").card-light.card-light--pic.swiper-slide
+													.card-light__img
+														img(src="./img/game-news1.jpg", width="104" height="104" alt="alt")
+													.card-light__text
+														.h4 Киберспорт
+														p Победа Natus Vincere в заветном мейджоре и влия...
+														.card-light__details
+															p 14.10.2021
+															span
+												//=======one card ======
+												a(href="#!").card-light.card-light--pic.swiper-slide
+													.card-light__img
+														img(src="./img/game-news2.jpg", width="104" height="104" alt="alt")
+													.card-light__text
+														.h4 Секреты лучших
+														p Обсуждаем с про игроком секреты тактики в Axie...
+														.card-light__details
+															p 14.10.2021
+															span
+												//=======one card ======
+												a(href="#!").card-light.card-light--pic.swiper-slide
+													.card-light__img
+														img(src="./img/game-news3.jpg", width="104" height="104" alt="alt")
+													.card-light__text
+														.h4 JRPG и Game Fi
+														p Как Япония оказывает влияние на индустрию...
+														.card-light__details
+															p 14.10.2021
+															span
+												//=======one card ======
+												a(href="#!").card-light.card-light--pic.swiper-slide
+													.card-light__img
+														img(src="./img/game-news1.jpg", width="104" height="104" alt="alt")
+													.card-light__text
+														.h4 Киберспорт
+														p Победа Natus Vincere в заветном мейджоре и влия...
+														.card-light__details
+															p 14.10.2021
+															span
+												//=======one card ======
+												a(href="#!").card-light.card-light--pic.swiper-slide
+													.card-light__img
+														img(src="./img/game-news2.jpg", width="104" height="104" alt="alt")
+													.card-light__text
+														.h4 Секреты лучших
+														p Обсуждаем с про игроком секреты тактики в Axie...
+														.card-light__details
+															p 14.10.2021
+															span
+												//=======one card ======
+												a(href="#!").card-light.card-light--pic.swiper-slide
+													.card-light__img
+														img(src="./img/game-news3.jpg", width="104" height="104" alt="alt")
+													.card-light__text
+														.h4 JRPG и Game Fi
+														p Как Япония оказывает влияние на индустрию...
+														.card-light__details
+															p 14.10.2021
+															span
+						
+						//======== ПОСЛЕДНИЕ НОВОСТИ ДЛЯ МОБ ВЕРСИИ
+						.page-content-left__block.visible-1023
+							article.news-slider
+								.column-container
+									.flex-header
+										.text-group
+											p.text-24 Последние новости
+
+									//=====слайдер последних новостей =======
+									.news-list.news-list-swiper.swiper
+										.swiper-wrapper
+											.swiper-slide
+												.news-item
+													a(href="#!").text-14 Gambit Esports заняла второе место#[br] в рейтинге HLTV.org
+													span.text-13 14.10.2021
+											.swiper-slide
+												.news-item
+													a(href="#!").text-14 Комиссия, созданная PSG.LGD, не нашла фактов причастности Xiao8#[br]к ставкам на подставные матчи
+													span.text-13 14.10.2021
+											
+											.swiper-slide
+												.news-item
+													a(href="#!").text-14 Team Liquid представила нового игрока состава по CS:GO
+													span.text-13 14.10.2021
+											.swiper-slide
+												.news-item
+													a(href="#!").text-14 Gambit Esports заняла второе место#[br] в рейтинге HLTV.org
+													span.text-13 14.10.2021
+											.swiper-slide
+												.news-item
+													a(href="#!").text-14 Комиссия, созданная PSG.LGD, не нашла фактов причастности Xiao8#[br]к ставкам на подставные матчи
+													span.text-13 14.10.2021
+											
+											.swiper-slide
+												.news-item
+													a(href="#!").text-14 Team Liquid представила нового игрока состава по CS:GO
+													span.text-13 14.10.2021
+										.news-list-pagination.swiper-pagination.hide-1024
+						
+						//==========================
+						.page-content-left__block
+								include ../blocks/_comments-block
+					.page-content-right
+						include ../sections/_single-news-sidebar
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "About Game";

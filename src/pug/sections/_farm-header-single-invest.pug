@@ -1,0 +1,62 @@
+//===========FARM HEADER ===========
+.farm-header
+	.container
+		.farm-header-content.d-flex
+			.farm-header-left
+				.farm-header-column
+					.farm-title
+						h1 Раунд#[br] прямых инвестиций
+						.badge.badge--light Открыт до 2 марта
+					.farm-info
+						.investrounds-card__col
+							.investrounds-info
+								.info-item
+									p 9 090 909
+									span Всего токенов
+								
+								.info-item
+									p 25%
+									span Скидка
+								
+								.info-item
+									p $ 0.13750
+									span Цена токена
+					.farm-header-text
+						p #[span Выплачиваем 40% прибыли#[br] от игрового майнинга] держателям #[br]токена GHOT и участвующим в добыче
+						
+						
+			//=======правая часть с формой =======		
+			.farm-header-right
+				.farm-header-right__title
+					p Покупка GHOT
+				.farm-header-form
+					form.invest-round-form
+						.invest-form__header.text-20
+							p Купить GHOT через USDT
+						
+						.invest-form__body
+							//====блок ПОЛУЧИТЬ=====
+							.form-field
+								.form-field-top.d-flex
+									span.text-14 Получить
+									.text-13.text-bold
+										p MAX 30 000 GHOT
+								.form-field-bottom
+									input(type="text" value="0.0" name="")
+									.input-icon
+										span.text-14 GHOT
+										img(src="./img/coins/coingold.png" width="30", alt="alt")
+							
+							//====блок Отдать=====
+							.form-field
+								.form-field-top.d-flex
+									span.text-14 Отдать
+									.text-13.text-bold
+										p 
+								.form-field-bottom
+									input(type="text" value="0.0" name="")
+									.input-icon
+										span.text-14 USDT
+										img(src="./img/coins/tether.png" width="30", alt="alt")
+							button(type="submit").button.button--color Купить GHOT
+							.subbutton 1 GHOT = 0,13750 USDT

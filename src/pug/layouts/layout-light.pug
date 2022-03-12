@@ -1,0 +1,68 @@
+include ../mixins/mixins.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		meta(name="format-detection" content="telephone=no")
+		//=====запрет на кэширование===============
+		meta(http-equiv="Cache-Control" content="no-cache")
+		//=====favicon===============
+		link(rel='icon' type='image/svg+xml' href='./img/favicon.svg')
+		link(rel='icon' type='image/png' href='./img/favicon.png')
+		
+		//========AOS animation========
+		link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+		
+		//========fonts========
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet")
+		//=======swiper.js=======
+		link(rel="stylesheet",  href="https://unpkg.com/swiper/swiper-bundle.min.css")
+		
+		link(rel="stylesheet", href="css/main.css")
+		title !{title}
+		
+	body
+		
+		
+		block content
+
+		
+		
+		//====swiper slider ====
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		script(src ="./libs/SwiperAdder.js")
+		
+		//======jQuery CDN =====
+		script(src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		
+		//===анимация чисел =====
+		script(src="./libs/jquery.animateNumber.min.js")
+		
+		//======for phone mask =====
+		script(src="./libs/phoneMask/jquery.inputmask.js")
+		script(src="./libs/phoneMask/jquery.bind-first-0.1.min.js")
+		script(src="./libs/phoneMask/jquery.inputmask-multi.min.js")
+		
+		//======pageNav =====
+		script(src="./libs/nav.js")
+
+		//=========плавныйй скролл для сафари и ios ======
+		script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js")
+		script.
+			let scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 300
+			});
+		
+		//====== aos animation =======
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script.
+			AOS.init({
+				once: true,
+			})
+		
+		script(src="js/main.js")

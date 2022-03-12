@@ -7,6 +7,7 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
 		//=====запрет на кэширование===============
 		meta(http-equiv="Cache-Control" content="no-cache")
@@ -49,6 +50,8 @@ html(lang="ru")
 		+social-block(class=" contact-icons--vertical")
 		block content
 
+		
+		a(href="#top")#backTop.backTop Up
 		//====swiper slider ====
 		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
 		script(src ="./libs/SwiperAdder.js")
@@ -60,12 +63,20 @@ html(lang="ru")
 		script(src="./libs/jquery.animateNumber.min.js")
 		
 		//======for phone mask =====
-		//- script(src="https://unpkg.com/imask")
 		script(src="./libs/phoneMask/jquery.inputmask.js")
 		script(src="./libs/phoneMask/jquery.bind-first-0.1.min.js")
 		script(src="./libs/phoneMask/jquery.inputmask-multi.min.js")
 		
-				
+		//======pageNav =====
+		script(src="./libs/nav.js")
+		
+		//=========плавныйй скролл для сафари и ios ======
+		script(src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js")
+		script.
+			let scroll = new SmoothScroll('a[href*="#"]', {
+			speed: 300
+			});
+		
 		//====== aos animation =======
 		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 		script.

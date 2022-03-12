@@ -1,0 +1,98 @@
+section.investrounds-top
+	.container
+		.title-1
+			h1 Раунд инвестиций
+		.investrounds-content
+			//======левая часть =====
+			.investrounds-left
+				.investrounds-wrapper
+					//====одна карточка ======
+					.investrounds-card
+						.investrounds-card__header
+							.investrounds-card__title.text-20 
+								p Стратегический раунд
+							.badge.badge--light Закрыт 10 декабря
+						.investrounds-card__body
+							.investrounds-card__button
+								a(href="#!").button.button--flex
+									span.icon-lock 
+									span Раунд закрыт
+							.investrounds-card__col
+								.investrounds-info
+									.info-item
+										p 8 181 818
+										span Всего токенов
+									
+									.info-item
+										p 50%
+										span Скидка
+									
+									.info-item
+										p $ 0.09167
+										span Цена токена
+					
+					//==== Активная карточка: Именно наличие этого класса  active  меняет жирность текста и появляется слева от заголовка зеленая метка ======
+					.investrounds-card.active
+						.investrounds-card__header
+							.investrounds-card__title.text-20 
+								p Раунд прямых инвестиций
+							.badge.badge--light Открыт до 2 марта
+						.investrounds-card__body
+							.investrounds-card__button
+								a(href="invest-round-single.html").button Инвестировать
+							.investrounds-card__col
+								.investrounds-info
+									.info-item
+										p 9 090 909
+										span Всего токенов
+									
+									.info-item
+										p 25%
+										span Скидка
+									
+									.info-item
+										p $ 0.13750
+										span Цена токена
+					//====одна карточка ======
+					.investrounds-card
+						.investrounds-card__header
+							.investrounds-card__title.text-20 
+								p Открытые продажи
+							.badge.badge--light Начнется 10 июня
+						.investrounds-card__body
+							.investrounds-card__button
+								a(href="#!").button Еще недоступно
+							.investrounds-card__col
+								.investrounds-info
+									.info-item
+										p 2 727 273
+										span Всего токенов
+									
+									.info-item
+										p 0%
+										span Скидка
+									
+									.info-item
+										p $ 0.18333
+										span Цена токена
+			
+			//====  правая часть  ======
+			.investrounds-right
+				//======карточка баланса =====
+				.balance-card
+					.balance-card-top
+						.text-14.text-grey Баланс
+						.balance-card__value.text-24
+							p 0.000 GHOT
+							img(src="./img/goldlogo.png", width="32" alt="alt")
+					.balance-card-body
+						button.button.button--flex.button-light(data-btn="mm-wallet")
+							svg(width="20" height="20")
+								use(xlink:href="./img/svg-sprite.svg#metam2Icon")
+							span Подключить Metamask
+					.balance-card-footer
+						.text-14.text-grey
+							p Для того чтобы увидеть ваш баланс GHOT, подключите Metamask к вашему аккаунту на сайте
+
+
+

@@ -1,4 +1,5 @@
-header.header
+//============desktop header =========
+header.header.header--desk
 	.header-content.d-flex
 		.header-left
 			.mobile-logo
@@ -18,22 +19,19 @@ header.header
 			.header-menu
 				ul
 					li.active
-						a(href="#!") О проекте
+						a(href="#!") Игры
 					li
-						a(href="#games-catalogy") Игры
+						a(href="#games-catalogy") Обзоры
 					li
-						a(href="#road-map") Road map
+						a(href="#road-map") Обучение
 					li
-						a(href="#tokenomic") Токеномика
-					li
-						a(href="#team") Команда
-					li
-						a(href="#hoy-bay") Как купить GHOT?
+						a(href="#tokenomic") Новости GameFi
+					
 			//=======SEARCH FORM =======
-			.header-search
+			.header-search.sf-block
 				form.header-search-form(action="" method="method")
 					.form-field
-						input(type="text")
+						input(type="text" placeholder="Поиск по названию игры")
 					button(type="submit").form-btn.search-form-btn
 		
 		//=======HEADER RIGHT =======			
@@ -52,3 +50,62 @@ header.header
 					.profile-persone__row
 						p 0x...263a
 					//- .profile-persone__drop#profile-menu
+
+//===========MOBILE HEADER========
+header.header.header--mob
+	.header-content.d-flex
+		.header-left
+			.mobile-logo
+				a(href="#!")
+					svg(width="42" height="24")
+						use(xlink:href="./img/svg-sprite.svg#footer-logo")
+				
+				//======= выбор языка для моб версии ==========
+				.custom-select.custom-select--lang
+					.select-icon
+					.select-field
+						input(type="text" value="Ru" readonly)
+					.select-list
+						ul
+							li.current(data-role="Ru") Ru
+							li(data-role="En") En
+				//========mobile header search form toggle=====
+				.search-form-toggle.search-form-btn#mob-sf-toggle
+				
+				//===== поиск - модальное окно на моб версии ===========
+				.mobile-search-page#mob-sf-page
+					.page-modal__header
+						button.arrow-back#mob-sf-close
+						p.text-16 Поиск
+					.mobile-search-content
+						.sf-block
+							form.header-search-form(action="" method="method")
+								.form-field
+									input(type="text" placeholder="Введите название игры")
+								button(type="submit").form-btn.search-form-btn
+
+
+		//====LOGOUT=====
+		//.header-right
+			.login-block
+				.login-block__img
+					img(src="./img/login.png", width="31" alt="alt")
+				button.login-btn(type="button" data-btn="logIn") Войти
+		
+		
+		//====LOGIN=====
+		.header-right
+			.profile-panel
+				//========profile panel =====			
+				.profile-icon
+					.icon-notify
+						p.label
+							span 2
+				.profile-persone
+					.profile-persone__img
+						img(src="./img/ava.png", width="38" alt="ava")
+					.profile-persone__arrow#profile-arrow
+						svg(width="10" height="6")
+							use(xlink:href="./img/svg-sprite.svg#iconArr")
+					.profile-persone__row
+						p 0x...263a

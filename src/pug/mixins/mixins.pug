@@ -24,7 +24,7 @@ mixin breadcrumb(...items)
 				li
 					a(href="#!") #{item}
 
-mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge, cardWidth)
+mixin game-card-large(rang, title, text, imgSrc, logoSrc, badge, cardWidth)
 	a.game-card-large(href="#!")&attributes(attributes)
 		if badge
 			.badge.badge--white !{badge}
@@ -37,22 +37,24 @@ mixin game-card-large(rang, title, text,imgSrc, logoSrc, badge, cardWidth)
 			.game-card__body
 				.game-card__title
 					span.badge.badge--green !{rang}
-					h4.text-15 !{title}
+					p.text-15 !{title}
 				p.text-14 !{text}
 			.game-card__footer
 				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
-				span.button.button-light.button--flex
-					span Изучить
+				span.game-card__arrow
 					svg(width="16" height="16")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
 
-mixin game-card-category(imgSrc, title)
+mixin game-card-category(imgSrc, title, type)
 	a(href="#!").simple-card
 		.simple-card__img
 			img(src="./img/games/"+ imgSrc +"-thumb.jpg", width="96" alt="alt")
 		.simple-card__info
-			h4.text-15 !{title}
-			p.text-13  Пошаговая, карточная
+			p.text-15 !{title}
+			if type
+				p.text-13  #{type}
+			else	
+				p.text-13  Пошаговая, карточная
 		.simple-card__arrow
 
 mixin game-card-medium(rang, title, text,imgSrc, logoSrc, badge)
@@ -64,7 +66,7 @@ mixin game-card-medium(rang, title, text,imgSrc, logoSrc, badge)
 			.game-card__body
 				.game-card__title
 					span.badge.badge--green !{rang}
-					h4.text-15 !{title}
+					p.text-15 !{title}
 				p.text-14 !{text}
 			.game-card__footer
 				img(src="./img/games/"+ logoSrc +".png", width="82" alt="alt")
@@ -72,4 +74,264 @@ mixin game-card-medium(rang, title, text,imgSrc, logoSrc, badge)
 					span Изучить
 					svg(width="16" height="16")
 						use(xlink:href="./img/svg-sprite.svg#arrRight")
+
+mixin account-th-1
+	thead
+		tr
+			th.id-col
+				.form-checkbox.check-all
+					label
+						input(type="checkbox" name="")
+						span.fake-checkbox
+						span ID
+			th.logo-col
+				p Логотип
+			th.game-col.icon-cell
+				span.sort-icon
+				span Название
+			
+			th.login-col.icon-cell
+				p Логин
+			th.passw-col.icon-cell
+				p Пароль
+			th.range-col.icon-cell
+				span.sort-icon
+				span Рейтинг
+			
+			th.ntf-col
+				span NTF
+			
+			th.balance-col.icon-cell
+				span.sort-icon
+				span Баланс
+			
+			th.btn-col
+mixin account-tb-1(id, img, title, acc)
+	//=========строка с контентом =====
+	tr
+		td.id-col
+			.form-checkbox
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span #{id}
+		td.logo-col
+			img(src="./img/games/"+ img+"-logo.png", width="80" alt="img")
+		td.game-col
+			p !{title}
+		td.login-col
+			.account-badge
+				span.copy-icon
+				span.account-input  #{acc}
+		td.passw-col
+			.account-badge
+				span.copy-icon
+				input(type="password" value="password111111" size="8").account-input
+		td.range-col
+			p 1 200 MMR
 		
+		td.ntf-col
+			p 2 ед.
+		
+		td.balance-date.icon-cell
+			p 8 232 SLP
+		td.btn-col
+			.button-refresh
+
+mixin account-th-2
+	thead
+		tr
+			th.id-col
+				.form-checkbox.check-all
+					label
+						input(type="checkbox" name="")
+						span.fake-checkbox
+						span ID
+			th.games-col
+				p Игра
+			th.owner-col
+				p Владелец
+			
+			th.league-col
+				p Лига
+			th.reward-col
+				p Награда
+			
+			th.ntf-col.icon-cell
+				span.sort-icon
+				span NTF
+			
+			th.range-col.icon-cell
+				span.sort-icon
+				span Рейтинг
+			
+			th.period-col.icon-cell
+				span.sort-icon
+				span Срок
+			
+			th.btn-col
+mixin account-tb-2(id, img, owner, reward, badge, rating, bdg, filter)
+	//====строка с контентом =====
+	tr(class=(filter === "true" ? "disable-item" : ''))
+		td.id-col
+			.form-checkbox
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span #{id}
+		td.games-col
+			img(src="./img/games/"+img+"-logo.png", width="80" alt="img")
+		td.owner-col
+			p #{owner}
+		td.league-col
+			p.badge(class=" badge--"+bdg) #{badge}
+		td.result-col
+			p #{reward}
+		td.ntf-col
+			p 2 ед
+		td.range-col
+			p #{rating} место
+		td.period-col
+			p 20 дней
+		td.btn-col
+			.button.button--color Арендовать
+mixin account-th-3
+	//====заголовочная строка =====
+	tr
+		th.id-col
+			.form-checkbox.check-all
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span ID
+		th.games-col
+			p Игра
+		th.reward-col
+			p Награда
+		th.ntf-col.icon-cell
+			span.sort-icon
+			span NTF
+		th.range-col.icon-cell
+			span.sort-icon
+			span Рейтинг
+		th.replacement-date.icon-cell
+			span.sort-icon
+			span Дата замены
+		th.btn-col
+mixin account-tb-3(id, img)
+	//====строка с контентом =====
+	tr
+		td.id-col
+			.form-checkbox
+				label
+					input(type="checkbox" name="")
+					span.fake-checkbox
+					span #{id}
+		td.games-col
+			img(src="./img/games/"+img+"-logo.png", width="80" alt="img")
+		td.result-col.text-bold
+			p $ 1,5 за 1 SLP / 30% за AXS
+		td.ntf-col
+			p.account-badge 2 ед.
+		td.range-col
+			p 1 место
+		td.replacement-date
+			p 7 января
+		td.btn-col
+			.button.button--color Подменить
+
+
+mixin claim-table(num, text1, text2, dt)
+	tr
+		td
+			p #{num}
+			
+		td.wallet-name
+			p #{text1}
+		td.wallet-val
+			p.badge.badge--light #{text2}
+		td.btn-col
+			.button.button--color(data-btn=""+ dt) claim
+
+mixin header(menuItems)
+	header.header.header--desk
+		.header-content.d-flex
+			.header-left
+				.mobile-logo
+					a(href="#!")
+						svg(width="42" height="24")
+							use(xlink:href="./img/svg-sprite.svg#footer-logo")
+				.custom-select.custom-select--lang
+					.select-icon
+					.select-field
+						input(type="text" value="Ru" readonly)
+					.select-list
+						ul
+							li.current(data-role="Ru") Ru
+							li(data-role="En") En
+							
+			.header-center
+				.header-menu
+					ul
+						each item in menuItems
+							if item.addCl
+								li.active
+									a(href=""+ item.link) #{item.text}
+							else
+								li
+									a(href=""+ item.link) #{item.text}
+							
+
+			//====LOGIN=====
+			.header-right
+				.profile-panel
+					.profile-icon
+						.icon-notify
+							p.label
+								span 2
+					.profile-persone
+						.profile-persone__img
+							img(src="./img/ava.png", width="38" alt="ava")
+						.profile-persone__arrow#profile-arrow
+							svg(width="10" height="6")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.profile-persone__row
+							p 0x...263a
+
+	//===========MOBILE HEADER========
+	header.header.header--mob
+		.header-content.d-flex
+			.header-left
+				.mobile-logo
+					a(href="#!")
+						svg(width="42" height="24")
+							use(xlink:href="./img/svg-sprite.svg#footer-logo")
+			
+			
+			
+			//====LOGIN=====
+			.header-right
+				.profile-panel
+					.profile-icon
+						.icon-notify
+							p.label
+								span 2
+					.profile-persone
+						.profile-persone__img
+							img(src="./img/ava.png", width="38" alt="ava")
+						.profile-persone__arrow#profile-arrow
+							svg(width="10" height="6")
+								use(xlink:href="./img/svg-sprite.svg#iconArr")
+						.profile-persone__row
+							p 0x...263a
+
+mixin fix-bottom-menu(...items)
+	//=====MOBILE FIX BOTTOM MENU ========
+	.fix-mobile-menu&attributes(attributes)
+		#open-fixMenu.fix-menu-toggle.active Меню раздела
+		#close-fixMenu.fix-menu-toggle
+		.fix-menu-list
+			ul
+				each item in items
+					li
+						a(href="#!") #{item}

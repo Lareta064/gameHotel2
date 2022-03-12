@@ -1,0 +1,44 @@
+extends ../layouts/layout.pug
+
+block content
+
+	- var menuItems = ([{link: '#', text: 'Игры', addCl:'active'}, {link: '#', text: 'Обзоры'}, {link: 'education.html', text: 'Обучение'}, {link: '#', text: 'Новости GameFi'}]);
+	
+	#overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
+	include ../sections/_aside-menu.pug
+	+header(menuItems)
+
+	//========= тег main =========
+	main.all-games-page.about-game-main
+		include ../sections/_header-slider
+		.page-content-wrapper.page-content-wrapper--games
+			.page-content-wrapper__img(data-aos="fade-up"    data-aos-duration="1500")
+				img(src="./img/all-gamesBg.png", width="700" alt="img")
+			.container.container--special
+				.page-content-columns
+					.page-content-left
+						//======один блок с карточками ====
+						.fake-offset#step-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar
+						//======один блок с карточками ====
+						.fake-offset#card-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar-card
+						//======один блок с карточками ====
+						.fake-offset#role-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar-role
+						//======один блок с карточками ====
+						.fake-offset#action-genres
+							.page-content-left__block
+								include ../sections/_one-game-similar-action
+					.page-content-right.sticky-block
+						include ../sections/_one-game-aside
+		include ../sections/_one-game-category
+		include ../sections/_best-games
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = " Games";

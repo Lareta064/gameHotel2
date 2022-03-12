@@ -1,0 +1,104 @@
+.article{
+	padding-left: 32px;
+	padding-right: 32px;
+	.article-header.d-flex{
+		justify-content: space-between;
+		margin-bottom: 12px;
+	}
+	.title-1{max-width:565px;}
+	.article-icons-group{
+		align-items: center;
+		margin-top: 32px;
+		.icon-group +.icon-group{margin-left: 58px;}
+	}
+	.article-text{
+		padding-top: 24px;
+		font-size: 17px;
+		line-height: 1.53;
+		font-family: $os;
+		p+p{margin-top: 24px;}
+	}
+	figure{
+		
+		p{margin-top: 32px;}
+		img{
+			border-radius: 24px;
+		}
+		margin-bottom: 32px;
+	}
+	figcaption{margin-top: 12px;}
+}
+.article-text-badge{
+	// margin-top: 24px;
+	display: inline-flex;
+	align-items: center;
+	.badge + .badge{margin-left: 16px;}
+	.badge{
+		height: 28px;
+		line-height: 28px;
+		display: inline-flex;
+		align-items: center;
+		padding-left: 8px;
+		padding-right: 8px;
+		.icon-share,.icon-chat {
+			transform: scale(.7);
+			margin-right: 9px;
+			
+		}
+	}
+}
+.article-text .article-text-badge {
+	margin-top: 24px;}
+.news-item{
+	transition: .3s;
+	.text-13{
+		color: #3B4E6A;
+		margin-top: 8px;
+		display: block;
+	}
+	&:hover{opacity: .7;}
+}
+.news-item+.news-item{margin-top: 26px;}
+.single-news-page .sidebar{
+	border-radius: 24px;
+	background-color: #fff;
+	padding: 24px;
+	.sidebar-title.text-14{
+		font-family: $ms;
+	}
+	.news-list{margin-top: 26px;}
+}
+.page-content-left__block.visible-1023 {
+		display: none;
+	}
+.single-news-page{
+	
+	.news-list-swiper .swiper-wrapper {
+		display: block;
+	}
+	@media(max-width:1023px){
+		.page-content-right{display: none;}
+		.page-content-left__block.visible-1023{display: block; }
+		.page-content-columns .page-content-right{top: 40px;}
+		
+		.news-list-swiper .swiper-wrapper {
+			display: flex;
+			.swiper-slide{padding-right: 20px;}
+		}
+	}
+	@media(max-width:767px){
+		.text-24{font-size: 20px;}
+		.page-content-wrapper {
+			padding-top: 0;
+		}
+		.page-content-left__block.visible-1023 {
+			
+			margin-top: -60px;
+		}
+		.article{padding-left: 16px;
+		padding-right: 16px;}
+		.article figure img {
+			border-radius: 12px;
+		}
+	}
+}

@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function (){
 			openFixMenu.classList.add('active');
 			 listFixMenu.classList.remove('active');
 		});
-
-
 	}
+	/*========кнопка ВВерх====== */
+	$("#backTop").hide();
+	$(function(){$(window).scroll(function(){200<$(this).scrollTop()?$("#backTop").fadeIn():$("#backTop").fadeOut()}),$("#backTop").click(function(){return $("body,html").animate({scrollTop:0},600),!1})});
 	/* анимация свг-диаграммы-круг */
 	const target = document.querySelectorAll('.board-chart .chart-path');
 	
@@ -136,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		item.addEventListener('click', function(e){
 			const thisList = item.querySelector('.select-list');
 			const thisInput = item.querySelector('input');
+			const thisIconArrow = item.querySelector('.select-icon');
 			const thisListItem = item.querySelectorAll('li');
 
 			if(e.target.tagName == 'INPUT'){
@@ -143,10 +145,12 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(thisList.classList.contains('visible')){
 					thisList.style.maxHeight = 0 + "px";
 					thisList.classList.remove('visible');
+					thisIconArrow.classList.remove('rotate');
 					
 				}else{
 					thisList.classList.add('visible');
 					thisList.style.maxHeight = thisList.scrollHeight + "px";
+					thisIconArrow.classList.add('rotate');
 				}				
 			}
 
@@ -159,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				e.target.classList.add('current');
 				thisList.style.maxHeight = 0 + "px";
 				thisList.classList.remove('visible');
+				thisIconArrow.classList.remove('rotate');
 			}
 		});
 	}
@@ -252,14 +257,18 @@ document.addEventListener("DOMContentLoaded", function (){
 		//===news slider one game page =====
 		swips.addSwiper(".game-news-cards--1365", "min-width:1365px", {
 			loop: true,
-			slidesPerView: 1.2, 
-			spaceBetween: 24,
+			slidesPerView: 1.3, 
+			spaceBetween: 0,
 			speed:800,
 			pagination: {
 				el: ".swiper-pagination-news",
 				clickable: true,
 			},
 			breakpoints: {
+				424: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
 				574: {
 					slidesPerView: 1.5,
 					spaceBetween: 24,
@@ -360,6 +369,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				
 			}
 		});
+		 /*  карточки Героев на стр одной игры*/
 		swips.addSwiper(".hero-cards-swiper", "min-width:1024px", {
 			slidesPerView: 1.3,
 			spaceBetween: 24,
@@ -382,19 +392,22 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		 /*  карточки игровые карты на стр about game*/
+		 /*  карточки игровые карты на стр одной игры*/
 		swips.addSwiper(".game-cards-swiper", "min-width:1024px", {
-			slidesPerView: 1.2,
-			grid: {
-				rows: 2,
-			},
-			spaceBetween: 24,
+			slidesPerView: 1.3,
+			// grid: {
+			// 	rows: 2,
+			// },
+			spaceBetween: 16,
 			pagination: {
 			el: ".game-cards-swiper-pagination",
 			clickable: true,
 			},
 			breakpoints: {
-
+				424: {
+					slidesPerView: 1.5,
+					spaceBetween: 16,
+				},
 				575: {
 					slidesPerView: 2,
 					spaceBetween: 24,
@@ -406,9 +419,10 @@ document.addEventListener("DOMContentLoaded", function (){
 
 			}
 		});
-		swips.addSwiper(".games-cards-large", "min-width:1024px", {
-			slidesPerView: 1.2,
-			spaceBetween: 24,
+		/*====стр Одной игры раздел Похожие */
+		swips.addSwiper(".similareCards-swiper", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
 			loop: true,
 			speed:800,
 			pagination: {
@@ -416,7 +430,6 @@ document.addEventListener("DOMContentLoaded", function (){
 				clickable: true,
 			},
 			breakpoints: {
-
 				575: {
 					slidesPerView: 1.8,
 					spaceBetween: 24,
@@ -498,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 
-		swips.addSwiper(".task-board", "min-width:1600px",  {
+		swips.addSwiper(".task-board", "min-width:1920px",  {
 		
 		slidesPerView: 1.1,
 		 slidesPerColumn: 1,
@@ -509,33 +522,354 @@ document.addEventListener("DOMContentLoaded", function (){
 			nextEl: ".task-board-next",
 			prevEl: ".task-board-prev",
 			},
-			// loop: true,
+			loop: true,
 			breakpoints: {
 				
-				424: {
-						slidesPerView: 1.8,
+				575: {
+						slidesPerView: 1.3,
 						spaceBetween: 24,
 					},
+				650: {
+						slidesPerView: 1.5,
+						spaceBetween: 24,
+					},
+
 				768: {
-						slidesPerView: 2.5,
+						slidesPerView: 1.9,
 						spaceBetween: 32,
 					},
+				850: {
+						slidesPerView: 2.1,
+						spaceBetween: 24,
+					},
 				1024: {
-						slidesPerView: 2.8,
+						slidesPerView: 2.5,
 						spaceBetween: 24,
 					},
 				1200: {
+						slidesPerView: 2.8,
+						spaceBetween: 0,
+					},
+				1364: {
 						slidesPerView: 3.2,
+						spaceBetween: 0,
+					},
+				1440: {
+						slidesPerView: 3.3,
+						spaceBetween: 0,
+					},
+				1500: {
+						slidesPerView: 3.5,
+						spaceBetween: 0,
+					}
+					,
+				1700: {
+						slidesPerView: 4.1,
 						spaceBetween: 0,
 					}
 				}
-		})
+		});
+		/* стр Игры - Популярные в декабре*/
+		swips.addSwiper(".popular-games-block", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".populareGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
 
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Пошаговые*/
+		swips.addSwiper(".swiper-cardStep", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".cardStep-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2.2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Карточные*/
+		swips.addSwiper(".swiper-cardGames", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".cardGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2.2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Ролевые*/
+		swips.addSwiper(".swiper-roleGames", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".roleGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2.2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/* стр Игры - категория Action*/
+		swips.addSwiper(".swiper-actionGames", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".actionGames-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				474: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				575: {
+					slidesPerView: 1.8,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2.2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/*====game categories */
+		swips.addSwiper(".game-categories-swiper", "min-width:1024px", {
+			slidesPerView: 1,
+			spaceBetween: 16,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".gameCategories-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.6,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.1,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+
+		/*======стр education карточки жанр 1 */		
+		swips.addSwiper(".edu-cards-sw1", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".edu-sw1-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		/*======стр education карточки жанр 2 */		
+		swips.addSwiper(".edu-cards-sw2", "min-width:1024px", {
+			slidesPerView: 1.1,
+			spaceBetween: 20,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".edu-sw2-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.8,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.5,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+
+		/* стр одной новости - боковая панель с  последними новостями */
+		swips.addSwiper(".news-list-swiper", "min-width:1024px", {
+			slidesPerView: 1.2,
+			spaceBetween: 16,
+			loop: true,
+			speed:800,
+			pagination: {
+				el: ".news-list-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+
+				475: {
+					slidesPerView: 1.4,
+					spaceBetween: 24,
+				},
+				600: {
+						slidesPerView: 1.6,
+						spaceBetween: 24,
+					},
+				768:{
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				800:{
+					slidesPerView: 2.1,
+					spaceBetween: 16,
+				}
+
+			}
+		});
+		
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/
-	let locCradsSwiper = new Swiper(".location-cards-swiper", {
+	
+	 let locCradsSwiper = new Swiper(".location-cards-swiper", {
        slidesPerView: 1.2,
+	   spaceBetween: 24,
         navigation: {
           nextEl: ".locSwiper-button-next",
           prevEl: ".locSwiper-button-prev",
@@ -559,68 +893,96 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 		}
       });
-	  /*  карточки новостей на стр about game*/
-	  let gameNewsSwiper = new Swiper(".gn-cards-full", {
-		//   observer: true,
-        //     observeParents: true,
-       slidesPerView: 1,
-	   spaceBetween: 16,
-        navigation: {
-          nextEl: ".game-news-next",
-          prevEl: ".game-news-prev",
-        },
-		speed:800,
+	/*  карточки новостей на стр about game*/
+	let gameNewsSwiper = new Swiper(".gn-cards-full", {
+	//   observer: true,
+	//     observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 16,
+	navigation: {
+		nextEl: ".game-news-next",
+		prevEl: ".game-news-prev",
+	},
+	speed:800,
 
-		loop: true,
-		breakpoints: {
-			575: {
-				slidesPerView: 1.5,
+	loop: true,
+	breakpoints: {
+		424: {
+			slidesPerView: 1.3,
+			spaceBetween: 24,
+		},
+		575: {
+			slidesPerView: 1.5,
+			spaceBetween: 24,
+		},
+		768: {
+				slidesPerView: 1.8,
 				spaceBetween: 24,
-			},
-			768: {
-					slidesPerView: 1.8,
-					spaceBetween: 24,
-				}
-				,
-			1024: {
-					slidesPerView: 2,
-					spaceBetween: 32,
-				},
-			1200: {
-					slidesPerView: 2.2,
-					spaceBetween: 24,
-				}
-		}
-      });
-	  
-	  let bannersSlider = new Swiper(".header-slider-swiper", {
-		
-       slidesPerView: 1,
-	   spaceBetween: 72,
-	   centeredMode: true,
-	   speed:800,
-	   navigation: {
-          nextEl: ".header-slider-next",
-          prevEl: ".header-slider-prev",
-        },
-		// loop: true,
-		breakpoints: {
-			
-			768: {
-					slidesPerView: 1.1,
-					spaceBetween: 32,
-				},
-			1200: {
-					slidesPerView: 1.3,
-					spaceBetween: 48,
-				},
-			1440: {
-					slidesPerView: 1.4,
-					spaceBetween: 48,
-				}
 			}
-      });
+			,
+		1024: {
+				slidesPerView: 2,
+				spaceBetween: 32,
+			},
+		1200: {
+				slidesPerView: 2.2,
+				spaceBetween: 24,
+			}
+	}
+	});
+	  
+	let bannersSlider = new Swiper(".header-slider-swiper", {
+	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	centeredMode: true,
+	loop: true,
+	speed:800,
+	navigation: {
+		nextEl: ".header-slider-next",
+		prevEl: ".header-slider-prev",
+	},
+	// loop: true,
+	breakpoints: {
+		
+		768: {
+				slidesPerView: 1.1,
+				spaceBetween: 32,
+				loop: false,
+			},
+		1200: {
+				slidesPerView: 1.3,
+				spaceBetween: 48,
+			},
+		1440: {
+				slidesPerView: 1.4,
+				spaceBetween: 72,
+			}
+		}
+	});
 
+	/*=====СЛАЙДЕР КАЛЕНДАРЬ МЕСЯЦЫ==== */
+	let calendarMonth = new Swiper(".calendar-month", {
+	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	loop: true,
+	navigation: {
+		nextEl: ".calendar-month-prev",
+		prevEl: ".calendar-month-next",
+	}
+	});
+	/*=====СЛАЙДЕР КАЛЕНДАРЬ МЕСЯЦЫ==== */
+	let calendarDays = new Swiper(".calendar-days", {
+	
+	slidesPerView: 1,
+	spaceBetween: 16,
+	loop: true,
+	navigation: {
+		nextEl: ".calendar-month-prev",
+		prevEl: ".calendar-month-next",
+	}
+	});
 	
 	//   gameNewsSwiper.update();
 	/*===========MODAL FORM==========*/
@@ -632,6 +994,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const formCloseBtn = document.querySelectorAll('[data-close]');
 
 	// ===== Показать модальное окно регистрации  ======
+
 	for(let item of formOpenButton){
 		item.addEventListener('click', function(e){
 			
@@ -655,54 +1018,79 @@ document.addEventListener("DOMContentLoaded", function (){
 	for(let item of formCloseBtn){
 		item.addEventListener('click', function(){
 			item.closest('[data-modal]').classList.remove('visible');
-			overlayBg.classList.remove('active');
+			if(overlayBg){
+				overlayBg.classList.remove('active');
+			}
 			bodyEl.classList.remove('noscroll');
+			for(let i=0; i<formsArray.length; i++){
+				if(formsArray[i].dataset.modal=='profile-info'){
+					if(formsArray[i].classList.contains('visible')){
+						formsArray[i].classList.remove('visible')
+					}
+				}
+			}
+			
+		});
+		/* на стр Профиля закрыть short-modal*/
+		
+	}
+	// =====Закрыть модалку по ресайзу экрана ======
+	window.addEventListener('resize', function(){
+		for(let i=0; i<formsArray.length; i++){
+			formsArray[i].classList.remove('visible');}
+			if(overlayBg){
+				overlayBg.classList.remove('active');
+			}
+			bodyEl.classList.remove('noscroll');
+	});
+
+	// ===== Закрыть модалку  по клику на фон-затемнение ======
+	if(overlayBg){
+		overlayBg.addEventListener('click', function(){
+			for(let item of formsArray){
+				item.classList.remove('visible');
+				this.classList.remove('active');
+				bodyEl.classList.remove('noscroll');
+			}
 		});
 	}
 
-	// ===== Закрыть модалку  по клику на фон-затемнение ======
-	overlayBg.addEventListener('click', function(){
-		for(let item of formsArray){
-			item.classList.remove('visible');
-			this.classList.remove('active');
-			bodyEl.classList.remove('noscroll');
-		}
-	});
-
 	/* ========= MASK FOR INPUT PHONE =======*/	
-	var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
-		var maskOpts = {
-			inputmask: {
-				definitions: {
-					'#': {
-						validator: "[0-9]",
-						cardinality: 1
-					}
+	if(jQuery('.phone').length >0){
+		var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+			var maskOpts = {
+				inputmask: {
+					definitions: {
+						'#': {
+							validator: "[0-9]",
+							cardinality: 1
+						}
+					},
+					//clearIncomplete: true,
+					showMaskOnHover: false,
+					autoUnmask: true
 				},
-				//clearIncomplete: true,
-				showMaskOnHover: false,
-				autoUnmask: true
-			},
-			match: /[0-9]/,
-			replace: '#',
-			list: maskList,
-			listKey: "mask",
-			onMaskChange: function(maskObj, completed) {
-				if (completed) {
-					var hint = maskObj.name_ru;
-					if (maskObj.desc_ru && maskObj.desc_ru != "") {
-						hint += " (" + maskObj.desc_ru + ")";
+				match: /[0-9]/,
+				replace: '#',
+				list: maskList,
+				listKey: "mask",
+				onMaskChange: function(maskObj, completed) {
+					if (completed) {
+						var hint = maskObj.name_ru;
+						if (maskObj.desc_ru && maskObj.desc_ru != "") {
+							hint += " (" + maskObj.desc_ru + ")";
+						}
+						// $("#descr").html(hint);
 					}
-					// $("#descr").html(hint);
+					$(this).attr("placeholder", $(this).inputmask("getemptymask"));
 				}
-				$(this).attr("placeholder", $(this).inputmask("getemptymask"));
-			}
-		};
+			};
 
-	
-	jQuery('.phone').each(function(i, item){
-		$(item).inputmasks(maskOpts);
-	})
+
+		jQuery('.phone').each(function(i, item){
+			$(item).inputmasks(maskOpts);
+		});
+	}
 	/*================about game жалюзи на большой картинке =============*/
 	const imgBlind = document.querySelector('.blind-img-block');
 	if(imgBlind){
@@ -743,130 +1131,453 @@ document.addEventListener("DOMContentLoaded", function (){
 		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 		Visible(imgBlind);
 	}
-});
 
-/*==================INPUT TYPE="FILE" ========*/
-( function ( document, window, index )
-{
-	var inputs = document.querySelectorAll( '.inputfile' );
-	Array.prototype.forEach.call( inputs, function( input )
+
+	/*==================INPUT TYPE="FILE" ========*/
+	( function ( document, window, index )
 	{
-		var label	 = input.nextElementSibling,
-			labelVal = label.innerHTML;
-
-		input.addEventListener( 'change', function( e )
+		var inputs = document.querySelectorAll( '.inputfile' );
+		Array.prototype.forEach.call( inputs, function( input )
 		{
-			var fileName = '';
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else
-				fileName = e.target.value.split( '\\' ).pop();
+			var label	 = input.nextElementSibling,
+				labelVal = label.innerHTML;
 
-			if( fileName ) {
+			input.addEventListener( 'change', function( e )
+			{
+				var fileName = '';
+				if( this.files && this.files.length > 1 )
+					fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+				else
+					fileName = e.target.value.split( '\\' ).pop();
 
-				if ( label.firstChild.nodeType === Node.ELEMENT_NODE ) {
-					label.querySelector( 'span' ).innerHTML = fileName;
-				} else {
-					label.nextElementSibling.innerHTML = fileName;
+				if( fileName ) {
+
+					if ( label.firstChild.nodeType === Node.ELEMENT_NODE ) {
+						label.querySelector( 'span' ).innerHTML = fileName;
+					} else {
+						label.nextElementSibling.innerHTML = fileName;
+					}
+
 				}
+				else
+					label.innerHTML = labelVal;
+			});
 
-			}
-			else
-				label.innerHTML = labelVal;
+			// Firefox bug fix
+			input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+			input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
 		});
+	}( document, window, 0 ));
 
-		// Firefox bug fix
-		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
+	 *  по клику на выпадашку менять класс current  у <li> */
+	const customDrop = document.querySelectorAll('.custom-dropdown');
+	if(customDrop){
+		for(let i = 0; i < customDrop.length; i++){
+			const customDropField = customDrop[i].querySelector('.custom-dropdown__field');
+			const customDropIcon = customDrop[i].querySelector('.custom-dropdown__icon');
+			const customDropList = customDrop[i].querySelector('.custom-dropdown__wrapper');
+			const customDropListItem = customDrop[i].querySelectorAll('.custom-dropdown__list-item');
+
+			customDropField.addEventListener('click', function(e){
+				
+				for(let j = 0; j < customDrop.length; j++){
+					if(j!==i){
+						customDrop[j].querySelector('.custom-dropdown__field').classList.remove('active');
+						customDrop[j].querySelector('.custom-dropdown__icon').classList.remove('active');
+						customDrop[j].querySelector('.custom-dropdown__wrapper').classList.remove('active');
+					}
+					else{
+						if(this.classList.contains('active')){
+							this.classList.remove('active');
+							customDropIcon.classList.remove('icon-rotate');
+							customDropList.classList.remove('active');
+						}else{
+							this.classList.add('active');
+							customDropIcon.classList.add('icon-rotate');
+							customDropList.classList.add('active');
+						}	
+					}
+				}
+						
+			});
+			for(let item of customDropListItem){
+				item.addEventListener('click',()=>{
+					for(let i = 0; i < customDropListItem.length; i++){
+					customDropListItem[i].classList.remove('current');
+				}
+				item.classList.add('current');
+				if(item.closest('.dropdown-menu')){
+					const menuDrop = item.closest('.custom-dropdown__wrapper');
+					const menuIcon = item.closest('.dropdown-menu').querySelector('.custom-dropdown__icon');
+					const menuField = item.closest('.dropdown-menu').querySelector('.custom-dropdown__field');
+					menuDrop.classList.remove('active');
+					menuField.classList.remove('active');
+					menuIcon.classList.remove('icon-rotate');
+				}
+				});
+			}
+			
+		}
+	}
+
+	//=========закрыть custom drop  по клику на ссылку =====
+	
+	/*============закрыть large modal  при клике по фону ===========*/
+	const largeModal = document.querySelectorAll('.large-modal');
+	for(let item of largeModal){
+		item.addEventListener('click', (e)=>{
+			if(e.target.classList.contains('visible')){
+				item.classList.remove('visible')
+			}
+		})
+	}
+
+	/*============video clip play ===========*/
+	const videoContent = document.querySelectorAll('.gameVideo');
+	if (videoContent) {
+		for(let item of videoContent){
+
+			const videoBtn = item.querySelector('.video-play-btn');
+			const videoClip = item.querySelector('.gameVideoClip');
+			
+			item.addEventListener('click', function (e) {
+				
+				if (videoClip.paused) {
+					videoClip.play();
+					videoBtn.style.opacity = "0";
+					this.classList.add("active");
+				} else {
+					videoClip.pause();
+					videoBtn.style.opacity = "1";
+					this.classList.remove("active");
+				} 
+			}); 
+		} 
+	}
+	/* ========== анимация чисел стр tasks========*/
+	var decimal_places = 2;
+	var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+	function animateNum(numItem){
+		$(numItem).animateNumber( {
+		number: $(numItem).text() * decimal_factor,
+		numberStep: function(now, tween) {		 
+			var floored_number = Math.floor(now) / decimal_factor,
+				target = $(tween.elem);
+
+			if (decimal_places > 0) {
+			// force decimal places even if they are 0
+			floored_number = floored_number.toFixed(decimal_places);
+
+			// replace '.' separator with ','
+			floored_number = floored_number.toString().replace('.', ',');
+			}
+			target.text( floored_number);
+		}
+		},
+		2000
+	);
+	}
+	$('.animateNum').each(function(i, item){
+		animateNum($(item))
 	});
-}( document, window, 0 ));
-
-/*******ВЫБОР ВЫВОДА СРЕДСТВ выпадашка CLAM стр задачи***
- *  по клику на выпадашку менять класс current  у <li> */
-const customDrop = document.querySelectorAll('.custom-dropdown');
-if(customDrop){
-	for(let item of customDrop){
-		const customDropField = item.querySelector('.custom-dropdown__field');
-		const customDropIcon = item.querySelector('.custom-dropdown__icon');
-		const customDropList = item.querySelector('.custom-dropdown__wrapper');
-		const customDropListItem = item.querySelectorAll('.custom-dropdown__list-item');
-
-		customDropField.addEventListener('click', function(e){
-			console.log(e.target);
-			if(this.classList.contains('active')){
-				this.classList.remove('active');
-				customDropIcon.classList.remove('icon-rotate');
-				customDropList.classList.remove('active');
-			}else{
-				this.classList.add('active');
-				customDropIcon.classList.add('icon-rotate');
-				customDropList.classList.add('active');
-			}			
+	/*========= pageNav стр about-game========*/
+	if($('.page-nav')){
+		$('.page-nav').each(function(i, item){
+				$(item).onePageNav({
+				currentClass: 'active',
+				changeHash: false,
+				scrollSpeed: 750,
+				scrollThreshold: 0.5,
+				filter: '',
+				easing: 'swing',
+			});
 		});
-		for(let item of customDropListItem){
-			item.addEventListener('click',()=>{
-				for(let i = 0; i < customDropListItem.length; i++){
-				customDropListItem[i].classList.remove('current');
+	}
+
+	/*========универсализация, когда блок в зоне видимости========*/
+	const gameCardsCategory = document.querySelector('#gameCardsCategory');
+	if(gameCardsCategory){
+		
+		let Visible = function (target) {
+			// Все позиции элемента
+			let targetPosition = {
+					top: window.pageYOffset + target.getBoundingClientRect().top,
+					left: window.pageXOffset + target.getBoundingClientRect().left,
+					right: window.pageXOffset + target.getBoundingClientRect().right,
+					bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+				},
+				// Получаем позиции окна
+				windowPosition = {
+					top: window.pageYOffset,
+					left: window.pageXOffset,
+					right: window.pageXOffset + document.documentElement.clientWidth,
+					bottom: window.pageYOffset + document.documentElement.clientHeight
+				};
+
+			if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+				targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+				targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+				targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+				// Если элемент полностью видно, то запускаем следующий код
+				setTimeout(function(){
+					target.classList.add('active');
+				}, 200)
+				
 			}
-			item.classList.add('current');
+		};
+
+		// Запускаем функцию при прокрутке страницы
+		window.addEventListener('scroll', function () {
+			Visible(gameCardsCategory);
+		});
+
+		// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+		Visible(gameCardsCategory);
+	}
+
+	/*=======ТАБЫ========== */
+	
+	$('.tabs-wrapper').each(function() {
+		let ths = $(this);
+		ths.find('.tab-item').not(':first').hide();
+		ths.find('.tab').click(function() {
+			ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+			ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+		}).eq(0).addClass('active');
+	});
+
+	/* таблица Аккаунты выделить все чекбоксы*/
+	const pageTable = document.querySelectorAll('.accounts-page .tab-item');
+	if(pageTable.length > 0){
+		
+		for(let item of pageTable){
+			const checkAllCheckbox = item.querySelector('.check-all');
+      		const formInputCheckbox = item.querySelectorAll('td input[type="checkbox"]');
+			
+      		checkAllCheckbox.addEventListener('click', function(){ 			
+			const checkboxStatus = this.querySelector('input[type="checkbox"]').checked;
+			for(let item of formInputCheckbox){
+				if(item.checked !== checkboxStatus) item.checked = checkboxStatus;
+			}
+		});
+		}
+	}
+
+	/*=====изменить Лайки и дизлайки блок комментариев */
+	 const setRatingComment = document.querySelectorAll('.comment-rate');
+	 for(let item of setRatingComment){
+      const likeBtnItems= item.querySelectorAll("[data-clicked]");
+		
+		likeBtnItems[0].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText + 1;
+				 			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText - 1;
+				
+			}
+			else{
+				return;
+			}
+		});
+
+		likeBtnItems[1].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText + 1;
+			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				this.querySelector('.rating-value').innerText = +this.querySelector('.rating-value').innerText - 1;
+			}
+			else{return}
+		});
+	}
+	/*=====изменить цвет Лайки и дизлайки , когда только серые иконки, оценить урок */
+	const setRating = document.querySelectorAll('.light-rate');
+	 for(let item of setRating){
+      const likeBtnItems= item.querySelectorAll("[data-clicked]");
+		
+		likeBtnItems[0].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				
+				 			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[1].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+			}
+			else{
+				return;
+			}
+		});
+
+		likeBtnItems[1].addEventListener('click', function() {
+			if (this.dataset.clicked == 'false' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'true';
+				
+			}
+			else if(this.dataset.clicked == 'true' && likeBtnItems[0].dataset.clicked == 'false') {
+				this.dataset.clicked = 'false'
+				
+			}
+			else{return}
+		});
+	}
+	/*=========переключать класс active  в группе кнопок фильтрации=========== */
+	const buttonsGroup = document.querySelectorAll('[data-buttons]');
+	for(let item of buttonsGroup){
+		const btnItem = item.querySelectorAll('[data-btn');
+		for(let i = 0; i < btnItem.length; i++){
+			btnItem[i].addEventListener('click', function(){
+				for(let j = 0; j < btnItem.length; j++){
+					btnItem[j].classList.remove('active');
+					if(j == i){
+						btnItem[j].classList.add('active');
+					}
+				}
+			})
+		}
+	}
+	 /*======custom tabs (calendar page)======*/
+	const customTabBtns = document.querySelectorAll('[data-tab]');
+	if(customTabBtns.length >0){
+		customTabContent = document.querySelectorAll('[data-tabcontent]');
+		for(let item of  customTabBtns){
+			item.addEventListener('click', function(){
+				
+				for(let i = 0; i < customTabContent.length; i++){					
+					customTabContent[i].classList.remove('active');
+					if(item.dataset.tab == customTabContent[i].dataset.tabcontent){
+						customTabContent[i].classList.add('active');
+						
+					}
+				}
 			});
 		}
-		
 	}
-}
-/*============закрыть large modal  при клике по фону ===========*/
-const largeModal = document.querySelectorAll('.large-modal');
-for(let item of largeModal){
-	item.addEventListener('click', (e)=>{
-		if(e.target.classList.contains('visible')){
-			item.classList.remove('visible')
+	/*============radio and checkbox parent label whis background */
+	const inputGroupItems = document.querySelectorAll('.form-fields-group');
+	if(inputGroupItems.length > 0){
+		for(let item of inputGroupItems){
+
+			const labelElements = item.querySelectorAll('label');
+			for(let i = 0; i < labelElements.length; i++){
+				let labelInputType = labelElements[i].querySelector('input').getAttribute('type');
+				if(labelInputType == 'radio'){
+					labelElements[i].addEventListener('click', function(){
+
+						for(let j = 0; j < labelElements.length; j++ ){
+							labelElements[j].classList.remove('active');
+							if(j == i){
+								if(labelElements[j].querySelector('input').checked){
+									labelElements[j].classList.add('active');
+								}
+								else{
+									labelElements[j].classList.remove('active');
+								}
+							}
+						}
+
+					});
+				}
+				if(labelInputType == 'checkbox'){
+					labelElements[i].addEventListener('click', function(){
+						if(labelElements[i].querySelector('input').checked){
+							labelElements[i].classList.add('active');
+						}
+						else{
+							labelElements[i].classList.remove('active');
+						}
+					});
+				}
+			}
 		}
-	})
-}
+	}
 
-/*============video clip play ===========*/
-const videoContent = document.querySelector('#gameVideo');
-if (videoContent) {
-	const videoBtn = videoContent.querySelector('.video-play-btn');
-	const videoClip = document.querySelector('#gameVideoClip');
+	/* ========= карточки-картинки  выбор ответ на тест =========*/
+	const testCards = document.querySelectorAll('[data-testcards]');
+	if(testCards.length > 0){
+		for(let item of testCards){
+			const testCardModal =  item.querySelectorAll('[data-modal]');
+			const testCardBtn =  item.querySelectorAll('.test-card-label');
+			const testCardClose =  item.querySelectorAll('[data-close]');
+			for(let i = 0; i < testCardBtn.length; i++){
+				testCardBtn[i].addEventListener('click', function(){
+					for(let k = 0; k < testCardBtn.length; k++){
+						testCardBtn[k].classList.remove('active');
+						if(k == i){
+							testCardBtn[k].classList.add('active');
+						}
+					}
+					for(let j = 0; j < testCardModal.length; j++){
+						testCardModal[j].classList.remove('visible');
+						if(j == i){
+							testCardModal[i].classList.add('visible');
+						}
+					}
+				});
+			}
+			/* remove pink bg for test-card label*/
+			for(let n = 0; n < testCardClose.length; n++){
+				testCardClose[n].addEventListener('click', function(){
+					for(let k = 0; k < testCardBtn.length; k++){
+						testCardBtn[k].classList.remove('active');						
+					}
+				});
+			}
+			
+		}
+	}
+
+/*====== МОБИЛЬНОЕ ОКНО ПОИСКА =======*/
+const toggleMobSF = document.getElementById('mob-sf-toggle');
+if(toggleMobSF){
+	const mobileSFpage = document.getElementById('mob-sf-page');
+	const closeSFpage = document.getElementById('mob-sf-close');
 	
-	videoContent.addEventListener('click', function (e) {
-		
-		if (videoClip.paused) {
-			videoClip.play();
-			videoBtn.style.opacity = "0";
-			this.classList.add("active");
-		} else {
-			videoClip.pause();
-			videoBtn.style.opacity = "1";
-			this.classList.remove("active");
-		} 
-	});  
-}
-/* ========== анимация чисел ========*/
-var decimal_places = 2;
-var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
-function animateNum(numItem){
-	$(numItem).animateNumber( {
-      number: $(numItem).text() * decimal_factor,
-      numberStep: function(now, tween) {		 
-        var floored_number = Math.floor(now) / decimal_factor,
-            target = $(tween.elem);
+	/*показать окно мобильного поиска игры*/
+	toggleMobSF.addEventListener('click', ()=>{
+		mobileSFpage.classList.add('active');
+		bodyEl.classList.add('noscroll');
+	});
 
-        if (decimal_places > 0) {
-          // force decimal places even if they are 0
-          floored_number = floored_number.toFixed(decimal_places);
+	/*закрыть окно мобильного поиска игры*/
+	closeSFpage.addEventListener('click', ()=>{
 
-          // replace '.' separator with ','
-          floored_number = floored_number.toString().replace('.', ',');
-        }
-        target.text( floored_number);
-      }
-    },
-    2000
-  );
+		mobileSFpage.classList.remove('active');
+		bodyEl.classList.remove('noscroll');
+
+	});
+
 }
-$('.animateNum').each(function(i, item){
-	animateNum($(item))
+
+	/*=======боковая панель на странице урока курса */
+	const lessonSedebar = document.getElementById('course-sidebar');
+	
+	if(lessonSedebar){
+		const lessonSedebarToggle = document.getElementById('course-sidebar-toggle');
+		lessonSedebarToggle.addEventListener('click', function(e){
+			
+			if(this.classList.contains('active')){
+				lessonSedebar.classList.remove('active');
+				this.classList.remove('active');
+				overlayBg.classList.remove('active');
+			}else{
+				lessonSedebar.classList.add('active');
+				this.classList.add('active');
+				overlayBg.classList.add('active');
+			}
+		});
+
+		overlayBg.addEventListener('click', function(e){
+			lessonSedebar.classList.remove('active');
+			this.classList.remove('active');
+			lessonSedebarToggle.classList.remove('active');
+		});
+	}
+
+
 });
- 

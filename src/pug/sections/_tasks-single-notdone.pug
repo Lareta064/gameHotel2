@@ -1,0 +1,83 @@
+//=========НЕ ЗАВЕРШЕННЫЕ - одна задача модальное большое окно =======
+.large-modal( data-modal="task_D" style="dispaly: block")
+	.large-modal-content
+		.single-task-modal.single-task-modal--notcompleted
+			//=== header =========
+			.page-modal__header
+				h3.text-16 10 побед на Арене (PvP)
+				.page-modal__header-btns
+					button.close-btn(data-close)
+			
+			.page-modal__body
+				//============left sidebar ======
+				.page-modal__body-sidebar
+					.account-sidebar
+						.account-sidebar__img
+							img(src="./img/account-sidebar.png", width="160" alt="img")
+						.account-sidebar__info
+							//===== single text item ======
+							.account-sidebar__group
+								.account-sidebar__img
+									img(src="./img/account-sidebar.png", width="110" alt="img")
+								.account-sidebar__info-item
+									p.text-14 Аккаунт
+									p.text-15.account-badge
+										span.copy-icon
+										span.account-input  AxieHotel281
+							
+							//===== single text item ======
+							.account-sidebar__info-item
+								p.text-14 Пароль
+								p.text-15.account-badge
+									span.copy-icon
+									input(type="password" value="password111111" size="8").account-input
+
+							//===== single text item ======
+							.account-sidebar__info-item
+								p.text-14 Рейтинг
+								p.text-15 1 200 MMR
+							
+							//===== single text item ======
+							.account-sidebar__info-item
+								p.text-14 NFT
+								p.text-15 3 NFT
+							
+							//===== single text item ======
+							.account-sidebar__info-item
+								p.text-14 Баланс
+								p.text-15 8 232 SLP
+				//============right frame ======
+				.page-modal__body-frame
+					.acor-container
+						.acor-container-block
+							input#acor41(type='checkbox' name='acor' checked='checked')
+							label(for='acor41')
+								span.acor-arrow
+								h4 Задача в очереди
+							.acor-body
+								.acor-body-content
+									.acor-body__header.task-info-line
+										.task-card-badge Начать до 14:00
+										.task-info-line__group
+											.task-card-timeCounter Задача на 1 ч. 20 мин.
+											.task-info-coast от $8
+									.task-info-text
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet tellus eu nibh finibus dictum. Integer aliquam rhoncus pulvinar. Phasellus a neque vel mauris lobortis eleifend a a tellus. Integer nulla lectus, laoreet sed consectetur cursus, placerat faucibus orci. Vestibulum a velit lobortis, cursus neque ut, malesuada ex.
+						
+						.acor-container-block
+							input#acor42(type='checkbox' name='acor' checked='checked')
+							label(for='acor42')
+								span.acor-arrow
+								h4 Как выполнить задание?
+							.acor-body
+								.acor-body-content
+									.about-game-video
+										.about-game-video__content.gameVideo
+											.video-play-btn
+											video.gameVideoClip( poster="./img/aboutGame/video-poster.jpg" width="100%")
+												source(src="video/video.ogv", type="video/ogg;")
+												source(src="video/video.mp4", type="video/mp4")
+												source(src="video/video.webm", type="video/webm")
+			.page-modal__footer
+				.btn-group
+					a(href="#!").button.button-light Назад

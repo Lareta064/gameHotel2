@@ -1,0 +1,197 @@
+/*-=======ТАБЫ=====*/
+.tabs-wrapper{
+	border: 1px solid #D8E1EF;
+	border-radius: 16px;
+	tr:last-child td:first-child{
+		border-radius: 0 0 0 16px;
+	}
+	tr:last-child td:last-child {
+		border-radius: 0 0 16px 0;
+	}
+}
+
+.tabs-wrapper .tabs-header {
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #D8E1EF;
+	border-top: 1px solid #D8E1EF;
+	padding-right: 24px;
+	border-radius: 16px 16px 0 0;
+	
+}
+
+.tabs-wrapper .tab-options {
+	display: flex;
+	align-items: center;
+	.custom-dropdown.dropdown-menu{
+		z-index: 2;/*иначе на десктопах выше выпадашки все игры*/
+	}
+	&>*+* {
+		margin-left: 16px;
+	}
+}
+
+.tabs-wrapper .tabs {
+	border-radius: 16px 0 0 0;
+	overflow: hidden;
+	display: flex;
+	overflow-x: auto;
+	scrollbar-width: none ;
+	&::-webkit-scrollbar{
+		display: none;
+	};
+	.tab p {
+		pointer-events: none;
+	}
+
+	.tab {
+		padding-left: 24px;
+		padding-right: 24px;
+		height: 56px;
+		line-height: 56px;
+		font-size: 14px;
+		color: $pr;
+		cursor: pointer;
+		background-color: $light;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&>*+*{margin-left: 7px;}
+		.badge{
+			background-color: $pr;
+			color: #fff;
+			font-size: 13px;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+		p{position: relative;
+			&:after{
+				content:'';
+				position: absolute;
+				left: 0;
+				width: 0;
+				bottom: 2px;
+				height: 2px;
+				background-color: transparent;
+				transition: .3s;
+			}
+			
+		}
+		&.active {
+			background-color: #fff;
+			color: #E857D1;
+			
+			.badge {
+				background-color: #E857D1;
+			}
+			p {
+				&:after{
+					width: 100%;
+					background-color: #E857D1;
+				}
+				text-shadow: 0.5px 0.2px 0px #E857D1, -0.5px -0.2px 0px #E857D1;
+				
+			}
+		}
+	}
+}
+.table{
+max-height: 325px;
+	overflow:hidden;
+	overflow-y:auto;	
+	scrollbar-width: thin;
+	scrollbar-color: #D8E1EF,	#9BADCA;
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 20px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #9BADCA;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #D8E1EF;
+		border-radius: 32px;
+	}
+
+	&:first-child {
+		display: block;
+	}
+}
+.tabs-wrapper .tab-item {
+	display: none;
+	
+	border-radius: 0 0 16px 16px;
+	table tr:last-child td{border-bottom: 0px;}
+}
+.tabs-wrapper .tab-item:first-child{display: block;}
+
+.tabs-wrapper .tab-options {
+	.custom-dropdown .custom-dropdown__field{
+		min-width: 32px;
+		padding: 0;
+	}
+	.custom-dropdown .custom-dropdown__icon{
+		right: 0;
+	}
+}
+.tabs-footer{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #fff;
+	padding-left: 24px;
+	padding-right: 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 0 0 16px 16px;
+	border-top: 1px solid #D8E1EF;
+	.tabs-footer__left{
+		display: flex;
+		align-items: center;
+		&>*+*{margin-left: 32px;}
+	}
+	p{
+		font-size: 13px;
+		white-space: nowrap;
+		line-height: 20px;
+	}
+	.custom-select.custom-select--light .select-list ul{
+		padding-top: 4px;
+		padding-bottom: 4px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.custom-select.custom-select--light .select-list li{
+		padding-top: 2px;
+		padding-bottom: 2px;
+		justify-content: center;
+		border-radius: 5px;
+	}
+}
+.filter-group{
+	display: flex;
+	align-items: center;
+	
+	&>*+* {
+		margin-left: 16px;
+	}
+	.custom-select.custom-select--light{
+		width: 80px;
+		max-width: 80px;
+		.select-icon{
+			top: 6px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+	}
+	.custom-select.custom-select--light .select-field input {
+		height: 32px;
+		background-color: #EEF5FF;
+	}
+}

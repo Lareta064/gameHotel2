@@ -1,0 +1,14 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay
+	include ../sections/_mobile-fix-bottom-menu.pug
+	include ../sections/_aside-menu.pug
+	include ../sections/_header.pug
+	main.farm-page.farm-page--single
+		include ../sections/_farm-header-single-invest.pug
+		
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Farm page";

@@ -1,0 +1,82 @@
+
+//========Поздравляем ======
+main.congrat-page
+	//=========падающие элементы ==========
+	.snowflakes(aria-hidden='true')
+		.snowflake
+			span.square 1
+		.snowflake
+			span.ball.ball--small 2
+		.snowflake
+			span.triangle 3
+		.snowflake
+			span.ball 4
+		.snowflake
+			span.square 5
+		.snowflake
+			span.ball.ball--small 6
+		.snowflake
+			span.triangle.triangle--small 7
+		.snowflake
+			span.ball 8
+		.snowflake
+			span.square 9
+		.snowflake
+			span.triangle 10
+		.snowflake
+			span.ball 11
+		.snowflake
+			span.square 12
+		.snowflake
+			span.triangle.triangle--small 13
+		.snowflake
+			span.triangle 14
+		.snowflake
+			span.ball.ball--small 15
+		.snowflake
+			span.square 16
+		.snowflake
+			span.triangle 17
+		.snowflake
+			span.ball.ball--small 18
+
+	//===== картинка героя =========
+	.congrat-page-img
+		img(src="./img/sertificate/bigman.png", width="408" alt="alt")
+
+	//========modal========
+	.congrat-modal
+		.congrat-modal__title
+			.text-28
+				h1 Поздравляем!
+			.text-15
+				p Вы прошли базовый курс по #[strong Axie Infinity]
+		.congrat-block
+			.congrat-result
+				.congrat-result__img
+					img(src="./img/sertificate/gold-star.png", width="45" alt="alt")
+					img(src="./img/sertificate/gold-star.png", width="62" alt="alt")
+					img(src="./img/sertificate/silver-star.png", width="45" alt="alt")
+				.congrat-result__text
+					.text-13
+						p Баллы экспертности
+					.text-24
+						p 2 546
+
+		.congrat-reward
+			.congrat-reward__col
+				img(src="./img/sertificate/labelgh.svg", alt="alt")
+			.congrat-reward__col
+				.text-13
+					p Ваша награда
+				.text-24
+					p #[strong LUX] Certificat
+			.congrat-reward__col
+				img(src="./img/sertificate/lux.svg", alt="alt")
+		.button-group
+			a(href="#!").button.button-light К сертификатам
+			
+			a(href="#!").button.button--flex.button--color
+				svg.nft-icon
+					use(xlink:href="./img/svg-sprite.svg#nftIcon")
+				span Выпустить NFT

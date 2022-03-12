@@ -1,0 +1,187 @@
+.claim-page{
+	background-color: #EEF5FF;
+	.claim-table__header{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: #fff;
+	}
+	.claim-table__content{
+		background-color: #EEF5FF;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+
+	@media(min-width:768px){
+		min-height: calc(100vh - 120px);
+	}
+
+}
+.claim-table__content{
+	.container{
+		@media(max-width:768px) {
+			padding: 0;
+		}
+
+	}
+}
+.claim-table{
+	max-height: unset;
+	border-radius: 16px;
+	overflow:hidden;
+	overflow-y: unset;
+	scrollbar-width: none;
+	@media(max-width:1023px){
+		overflow-x:auto;
+		table{
+			width:100%;
+			min-width: 500px;
+		}
+		&::-webkit-scrollbar{
+			display: none;
+			width: 0;
+			height: 0;
+		}
+	}
+	th{
+		text-transform: uppercase;
+		font-family: $ms;
+		color: #E857D1;
+		font-size: 14px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	td{
+		padding-left: 10px;
+		padding-right: 10px;
+		.badge{
+			font-size: 13px;
+		}
+	}
+	th:first-child, td:first-child{
+		width: 60px;
+		
+	}
+	th:last-child,
+	td:last-child {
+		width: 80px;
+		.button{
+			text-transform: uppercase;
+		}
+	}
+	th:nth-child(2),
+	td:nth-child(2),
+	th:nth-child(3),
+	td:nth-child(3){
+		width: calc(100% - 140px) / 2;
+		text-align: center;
+		@media(max-width:1023px){
+		overflow-x:auto;
+		table{width:100px;}
+		@media(max-width: 1023px){
+			width:200px;
+		}
+	}
+	}
+	td:nth-child(3){
+		white-space: nowrap;
+	}
+}
+.page-modal.claim-modal{
+	width: 100%;
+	max-width: 580px;
+	form{
+		label{
+			font-family: "Montserrat Semibold";
+			font-size: 15px;
+			line-height: 1.5;
+			color: #0A0522;
+			margin-bottom: 6px;
+			display: inline-block;
+		}
+	}
+	@media(min-width: 768px){
+		padding: 16px 32px 32px;
+	}
+	.claim-form-btn{
+		padding-top: 24px;
+		text-align: center;
+		.button{
+			height: 48px;
+			line-height: 48px;
+		}
+		.text-link{
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 12px;
+			margin-top: 12px;
+			text-decoration: underline;
+
+		} 
+	}
+}
+.claim-table.claim-table2{
+	tr:nth-child(2n+1) td{
+		background-color: rgba(216, 225, 239, .54);
+		.badge.badge--light{background-color: #fff;}
+	}
+}
+.claim-page.claim-page--dark{
+	.claim-table__header{
+		border-bottom: 1px solid rgba(238, 245, 255, .3 );
+	}
+	background: linear-gradient(180deg, #0A0522 0%, #5766E8 52.08%, #0A0522 100%);
+	.claim-table__header {
+		
+		background-color: transparent;
+		.text-24{color: #fff}
+	}
+
+	.claim-table__content {
+		background-color: transparent;}
+
+}
+
+.claim-table.claim-table3{
+	table th,table td{
+		background-color: #0A0522;
+		border-bottom: 1px solid rgba(238, 245, 255, .3);
+	}
+	table td {
+
+		p,
+		span {
+			color: #fff;
+		}
+		p.badge {
+			color: #0A0522;
+		}
+		.button.button--color {
+			background-color: #E857D1;
+			border-color: #E857D1;
+		}
+	}
+	table tr:last-child td{
+		border-bottom: none;;
+	}
+}
+.modal--dark{
+	background-color: #0A0522;
+	box-shadow: 0 0 15px rgba(255,255,255, .25);
+	border:1px solid rgba(255, 255, 255, .25);
+	.page-modal__body{
+		background-color: #0A0522;
+		form label{color: #fff;}
+	}
+	.page-modal__header{
+		border-bottom: 0;
+		.text-16 {
+			color: #fff;
+		}
+	}
+	.button.button--color{
+		background-color: #E857D1;
+	}
+	.claim-form-btn .text-link{color: #fff;}
+}

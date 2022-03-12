@@ -1,5 +1,18 @@
 //================ui==========
 .container
+	.button--color.button.button--flex.button-medium
+		svg.icon-gamepad
+			use( xlink:href="./img/svg-sprite.svg#icon-gamepad")
+		span Получить аккаунт
+	.button--white.button.button--flex.button-medium
+		svg.icon-edu
+			use( xlink:href="./img/svg-sprite.svg#iconEdu")
+		span Научиться играть
+	.comment-info-count
+		span.decrem-btn
+		input(type="text" readonly value="20")
+		span.increm-btn
+
 	.wr(style="margin-bottom:40px;")
 		.filter-btn-block
 			.filter-btn по популярности
@@ -167,11 +180,11 @@
 				h3.text-24 Новости
 				p.text-18 Статьи	
 	.wr(style="margin-bottom:40px; overflow:hidden; width:260px")
-		+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная', 'axie-card','game-logo', 'Ранний доступ')
+		+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная', 'axie','game-logo', 'Ранний доступ')
 	.wr(style="margin-bottom:40px; overflow:hidden; width:376px;")
-		+game-card-medium('8.9', 'Axie Infinity', 'Пошаговая, карточная','favor-card', 'game-logo')
+		+game-card-medium('8.9', 'Axie Infinity', 'Пошаговая, карточная','snake', 'game-logo')
 		pre.
-			+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная','axie-card', 'game-logo', 'Ранний доступ')
+			+game-card-large('8.9', 'Axie Infinity', 'Пошаговая, карточная','axie', 'game-logo', 'Ранний доступ')
 	.wr(style="margin-bottom:40px; overflow:hidden; ")
 		a(href="#!").action-card
 			.action-card-img(style="background: #F3EAFF url(./img/action-card1.jpg)")

@@ -22,6 +22,7 @@
 .header-group .badge{font-family: $ms;}
 .badge--light{
 	background-color: #EEF5FF;
+	color: #3B4E6A;
 }
 .badge--green{
 	background-color: #33A661;
@@ -32,4 +33,23 @@
 .badge--white{
 	background-color: #fff;
 	color: #0A0522;
+}
+.badge--yellow{
+	background-color: #FCF1D5;
+		color: #0A0522;
+}
+.badge-sale{
+	background-color: #F2CF68;
+	color: #0A0522;
+	font-family: $mr;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.badge--red{
+	color: #fff;
+	background-color: #EE605F;
+}
+.badge--profi{
+	background: linear-gradient(90deg, #EE667D 0%, #C26BEB 100%);
+	color: #fff;
 }

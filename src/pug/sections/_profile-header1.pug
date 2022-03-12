@@ -1,0 +1,60 @@
+//========верх под навигацией для моб версии ===========
+.profile-mobile
+	include ../sections/_profile-mobile-header
+//========баннер в шапке на экранах от 768 + ==============
+.profile-header(style="background-image: url(./img/profile/banner1.jpg")
+	.container
+		.profile-header-content
+			.profile-header-left.flex-center
+				.profile-header-avatar
+					img(src="./img/profile/persone.jpg", width="144" alt="alt")
+				.profile-header-title
+					.top-block
+						.top-block-group.flex-center
+							.text-36 Геральт из Ривии
+							.top-block-col
+								.icon-group
+									span.star-symbol &#9733;
+									span 1334
+								.badge.badge--profi Профи
+						.text-16
+							p Ведьмак
+							
+					.bottom-block
+						.skills-progress
+							.skills-progress-bar
+								.skills-progress-line
+								.skills-progress-scale
+							.skills-progress-text.text-14
+								p Еще 540 xp для получения уровня Легенда	
+			.profile-header-right
+				.profile-header-label
+					.profile-label__img
+						img(src="./img/profile/gh-logo.jpg", width="36" alt="alt")
+					
+					.gh-title
+						p Game Hotel
+						.icon-check
+				
+				.person-statistics
+					.statistics-item
+						.top-block
+							svg.icon-followers
+								use( xlink:href="./img/svg-sprite.svg#iconFollover")
+							span 56
+						.text-14
+							span Фоловеров
+					.statistics-item
+						.top-block
+							svg.icon-reward
+								use( xlink:href="./img/svg-sprite.svg#iconReward")
+							span 5
+						.text-14
+							span Наград
+					.statistics-item
+						.top-block
+							svg.icon-post
+								use( xlink:href="./img/svg-sprite.svg#iconPost")
+							span 12
+						.text-14
+							span Статей

@@ -1,11 +1,52 @@
 .sidebar
-	.nav-list
-		nav
-			p Все жанры
-			a(href="#!") Пошаговые
-			a(href="#!") Карточные
-			a(href="#!") Ролевые
-			a(href="#!") Action
-			a(href="#!") MOBA
-			a(href="#!") MMORPG
-			
+	.sidebar-content
+		//=====search form ======
+		.aside-search
+			.sf-block
+				form.aside-search-form(action="" method="method")
+					.form-field
+						input(type="text" placeholder="Поиск игры")
+					button(type="submit").form-btn.search-form-btn
+		
+		//==== выпадающий список категорий для мобилок   =====
+		.catalogy-menu
+			.custom-dropdown.dropdown-menu
+				.custom-dropdown__icon
+					svg(width="16" height="16")
+						use(xlink:href="./img/svg-sprite.svg#iconArr")
+				.custom-dropdown__field
+					p Все жанры
+				
+				.custom-dropdown__wrapper
+					ul
+						li.custom-dropdown__list-item 
+							a(href="#step-genres") Пошаговые
+						li.custom-dropdown__list-item 
+							a(href="#card-genres") Карточные
+						li.custom-dropdown__list-item 
+							a(href="#role-genres") Ролевые
+						li.custom-dropdown__list-item 
+							a(href="#action-genres") Action
+						li.custom-dropdown__list-item 
+							a(href="#moba-genres") MOBA
+						li.custom-dropdown__list-item 
+							a(href="#mmorpg-genres") MMORPG
+		
+		//======= список категорий на десктоп версиях =======
+		.nav-list
+			ul.page-nav
+				li.active
+					a(href="#all-genres") Все жанры
+				
+				li 
+					a(href="#step-genres") Пошаговые
+				li 
+					a(href="#card-genres") Карточные
+				li 
+					a(href="#role-genres") Ролевые
+				li 
+					a(href="#action-genres") Action
+				li 
+					a(href="#moba-genres") MOBA
+				li 
+					a(href="#mmorpg-genres") MMORPG

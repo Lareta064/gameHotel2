@@ -13,7 +13,7 @@
 	.swiper-slide{
 		width: 376px;
 	}
-	@media(max-width: 1599px){
+	@media(max-width: 1919px){
 		box-sizing: content-box;
 		column-gap: unset;
 		display: flex;
@@ -47,6 +47,12 @@
 	background: #FFF;
 	border-radius: 16px;
 	padding: 14px 16px;
+}
+.task-card__logo img{
+	width: 82px;
+	height: 32px;
+	object-fit: contain;
+	object-position: left
 }
 	.task-card-timeCounter,
 	.task-card-deskrip,
@@ -188,7 +194,7 @@
 	}
 
 }
-
+.single-task-modal--process,
 .task-board-column--process{
 	background-color: #FCF1D5;
 	.task-card-badge {
@@ -204,6 +210,8 @@
 		color: #fff;
 	}
 }
+
+.single-task-modal--done,
 .task-board-column--done{
 	background-color: #E0F1E7;
 	.task-card-badge {
@@ -217,6 +225,7 @@
 		color: #33A661;
 	}
 }
+.single-task-modal--notcompleted,
 .task-board-column--notcompleted{
 	background-color: rgba(238, 96, 95, 0.2);
 	.task-card-badge {
@@ -231,4 +240,15 @@
 	.task-card__footer-spans {
 		color: #EE605F;
 	}
+}
+.single-task-modal--done .page-modal__body {
+	background-color: #E0F1E7;
+}
+.single-task-modal--notcompleted .page-modal__body {
+	background-color: #FCDFDF;
+}
+.single-task-modal--notcompleted,
+.single-task-modal--done,
+.single-task-modal--process {
+	background-color: transparent;
 }

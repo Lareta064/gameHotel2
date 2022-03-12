@@ -1,0 +1,568 @@
+extends ../layouts/layout.pug
+
+mixin typeCard(title, text, icon)
+	.card-light.card-light--bg
+		.card-light__head
+			.h4 #{title}
+			svg.icon-briding
+				use(xlink:href="./img/svg-sprite.svg#"+icon +"")
+		.card-light__text
+			p !{text}
+
+
+
+block content
+	#overlay
+	header.inner-header
+		.inner-header-content
+			button.back-arrow--white
+				svg(width="24" height="24")
+					use(xlink:href="./img/svg-sprite.svg#arrRight")
+			
+			.innner-header-menu
+				a(href="#!") Об Axie Infinity
+				a(href="#!") Персонажи
+				a(href="#!") Локации
+				a(href="#!") Геймплей
+				a(href="#!") Новости
+				a(href="#!") Похожие игры
+				a(href="#!") Комментарии
+		
+			.inner-header-right
+				//=======btn=======
+				a(href="#!").button--color.button.button--flex.button-medium
+					svg.icon-gamepad
+						use( xlink:href="./img/svg-sprite.svg#icon-gamepad")
+					span Получить аккаунт
+				//=======btn=======
+				a(href="#!").button--white.button.button--flex.button-medium
+					svg.icon-edu
+						use( xlink:href="./img/svg-sprite.svg#iconEdu")
+					span Научиться играть
+	
+	//=======header banner ============
+	.about-game.about-game--dark
+		.about-game-parts__img
+			img(src="./img/aboutGame/bg.jpg", width="2500"  alt="alt")
+		.game-banner(style="background-image: url(./img/aboutGame/axie-banner.jpg)")
+			.container
+				.flex-wrapper
+					.game-banner__content
+						h1.title-1
+							img(src="./img/games/axie-banner-logo.png", width="99"  alt="logo")
+							| Axie Infinity
+						p Онлайн-игра на основе NFT, разработанная вьетнамской студией Sky Mavis, в которой используются криптовалюты на основе Ethereum
+						//====кнопки ======
+						.game-rate
+							.game-rate-val 8.9
+							.game-rate-info
+								.text-17 Рейтинг игры
+								.text-14 Основан на 240 оценках игроков
+
+					.game-banner__right
+						.play-button
+							span
+		
+		.section-wrapper
+			
+			//=======блок в рамке ============
+			.about-game-parametrs
+				.container.pr-1023
+					.gradient-box.gradient-box--orange
+						.gradient-box__inner.flex-wrapper
+							.about-game-img
+								img(src="./img/games/banner-gif.gif", width="246" alt="alt")
+							.swiper-block
+								ul
+									li
+										span.text-grey.text-13 Жанр
+										p.text-15 Пошаговая, карточная
+									li
+										span.text-grey.text-13 Разработчики
+										p.text-15
+											a(href="#!") skymavis.com
+									li
+										span.text-grey.text-13 Сеть
+										p.text-15 Ronin на базе ETH
+									li
+										span.text-grey.text-13 Сайт игры
+										p.text-15 
+											a(href="#!") axieinfinity.com
+									li
+										span.text-grey.text-13 Стадия
+										p.text-15 Релиз / ранний доступ
+									li
+										span.text-grey.text-13 Платформа
+										p.d-flex
+											span.badge.badge--white Android
+											span.badge.badge--white IOS
+											span.badge.badge--white MacOs
+											span.badge.badge--white Windows
+
+		
+			//========доходность =========
+			.about-game-earnings
+				.container
+					.flex-wrapper
+						.about-game-earnings__text
+							.main-title
+								p Игроки могут зарабатывать внутриигровые криптовалюты, которые затем можно обменять на бирже на фиатные валюты
+							.result-info-content
+								ul
+									li
+										.gradient-text--blue.text-28
+											p до $ 1 200 / мес.
+										span.text-grey Средний доход игроков
+									li
+										.gradient-text--pink.text-28
+											p 1-3 часа в день
+										span.text-grey Временные затраты
+						
+							.text-17
+								p Но чтобы начать играть в игру, игрокам необходимо приобрести трёх цифровых питомцев под названием «Axie», которых они будут разводить как потомков персонажей, которые можно использовать на поле битвы. За завершение битвы есть награды в виде криптовалют.	
+						
+						.about-game-earnings__img
+							img(src="./img/aboutGame/axie-pic.png", width="440" alt="alt")
+
+			//=======block========
+			.about-game-parts.about-game-gradBlue
+				.container
+					.section-row.section-row--white
+						//========== Как заработать ===========
+						.make-money.section-row-block
+							.row-col-4
+								.text-28
+									p Как заработать
+							.row-col-8
+								.text-16
+									p При том что игра находится на ранней стадии, пользователям открыт максимально большой спектор вариантов дохода в игре. 
+
+									p Но для большинства из них следует хорошо понимать игру и потребности игроков, иначе можно уйти в глубокий минус или потерять все активы. Мы советуем пройти обучение и набраться опыта, а потом уже рисковать.
+								.row-col-box
+									a(href="#!").button.button--pink Научиться играть
+						
+						//========== Виды игровых механик в игре Axie Infinity ===========
+						.game-mechanics.section-row-block
+							.row-col-4
+								.text-28
+									p Виды игровых механик в игре#[br] #[span Axie Infinity]
+							.row-col-8
+								.game-mechanics-cards
+									+typeCard('Бридинг', 'Вы можете создавать игровых персонажей при помощи зелья любви (SLP) и продавать их на маркете', 'icon-briding')
+									+typeCard('PVE бои', 'Если ваш аккаунт выше 800 рейтинга на арене, вы будете зарабатывать до 50 SLP в день играя PVE.', 'iconBatl')
+									+typeCard('PVP арена', 'Срaжайтесь с другими пользователями и зарабатывайте SLP и AXS при выходе в топ 1 000.', 'iconReward')
+									+typeCard('Мини игры', 'Если вы приобрели землю в игре, вы можете разместить на ней игру и зарабатывать часть дохода игроков.', 'icon-gamepad')
+									+typeCard('Поиск ресурсов', 'Путешествия на карте проекта в LAND вы можете находить или добывать AXS и SLP.', 'iconResourse')
+									+typeCard('Торговля', 'Вы можете покупать <br>и перепродавать ресурсы, монеты и игровых персонажей. ', 'iconCart')
+
+						//========== Как играть? ===========
+						.game-rules.section-row-block
+							.row-col-4
+								.text-28
+									p Как играть?
+							.row-col-8
+								.game-rules-block
+									//========== Шаг 1 ===========
+									.game-rules-item
+										.badge.badge--black Шаг 1
+										.text-16
+											p Скачать игру можно на сайте #[a.text-link(href="#") axieinfinity.com] по кнопке play now. Доступны приложения для PC, Andriod, IOS.
+									
+									//========== Шаг 2 ===========
+									.game-rules-item
+										.badge.badge--black Шаг 2
+										.text-16
+											p Для регистрации Вам понадобится установить и завести кошелек #[a.text-link(href="#") roninwallet.io]  Он нужен для приобретения игровых персонажей — NFT и работы с внутриигровыми активами.
+									//========== Шаг 3 ===========
+									.game-rules-item
+										.badge.badge--black Шаг 3
+										.text-16
+											p Далее необходимо определить, какие персонажи Axie Вам наиболее интересны и приобрести минимум трех на торговой площадке #[a.text-link(href="#") marketplace.axieinfinity.com.] Эти персонажи составят команду, которой можно играть
+			//=======block========
+			.about-game-parts
+				.container
+					.section-row.section-row--dark
+						//========== Сколько времени нужно на игру? ===========
+						.playing-time.section-row-block
+							.row-col-4
+								.text-28
+									p Сколько времени нужно на игру?
+							.row-col-8
+								.flex-wrapper
+									.playing-time-text.text-16
+										p В игре есть параметр энергии, благодаря которой добывается больше игровой валюты или прокачиваются персонажи.
+
+										p На аккаунте количество энергии может быть от 20 до 60 единиц. В среднем 20 ед. энергии расходуется за 80 минут, 60 ед. энергии за 200 минут.
+									
+									//=======picture======
+									.text-block-grid__right
+										.text-block-grid__text
+											span.text-14 Временные затраты 
+											p.text-20 1–3 ч. в день
+										.text-block-grid__img
+											img(src="./img/aboutGame/hand.png",width="240" alt="alt" data-aos="fade-up" data-aos-duration="800")
+					
+			//=======block========			
+			.about-game-parts
+				.container
+					.section-row.section-row--dark
+						
+						//========== Классы персонажей в игре  ===========
+						.hero-cards.section-row-block
+							.row-col-4
+								.text-28
+									p Классы персонажей в игре #[br] #[span Axie Infinity]
+							.row-col-8
+								.hero-cards-text.text-16
+									p В игре имеется 6 основных классов и 3 смешанных. Каждый основной класс имеет гены, которые передаются его потомкам Набор генов у каждого персонажа индивидуален, но не обязательно уникален Гены классов влияют на значения здоровья, скорости, навык, мораль, а также на 4 умения персонажа.
+								.hero-cards-swiper.swiper
+									.card-grid-trio.swiper-wrapper.gap-32
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-1.png", width="128" alt="alt"  data-aos="fade-down" data-aos-delay="200")
+												.hero-card__text
+													p.text-15 Aquantic
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-2.png", width="128" alt="alt"  data-aos="fade-down" data-aos-delay="500")
+												.hero-card__text
+													p.text-15 Beast
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-3.png", width="128" alt="alt" data-aos-delay="800"  data-aos="fade-down")
+												.hero-card__text
+													p.text-15 Bird
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-1.png", width="128" alt="alt"  data-aos="fade-down" data-aos-delay="200")
+												.hero-card__text
+													p.text-15 Aquantic
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-2.png", width="128" alt="alt"  data-aos="fade-down" data-aos-delay="500")
+												.hero-card__text
+													p.text-15 Beast
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-3.png", width="128" alt="alt" data-aos-delay="800"  data-aos="fade-down")
+												.hero-card__text
+													p.text-15 Bird
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-1.png", width="128" alt="alt"  data-aos="fade-down" data-aos-delay="200")
+												.hero-card__text
+													p.text-15 Aquantic
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-2.png", width="128" alt="alt"  data-aos="fade-down" data-aos-delay="500")
+												.hero-card__text
+													p.text-15 Beast
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+										.swiper-slide
+											.hero-card
+												.hero-card__img
+													img(src="./img/aboutGame/hero-3.png", width="128" alt="alt" data-aos-delay="800"  data-aos="fade-down")
+												.hero-card__text
+													p.text-15 Bird
+													ul
+														li
+															span.text-grey Здоровье
+															span.text-green 45,
+														li
+															span.text-grey Скорость
+															span.text-green 57,
+														li
+															span.text-grey Навык
+															span.text-green 35,
+														li
+															span.text-grey Мораль
+															span.text-green 27
+			//=======block========
+			.about-game-parts
+				.container
+					.section-row.section-row--dark
+						
+						//========== Локации в игре Axie Infinity  ===========
+						.hero-cards.section-row-block
+							.row-col-4
+								.text-28
+									p Локации в игре #[br] #[span Axie Infinity]
+							.row-col-8
+								//=======slider========
+								.location-types
+									.picture-card(style="background-image:url(./img/aboutGame/location-1.jpg)")
+										.badge.badge--white Рынок
+								
+									.picture-card(style="background-image:url(./img/aboutGame/location-2.jpg)")
+										.badge.badge--white Сад
+								
+									.picture-card(style="background-image:url(./img/aboutGame/location-3.jpg)")
+										.badge.badge--white Руины
+								
+									.picture-card(style="background-image:url(./img/aboutGame/location-1.jpg)")
+										.badge.badge--white Деревня
+										
+			//=======block про сражения PVP PVE========
+			.about-game-parts.about-game-gradPink
+				.container
+					.section-row.section-row--white
+						//========== PvE ===========
+						.pve-batl.section-row-block
+							.row-col-4
+								.text-28
+									p PvE Сражения
+							.row-col-8
+								.text-paragrafe
+									.text-16.text-bold
+										p Основная механика игры заключается в следующем:
+									p Любое сражение, вне зависимости от режима, состоит из раундов. В начале первого рануда выдается определенное количество случайных карт с умениями ваших axies, а также начисляется определенное кол-во энергии для применения этих умений.
+									
+									img(src="./img/aboutGame/banner.jpg", width="767" alt="alt")
+									
+									.text-16.text-bold
+										p В режиме PVE нам предстоит сражаться с NPC на различных точках карты приключений:
+									p В зависимости от точки, нам предстоит преодолеть от 1 до 5 ранудов, ликвидировать всех NPC и получить в награду SLP (если точка пройдена «на отлично» и никто из axie не погиб, то мы сможем разово заработать дополнительную награду). Чем дальше точка от начала, тем выше будет уровень NPC, и тем сложнее нам будет их победить. Но наши axie также смогут повышать свой уровень, увеличивая свои характеристики, но для этого нужно играть в PVE при наличии на аккаунте энергии. #[br] В день на прокачку мы, имея на аккаунте 3 акси, сможем потратить только 20 энергии. На вознаграждение в виде SLP энергия аккаунта не влияет, но есть ограничение: в режиме PVE можно заработать только 50 SLP в день. #[br] Чтобы заработать больше SLP, нам необходимо будет выигрывать матчи в режиме PVP, против других игроков. На этот режим уровень axie не влияет, и ваши axie, и axie вашего противника будут иметь базовые параметры, как на 1 уровне. Но нужно помнить, что вознаграждение, в случае победы, мы получим только при наличии энергии на аккаунте. Как только энергия кончится мы и дальше сможем играть, однако SLP за победу получать не будем. 
+						
+						//========== PvE ===========
+						.pve-batl.section-row-block
+							.row-col-4
+								.text-28
+									p PvE Сражения
+							.row-col-8
+								.text-paragrafe
+									.text-16.text-bold
+										p На картинке можно увидеть, в каком порядке будут выполнять ход ваши axies, и axies противника.
+									
+									img(src="./img/aboutGame/banner.jpg", width="767" alt="alt")
+									
+									
+									p В каждом из ходов можно выбрать, какие именно умения будет применять ваш axie, выбрав соответствующую карту. На применение каждой из карт требуется определенное кол-во энергии, указанной на карте. После совершения выбора игрок подтверждает завершение хода, послеподтвердят ход все axie в порядке очереди начинают применять свои умения, нанося урон противнику, защищая себя щитами и так далее.
+
+									p Также нужно отметить, что большинство карт имеют дополнительный эффект, который сработает только в определенных условиях ( к примеру, за 1 ход axie разыграет определенное количество карт, или урон от карты будет нанесен самому быстрому axie противника, и так далее).
+
+									p Это, если можно так сказать, краткая выжимка игрового процесса, в котором, на самом деле, крайне много особенностей, которые зависят от типа axie, его параметров, его умений и даже линии, на которой он стоит (в игре их 3, по 2 позиции на линии).
+
+			
+			//=======игровые карточки ========
+			.playing-cards.about-game-parts
+				
+				.container
+					.flex-header
+						.text-36 
+							p Игровые карты
+						a(href="#!").button.button--pink Перейти в каталог
+					
+					.playing-cards-wrapper
+						.playing-card
+							.badge.badge--white Рыба
+							img(src="./img/aboutGame/fish-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Зверь
+							img(src="./img/aboutGame/animals-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Птица
+							img(src="./img/aboutGame/birds-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Жук
+							img(src="./img/aboutGame/bugs-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Рептилия
+							img(src="./img/aboutGame/reptile-card.png", width="207" alt="fish")
+						.playing-card
+							.badge.badge--white Растение
+							img(src="./img/aboutGame/plants-card.png", width="207" alt="fish")
+
+			//=====block======
+			.about-game-parts
+				.container
+					.section-row.section-row--white
+						//======news=======
+						.game-news.section-row-block
+							.flex-header
+								.text-group
+									p.text-24 Новости
+									p.text-18 Статьи
+								//==========slider btn ========
+								a(href="#!").button.button-light Смотреть все
+							
+							.game-news-cards.swiper
+								.card-grid-trio.swiper-wrapper
+									//=======one card ======
+									a(href="#!").card-light.card-light--pic.swiper-slide
+										.card-light__img
+											img(src="./img/game-news1.jpg", width="104" height="104" alt="alt")
+										.card-light__text
+											h4 Киберспорт
+											p Победа Natus Vincere в заветном мейджоре и влия...
+											.card-light__details
+												p 14.10.2021
+												span
+									//=======one card ======
+									a(href="#!").card-light.card-light--pic.swiper-slide
+										.card-light__img
+											img(src="./img/game-news2.jpg", width="104" height="104" alt="alt")
+										.card-light__text
+											h4 Секреты лучших
+											p Обсуждаем с про игроком секреты тактики в Axie...
+											.card-light__details
+												p 14.10.2021
+												span
+									//=======one card ======
+									a(href="#!").card-light.card-light--pic.swiper-slide
+										.card-light__img
+											img(src="./img/game-news3.jpg", width="104" height="104" alt="alt")
+										.card-light__text
+											h4 JRPG и Game Fi
+											p Как Япония оказывает влияние на индустрию...
+											.card-light__details
+												p 14.10.2021
+												span
+								.swiper-pagination-news.swiper-pagination
+						.game-similar-cards.section-row-block
+							.flex-header
+								.text-group
+									p.text-24 Похожие игры
+									
+								//==========slider btn ========
+								a(href="#!").button.button-light Смотреть все
+							.farm-projects-block
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/axier.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/axie-logo.png", width="80" alt="img")
+							
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/snake.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/snake-logo.png", width="80" alt="img")
+							
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/ember.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/ember-logo.png", width="80" alt="img")
+						
+								.farm-projects-card
+									.farm-projects-img
+										img(src="./img/games/fara.jpg", width="272" alt="img")
+									.farm-projects-logo
+										img(src="./img/games/fara-logo.png", width="80" alt="img")
+
+		
+			
+	include ../blocks/_comments-block2
+					
+	-var title = "About Game";

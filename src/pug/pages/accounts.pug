@@ -1,0 +1,16 @@
+extends ../layouts/layout.pug
+
+block content
+	#overlay.light-overlay
+	+fix-bottom-menu('Игры', 'Обзоры', 'Обучение', 'Новости GameFi')
+	include ../sections/_aside-menu.pug
+	include ../sections/_header-tasks.pug
+	include ../sections/_ui-header-personal
+	main.accounts-page
+		
+		include ../sections/_ui-accounts
+	//=======FOOTER========
+	include ../sections/_footer.pug
+	
+block variables
+	-var title = "Game Hotel | Accounts";

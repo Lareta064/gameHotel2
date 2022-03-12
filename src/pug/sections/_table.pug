@@ -1,0 +1,93 @@
+//=========tabs==============
+.accounts__tabs
+	.container
+		.tabs-wrapper
+			//===переключатели табов ======
+			.tabs-header
+				.tabs
+					.tab
+						p Мои аккаунты
+					.tab
+						p Предложения на рынке
+					.tab
+						p Аккаунты на замену
+						span.badge 3
+				
+				//===правая часть с иконками-выпадашками ======
+				.tab-options
+					//======выпадашка filter-list ====
+					.filter-list-wrapper.custom-dropdown.dropdown-menu
+						.custom-dropdown__icon
+							span.filer-list
+						.custom-dropdown__field
+						//====выпадающий список =====
+						.custom-dropdown__wrapper
+							.custom-dropdown__list
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item.current
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+					
+					//======выпадашка три точки ====
+					.options-block.custom-dropdown.dropdown-menu
+						.custom-dropdown__icon
+							span.dotted-icon
+						.custom-dropdown__field
+						//====выпадающий список =====
+						.custom-dropdown__wrapper
+							.custom-dropdown__list
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item.current
+									p Какой-то текст
+								//====элемент списка =====
+								.custom-dropdown__list-item
+									p Какой-то текст
+			//===== основной контент-таблица ======
+			.tabs-content
+				//=======вкладка Аккаунты=======
+				.tab-item
+					.table.my-accounts
+						table
+							//==== заголовочная строка =====
+							thead
+							+account-th-1
+							tbody
+								+account-tb-1('01', 'axie', 'Axie Infinity', 'AxieHotel')
+								+account-tb-1('02', 'plant', 'Plant vs Undead', 'PlantHotel')
+								+account-tb-1('03', 'fara', 'Fara Land', 'FaraHotel')
+								+account-tb-1('04', 'jojo', 'Jojo.Fun', 'JojoHotel')
+								+account-tb-1('05', 'ember', 'Ember Sword', 'EmberHotel')
+								+account-tb-1('06', 'monsta', 'Monsta Infinite', 'MonstaHotel')
+					include ../blocks/_accounts-table-footer.pug			
+				
+				//======= вкладка Предложения на рынке =======
+				.tab-item
+					.table.offer-accounts
+						table
+							//==== заголовочная строка =====
+							thead
+							+account-th-2
+							tbody
+								+account-tb-2('01', 'axie','Game Hotel', '$ 1,5 за 1 SLP/ 30% за AXS', 'Стандарт', 1255, 'std')
+								+account-tb-2('02', 'jojo','El Urbik', '40 % от добычи', 'Комфорт', 1, 'cmf')
+								+account-tb-2('03', 'jojo','Game Hotel', '40 % от добычи', 'Комфорт', 1, 'cmf', 'true')
+								+account-tb-2('04', 'mechmaster','CryptoM', '20 % от добычи', 'Люкс', 1, 'lux', 'true')
+					
+				//======= вкладка Аккаунты на замену =======
+				.tab-item
+					.table.replacement-accounts
+						table
+							thead
+								+account-th-3
+							tbody
+								+account-tb-3('01', 'axie')
+								+account-tb-3('02', 'axie')
+								+account-tb-3('03', 'axie')

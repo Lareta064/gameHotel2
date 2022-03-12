@@ -44,20 +44,36 @@
 
 /*контейнер на стр about game*/
 .column-container{
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-left: 32px;
+	padding-right: 32px;
 	@media(max-width:767px){
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 }
 /*группа из двух элементов*/
+.icon-group,
 .text-group {
 	display: flex;
 	align-items: center;
 
 	&>*+* {
 		margin-left: 16px;
+	}
+}
+.icon-group {
+	cursor:pointer;
+	&:hover{
+		opacity: .7;
+	}
+	span{
+		font-size: 13px;
+		line-height: 20px;
+		font-family: $ms;
+		color:#3B4E6A;
+	}
+	&>*+* {
+		margin-left: 11px;
 	}
 }
 /***СВАЙП-СЕТКА ДЛЯ КАРТОЧЕК**/
@@ -68,9 +84,16 @@
 	row-gap: 32px;
 
 }
+.grid-column-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 24px;
+	row-gap: 24px;
+}
+
 /****заголовок на баннерах ***/
 
-.main-header__content{
+.game-banner__content{
 	position: relative;
 	z-index: 3;
 	display: flex;
@@ -80,19 +103,93 @@
 	flex-direction: column;
 	.title-1{
 		margin-bottom: 32px;
-		img{margin-right: 20px;}
+		text-align: center;
+		img{
+			margin-right: 20px;
+			
+		}
+		@media(max-width:767px) {
+			img{
+				width: 120px;
+				margin-bottom: 54px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			font-size: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	.title-1, p{color: #ffffff;}
 	p{
 		font-size: 17px;
-		line-height: 1.53;
+		line-height: 1.65;
 	}
 	.btn-group{
 		margin-top: auto;
 		padding-left: 0;
+		display: flex;
+		align-items: center;
 		.button +.button{margin-left: 24px;}
+		@media(max-width:767px) {
+			justify-content: center;
+			// margin-top: 0;
+			.button{
+				height: 40px;
+				line-height: 38px;
+				padding-left: 12px;
+				padding-right: 12px;
+				border-radius: 9px;
+				font-size: 13px;
+				text-align: center;
+				min-width:112px;
+			}
+		}
+	}
+	.game-banner__gif{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform:translate(114%, -50%);
+		@media(max-width:1023px){
+			width: 180px;
+			transform:translate(100%, -50%);
+		}
+		@media(max-width:767px) {
+			width: 150px;
+			transform: translate(12%, -120%);
+		}
 	}
 	@media(max-width:1023px){
 		p {font-size: 15px;}
+	}
+	@media(max-width:767px) {
+		width: 100%;
+		p{
+			display: none;
+		}
+	}
+}
+.fake-offset{
+	padding-top: 88px;
+	margin-top: -40px;
+	@media(max-width:1023px){
+		padding-top: 180px;
+		margin-top: -160px;
+	}
+}
+.br-desktop {
+	display: block;
+
+	@media(max-width:767px) {
+		display: none;
+	}
+}
+.br-mobile {
+	display: none;
+
+	@media(max-width:767px) {
+		display: block;
 	}
 }

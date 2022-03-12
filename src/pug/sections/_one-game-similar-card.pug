@@ -1,0 +1,19 @@
+//========= ПОХОЖИЕ ИГРЫ===========
+article.games-similare.slider-1023
+	.column-container
+		.flex-header
+			h3.text-24 Карточные игры
+			a(href="#!").button-medium.button-light Смотреть все
+		//=======слайдер======
+		.games-cards-large.swiper.swiper-cardGames
+			.card-grid-trio.swiper-wrapper.flex-1023
+				//=====один слайд =====
+				.swiper-slide
+					+game-card-large('8.9', 'Waves Duck', 'Пошаговая, карточная', 'duck','duck-logo', 'Ранний доступ', 'Ранний доступ',330)
+				//=====один слайд =====
+				.swiper-slide
+					+game-card-large('8.1', 'Mechmaster', 'Пошаговая, карточная', 'mechmaster', 'mechmaster-logo', 'Ранний доступ',330)
+				//=====один слайд =====
+				.swiper-slide
+					+game-card-large('8.2', 'Thetan Arena', 'Пошаговая, карточная', 'thetan','thetan-logo', 'Ранний доступ',330)
+			.cardGames-pagination.swiper-pagination.hide-1024

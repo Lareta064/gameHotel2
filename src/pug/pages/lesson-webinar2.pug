@@ -1,0 +1,121 @@
+
+block content
+	#overlay
+	.course-page
+		.course-page__content
+			//===== выезжающий сайдбар======
+			.course-menu#course-sidebar
+				//======= header Course menu sidebar =============
+				
+				.course-menu-body
+					.course-menu-top
+						.course-menu-left
+							img(src="../img/games/ember-logo.png", width="120" alt="alt")
+						.course-menu-right
+							.point-block
+								.text-18.text-bold
+									p 223
+								.text-14
+									p Баллов эксперта
+					//======= progress bar =============
+					.course-menu-progress
+						.progress-block
+							.progress-block-text
+								p Идет обучение
+							.progress-block-line
+								.progress-block-bar
+									span 50%
+
+					include ../sections/_edu-accor
+			
+			//==== left-panel=======
+			.course-frame-panel
+				.course-frame-panel__header
+					button.back-arrow--white
+						svg(width="24" height="24")
+							use(xlink:href="./img/svg-sprite.svg#arrRight")
+				.course-frame-panel__body
+					.course-frame-panel__btns#course-sidebar-toggle
+						button.vert-lines
+						button.cross-btn
+
+			//==== main-frame=======
+			.course-frame
+				//==== header course-frame =======
+				.header
+					.container
+						.flex-content
+							.header-title.text-16.text-bold
+								.icon-task
+								p Задание
+							.header-col.d-flex
+								.header-col__box
+									a(href="#!").button.button-light.button--flex.button-support
+										span.support-icon
+										span Помощь
+								
+								.header-right
+									.profile-panel
+										.profile-icon
+											.icon-notify
+												p.label
+													span 2
+										.profile-persone
+											.profile-persone__img
+												img(src="./img/ava.png", width="38" alt="ava")
+											.profile-persone__arrow#profile-arrow
+												svg(width="10" height="6")
+													use(xlink:href="./img/svg-sprite.svg#iconArr")
+											.profile-persone__row
+												p 0x...263a
+
+				//==== body course-frame =======
+				.course-frame-body
+
+					//=======video frame =======
+					.course-frame-player(style="background-image:url(./img/aboutGame/video-poster.jpg)")
+						
+						//====блок-затемнение  ========
+						.course-frame-player__overlay
+							//===========кнопка Play временно скрыта через display: none. Если этому диву добавить класс visible - кнопка станет видна ==============
+							.video-play-btn.visible
+							//=========== блок с песочными часами - виден из-за класса visible Если этот класс удалить, то блок  скроется  ==============
+							.waiting-block
+								.icon-clock
+								.text-14.text-bold
+									p Через 10 минут
+					
+					//======= контент под видео =======
+					.course-frame-text
+						//===========блок под видео: Посмотрите видео и ответьте на вопрос ===============
+						.course-frame-text__block
+							.course-frame-text__header
+								.text-16
+									p Как видишь решение проблемы ?
+							.course-frame-text__body
+								.text-14.course-frame-text__title
+									p #[span +1 балл эксперта] за правильный ответ
+								.flex-wrapper
+									.comments-block__avatar(style="background-image: url(./img/comment1.jpg")
+									//=======форма для заметки ===========
+									form.note-form(action="" method="method")
+										.form-field.form-field--textarea
+											textarea(type="text" required placeholder="Введите ответ")
+											button(type="submit").form-btn.send-btn
+				
+				
+				//==== footer =======
+				.course-frame-footer
+					.container
+						.center-wrapper
+							a(href="#!").button.button--color.button--flex
+								span Далее
+								svg(width="16" height="16")
+									use(xlink:href="./img/svg-sprite.svg#arrRight")
+		
+	
+	
+block variables
+	-var title = "Course | Webinar";
+
+

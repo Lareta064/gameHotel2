@@ -22,6 +22,9 @@
  @import "blocks/asidebar";
  @import "blocks/comment-block";
  @import "blocks/accordion";
+ @import "blocks/accor-edu";
+ @import "blocks/tabs";
+ @import "blocks/pagination";
 
  //sections
  @import "sections/investor-banner";
@@ -40,16 +43,29 @@
  @import "sections/faq";
  @import "sections/game-categories";
  @import "sections/best-games";
+ @import "sections/table";
  
 
- @import "sections/footer";
- @import "pages/success-reg";
- @import "pages/investor-page";
- @import "pages/about-game";
- @import "pages/farm-page";
+@import "sections/footer";
+@import "pages/success-reg";
+@import "pages/investor-page";
+@import "pages/about-game";
+@import "pages/one-game";
+@import "pages/one-game2";
+@import "pages/farm-page";
+@import "pages/single-news-page";
 
 
- @import "blocks/task-card";
- @import "blocks/cabinet-header";
- @import "sections/tasks-single";
- @import "pages/tasks";
+@import "blocks/task-card";
+@import "blocks/cabinet-header";
+@import "sections/tasks-single";
+@import "pages/tasks";
+@import "pages/accounts";
+@import "pages/calendar";
+@import "pages/edu";
+@import "pages/course-page";
+@import "pages/certificate.scss";
+@import "pages/invest-rounds.scss";
+@import "sections/_profile-header.scss";
+@import "pages/profile.scss";
+@import "pages/claim.scss";

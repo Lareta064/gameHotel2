@@ -9,6 +9,15 @@
 		border: 1px solid #D4DFF1;
 		border-radius: 12px;
 		padding-left: 44px;
+		font-family: inherit;
+		font-size: 14px;
+		color: #3B4E6A;
+		&::placeholder{
+			color: #3B4E6A;
+		}
+		@media(max-width:1199px){
+			font-size: 16px;
+		}
 	}
 	.form-field-icon{
 		position: absolute;
@@ -104,7 +113,7 @@
 			background-repeat: no-repeat;
 			background-size: auto;
 			transition: .3s;
-
+			flex-shrink: 0;
 		}
 
 		input[type="checkbox"]:checked+span.fake-checkbox {
@@ -127,6 +136,7 @@
 		top: 0;
 		left: 0;
 		opacity: 0;
+		
 	}
 	.fake-radio{
 		width: 20px;
@@ -140,6 +150,7 @@
 		background-repeat: no-repeat;
 		background-size: auto;
 		transition: .3s;
+		flex-shrink: 0;
 	}
 	span +span{margin-left: 12px;}
 	input[type="radio"]:checked+span.fake-radio {
@@ -149,11 +160,30 @@
 
 	}
 }
+.form-fields-group {
+	.form-checkbox+.form-checkbox, .form-radio+.form-radio {
+		margin-top: 4px;
+	}
+	label{
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 12px;
+		padding-right: 12px;
+		border-radius: 9px;
+		width: 100%;
+	}
+	label.active{
+		background-color: #D4E5FF;
+	}
+}
+
 /* switch item*/
 .switch-item{
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	height: 20px;
+	white-space: nowrap;
 	input{
 		width: 0.01px;
 		height: 0.01px;
@@ -165,16 +195,17 @@
 	input + span{
 		width: 36px;
 		height: 20px;
-		background: #fff;
-		border: 1px solid #3B4E6A;
+		background: #EEF5FF;
+		border: 1px solid #9BADCA;
 		border-radius: 32px;
+		margin-right: 10px;
 
 	}
 	span+span{
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		background-color: #3B4E6A;
+		background-color: #788CAB;
 		position: absolute;
 		top:50%;
 		transform: translateY(-50%);
@@ -190,5 +221,42 @@
 	}
 	input:checked+span+span {
 		background-color: #fff;
+	}
+}
+.form-field--textarea{
+	.send-btn{
+		transform: translateY(0);
+		top: 12px;
+	}
+}
+.form-field textarea{
+	border: 1px solid #D8E1EF;
+	background-color: #EEF5FF;
+	padding: 12px;
+	border-radius: 12px;
+	resize:none;
+	width: 100%;
+	display: inline-block;
+	min-height: 104px;
+	padding-right: 40px;
+	outline: none;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: $mr;
+	&::placeholder{
+		font-size: 14px;
+		line-height: 20px;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+.custom-select.custom-select--light .select-icon {
+	text-align: center;
+	svg{transition: .3s;}
+}
+.custom-select.custom-select--light .select-icon.rotate{
+	svg{
+		transform:rotate(180deg)
 	}
 }

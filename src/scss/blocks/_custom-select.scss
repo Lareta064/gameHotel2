@@ -31,11 +31,14 @@
 			width: 60px;
 			height: 24px;
 			color: $text;
-			font-size: 13px;
+			font-size: 16px;
 			background-color: transparent;
 			font-family: $os;
 			cursor: pointer;
 			display: block;
+			@media(min-width:768px){
+				font-size: 13px;
+			}
 		}
 	}
 
@@ -66,6 +69,12 @@
 			&:hover {
 				opacity: .8;
 			}
+			img{
+				width: 60px;
+				height: 24px;
+				object-fit: contain;
+				object-position: right;
+			}
 		}
 
 		li.current {
@@ -76,6 +85,7 @@
 		}
 	}
 }
+.custom-select.custom-select--light,
 .custom-select.custom-select--full {
 	.select-icon{
 		width: 20px;
@@ -173,7 +183,7 @@
 		left: auto;
 		right: 0;
 		display: none;
-		z-index: 10;
+		z-index: 15;
 		&.active{
 			display: block;
 		}
@@ -215,7 +225,7 @@
 				span{margin-left: 12px;}
 			}
 		}
-		.custom-dropdown__list-item:hover,
+		
 		.custom-dropdown__list-item.current {
 			background-color: #D4E5FF;
 			color: #0A0522;

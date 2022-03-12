@@ -25,7 +25,10 @@
 		transform: translate(-50%, -50%);
 	}
 	@media(max-width:1199px){
-		margin-bottom: 70px;
+		margin-bottom: 60px;
+	}
+	@media(max-width:767px) {
+		margin-bottom: 90px;
 	}
 }
 .footer .footer-content--desk {

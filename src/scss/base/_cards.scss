@@ -26,7 +26,7 @@
 			color: #fff;
 		}
 	}
-	h4{
+	h4, .h4{
 		font-family: $ms;
 		font-size: 15px;
 		line-height: 24px;
@@ -45,7 +45,9 @@
 			 -webkit-box-orient: vertical;
 			 -webkit-line-clamp: 3;
 			 overflow: hidden;
+			
 		}
+		
 	}
 }
 .card-light.card-light--bg{
@@ -109,11 +111,18 @@
 		height: 104px;
 		flex-shrink: 0;
 		img{border-radius: 10px;}
+		@media(max-width:767px){
+			width: 90px;
+			height: 90px;
+		}
 	}
 	.card-light__text{
 		padding-top: 0;		
 		padding-right: 24px;
-		h4{
+		@media(max-width:767px) {
+			padding-right: 0;
+		}
+		h4, .h4{
 			font-size: 15px;
 			line-height: 24px;
 			font-family: $ms;
@@ -163,7 +172,7 @@
 	}
 	.persone-card__text{
 		flex-grow: 2;
-		h4{
+		h4, .h4{
 			font-size: 16px;
 			line-height: 1.5;
 			font-family: $ms;
@@ -302,13 +311,52 @@
 .picture-card {
 	position: relative;
 	border-radius: 16px;
-	width: 256px;
+	max-width: 256px;
 	height: 168px;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	
+	overflow: hidden;
+	display: block;
+	transition: .3s;
+	img{
+		position: absolute;
+		left: 50%;
+		top: 18px;
+		transform: translate(-45%, 150%);
+		transition: .5s;
+
+	}
+	img.img-back{
+		top: 50px;
+		transform: translateX(-54%, 150%);
+	}
+	&:hover{
+		opacity: .8;
+		.badge{opacity: 1;}
+		
+	}
 }
+.picture-card--fish{
+	background-color: #ABDFE5;
+	img{top:10px}
+}
+.picture-card--animals {
+	background-color: #EECFAE;
+}
+.picture-card--birds {
+	background-color: #B0C7EC;
+}
+.picture-card--bugs {
+	background-color: #EFB9B6;
+}
+.picture-card--reptile {
+	background-color: #EBCAF6;
+}
+.picture-card--plants {
+	background-color: #B9ECC4;
+}
+
 .picture-card .badge {
 	top: 14px;
 	left: 16px;
@@ -319,6 +367,9 @@
 .picture-card.badge-center .badge {
 	top: 50%;
 	left: 50%;
+	height: 28px;
+	line-height: 28px;
+	font-family: $ms;
 	transform:translate(-50%, -50%);
 }
 .game-card-large{
@@ -329,6 +380,7 @@
 	overflow: hidden;
 	padding-bottom: 12px;
 	transition: .3s;
+	max-width:330px;
 	.badge{
 		position: absolute;
 		top: 14px;
@@ -337,16 +389,25 @@
 		font-size: 13px;		
 	}
 	
-	&--medium .game-card-large__img, &__img {
-		height: 216px;
+	 .game-card-large__img {
+		height: 244px;
 		overflow:hidden;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		img{
+			transition: .5s;
+		}
 	}
 	&--medium .game-card-large__img{
-		height: 244px;
+		height: 216px;
 	}
+	.game-card__arrow svg{fill:$pr!important;}
+}
+.game-card-large .game-card__footer img{
+	height: 32px;
+	object-fit: contain;
+	object-position: left;
 }
 .game-card__info{
 	.game-card__title {
@@ -385,12 +446,14 @@
 	}
 }
 .game-card-large:hover{
-	// box-shadow: 0 0 15px rgba(0,0,0, .08);
-	filter: drop-shadow(0px 5px 16px rgba(216, 207, 244, 0.8));
+	box-shadow: 0 0 15px rgba(0,0,0, .08);
+	// filter: drop-shadow(0px 5px 16px rgba(216, 207, 244, 0.8));
 	background-color: #fff;
 	.game-card__footer .button {
 		opacity: .7;
-		
+	}
+	.game-card-large__img img{
+		transform: scale(1.02);
 	}
 }
 .simple-card{
@@ -499,5 +562,9 @@
 
 		&:hover &-arrow {
 			opacity: .7;
+		}
+		@media(max-width:767px) {
+			width: 100%;
+			& +.action-card{margin-top: 32px;}
 		}
 }
