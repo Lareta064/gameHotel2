@@ -863,11 +863,11 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 		
-
 	swips.init();
 	})();
 	 /*  карточки location на стр about game*/
-	let locCradsSwiper = new Swiper(".location-cards-swiper", {
+	
+	 let locCradsSwiper = new Swiper(".location-cards-swiper", {
        slidesPerView: 1.2,
 	   spaceBetween: 24,
         navigation: {
@@ -1056,39 +1056,41 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 
 	/* ========= MASK FOR INPUT PHONE =======*/	
-	var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
-		var maskOpts = {
-			inputmask: {
-				definitions: {
-					'#': {
-						validator: "[0-9]",
-						cardinality: 1
-					}
+	if(jQuery('.phone').length >0){
+		var maskList = $.masksSort($.masksLoad("libs/phoneMask/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+			var maskOpts = {
+				inputmask: {
+					definitions: {
+						'#': {
+							validator: "[0-9]",
+							cardinality: 1
+						}
+					},
+					//clearIncomplete: true,
+					showMaskOnHover: false,
+					autoUnmask: true
 				},
-				//clearIncomplete: true,
-				showMaskOnHover: false,
-				autoUnmask: true
-			},
-			match: /[0-9]/,
-			replace: '#',
-			list: maskList,
-			listKey: "mask",
-			onMaskChange: function(maskObj, completed) {
-				if (completed) {
-					var hint = maskObj.name_ru;
-					if (maskObj.desc_ru && maskObj.desc_ru != "") {
-						hint += " (" + maskObj.desc_ru + ")";
+				match: /[0-9]/,
+				replace: '#',
+				list: maskList,
+				listKey: "mask",
+				onMaskChange: function(maskObj, completed) {
+					if (completed) {
+						var hint = maskObj.name_ru;
+						if (maskObj.desc_ru && maskObj.desc_ru != "") {
+							hint += " (" + maskObj.desc_ru + ")";
+						}
+						// $("#descr").html(hint);
 					}
-					// $("#descr").html(hint);
+					$(this).attr("placeholder", $(this).inputmask("getemptymask"));
 				}
-				$(this).attr("placeholder", $(this).inputmask("getemptymask"));
-			}
-		};
+			};
 
-	
-	jQuery('.phone').each(function(i, item){
-		$(item).inputmasks(maskOpts);
-	})
+
+		jQuery('.phone').each(function(i, item){
+			$(item).inputmasks(maskOpts);
+		});
+	}
 	/*================about game жалюзи на большой картинке =============*/
 	const imgBlind = document.querySelector('.blind-img-block');
 	if(imgBlind){
